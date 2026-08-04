@@ -1,277 +1,767 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ORION Accessories</title>
-    <!-- Google Font: Inter -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
-    
-    <style>
-        :root {
-            --primary-color: #0f172a;
-            --accent-color: #d4af37; /* Elegant Gold to match ORION logo */
-            --accent-hover: #b59226;
-            --bg-color: #f8fafc;
-            --card-bg: #ffffff;
-            --text-main: #334155;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            font-family: 'Inter', sans-serif;
-            scroll-behavior: smooth;
-        }
+<title>ORION Accessories</title>
 
-        body {
-            background-color: var(--bg-color);
-            color: var(--text-main);
-            line-height: 1.7;
-        }
+<style>
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
-        /* Header Layout */
-        header {
-            background-color: var(--primary-color);
-            color: #fff;
-            padding: 10px 5%;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+body {
+    font-family: Arial, sans-serif;
+    background: #000;
+    color: #fff;
+}
 
-        .logo img {
-            height: 45px;
-            display: block;
-        }
+header {
+    background: #000;
+    text-align: center;
+    padding: 35px 20px;
+    border-bottom: 1px solid #d4af37;
+}
 
-        nav ul {
-            list-style: none;
-            display: flex;
-            gap: 20px;
-        }
+.logo {
+    width: 180px;
+    max-width: 80%;
+    height: auto;
+    margin-bottom: 15px;
+}
 
-        nav a {
-            color: #cbd5e1;
-            text-decoration: none;
-            font-weight: 600;
-            transition: color 0.3s;
-        }
+.brand {
+    font-size: 38px;
+    letter-spacing: 5px;
+    color: #d4af37;
+    font-weight: bold;
+}
 
-        nav a:hover {
-            color: var(--accent-color);
-        }
+.subtitle {
+    color: #fff;
+    font-size: 18px;
+    margin-top: 8px;
+    letter-spacing: 2px;
+}
 
-        section {
-            padding: 60px 5%;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
+.hero {
+    text-align: center;
+    padding: 55px 20px;
+}
 
-        .section-title {
-            text-align: center;
-            font-size: 2rem;
-            margin-bottom: 40px;
-            color: var(--primary-color);
-            position: relative;
-        }
+.hero h1 {
+    color: #d4af37;
+    font-size: 42px;
+    margin-bottom: 15px;
+}
 
-        .section-title::after {
-            content: '';
-            display: block;
-            width: 60px;
-            height: 4px;
-            background: var(--accent-color);
-            margin: 10px auto 0;
-            border-radius: 2px;
-        }
+.hero p {
+    color: #ddd;
+    font-size: 18px;
+    line-height: 1.6;
+}
 
-        /* Store Section */
-        .grid-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 25px;
-        }
+section {
+    padding: 35px 18px;
+}
 
-        .card {
-            background: var(--card-bg);
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-            transition: transform 0.3s, box-shadow 0.3s;
-            border: 1px solid #e2e8f0;
-        }
+.section-title {
+    text-align: center;
+    color: #d4af37;
+    font-size: 34px;
+    margin-bottom: 30px;
+}
 
-        .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-        }
+.products {
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
 
-        .card img {
-            width: 100%;
-            height: 250px;
-            object-fit: cover;
-        }
+.product {
+    background: #111;
+    border: 1px solid #333;
+    border-radius: 22px;
+    padding: 18px;
+    text-align: center;
+    transition: 0.3s;
+}
 
-        .card-body {
-            padding: 20px;
-            text-align: center;
-        }
+.product:hover {
+    border-color: #d4af37;
+    transform: translateY(-4px);
+}
 
-        .card-title {
-            font-size: 1.1rem;
-            margin-bottom: 10px;
-        }
+.product img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 15px;
+    display: block;
+    margin-bottom: 18px;
+}
 
-        .btn {
-            background-color: var(--accent-color);
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 6px;
-            font-size: 1rem;
-            font-weight: 600;
-            cursor: pointer;
-            width: 100%;
-            transition: background 0.3s;
-        }
+.product h3 {
+    font-size: 21px;
+    margin-bottom: 10px;
+}
 
-        .btn:hover {
-            background-color: var(--accent-hover);
-        }
+.price {
+    color: #d4af37;
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 18px;
+}
 
-        /* Contact Section */
-        .contact-form {
-            max-width: 600px;
-            margin: 0 auto;
-            background: var(--card-bg);
-            padding: 30px;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-        }
+.order-btn {
+    border: none;
+    background: #d4af37;
+    color: #000;
+    font-size: 17px;
+    font-weight: bold;
+    padding: 13px 35px;
+    border-radius: 30px;
+    cursor: pointer;
+}
 
-        .form-group {
-            margin-bottom: 20px;
-        }
+.order-btn:hover {
+    background: #fff;
+}
 
-        .form-group label {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: 600;
-        }
+.pack {
+    max-width: 600px;
+    margin: auto;
+}
 
-        .form-group input, 
-        .form-group textarea {
-            width: 100%;
-            padding: 12px;
-            border: 1px solid #cbd5e1;
-            border-radius: 6px;
-            font-size: 1rem;
-            outline: none;
-        }
+.pack .product img {
+    height: 380px;
+}
 
-        footer {
-            background: var(--primary-color);
-            color: #94a3b8;
-            text-align: center;
-            padding: 20px;
-            margin-top: 40px;
-        }
-    </style>
+.pack-description {
+    color: #ddd;
+    margin-bottom: 15px;
+    font-size: 17px;
+}
+
+footer {
+    margin-top: 50px;
+    padding: 35px 20px;
+    text-align: center;
+    border-top: 1px solid #333;
+    color: #d4af37;
+}
+
+footer p {
+    margin: 8px;
+}
+
+/* ORDER POPUP */
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    inset: 0;
+    background: rgba(0,0,0,0.85);
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.modal-box {
+    max-width: 500px;
+    margin: 50px auto;
+    background: #111;
+    border: 1px solid #d4af37;
+    border-radius: 20px;
+    padding: 25px;
+}
+
+.modal-box h2 {
+    color: #d4af37;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.close {
+    float: right;
+    color: #fff;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 7px;
+    color: #d4af37;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 13px;
+    border-radius: 8px;
+    border: 1px solid #555;
+    background: #000;
+    color: #fff;
+    font-size: 16px;
+}
+
+.selected-product {
+    text-align: center;
+    padding: 12px;
+    margin-bottom: 18px;
+    border: 1px solid #333;
+    border-radius: 10px;
+}
+
+.selected-product strong {
+    color: #d4af37;
+}
+
+.submit-btn {
+    width: 100%;
+    border: none;
+    padding: 15px;
+    background: #d4af37;
+    color: #000;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 30px;
+    cursor: pointer;
+    margin-top: 8px;
+}
+
+@media (max-width: 700px) {
+
+    .products {
+        grid-template-columns: 1fr;
+    }
+
+    .product img {
+        height: 330px;
+    }
+
+    .hero h1 {
+        font-size: 34px;
+    }
+
+    .section-title {
+        font-size: 30px;
+    }
+
+    .brand {
+        font-size: 32px;
+    }
+}
+</style>
 </head>
+
 <body>
 
-    <!-- Header with ORION Logo -->
-    <header>
-        <div class="logo">
-            <img src="https://raw.githubusercontent.com/oreonaccessoires/OREON-/main/803CDB18-8551-43D7-B862-30AA90CD5AC0.png" alt="ORION Accessories Logo">
+<header>
+
+    <img
+        class="logo"
+        src="803CDB18-8551-43D7-B862-30AA90CD5AC0.png"
+        alt="ORION Accessories"
+        onerror="this.style.display='none';"
+    >
+
+    <div class="brand">ORION</div>
+    <div class="subtitle">Accessories</div>
+
+</header>
+
+<div class="hero">
+
+    <h1>Luxury Accessories</h1>
+
+    <p>
+        Discover our sunglasses, chains and exclusive packs.
+    </p>
+
+</div>
+
+
+<!-- SUNGLASSES -->
+
+<section>
+
+<h2 class="section-title">Sunglasses</h2>
+
+<div class="products">
+
+    <div class="product">
+        <img src="Glasses 120dh.JPG" alt="ORION Sunglasses 01">
+        <h3>ORION Sunglasses 01</h3>
+        <div class="price">120 DH</div>
+        <button class="order-btn"
+        onclick="openOrder('ORION Sunglasses 01','120 DH','Glasses 120dh.JPG')">
+        Order
+        </button>
+    </div>
+
+
+    <div class="product">
+        <img src="Glasses 120dh 2.JPG" alt="ORION Sunglasses 02">
+        <h3>ORION Sunglasses 02</h3>
+        <div class="price">120 DH</div>
+        <button class="order-btn"
+        onclick="openOrder('ORION Sunglasses 02','120 DH','Glasses 120dh 2.JPG')">
+        Order
+        </button>
+    </div>
+
+
+    <div class="product">
+        <img src="Glasses 120dh 3.JPG" alt="ORION Sunglasses 03">
+        <h3>ORION Sunglasses 03</h3>
+        <div class="price">120 DH</div>
+        <button class="order-btn"
+        onclick="openOrder('ORION Sunglasses 03','120 DH','Glasses 120dh 3.JPG')">
+        Order
+        </button>
+    </div>
+
+
+    <div class="product">
+        <img src="Glasses 120dh 4.JPG" alt="ORION Sunglasses 04">
+        <h3>ORION Sunglasses 04</h3>
+        <div class="price">120 DH</div>
+        <button class="order-btn"
+        onclick="openOrder('ORION Sunglasses 04','120 DH','Glasses 120dh 4.JPG')">
+        Order
+        </button>
+    </div>
+
+
+    <div class="product">
+        <img src="Glasses 120dh 5.JPG" alt="ORION Sunglasses 05">
+        <h3>ORION Sunglasses 05</h3>
+        <div class="price">120 DH</div>
+        <button class="order-btn"
+        onclick="openOrder('ORION Sunglasses 05','120 DH','Glasses 120dh 5.JPG')">
+        Order
+        </button>
+    </div>
+
+
+    <div class="product">
+        <img src="Glasses 120dh 6.JPG" alt="ORION Sunglasses 06">
+        <h3>ORION Sunglasses 06</h3>
+        <div class="price">120 DH</div>
+        <button class="order-btn"
+        onclick="openOrder('ORION Sunglasses 06','120 DH','Glasses 120dh 6.JPG')">
+        Order
+        </button>
+    </div>
+
+
+    <div class="product">
+        <img src="Glasses 150dh 7.JPG" alt="ORION Sunglasses 07">
+        <h3>ORION Sunglasses 07</h3>
+        <div class="price">150 DH</div>
+        <button class="order-btn"
+        onclick="openOrder('ORION Sunglasses 07','150 DH','Glasses 150dh 7.JPG')">
+        Order
+        </button>
+    </div>
+
+
+    <div class="product">
+        <img src="Glasses 150dh 8.JPG" alt="ORION Sunglasses 08">
+        <h3>ORION Sunglasses 08</h3>
+        <div class="price">150 DH</div>
+        <button class="order-btn"
+        onclick="openOrder('ORION Sunglasses 08','150 DH','Glasses 150dh 8.JPG')">
+        Order
+        </button>
+    </div>
+
+
+    <div class="product">
+        <img src="Glasses 150dh 9.JPG" alt="ORION Sunglasses 09">
+        <h3>ORION Sunglasses 09</h3>
+        <div class="price">150 DH</div>
+        <button class="order-btn"
+        onclick="openOrder('ORION Sunglasses 09','150 DH','Glasses 150dh 9.JPG')">
+        Order
+        </button>
+    </div>
+
+
+    <div class="product">
+        <img src="Glasses 150dh 10.JPG" alt="ORION Sunglasses 10">
+        <h3>ORION Sunglasses 10</h3>
+        <div class="price">150 DH</div>
+        <button class="order-btn"
+        onclick="openOrder('ORION Sunglasses 10','150 DH','Glasses 150dh 10.JPG')">
+        Order
+        </button>
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- CHAINS -->
+
+<section>
+
+<h2 class="section-title">Chains</h2>
+
+<div class="products">
+
+    <div class="product">
+        <img src="Snsla 1.JPG" alt="ORION Chain 01">
+        <h3>ORION Chain 01</h3>
+        <div class="price">80 DH</div>
+        <button class="order-btn"
+        onclick="openOrder('ORION Chain 01','80 DH','Snsla 1.JPG')">
+        Order
+        </button>
+    </div>
+
+
+    <div class="product">
+        <img src="Snsla 2.JPG" alt="ORION Chain 02">
+        <h3>ORION Chain 02</h3>
+        <div class="price">80 DH</div>
+        <button class="order-btn"
+        onclick="openOrder('ORION Chain 02','80 DH','Snsla 2.JPG')">
+        Order
+        </button>
+    </div>
+
+
+    <div class="product">
+        <img src="Snsla 3.JPG" alt="ORION Chain 03">
+        <h3>ORION Chain 03</h3>
+        <div class="price">80 DH</div>
+        <button class="order-btn"
+        onclick="openOrder('ORION Chain 03','80 DH','Snsla 3.JPG')">
+        Order
+        </button>
+    </div>
+
+
+    <div class="product">
+        <img src="Snsla 4.JPG" alt="ORION Chain 04">
+        <h3>ORION Chain 04</h3>
+        <div class="price">80 DH</div>
+        <button class="order-btn"
+        onclick="openOrder('ORION Chain 04','80 DH','Snsla 4.JPG')">
+        Order
+        </button>
+    </div>
+
+
+    <div class="product">
+        <img src="Snsla 5.JPG" alt="ORION Chain 05">
+        <h3>ORION Chain 05</h3>
+        <div class="price">80 DH</div>
+        <button class="order-btn"
+        onclick="openOrder('ORION Chain 05','80 DH','Snsla 5.JPG')">
+        Order
+        </button>
+    </div>
+
+
+    <div class="product">
+        <img src="Snsla 6.JPG" alt="ORION Chain 06">
+        <h3>ORION Chain 06</h3>
+        <div class="price">80 DH</div>
+        <button class="order-btn"
+        onclick="openOrder('ORION Chain 06','80 DH','Snsla 6.JPG')">
+        Order
+        </button>
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- SAUVAGE PACK -->
+
+<section>
+
+<h2 class="section-title">Exclusive Pack</h2>
+
+<div class="pack">
+
+    <div class="product">
+
+        <img src="Pack 1.JPG" alt="Sauvage Pack">
+
+        <h3>Sauvage Pack</h3>
+
+        <div class="pack-description">
+            Watch + Chain + Sauvage
         </div>
-        <nav>
-            <ul>
-                <li><a href="#store">Collection</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <!-- Products / Accessories Section -->
-    <section id="store">
-        <h2 class="section-title">Our Collection</h2>
-        <div class="grid-container">
-            <!-- Product 1 -->
-            <div class="card">
-                <img src="https://raw.githubusercontent.com/oreonaccessoires/OREON-/main/IMG_8059.jpeg" alt="Accessory 1">
-                <div class="card-body">
-                    <h3 class="card-title">ORION Item #8059</h3>
-                    <button class="btn" onclick="addToCart('Item 8059')">Order Now</button>
-                </div>
-            </div>
-            <!-- Product 2 -->
-            <div class="card">
-                <img src="https://raw.githubusercontent.com/oreonaccessoires/OREON-/main/IMG_8061.jpeg" alt="Accessory 2">
-                <div class="card-body">
-                    <h3 class="card-title">ORION Item #8061</h3>
-                    <button class="btn" onclick="addToCart('Item 8061')">Order Now</button>
-                </div>
-            </div>
-            <!-- Product 3 -->
-            <div class="card">
-                <img src="https://raw.githubusercontent.com/oreonaccessoires/OREON-/main/IMG_8062.jpeg" alt="Accessory 3">
-                <div class="card-body">
-                    <h3 class="card-title">ORION Item #8062</h3>
-                    <button class="btn" onclick="addToCart('Item 8062')">Order Now</button>
-                </div>
-            </div>
-            <!-- Product 4 -->
-            <div class="card">
-                <img src="https://raw.githubusercontent.com/oreonaccessoires/OREON-/main/IMG_8063.jpeg" alt="Accessory 4">
-                <div class="card-body">
-                    <h3 class="card-title">ORION Item #8063</h3>
-                    <button class="btn" onclick="addToCart('Item 8063')">Order Now</button>
-                </div>
-            </div>
+        <div class="price">125 DH</div>
+
+        <button class="order-btn"
+        onclick="openOrder('Sauvage Pack','125 DH','Pack 1.JPG')">
+        Order
+        </button>
+
+    </div>
+
+</div>
+
+</section>
+
+
+<footer>
+
+    <h2>ORION Accessories</h2>
+
+    <p>Luxury Accessories</p>
+
+    <p>© 2026 ORION Accessories</p>
+
+</footer>
+
+
+<!-- ORDER MODAL -->
+
+<div class="modal" id="orderModal">
+
+    <div class="modal-box">
+
+        <span class="close" onclick="closeOrder()">×</span>
+
+        <h2>Place Your Order</h2>
+
+        <div class="selected-product">
+
+            Product:
+            <strong id="selectedProduct"></strong>
+
+            <br>
+
+            Price:
+            <strong id="selectedPrice"></strong>
+
         </div>
-    </section>
 
-    <!-- Contact Section -->
-    <section id="contact">
-        <h2 class="section-title">Contact Us</h2>
-        <form class="contact-form" onsubmit="handleContact(event)">
-            <div class="form-group">
-                <label for="name">Full Name</label>
-                <input type="text" id="name" placeholder="Enter your full name" required>
-            </div>
-            <div class="form-group">
-                <label for="email">Email Address</label>
-                <input type="email" id="email" placeholder="example@domain.com" required>
-            </div>
-            <div class="form-group">
-                <label for="message">Message</label>
-                <textarea id="message" rows="4" placeholder="How can we help you?" required></textarea>
-            </div>
-            <button type="submit" class="btn">Send Message</button>
-        </form>
-    </section>
 
-    <footer>
-        <p>&copy; 2026 ORION Accessories. All Rights Reserved.</p>
-    </footer>
+        <div class="form-group">
 
-    <script>
-        function addToCart(itemName) {
-            alert('Selected: ' + itemName);
-        }
+            <label>Full Name</label>
 
-        function handleContact(event) {
-            event.preventDefault();
-            alert('Thank you for reaching out to ORION Accessories!');
-            event.target.reset();
-        }
-    </script>
+            <input
+                type="text"
+                id="customerName"
+                placeholder="Your name"
+                required
+            >
+
+        </div>
+
+
+        <div class="form-group">
+
+            <label>Phone Number</label>
+
+            <input
+                type="tel"
+                id="customerPhone"
+                placeholder="06XXXXXXXX"
+                required
+            >
+
+        </div>
+
+
+        <div class="form-group">
+
+            <label>City</label>
+
+            <input
+                type="text"
+                id="customerCity"
+                placeholder="City"
+                required
+            >
+
+        </div>
+
+
+        <div class="form-group">
+
+            <label>Address</label>
+
+            <input
+                type="text"
+                id="customerAddress"
+                placeholder="Your address"
+                required
+            >
+
+        </div>
+
+
+        <div class="form-group">
+
+            <label>Quantity</label>
+
+            <input
+                type="number"
+                id="quantity"
+                value="1"
+                min="1"
+                required
+            >
+
+        </div>
+
+
+        <button
+            class="submit-btn"
+            onclick="sendOrder()">
+            Send Order on WhatsApp
+        </button>
+
+    </div>
+
+</div>
+
+
+<script>
+
+let selectedProduct = "";
+let selectedPrice = "";
+let selectedImage = "";
+
+
+function openOrder(product, price, image) {
+
+    selectedProduct = product;
+    selectedPrice = price;
+    selectedImage = image;
+
+    document.getElementById("selectedProduct").textContent = product;
+    document.getElementById("selectedPrice").textContent = price;
+
+    document.getElementById("orderModal").style.display = "block";
+}
+
+
+function closeOrder() {
+
+    document.getElementById("orderModal").style.display = "none";
+
+}
+
+
+function sendOrder() {
+
+    const name =
+        document.getElementById("customerName").value.trim();
+
+    const phone =
+        document.getElementById("customerPhone").value.trim();
+
+    const city =
+        document.getElementById("customerCity").value.trim();
+
+    const address =
+        document.getElementById("customerAddress").value.trim();
+
+    const quantity =
+        document.getElementById("quantity").value;
+
+
+    if (!name || !phone || !city || !address || !quantity) {
+
+        alert("Please complete all information.");
+
+        return;
+    }
+
+
+    const baseURL =
+        window.location.origin + window.location.pathname;
+
+
+    const productLink =
+        baseURL + "#" +
+        encodeURIComponent(
+            selectedProduct.replaceAll(" ", "-")
+        );
+
+
+    const imageLink =
+        new URL(
+            selectedImage,
+            window.location.href
+        ).href;
+
+
+    const message =
+`🛍️ NEW ORDER — ORION Accessories
+
+━━━━━━━━━━━━━━
+
+📦 Product:
+${selectedProduct}
+
+💰 Price:
+${selectedPrice}
+
+🔢 Quantity:
+${quantity}
+
+👤 Customer:
+${name}
+
+📱 Phone:
+${phone}
+
+🏙️ City:
+${city}
+
+📍 Address:
+${address}
+
+🔗 Product Link:
+${productLink}
+
+🖼️ Product Image:
+${imageLink}
+
+━━━━━━━━━━━━━━
+
+Thank you.`;
+
+
+    const whatsappNumber = "212673830013";
+
+
+    const whatsappURL =
+        "https://wa.me/" +
+        whatsappNumber +
+        "?text=" +
+        encodeURIComponent(message);
+
+
+    window.location.href = whatsappURL;
+
+}
+
+</script>
+
 </body>
 </html>
