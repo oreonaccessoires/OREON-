@@ -65,7 +65,6 @@ nav a {
 .hero h1 {
     font-size: 48px;
     letter-spacing: 5px;
-    color: white;
 }
 
 .hero p {
@@ -129,18 +128,23 @@ nav a {
     padding-bottom: 25px;
 }
 
+/* IMAGES - SHOW FULL IMAGE */
 .product img {
     width: 100%;
-    height: 270px;
-    object-fit: cover;
+    height: auto;
+    max-height: 520px;
+    object-fit: contain;
     display: block;
+    background: #fff;
 }
 
+/* PRODUCT NAME */
 .product h3 {
     font-size: 21px;
     margin: 20px 10px 10px;
 }
 
+/* PRICE */
 .price {
     color: #b08c20;
     font-size: 24px;
@@ -148,6 +152,7 @@ nav a {
     margin-bottom: 18px;
 }
 
+/* ORDER BUTTON */
 .order-btn {
     border: none;
     background: #d4af37;
@@ -170,6 +175,10 @@ nav a {
 }
 
 .pack h3 {
+    color: white;
+}
+
+.pack p {
     color: white;
 }
 
@@ -199,9 +208,11 @@ footer strong {
 }
 
 .modal-box {
-    background: white;
+    background: #111;
+    color: white;
     width: 100%;
     max-width: 420px;
+    border: 1px solid #d4af37;
     border-radius: 20px;
     padding: 28px;
     position: relative;
@@ -209,44 +220,52 @@ footer strong {
 }
 
 .modal-box h2 {
+    color: #d4af37;
     margin-bottom: 22px;
+    font-size: 30px;
 }
 
 .close {
     position: absolute;
     right: 18px;
     top: 10px;
+    color: white;
     font-size: 30px;
     cursor: pointer;
 }
 
 .selected-product {
-    background: #f5f5f5;
+    background: #080808;
+    border: 1px solid #333;
     border-radius: 12px;
     padding: 15px;
     margin-bottom: 20px;
 }
 
 .selected-product strong {
-    color: #b08c20;
+    color: #d4af37;
 }
 
 .quantity-label {
     display: block;
     text-align: left;
     font-weight: bold;
+    color: #d4af37;
     margin-bottom: 8px;
 }
 
 #quantity {
     width: 100%;
     padding: 14px;
-    border: 1px solid #ccc;
+    background: #000;
+    color: white;
+    border: 1px solid #555;
     border-radius: 10px;
     font-size: 17px;
     margin-bottom: 18px;
 }
 
+/* WHATSAPP */
 .whatsapp {
     width: 100%;
     border: none;
@@ -270,6 +289,18 @@ footer strong {
         padding: 18px 15px;
     }
 
+    .logo {
+        font-size: 22px;
+    }
+
+    .logo span {
+        font-size: 10px;
+    }
+
+    .hero {
+        padding: 55px 20px 65px;
+    }
+
     .hero h1 {
         font-size: 38px;
     }
@@ -287,8 +318,16 @@ footer strong {
         font-size: 14px;
     }
 
+    .products {
+        grid-template-columns: 1fr;
+    }
+
+    /* FULL IMAGE ON PHONE */
     .product img {
-        height: 300px;
+        width: 100%;
+        height: auto;
+        max-height: none;
+        object-fit: contain;
     }
 }
 </style>
@@ -297,7 +336,6 @@ footer strong {
 <body>
 
 <!-- HEADER -->
-
 <header>
 
     <div class="logo">
@@ -314,7 +352,6 @@ footer strong {
 
 
 <!-- HERO -->
-
 <section class="hero">
 
     <h1>ORION</h1>
@@ -325,7 +362,6 @@ footer strong {
 
 
 <!-- INTRO -->
-
 <section class="intro">
 
     <h2>Our Collection</h2>
@@ -338,205 +374,133 @@ footer strong {
 
 
 <!-- SUNGLASSES -->
-
 <section class="section" id="collection">
 
 <h2 class="section-title">Sunglasses</h2>
 
 <div class="products">
 
-
 <!-- GLASSES 120 DH -->
 
 <div class="product">
-
 <img src="Glasses 120dh.JPG" alt="ORION Sunglasses 01">
-
 <h3>ORION Sunglasses 01</h3>
-
 <div class="price">120 DH</div>
 
-<button
-class="order-btn"
+<button class="order-btn"
 onclick="openOrder('ORION Sunglasses 01','120 DH')">
-
 Order Now
-
 </button>
-
 </div>
 
 
 <div class="product">
-
 <img src="Glasses 120dh 2.JPG" alt="ORION Sunglasses 02">
-
 <h3>ORION Sunglasses 02</h3>
-
 <div class="price">120 DH</div>
 
-<button
-class="order-btn"
+<button class="order-btn"
 onclick="openOrder('ORION Sunglasses 02','120 DH')">
-
 Order Now
-
 </button>
-
 </div>
 
 
 <div class="product">
-
 <img src="Glasses 120dh 3.JPG" alt="ORION Sunglasses 03">
-
 <h3>ORION Sunglasses 03</h3>
-
 <div class="price">120 DH</div>
 
-<button
-class="order-btn"
+<button class="order-btn"
 onclick="openOrder('ORION Sunglasses 03','120 DH')">
-
 Order Now
-
 </button>
-
 </div>
 
 
 <div class="product">
-
 <img src="Glasses 120dh 4.JPG" alt="ORION Sunglasses 04">
-
 <h3>ORION Sunglasses 04</h3>
-
 <div class="price">120 DH</div>
 
-<button
-class="order-btn"
+<button class="order-btn"
 onclick="openOrder('ORION Sunglasses 04','120 DH')">
-
 Order Now
-
 </button>
-
 </div>
 
 
 <div class="product">
-
 <img src="Glasses 120dh 5.JPG" alt="ORION Sunglasses 05">
-
 <h3>ORION Sunglasses 05</h3>
-
 <div class="price">120 DH</div>
 
-<button
-class="order-btn"
+<button class="order-btn"
 onclick="openOrder('ORION Sunglasses 05','120 DH')">
-
 Order Now
-
 </button>
-
 </div>
 
 
 <div class="product">
-
 <img src="Glasses 120dh 6.JPG" alt="ORION Sunglasses 06">
-
 <h3>ORION Sunglasses 06</h3>
-
 <div class="price">120 DH</div>
 
-<button
-class="order-btn"
+<button class="order-btn"
 onclick="openOrder('ORION Sunglasses 06','120 DH')">
-
 Order Now
-
 </button>
-
 </div>
 
 
 <!-- GLASSES 150 DH -->
 
 <div class="product">
-
 <img src="Glasses 150dh 7.JPG" alt="ORION Sunglasses 07">
-
 <h3>ORION Sunglasses 07</h3>
-
 <div class="price">150 DH</div>
 
-<button
-class="order-btn"
+<button class="order-btn"
 onclick="openOrder('ORION Sunglasses 07','150 DH')">
-
 Order Now
-
 </button>
-
 </div>
 
 
 <div class="product">
-
 <img src="Glasses 150dh 8.JPG" alt="ORION Sunglasses 08">
-
 <h3>ORION Sunglasses 08</h3>
-
 <div class="price">150 DH</div>
 
-<button
-class="order-btn"
+<button class="order-btn"
 onclick="openOrder('ORION Sunglasses 08','150 DH')">
-
 Order Now
-
 </button>
-
 </div>
 
 
 <div class="product">
-
 <img src="Glasses 150dh 9.JPG" alt="ORION Sunglasses 09">
-
 <h3>ORION Sunglasses 09</h3>
-
 <div class="price">150 DH</div>
 
-<button
-class="order-btn"
+<button class="order-btn"
 onclick="openOrder('ORION Sunglasses 09','150 DH')">
-
 Order Now
-
 </button>
-
 </div>
 
 
 <div class="product">
-
 <img src="Glasses 150dh 10.JPG" alt="ORION Sunglasses 10">
-
 <h3>ORION Sunglasses 10</h3>
-
 <div class="price">150 DH</div>
 
-<button
-class="order-btn"
+<button class="order-btn"
 onclick="openOrder('ORION Sunglasses 10','150 DH')">
-
 Order Now
-
 </button>
-
 </div>
 
 </div>
@@ -545,125 +509,81 @@ Order Now
 
 
 <!-- CHAINS -->
-
 <section class="section">
 
 <h2 class="section-title">Chains</h2>
 
 <div class="products">
 
-
 <div class="product">
-
 <img src="Snsla 1.JPG" alt="ORION Chain 01">
-
 <h3>ORION Chain 01</h3>
-
 <div class="price">80 DH</div>
 
-<button
-class="order-btn"
+<button class="order-btn"
 onclick="openOrder('ORION Chain 01','80 DH')">
-
 Order Now
-
 </button>
-
 </div>
 
 
 <div class="product">
-
 <img src="Snsla 2.JPG" alt="ORION Chain 02">
-
 <h3>ORION Chain 02</h3>
-
 <div class="price">80 DH</div>
 
-<button
-class="order-btn"
+<button class="order-btn"
 onclick="openOrder('ORION Chain 02','80 DH')">
-
 Order Now
-
 </button>
-
 </div>
 
 
 <div class="product">
-
 <img src="Snsla 3.JPG" alt="ORION Chain 03">
-
 <h3>ORION Chain 03</h3>
-
 <div class="price">80 DH</div>
 
-<button
-class="order-btn"
+<button class="order-btn"
 onclick="openOrder('ORION Chain 03','80 DH')">
-
 Order Now
-
 </button>
-
 </div>
 
 
 <div class="product">
-
 <img src="Snsla 4.JPG" alt="ORION Chain 04">
-
 <h3>ORION Chain 04</h3>
-
 <div class="price">80 DH</div>
 
-<button
-class="order-btn"
+<button class="order-btn"
 onclick="openOrder('ORION Chain 04','80 DH')">
-
 Order Now
-
 </button>
-
 </div>
 
 
 <div class="product">
-
 <img src="Snsla 5.JPG" alt="ORION Chain 05">
-
 <h3>ORION Chain 05</h3>
-
 <div class="price">80 DH</div>
 
-<button
-class="order-btn"
+<button class="order-btn"
 onclick="openOrder('ORION Chain 05','80 DH')">
-
 Order Now
-
 </button>
-
 </div>
 
 
 <div class="product">
-
 <img src="Snsla 6.JPG" alt="ORION Chain 06">
-
 <h3>ORION Chain 06</h3>
-
 <div class="price">80 DH</div>
 
-<button
-class="order-btn"
+<button class="order-btn"
 onclick="openOrder('ORION Chain 06','80 DH')">
-
 Order Now
-
 </button>
-
 </div>
 
 </div>
@@ -671,8 +591,7 @@ Order Now
 </section>
 
 
-<!-- SAUVAGE PACK -->
-
+<!-- EXCLUSIVE PACK -->
 <section class="section">
 
 <h2 class="section-title">Exclusive Pack</h2>
@@ -691,12 +610,9 @@ Watch + Chain + Sauvage
 
 <div class="price">125 DH</div>
 
-<button
-class="order-btn"
+<button class="order-btn"
 onclick="openOrder('Sauvage Pack - Watch + Chain + Sauvage','125 DH')">
-
 Order Now
-
 </button>
 
 </div>
@@ -707,7 +623,6 @@ Order Now
 
 
 <!-- FOOTER -->
-
 <footer id="contact">
 
 <p>
@@ -725,8 +640,7 @@ WhatsApp: 0673830013
 </footer>
 
 
-<!-- ORDER WINDOW -->
-
+<!-- ORDER MODAL -->
 <div class="modal" id="orderModal">
 
 <div class="modal-box">
@@ -749,7 +663,6 @@ Price:
 
 </div>
 
-
 <label class="quantity-label">
 Quantity
 </label>
@@ -762,13 +675,8 @@ min="1"
 max="99"
 >
 
-
-<button
-class="whatsapp"
-onclick="sendWhatsApp()">
-
+<button class="whatsapp" onclick="sendWhatsApp()">
 Order on WhatsApp
-
 </button>
 
 </div>
@@ -782,6 +690,7 @@ let selectedProduct = "";
 let selectedPrice = "";
 
 
+/* OPEN ORDER */
 function openOrder(product, price) {
 
     selectedProduct = product;
@@ -797,6 +706,7 @@ function openOrder(product, price) {
 }
 
 
+/* CLOSE ORDER */
 function closeOrder() {
 
     document.getElementById("orderModal").style.display = "none";
@@ -804,11 +714,11 @@ function closeOrder() {
 }
 
 
+/* SEND WHATSAPP */
 function sendWhatsApp() {
 
     const quantity =
         document.getElementById("quantity").value;
-
 
     if (!quantity || quantity < 1) {
 
@@ -817,7 +727,6 @@ function sendWhatsApp() {
         return;
 
     }
-
 
     const message =
 `🛍️ ORION ACCESSORIES
@@ -837,11 +746,8 @@ ${quantity}
 
 Thank you for your order 🤍`;
 
-
-    /* YOUR WHATSAPP NUMBER */
-
+    /* ORION WHATSAPP NUMBER */
     const whatsappNumber = "212673830013";
-
 
     const whatsappURL =
         "https://wa.me/" +
@@ -849,14 +755,11 @@ Thank you for your order 🤍`;
         "?text=" +
         encodeURIComponent(message);
 
-
     window.location.href = whatsappURL;
-
 }
 
 
-/* Close window when clicking outside */
-
+/* CLOSE WHEN CLICKING OUTSIDE */
 window.onclick = function(event) {
 
     const modal =
@@ -868,7 +771,7 @@ window.onclick = function(event) {
 
     }
 
-}
+};
 
 </script>
 
