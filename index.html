@@ -1,317 +1,277 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ORION Accessories</title>
+    <!-- Google Font: Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-color: #0f172a;
+            --accent-color: #d4af37; /* Elegant Gold to match ORION logo */
+            --accent-hover: #b59226;
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-main: #334155;
+        }
 
-<title>ORION Accessories</title>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
 
-<style>
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.7;
+        }
 
-body {
-    font-family: Arial, sans-serif;
-    background: #000;
-    color: #fff;
-}
+        /* Header Layout */
+        header {
+            background-color: var(--primary-color);
+            color: #fff;
+            padding: 10px 5%;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
 
-header {
-    text-align: center;
-    padding: 55px 20px;
-    background: #000;
-    border-bottom: 1px solid #d4af37;
-}
+        .logo img {
+            height: 45px;
+            display: block;
+        }
 
-header h1 {
-    font-size: 48px;
-    letter-spacing: 8px;
-    color: #fff;
-}
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
 
-header p {
-    margin-top: 12px;
-    color: #d4af37;
-    font-size: 22px;
-}
+        nav a {
+            color: #cbd5e1;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
 
-.container {
-    max-width: 1100px;
-    margin: auto;
-    padding: 45px 20px;
-}
+        nav a:hover {
+            color: var(--accent-color);
+        }
 
-.intro {
-    text-align: center;
-    margin-bottom: 55px;
-}
+        section {
+            padding: 60px 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
 
-.intro h2 {
-    color: #d4af37;
-    font-size: 38px;
-    margin-bottom: 15px;
-}
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 40px;
+            color: var(--primary-color);
+            position: relative;
+        }
 
-.intro p {
-    color: #ccc;
-    font-size: 18px;
-}
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background: var(--accent-color);
+            margin: 10px auto 0;
+            border-radius: 2px;
+        }
 
-.section-title {
-    text-align: center;
-    color: #d4af37;
-    font-size: 36px;
-    margin: 55px 0 30px;
-}
+        /* Store Section */
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 25px;
+        }
 
-.products {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 25px;
-}
+        .card {
+            background: var(--card-bg);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: 1px solid #e2e8f0;
+        }
 
-.product {
-    background: #111;
-    border: 1px solid #333;
-    border-radius: 20px;
-    padding: 18px;
-    text-align: center;
-    transition: 0.3s;
-}
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
 
-.product:hover {
-    border-color: #d4af37;
-    transform: translateY(-5px);
-}
+        .card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
 
-.product img {
-    width: 100%;
-    height: 260px;
-    object-fit: cover;
-    border-radius: 14px;
-    background: #222;
-}
+        .card-body {
+            padding: 20px;
+            text-align: center;
+        }
 
-.product h3 {
-    margin: 20px 0 10px;
-    font-size: 21px;
-}
+        .card-title {
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+        }
 
-.price {
-    color: #d4af37;
-    font-size: 24px;
-    font-weight: bold;
-    margin: 10px 0 18px;
-}
+        .btn {
+            background-color: var(--accent-color);
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 6px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            width: 100%;
+            transition: background 0.3s;
+        }
 
-.order-btn {
-    display: inline-block;
-    background: #d4af37;
-    color: #000;
-    border: none;
-    padding: 13px 32px;
-    border-radius: 30px;
-    font-size: 17px;
-    font-weight: bold;
-    text-decoration: none;
-    cursor: pointer;
-}
+        .btn:hover {
+            background-color: var(--accent-hover);
+        }
 
-.order-btn:hover {
-    background: #fff;
-}
+        /* Contact Section */
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
 
-footer {
-    margin-top: 70px;
-    padding: 30px;
-    text-align: center;
-    border-top: 1px solid #333;
-    color: #d4af37;
-}
+        .form-group {
+            margin-bottom: 20px;
+        }
 
-@media (max-width: 600px) {
-    header h1 {
-        font-size: 38px;
-    }
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
 
-    .intro h2 {
-        font-size: 30px;
-    }
+        .form-group input, 
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #cbd5e1;
+            border-radius: 6px;
+            font-size: 1rem;
+            outline: none;
+        }
 
-    .section-title {
-        font-size: 30px;
-    }
-}
-</style>
+        footer {
+            background: var(--primary-color);
+            color: #94a3b8;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+    </style>
 </head>
-
 <body>
 
-<header>
-    <h1>ORION</h1>
-    <p>Accessories</p>
-</header>
+    <!-- Header with ORION Logo -->
+    <header>
+        <div class="logo">
+            <img src="https://raw.githubusercontent.com/oreonaccessoires/OREON-/main/803CDB18-8551-43D7-B862-30AA90CD5AC0.png" alt="ORION Accessories Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#store">Collection</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-<div class="container">
+    <!-- Products / Accessories Section -->
+    <section id="store">
+        <h2 class="section-title">Our Collection</h2>
+        <div class="grid-container">
+            <!-- Product 1 -->
+            <div class="card">
+                <img src="https://raw.githubusercontent.com/oreonaccessoires/OREON-/main/IMG_8059.jpeg" alt="Accessory 1">
+                <div class="card-body">
+                    <h3 class="card-title">ORION Item #8059</h3>
+                    <button class="btn" onclick="addToCart('Item 8059')">Order Now</button>
+                </div>
+            </div>
+            <!-- Product 2 -->
+            <div class="card">
+                <img src="https://raw.githubusercontent.com/oreonaccessoires/OREON-/main/IMG_8061.jpeg" alt="Accessory 2">
+                <div class="card-body">
+                    <h3 class="card-title">ORION Item #8061</h3>
+                    <button class="btn" onclick="addToCart('Item 8061')">Order Now</button>
+                </div>
+            </div>
+            <!-- Product 3 -->
+            <div class="card">
+                <img src="https://raw.githubusercontent.com/oreonaccessoires/OREON-/main/IMG_8062.jpeg" alt="Accessory 3">
+                <div class="card-body">
+                    <h3 class="card-title">ORION Item #8062</h3>
+                    <button class="btn" onclick="addToCart('Item 8062')">Order Now</button>
+                </div>
+            </div>
+            <!-- Product 4 -->
+            <div class="card">
+                <img src="https://raw.githubusercontent.com/oreonaccessoires/OREON-/main/IMG_8063.jpeg" alt="Accessory 4">
+                <div class="card-body">
+                    <h3 class="card-title">ORION Item #8063</h3>
+                    <button class="btn" onclick="addToCart('Item 8063')">Order Now</button>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<section class="intro">
-    <h2>Luxury Accessories</h2>
-    <p>Discover our sunglasses, chains and exclusive packs.</p>
-</section>
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2 class="section-title">Contact Us</h2>
+        <form class="contact-form" onsubmit="handleContact(event)">
+            <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" placeholder="Enter your full name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" placeholder="example@domain.com" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" rows="4" placeholder="How can we help you?" required></textarea>
+            </div>
+            <button type="submit" class="btn">Send Message</button>
+        </form>
+    </section>
 
+    <footer>
+        <p>&copy; 2026 ORION Accessories. All Rights Reserved.</p>
+    </footer>
 
-<!-- SUNGLASSES -->
-<h2 class="section-title">Sunglasses</h2>
+    <script>
+        function addToCart(itemName) {
+            alert('Selected: ' + itemName);
+        }
 
-<div class="products">
-
-<div class="product">
-<img src="IMG_8059.jpeg">
-<h3>ORION Sunglasses 01</h3>
-<div class="price">120 DH</div>
-<a class="order-btn" href="https://wa.me/212673830013?text=Hello%20ORION%20Accessories,%20I%20want%20to%20order%20Sunglasses%2001%20-%20120%20DH" target="_blank">Order</a>
-</div>
-
-<div class="product">
-<img src="IMG_8061.jpeg">
-<h3>ORION Sunglasses 02</h3>
-<div class="price">120 DH</div>
-<a class="order-btn" href="https://wa.me/212673830013?text=Hello%20ORION%20Accessories,%20I%20want%20to%20order%20Sunglasses%2002%20-%20120%20DH" target="_blank">Order</a>
-</div>
-
-<div class="product">
-<img src="IMG_8062.jpeg">
-<h3>ORION Sunglasses 03</h3>
-<div class="price">120 DH</div>
-<a class="order-btn" href="https://wa.me/212673830013?text=Hello%20ORION%20Accessories,%20I%20want%20to%20order%20Sunglasses%2003%20-%20120%20DH" target="_blank">Order</a>
-</div>
-
-<div class="product">
-<img src="IMG_8063.jpeg">
-<h3>ORION Sunglasses 04</h3>
-<div class="price">120 DH</div>
-<a class="order-btn" href="https://wa.me/212673830013?text=Hello%20ORION%20Accessories,%20I%20want%20to%20order%20Sunglasses%2004%20-%20120%20DH" target="_blank">Order</a>
-</div>
-
-<div class="product">
-<img src="IMG_8064.jpeg">
-<h3>ORION Sunglasses 05</h3>
-<div class="price">120 DH</div>
-<a class="order-btn" href="https://wa.me/212673830013?text=Hello%20ORION%20Accessories,%20I%20want%20to%20order%20Sunglasses%2005%20-%20120%20DH" target="_blank">Order</a>
-</div>
-
-<div class="product">
-<img src="IMG_8065.jpeg">
-<h3>ORION Sunglasses 06</h3>
-<div class="price">120 DH</div>
-<a class="order-btn" href="https://wa.me/212673830013?text=Hello%20ORION%20Accessories,%20I%20want%20to%20order%20Sunglasses%2006%20-%20120%20DH" target="_blank">Order</a>
-</div>
-
-<div class="product">
-<img src="IMG_8066.jpeg">
-<h3>ORION Sunglasses 07</h3>
-<div class="price">120 DH</div>
-<a class="order-btn" href="https://wa.me/212673830013?text=Hello%20ORION%20Accessories,%20I%20want%20to%20order%20Sunglasses%2007%20-%20120%20DH" target="_blank">Order</a>
-</div>
-
-<div class="product">
-<img src="IMG_8067.jpeg">
-<h3>ORION Sunglasses 08</h3>
-<div class="price">120 DH</div>
-<a class="order-btn" href="https://wa.me/212673830013?text=Hello%20ORION%20Accessories,%20I%20want%20to%20order%20Sunglasses%2008%20-%20120%20DH" target="_blank">Order</a>
-</div>
-
-<div class="product">
-<img src="IMG_8072.jpeg">
-<h3>ORION Sunglasses 09</h3>
-<div class="price">150 DH</div>
-<a class="order-btn" href="https://wa.me/212673830013?text=Hello%20ORION%20Accessories,%20I%20want%20to%20order%20Sunglasses%2009%20-%20150%20DH" target="_blank">Order</a>
-</div>
-
-<div class="product">
-<img src="IMG_8073.jpeg">
-<h3>ORION Sunglasses 10</h3>
-<div class="price">150 DH</div>
-<a class="order-btn" href="https://wa.me/212673830013?text=Hello%20ORION%20Accessories,%20I%20want%20to%20order%20Sunglasses%2010%20-%20150%20DH" target="_blank">Order</a>
-</div>
-
-</div>
-
-
-<!-- CHAINS -->
-<h2 class="section-title">Chains</h2>
-
-<div class="products">
-
-<div class="product">
-<img src="IMG_8075.jpeg">
-<h3>ORION Chain 01</h3>
-<div class="price">80 DH</div>
-<a class="order-btn" href="https://wa.me/212673830013?text=Hello%20ORION%20Accessories,%20I%20want%20to%20order%20Chain%2001%20-%2080%20DH" target="_blank">Order</a>
-</div>
-
-<div class="product">
-<img src="IMG_8077.jpeg">
-<h3>ORION Chain 02</h3>
-<div class="price">80 DH</div>
-<a class="order-btn" href="https://wa.me/212673830013?text=Hello%20ORION%20Accessories,%20I%20want%20to%20order%20Chain%2002%20-%2080%20DH" target="_blank">Order</a>
-</div>
-
-<div class="product">
-<img src="IMG_8078.jpeg">
-<h3>ORION Chain 03</h3>
-<div class="price">80 DH</div>
-<a class="order-btn" href="https://wa.me/212673830013?text=Hello%20ORION%20Accessories,%20I%20want%20to%20order%20Chain%2003%20-%2080%20DH" target="_blank">Order</a>
-</div>
-
-<div class="product">
-<img src="IMG_8079.jpeg">
-<h3>ORION Chain 04</h3>
-<div class="price">80 DH</div>
-<a class="order-btn" href="https://wa.me/212673830013?text=Hello%20ORION%20Accessories,%20I%20want%20to%20order%20Chain%2004%20-%2080%20DH" target="_blank">Order</a>
-</div>
-
-<div class="product">
-<img src="IMG_8080.jpeg">
-<h3>ORION Chain 05</h3>
-<div class="price">80 DH</div>
-<a class="order-btn" href="https://wa.me/212673830013?text=Hello%20ORION%20Accessories,%20I%20want%20to%20order%20Chain%2005%20-%2080%20DH" target="_blank">Order</a>
-</div>
-
-<div class="product">
-<img src="IMG_8081.jpeg">
-<h3>ORION Chain 06</h3>
-<div class="price">80 DH</div>
-<a class="order-btn" href="https://wa.me/212673830013?text=Hello%20ORION%20Accessories,%20I%20want%20to%20order%20Chain%2006%20-%2080%20DH" target="_blank">Order</a>
-</div>
-
-</div>
-
-
-<!-- SAUVAGE PACK -->
-<h2 class="section-title">Exclusive Pack</h2>
-
-<div class="products">
-
-<div class="product">
-<img src="IMG_8085.jpeg">
-<h3>Sauvage Pack</h3>
-<p>Watch + Chain + Sauvage</p>
-<div class="price">125 DH</div>
-
-<a class="order-btn" href="https://wa.me/212673830013?text=Hello%20ORION%20Accessories,%20I%20want%20to%20order%20Sauvage%20Pack%20-%20125%20DH" target="_blank">Order</a>
-</div>
-
-</div>
-
-</div>
-
-<footer>
-ORION Accessories
-</footer>
-
+        function handleContact(event) {
+            event.preventDefault();
+            alert('Thank you for reaching out to ORION Accessories!');
+            event.target.reset();
+        }
+    </script>
 </body>
 </html>
