@@ -1,265 +1,426 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>ORION Accessories</title>
+<title>ORION Accessories</title>
 
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+<style>
+* {
+    box-sizing: border-box;
+}
 
-    body {
-      font-family: Arial, sans-serif;
-      background: #080808;
-      color: #fff;
-    }
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f7f6f2;
+    color: #111;
+}
 
+header {
+    background: #0b0b0b;
+    text-align: center;
+    padding: 45px 20px;
+}
+
+header img {
+    width: 260px;
+    max-width: 85%;
+    height: auto;
+}
+
+header h1 {
+    color: white;
+    font-size: 38px;
+    letter-spacing: 6px;
+    margin: 0 0 8px;
+}
+
+header p {
+    color: #d4af37;
+    font-size: 22px;
+    margin: 0;
+}
+
+.intro {
+    text-align: center;
+    padding: 45px 20px 25px;
+}
+
+.intro h2 {
+    font-size: 38px;
+    margin-bottom: 15px;
+}
+
+.intro p {
+    color: #666;
+    font-size: 18px;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 34px;
+    margin: 40px 0 25px;
+}
+
+.products {
+    width: 92%;
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+}
+
+.product {
+    background: white;
+    border-radius: 20px;
+    padding: 18px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+
+.product img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    border-radius: 14px;
+}
+
+.product h3 {
+    font-size: 21px;
+    margin: 18px 0 8px;
+}
+
+.price {
+    color: #b08b20;
+    font-size: 23px;
+    font-weight: bold;
+    margin: 10px 0 18px;
+}
+
+.order-btn {
+    display: inline-block;
+    background: #111;
+    color: white;
+    text-decoration: none;
+    padding: 13px 30px;
+    border-radius: 30px;
+    font-size: 17px;
+    transition: 0.2s;
+}
+
+.order-btn:hover {
+    background: #d4af37;
+    color: #111;
+}
+
+footer {
+    background: #0b0b0b;
+    color: white;
+    text-align: center;
+    margin-top: 60px;
+    padding: 35px 20px;
+}
+
+footer span {
+    color: #d4af37;
+}
+
+@media (max-width: 600px) {
     header {
-      background: #080808;
-      text-align: center;
-      padding: 45px 20px;
-      border-bottom: 1px solid #d4af37;
+        padding: 35px 15px;
     }
 
-    .logo {
-      font-size: 42px;
-      letter-spacing: 8px;
-      font-weight: bold;
-      color: #fff;
+    header h1 {
+        font-size: 30px;
     }
 
-    .brand {
-      color: #d4af37;
-      font-size: 20px;
-      margin-top: 8px;
-      letter-spacing: 3px;
-    }
-
-    .hero {
-      text-align: center;
-      padding: 70px 20px;
-      background: linear-gradient(#111, #080808);
-    }
-
-    .hero h1 {
-      color: #d4af37;
-      font-size: 42px;
-      margin-bottom: 15px;
-    }
-
-    .hero p {
-      color: #ccc;
-      font-size: 18px;
-    }
-
-    section {
-      padding: 45px 20px;
-      max-width: 1100px;
-      margin: auto;
+    .intro h2 {
+        font-size: 30px;
     }
 
     .section-title {
-      text-align: center;
-      color: #d4af37;
-      font-size: 32px;
-      margin-bottom: 35px;
-      letter-spacing: 2px;
-    }
-
-    .products {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 25px;
-    }
-
-    .product {
-      background: #111;
-      border: 1px solid #333;
-      border-radius: 15px;
-      padding: 15px;
-      text-align: center;
-      transition: 0.3s;
-    }
-
-    .product:hover {
-      border-color: #d4af37;
-      transform: translateY(-5px);
+        font-size: 29px;
     }
 
     .product img {
-      width: 100%;
-      height: 230px;
-      object-fit: cover;
-      border-radius: 10px;
-      background: #222;
+        height: 240px;
     }
-
-    .product h3 {
-      margin: 15px 0 8px;
-      font-size: 19px;
-    }
-
-    .price {
-      color: #d4af37;
-      font-size: 21px;
-      font-weight: bold;
-      margin-bottom: 15px;
-    }
-
-    .order {
-      display: inline-block;
-      text-decoration: none;
-      background: #d4af37;
-      color: #080808;
-      padding: 11px 25px;
-      border-radius: 25px;
-      font-weight: bold;
-    }
-
-    .order:hover {
-      background: #fff;
-    }
-
-    footer {
-      text-align: center;
-      padding: 35px 20px;
-      border-top: 1px solid #333;
-      margin-top: 30px;
-    }
-
-    footer p {
-      color: #aaa;
-      margin-bottom: 15px;
-    }
-
-    .instagram {
-      color: #d4af37;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    @media (max-width: 600px) {
-      .logo {
-        font-size: 32px;
-      }
-
-      .hero h1 {
-        font-size: 32px;
-      }
-
-      .section-title {
-        font-size: 27px;
-      }
-    }
-  </style>
+}
+</style>
 </head>
 
 <body>
 
-  <header>
-    <div class="logo">ORION</div>
-    <div class="brand">Accessories</div>
-  </header>
+<header>
 
-  <div class="hero">
-    <h1>Luxury Accessories</h1>
-    <p>Discover our sunglasses, chains and exclusive packs.</p>
-  </div>
+    <img
+    src="803CDB18-8551-43D7-B862-30AA90CD5AC0.png"
+    alt="ORION Accessories">
 
-  <!-- SUNGLASSES -->
-  <section>
-    <h2 class="section-title">Sunglasses</h2>
+</header>
 
-    <div class="products">
+<section class="intro">
 
-      <div class="product">
-        <img src="IMG_8059.jpeg" alt="ORION Sunglasses">
-        <h3>ORION Sunglasses</h3>
+    <h2>Luxury Accessories</h2>
+
+    <p>
+        Discover our sunglasses, chains and exclusive packs.
+    </p>
+
+</section>
+
+
+<!-- SUNGLASSES -->
+
+<h2 class="section-title">Sunglasses</h2>
+
+<div class="products">
+
+    <div class="product">
+        <img src="IMG_8059.jpeg" alt="ORION Sunglasses 1">
+        <h3>ORION Sunglasses 01</h3>
         <div class="price">120 DH</div>
-        <a class="order" href="https://www.instagram.com/orion___accessories_official/" target="_blank">Order Now</a>
-      </div>
-
-      <div class="product">
-        <img src="IMG_8061.jpeg" alt="ORION Sunglasses">
-        <h3>ORION Sunglasses</h3>
-        <div class="price">120 DH</div>
-        <a class="order" href="https://www.instagram.com/orion___accessories_official/" target="_blank">Order Now</a>
-      </div>
-
-      <div class="product">
-        <img src="IMG_8062.jpeg" alt="ORION Sunglasses">
-        <h3>ORION Premium</h3>
-        <div class="price">150 DH</div>
-        <a class="order" href="https://www.instagram.com/orion___accessories_official/" target="_blank">Order Now</a>
-      </div>
-
-      <div class="product">
-        <img src="IMG_8063.jpeg" alt="ORION Sunglasses">
-        <h3>ORION Sunglasses</h3>
-        <div class="price">120 DH</div>
-        <a class="order" href="https://www.instagram.com/orion___accessories_official/" target="_blank">Order Now</a>
-      </div>
-
-      <div class="product">
-        <img src="IMG_8064.jpeg" alt="ORION Sunglasses">
-        <h3>ORION Premium</h3>
-        <div class="price">150 DH</div>
-        <a class="order" href="https://www.instagram.com/orion___accessories_official/" target="_blank">Order Now</a>
-      </div>
-
+        <a class="order-btn"
+        href="https://wa.me/212673830013?text=Hello%20ORION%20Accessories%2C%20I%20want%20to%20order%20ORION%20Sunglasses%2001%20-%20120%20DH"
+        target="_blank">
+        Order
+        </a>
     </div>
-  </section>
 
-  <!-- CHAINS -->
-  <section>
-    <h2 class="section-title">Chains</h2>
 
-    <div class="products">
-
-      <div class="product">
-        <h3>Luxury Chain</h3>
-        <div class="price">80 DH</div>
-        <a class="order" href="https://www.instagram.com/orion___accessories_official/" target="_blank">Order Now</a>
-      </div>
-
-      <div class="product">
-        <h3>Premium Chain</h3>
-        <div class="price">80 DH</div>
-        <a class="order" href="https://www.instagram.com/orion___accessories_official/" target="_blank">Order Now</a>
-      </div>
-
+    <div class="product">
+        <img src="IMG_8061.jpeg" alt="ORION Sunglasses 2">
+        <h3>ORION Sunglasses 02</h3>
+        <div class="price">120 DH</div>
+        <a class="order-btn"
+        href="https://wa.me/212673830013?text=Hello%20ORION%20Accessories%2C%20I%20want%20to%20order%20ORION%20Sunglasses%2002%20-%20120%20DH"
+        target="_blank">
+        Order
+        </a>
     </div>
-  </section>
 
-  <!-- EXCLUSIVE PACK -->
-  <section>
-    <h2 class="section-title">Exclusive Pack</h2>
 
-    <div class="products">
+    <div class="product">
+        <img src="IMG_8062.jpeg" alt="ORION Sunglasses 3">
+        <h3>ORION Sunglasses 03</h3>
+        <div class="price">120 DH</div>
+        <a class="order-btn"
+        href="https://wa.me/212673830013?text=Hello%20ORION%20Accessories%2C%20I%20want%20to%20order%20ORION%20Sunglasses%2003%20-%20120%20DH"
+        target="_blank">
+        Order
+        </a>
+    </div>
 
-      <div class="product">
-        <h3>Watch + Chain + Sauvage</h3>
+
+    <div class="product">
+        <img src="IMG_8063.jpeg" alt="ORION Sunglasses 4">
+        <h3>ORION Sunglasses 04</h3>
+        <div class="price">120 DH</div>
+        <a class="order-btn"
+        href="https://wa.me/212673830013?text=Hello%20ORION%20Accessories%2C%20I%20want%20to%20order%20ORION%20Sunglasses%2004%20-%20120%20DH"
+        target="_blank">
+        Order
+        </a>
+    </div>
+
+
+    <div class="product">
+        <img src="IMG_8064.jpeg" alt="ORION Sunglasses 5">
+        <h3>ORION Sunglasses 05</h3>
+        <div class="price">120 DH</div>
+        <a class="order-btn"
+        href="https://wa.me/212673830013?text=Hello%20ORION%20Accessories%2C%20I%20want%20to%20order%20ORION%20Sunglasses%2005%20-%20120%20DH"
+        target="_blank">
+        Order
+        </a>
+    </div>
+
+
+    <div class="product">
+        <img src="IMG_8065.jpeg" alt="ORION Sunglasses 6">
+        <h3>ORION Sunglasses 06</h3>
+        <div class="price">120 DH</div>
+        <a class="order-btn"
+        href="https://wa.me/212673830013?text=Hello%20ORION%20Accessories%2C%20I%20want%20to%20order%20ORION%20Sunglasses%2006%20-%20120%20DH"
+        target="_blank">
+        Order
+        </a>
+    </div>
+
+
+    <div class="product">
+        <img src="IMG_8066.jpeg" alt="ORION Sunglasses 7">
+        <h3>ORION Sunglasses 07</h3>
+        <div class="price">150 DH</div>
+        <a class="order-btn"
+        href="https://wa.me/212673830013?text=Hello%20ORION%20Accessories%2C%20I%20want%20to%20order%20ORION%20Sunglasses%2007%20-%20150%20DH"
+        target="_blank">
+        Order
+        </a>
+    </div>
+
+
+    <div class="product">
+        <img src="IMG_8067.jpeg" alt="ORION Sunglasses 8">
+        <h3>ORION Sunglasses 08</h3>
+        <div class="price">150 DH</div>
+        <a class="order-btn"
+        href="https://wa.me/212673830013?text=Hello%20ORION%20Accessories%2C%20I%20want%20to%20order%20ORION%20Sunglasses%2008%20-%20150%20DH"
+        target="_blank">
+        Order
+        </a>
+    </div>
+
+
+    <div class="product">
+        <img src="IMG_8072.jpeg" alt="ORION Sunglasses 9">
+        <h3>ORION Sunglasses 09</h3>
+        <div class="price">150 DH</div>
+        <a class="order-btn"
+        href="https://wa.me/212673830013?text=Hello%20ORION%20Accessories%2C%20I%20want%20to%20order%20ORION%20Sunglasses%2009%20-%20150%20DH"
+        target="_blank">
+        Order
+        </a>
+    </div>
+
+
+    <div class="product">
+        <img src="IMG_8073.jpeg" alt="ORION Sunglasses 10">
+        <h3>ORION Sunglasses 10</h3>
+        <div class="price">150 DH</div>
+        <a class="order-btn"
+        href="https://wa.me/212673830013?text=Hello%20ORION%20Accessories%2C%20I%20want%20to%20order%20ORION%20Sunglasses%2010%20-%20150%20DH"
+        target="_blank">
+        Order
+        </a>
+    </div>
+
+</div>
+
+
+<!-- CHAINS -->
+
+<h2 class="section-title">Chains</h2>
+
+<div class="products">
+
+    <div class="product">
+        <img src="IMG_8075.jpeg" alt="ORION Chain 1">
+        <h3>ORION Chain 01</h3>
+        <div class="price">80 DH</div>
+        <a class="order-btn"
+        href="https://wa.me/212673830013?text=Hello%20ORION%20Accessories%2C%20I%20want%20to%20order%20ORION%20Chain%2001%20-%2080%20DH"
+        target="_blank">
+        Order
+        </a>
+    </div>
+
+
+    <div class="product">
+        <img src="IMG_8077.jpeg" alt="ORION Chain 2">
+        <h3>ORION Chain 02</h3>
+        <div class="price">80 DH</div>
+        <a class="order-btn"
+        href="https://wa.me/212673830013?text=Hello%20ORION%20Accessories%2C%20I%20want%20to%20order%20ORION%20Chain%2002%20-%2080%20DH"
+        target="_blank">
+        Order
+        </a>
+    </div>
+
+
+    <div class="product">
+        <img src="IMG_8078.jpeg" alt="ORION Chain 3">
+        <h3>ORION Chain 03</h3>
+        <div class="price">80 DH</div>
+        <a class="order-btn"
+        href="https://wa.me/212673830013?text=Hello%20ORION%20Accessories%2C%20I%20want%20to%20order%20ORION%20Chain%2003%20-%2080%20DH"
+        target="_blank">
+        Order
+        </a>
+    </div>
+
+
+    <div class="product">
+        <img src="IMG_8079.jpeg" alt="ORION Chain 4">
+        <h3>ORION Chain 04</h3>
+        <div class="price">80 DH</div>
+        <a class="order-btn"
+        href="https://wa.me/212673830013?text=Hello%20ORION%20Accessories%2C%20I%20want%20to%20order%20ORION%20Chain%2004%20-%2080%20DH"
+        target="_blank">
+        Order
+        </a>
+    </div>
+
+
+    <div class="product">
+        <img src="IMG_8080.jpeg" alt="ORION Chain 5">
+        <h3>ORION Chain 05</h3>
+        <div class="price">80 DH</div>
+        <a class="order-btn"
+        href="https://wa.me/212673830013?text=Hello%20ORION%20Accessories%2C%20I%20want%20to%20order%20ORION%20Chain%2005%20-%2080%20DH"
+        target="_blank">
+        Order
+        </a>
+    </div>
+
+
+    <div class="product">
+        <img src="IMG_8081.jpeg" alt="ORION Chain 6">
+        <h3>ORION Chain 06</h3>
+        <div class="price">80 DH</div>
+        <a class="order-btn"
+        href="https://wa.me/212673830013?text=Hello%20ORION%20Accessories%2C%20I%20want%20to%20order%20ORION%20Chain%2006%20-%2080%20DH"
+        target="_blank">
+        Order
+        </a>
+    </div>
+
+</div>
+
+
+<!-- SAUVAGE PACK -->
+
+<h2 class="section-title">Exclusive Pack</h2>
+
+<div class="products">
+
+    <div class="product">
+
+        <img src="IMG_8085.jpeg" alt="Sauvage Pack">
+
+        <h3>Sauvage Pack</h3>
+
+        <p>
+            Watch + Chain + Sauvage
+        </p>
+
         <div class="price">125 DH</div>
-        <a class="order" href="https://www.instagram.com/orion___accessories_official/" target="_blank">Order Now</a>
-      </div>
+
+        <a class="order-btn"
+        href="https://wa.me/212673830013?text=Hello%20ORION%20Accessories%2C%20I%20want%20to%20order%20the%20Sauvage%20Pack%20-%20125%20DH"
+        target="_blank">
+        Order
+        </a>
 
     </div>
-  </section>
 
-  <footer>
-    <p>ORION Accessories — Luxury & Style</p>
+</div>
 
-    <a class="instagram"
-       href="https://www.instagram.com/orion___accessories_official/"
-       target="_blank">
-      Follow us on Instagram
-    </a>
-  </footer>
+
+<footer>
+
+    <p>
+        © 2026 <span>ORION Accessories</span>
+    </p>
+
+    <p>
+        Luxury • Style • Quality
+    </p>
+
+</footer>
 
 </body>
 </html>
