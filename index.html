@@ -219,27 +219,41 @@ footer{
   <div class="subtitle">ACCESSORIES</div>
 
   <div class="nav">
-    <button id="glassesBtn" class="active" onclick="showSection('glasses')">
+
+    <button id="glassesBtn"
+            class="active"
+            onclick="showSection('glasses')">
       🕶️ Glasses
     </button>
 
-    <button id="chainsBtn" onclick="showSection('chains')">
+    <button id="chainsBtn"
+            onclick="showSection('chains')">
       ⛓️ Chains
+    </button>
+
+    <button id="braceletsBtn"
+            onclick="showSection('bracelets')">
+      💎 Bracelets
     </button>
 
     <button onclick="showSection('watches')">
       ⌚ Watches
     </button>
+
   </div>
 
   <div class="controls">
-    <button onclick="toggleTheme()">🌙 / ☀️</button>
+
+    <button onclick="toggleTheme()">
+      🌙 / ☀️
+    </button>
 
     <select onchange="changeLanguage(this.value)">
       <option value="en">English</option>
       <option value="fr">Français</option>
       <option value="ar">العربية</option>
     </select>
+
   </div>
 
 </header>
@@ -263,6 +277,17 @@ footer{
 <h2 class="section-title">ORION Chains</h2>
 
 <div id="chainProducts" class="products"></div>
+
+</section>
+
+
+<!-- ================= WOMEN BRACELETS ================= -->
+
+<section id="bracelets" class="section hidden">
+
+<h2 class="section-title">ORION Women's Bracelets</h2>
+
+<div id="braceletProducts" class="products"></div>
 
 </section>
 
@@ -589,6 +614,66 @@ const chains = [
 
 
 /* =====================================================
+   WOMEN BRACELETS
+===================================================== */
+
+const bracelets = [
+
+{
+  model:"01",
+  price:80,
+  category:"Women",
+  images:[
+    "ORION Bracelets model 01 80dh 1.JPG",
+    "ORION Bracelets model 01 80dh 4.JPG",
+    "ORION Bracelets model 01 80dh 7.JPG",
+    "ORION Bracelets model 01 80dh 2.JPG",
+    "ORION Bracelets model 01 80dh 3.JPG",
+    "ORION Bracelets model 01 80dh 5.JPG",
+    "ORION Bracelets model 01 80dh 6.JPG",
+    "ORION Bracelets model 01 80dh 8.JPG"
+  ]
+},
+
+{
+  model:"02",
+  price:80,
+  category:"Women",
+  images:[
+    "ORION Bracelets model 02 80dh 2.JPG",
+    "ORION Bracelets model 02 80dh 4.JPG",
+    "ORION Bracelets model 02 80dh 1.JPG",
+    "ORION Bracelets model 02 80dh 3.JPG"
+  ]
+},
+
+{
+  model:"03",
+  price:80,
+  category:"Women",
+  images:[
+    "ORION Bracelets model 03 80dh 2.JPG",
+    "ORION Bracelets model 03 80dh 4.JPG",
+    "ORION Bracelets model 03 80dh 1.JPG",
+    "ORION Bracelets model 03 80dh 3.JPG"
+  ]
+},
+
+{
+  model:"04",
+  price:100,
+  category:"Women",
+  images:[
+    "ORION Bracelets model 04 100dh 3.JPG",
+    "ORION Bracelets model 04 100dh 2.JPG",
+    "ORION Bracelets model 04 100dh 1.JPG"
+  ]
+}
+
+];
+
+
+/* =====================================================
    CREATE PRODUCTS
 ===================================================== */
 
@@ -621,13 +706,25 @@ function createProducts(list, containerId, type){
     let categoryText = "";
 
     if(product.category){
-      categoryText = `<div style="color:#aaa;margin-bottom:10px;">
-        ${product.category}
-      </div>`;
+      categoryText = `
+        <div style="color:#aaa;margin-bottom:10px;">
+          ${product.category}
+        </div>
+      `;
+    }
+
+    let productName = "Glasses";
+
+    if(type === "chain"){
+      productName = "Chain";
+    }
+
+    if(type === "bracelet"){
+      productName = "Women's Bracelet";
     }
 
     const message =
-      `Hello ORION Accessories, I want ${type === "chain" ? "Chain" : "Glasses"} Model ${product.model} - ${product.price} DH`;
+      `Hello ORION Accessories, I want ${productName} Model ${product.model} - ${product.price} DH`;
 
     const whatsappLink =
       `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
@@ -638,7 +735,7 @@ function createProducts(list, containerId, type){
         id="${mainId}"
         class="main-image"
         src="${encodeURI(product.images[0])}"
-        alt="ORION ${type} Model ${product.model}"
+        alt="ORION ${productName} Model ${product.model}"
         onerror="imageError(this)"
       >
 
@@ -647,7 +744,7 @@ function createProducts(list, containerId, type){
       </div>
 
       <h3>
-        ORION ${type === "chain" ? "Chain" : "Glasses"} Model ${product.model}
+        ORION ${productName} Model ${product.model}
       </h3>
 
       ${categoryText}
@@ -700,12 +797,14 @@ function showSection(section){
 
   document.getElementById("glasses").classList.add("hidden");
   document.getElementById("chains").classList.add("hidden");
+  document.getElementById("bracelets").classList.add("hidden");
   document.getElementById("watches").classList.add("hidden");
 
   document.getElementById(section).classList.remove("hidden");
 
   document.getElementById("glassesBtn").classList.remove("active");
   document.getElementById("chainsBtn").classList.remove("active");
+  document.getElementById("braceletsBtn").classList.remove("active");
 
   if(section === "glasses"){
     document.getElementById("glassesBtn").classList.add("active");
@@ -713,6 +812,10 @@ function showSection(section){
 
   if(section === "chains"){
     document.getElementById("chainsBtn").classList.add("active");
+  }
+
+  if(section === "bracelets"){
+    document.getElementById("braceletsBtn").classList.add("active");
   }
 
 }
@@ -753,6 +856,8 @@ function changeLanguage(language){
 createProducts(glasses,"glassesProducts","glasses");
 
 createProducts(chains,"chainProducts","chain");
+
+createProducts(bracelets,"braceletProducts","bracelet");
 
 </script>
 
