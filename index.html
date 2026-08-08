@@ -3,14 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>ORION Accessories</title>
 
-  <meta name="description" content="ORION Accessories — Stylish sunglasses and chains in Morocco. Discover our latest models and order easily via WhatsApp.">
-
+<meta name="description" content="ORION Accessories — Stylish sunglasses and chains in Morocco. Discover our latest models and order easily via WhatsApp.">
 <meta name="keywords" content="ORION Accessories, ORION Glasses, sunglasses Morocco, chains Morocco, accessoires Maroc">
-
 <meta name="author" content="ORION Accessories">
-
 <meta name="robots" content="index, follow">
 
 <link rel="canonical" href="https://oreonaccessoires.github.io/OREON-/">
@@ -20,7 +18,8 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://oreonaccessoires.github.io/OREON-/">
 
-  <style>
+<style>
+
 :root{
   --gold:#d4af37;
   --bg:#050505;
@@ -206,6 +205,7 @@ footer{
 }
 
 @media(max-width:600px){
+
   .logo{
     font-size:38px;
     letter-spacing:7px;
@@ -222,7 +222,9 @@ footer{
   .product h3{
     font-size:23px;
   }
+
 }
+
 </style>
 </head>
 
@@ -251,7 +253,13 @@ footer{
       💎 Bracelets
     </button>
 
-    <button onclick="showSection('watches')">
+    <button id="promoBtn"
+            onclick="showSection('promo')">
+      🔥 Promo
+    </button>
+
+    <button id="watchesBtn"
+            onclick="showSection('watches')">
       ⌚ Watches
     </button>
 
@@ -303,6 +311,94 @@ footer{
 <h2 class="section-title">ORION Women's Bracelets</h2>
 
 <div id="braceletProducts" class="products"></div>
+
+</section>
+
+
+<!-- ================= PROMO ================= -->
+
+<section id="promo" class="section hidden">
+
+<h2 class="section-title">ORION Women's Promo</h2>
+
+<div class="products">
+
+  <div class="product">
+
+    <img
+      id="promo-main"
+      class="main-image"
+      src="ORION Pack Elegance Femme 1.JPG"
+      alt="ORION Pack Élégance Femme"
+      onerror="imageError(this)"
+    >
+
+    <div class="thumbs">
+
+      <img
+        src="ORION Pack Elegance Femme 1.JPG"
+        alt="Pack Élégance Femme 1"
+        onclick="changeImage('promo-main',this.src)"
+        onerror="this.style.display='none'"
+      >
+
+      <img
+        src="ORION Pack Elegance Femme 2.JPG"
+        alt="Pack Élégance Femme 2"
+        onclick="changeImage('promo-main',this.src)"
+        onerror="this.style.display='none'"
+      >
+
+      <img
+        src="ORION Pack Elegance Femme 3.JPG"
+        alt="Pack Élégance Femme 3"
+        onclick="changeImage('promo-main',this.src)"
+        onerror="this.style.display='none'"
+      >
+
+      <img
+        src="ORION Pack Elegance Femme 4.JPG"
+        alt="Pack Élégance Femme 4"
+        onclick="changeImage('promo-main',this.src)"
+        onerror="this.style.display='none'"
+      >
+
+    </div>
+
+    <h3>
+      🔥 PROMO — 135 DH فقط
+    </h3>
+
+    <div style="
+      color:#aaa;
+      line-height:1.9;
+      font-size:17px;
+      margin-bottom:15px;
+    ">
+
+      💎 Pack Élégance Femme<br>
+
+      🎁 Bracelet + Collier + Boucles d’oreilles + Bague<br>
+
+      🎨 متوفر بألوان مختلفة
+
+    </div>
+
+    <div class="price">
+      135 DH
+    </div>
+
+    <a
+      class="whatsapp"
+      href="https://wa.me/212673830013?text=Hello%20ORION%20Accessories%2C%20I%20want%20the%20Pack%20%C3%89l%C3%A9gance%20Femme%20-%20135%20DH"
+      target="_blank"
+    >
+      🛍️ Commander maintenant sur WhatsApp
+    </a>
+
+  </div>
+
+</div>
 
 </section>
 
@@ -705,7 +801,7 @@ function createProducts(list, containerId, type){
 
     let thumbnails = "";
 
-    product.images.forEach((image,i)=>{
+    product.images.forEach((image)=>{
 
       thumbnails += `
         <img
@@ -721,11 +817,13 @@ function createProducts(list, containerId, type){
     let categoryText = "";
 
     if(product.category){
+
       categoryText = `
         <div style="color:#aaa;margin-bottom:10px;">
           ${product.category}
         </div>
       `;
+
     }
 
     let productName = "Glasses";
@@ -813,6 +911,7 @@ function showSection(section){
   document.getElementById("glasses").classList.add("hidden");
   document.getElementById("chains").classList.add("hidden");
   document.getElementById("bracelets").classList.add("hidden");
+  document.getElementById("promo").classList.add("hidden");
   document.getElementById("watches").classList.add("hidden");
 
   document.getElementById(section).classList.remove("hidden");
@@ -820,6 +919,7 @@ function showSection(section){
   document.getElementById("glassesBtn").classList.remove("active");
   document.getElementById("chainsBtn").classList.remove("active");
   document.getElementById("braceletsBtn").classList.remove("active");
+  document.getElementById("promoBtn").classList.remove("active");
 
   if(section === "glasses"){
     document.getElementById("glassesBtn").classList.add("active");
@@ -831,6 +931,10 @@ function showSection(section){
 
   if(section === "bracelets"){
     document.getElementById("braceletsBtn").classList.add("active");
+  }
+
+  if(section === "promo"){
+    document.getElementById("promoBtn").classList.add("active");
   }
 
 }
@@ -858,7 +962,7 @@ function changeLanguage(language){
   }
 
   if(language === "ar"){
-    alert("النسخة العربية ستتم إضافتها قريباً.");
+    alert("النسخة العربية ستتم إضافée قريباً.");
   }
 
 }
