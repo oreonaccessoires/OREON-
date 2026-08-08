@@ -4,23 +4,23 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>ORION Accessories | Morocco</title>
+<title>ORION Accessories | Sunglasses & Accessories Morocco</title>
 
 <link rel="icon" type="image/png" href="favicon.PNG">
 
-<meta name="description"
-content="ORION Accessories — Sunglasses, watches, chains, bracelets and exclusive promos in Morocco.">
+<meta name="description" content="ORION Accessories — Sunglasses, watches, chains, bracelets and exclusive packs in Morocco.">
+<meta name="keywords" content="ORION Accessories, sunglasses Morocco, watches Morocco, chains Morocco, bracelets Morocco">
+<meta name="author" content="ORION Accessories">
+<meta name="robots" content="index, follow">
+
+<link rel="canonical" href="https://oreonaccessoires.github.io/OREON-/">
 
 <style>
 
-/* =========================
-   RESET
-========================= */
-
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
 html {
@@ -35,38 +35,24 @@ body {
 }
 
 /* =========================
-   GOLD
-========================= */
-
-:root {
-    --gold: #d4af37;
-    --dark: #080808;
-    --light: #f5f5f3;
-}
-
-/* =========================
    HEADER
 ========================= */
 
 header {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-
     background: #080808;
     color: white;
-
-    padding: 16px 30px;
-
+    padding: 18px 35px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-
-    border-bottom: 1px solid var(--gold);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid #d4af37;
 }
 
 .logo {
-    color: var(--gold);
+    color: #d4af37;
     font-size: 25px;
     font-weight: bold;
     letter-spacing: 5px;
@@ -74,7 +60,7 @@ header {
 
 .logo span {
     display: block;
-    font-size: 10px;
+    font-size: 11px;
     letter-spacing: 3px;
     text-align: center;
     margin-top: 4px;
@@ -90,24 +76,25 @@ nav a {
     color: white;
     text-decoration: none;
     font-weight: bold;
-    font-size: 14px;
+    font-size: 15px;
 }
 
 nav a:hover {
-    color: var(--gold);
+    color: #d4af37;
 }
 
+/* =========================
+   DARK BUTTON
+========================= */
+
 .dark-toggle {
-    width: 52px;
-    height: 34px;
-
+    width: 62px;
+    height: 36px;
+    border: 1px solid #d4af37;
     border-radius: 30px;
-    border: 1px solid var(--gold);
-
     background: #111;
-    color: var(--gold);
-
-    font-size: 18px;
+    color: #d4af37;
+    font-size: 20px;
     cursor: pointer;
 }
 
@@ -118,22 +105,56 @@ nav a:hover {
 .hero {
     background: #080808;
     color: white;
-
     text-align: center;
-
-    padding: 85px 20px;
+    padding: 90px 20px;
 }
 
 .hero h1 {
-    color: var(--gold);
+    color: #d4af37;
     font-size: 55px;
-    letter-spacing: 10px;
+    letter-spacing: 8px;
 }
 
 .hero p {
     margin-top: 12px;
-    font-size: 19px;
-    letter-spacing: 4px;
+    color: white;
+    font-size: 20px;
+    letter-spacing: 3px;
+}
+
+/* =========================
+   CATEGORY BUTTONS
+========================= */
+
+.categories {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 35px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 14px;
+    flex-wrap: wrap;
+    background: #f5f5f3;
+}
+
+.category-btn {
+    text-decoration: none;
+    color: #111;
+    background: white;
+    border: 1px solid #d4af37;
+    padding: 13px 22px;
+    border-radius: 30px;
+    font-size: 15px;
+    font-weight: bold;
+    transition: .25s;
+    box-shadow: 0 4px 12px rgba(0,0,0,.06);
+}
+
+.category-btn:hover {
+    background: #d4af37;
+    color: #111;
+    transform: translateY(-3px);
 }
 
 /* =========================
@@ -142,21 +163,21 @@ nav a:hover {
 
 .intro {
     text-align: center;
-    padding: 65px 20px 35px;
+    padding: 40px 20px 30px;
 }
 
 .intro h2 {
-    font-size: 38px;
+    font-size: 40px;
 }
 
 .intro p {
+    margin-top: 15px;
     color: #666;
-    margin-top: 12px;
-    font-size: 17px;
+    font-size: 18px;
 }
 
 /* =========================
-   SECTION
+   SECTIONS
 ========================= */
 
 .section {
@@ -167,22 +188,17 @@ nav a:hover {
 
 .section-title {
     text-align: center;
-    font-size: 35px;
+    font-size: 38px;
     margin-bottom: 40px;
 }
 
 .section-title::after {
     content: "";
-
     display: block;
-
-    width: 70px;
+    width: 75px;
     height: 4px;
-
-    background: var(--gold);
-
+    background: #d4af37;
     margin: 14px auto;
-
     border-radius: 10px;
 }
 
@@ -192,124 +208,60 @@ nav a:hover {
 
 .products {
     display: grid;
-
-    grid-template-columns:
-    repeat(auto-fit, minmax(260px, 1fr));
-
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
     gap: 25px;
 }
 
-/* =========================
-   PRODUCT CARD
-========================= */
-
 .product {
     background: white;
-
     border-radius: 22px;
-
     overflow: hidden;
-
     text-align: center;
-
-    box-shadow:
-    0 7px 25px rgba(0,0,0,.10);
-
+    box-shadow: 0 7px 25px rgba(0,0,0,.10);
     padding-bottom: 25px;
-
     transition: .3s;
 }
 
 .product:hover {
-    transform: translateY(-6px);
+    transform: translateY(-5px);
 }
 
-/* =========================
-   IMAGE PLACEHOLDER
-========================= */
-
-.product-image {
+.product img {
     width: 100%;
-    height: 360px;
-
-    background:
-    linear-gradient(
-        135deg,
-        #eeeeee,
-        #ffffff
-    );
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    color: #999;
-
-    font-size: 16px;
+    height: auto;
+    max-height: 520px;
+    object-fit: contain;
+    display: block;
+    background: #fff;
 }
-
-.product-image span {
-    border: 2px dashed #bbb;
-
-    padding: 18px 30px;
-
-    border-radius: 12px;
-}
-
-/* =========================
-   PRODUCT INFO
-========================= */
 
 .product h3 {
     font-size: 21px;
-
-    margin: 20px 10px 8px;
-}
-
-.product-description {
-    color: #777;
-
-    font-size: 15px;
-
-    margin-bottom: 10px;
+    margin: 20px 10px 10px;
 }
 
 .price {
     color: #b08c20;
-
     font-size: 25px;
-
     font-weight: bold;
-
-    margin: 12px 0 20px;
+    margin: 10px 0 20px;
 }
-
-/* =========================
-   ORDER BUTTON
-========================= */
 
 .order-btn {
     border: none;
-
-    background: var(--gold);
-
+    background: #d4af37;
     color: #111;
-
     padding: 14px 35px;
-
     border-radius: 30px;
-
-    font-size: 16px;
-
+    font-size: 17px;
     font-weight: bold;
-
     cursor: pointer;
-
     transition: .2s;
 }
 
 .order-btn:hover {
-    transform: scale(1.05);
+    background: #b99728;
+    transform: scale(1.04);
 }
 
 /* =========================
@@ -317,15 +269,11 @@ nav a:hover {
 ========================= */
 
 .promo-section {
-    max-width: 1200px;
-
-    margin: 30px auto;
-
-    padding: 55px 20px;
-
     background: #111;
-
+    max-width: 1200px;
+    margin: 40px auto;
     border-radius: 30px;
+    padding: 55px 20px;
 }
 
 .promo-section .section-title {
@@ -334,19 +282,18 @@ nav a:hover {
 
 .promo-card {
     background: #080808;
-
+    border: 1px solid #d4af37;
     color: white;
-
-    border: 1px solid var(--gold);
-}
-
-.promo-card .product-image {
-    background: #111;
-    color: #777;
 }
 
 .promo-card h3 {
-    color: var(--gold);
+    color: #d4af37;
+}
+
+.promo-text {
+    color: white;
+    font-size: 17px;
+    margin: 10px 0 15px;
 }
 
 /* =========================
@@ -355,22 +302,14 @@ nav a:hover {
 
 footer {
     background: #080808;
-
     color: white;
-
     text-align: center;
-
-    padding: 45px 20px;
-
+    padding: 40px 20px;
     margin-top: 50px;
 }
 
 footer strong {
-    color: var(--gold);
-}
-
-footer p {
-    margin-top: 10px;
+    color: #d4af37;
 }
 
 /* =========================
@@ -379,123 +318,82 @@ footer p {
 
 .modal {
     display: none;
-
     position: fixed;
-
     inset: 0;
-
+    background: rgba(0,0,0,.80);
     z-index: 2000;
-
-    background: rgba(0,0,0,.8);
-
     justify-content: center;
-
     align-items: center;
-
     padding: 20px;
 }
 
 .modal-box {
-    width: 100%;
-
-    max-width: 420px;
-
     background: #111;
-
     color: white;
-
-    border: 1px solid var(--gold);
-
+    width: 100%;
+    max-width: 420px;
+    border: 1px solid #d4af37;
     border-radius: 20px;
-
     padding: 28px;
-
-    text-align: center;
-
     position: relative;
+    text-align: center;
 }
 
 .modal-box h2 {
-    color: var(--gold);
-
-    margin-bottom: 20px;
+    color: #d4af37;
+    margin-bottom: 22px;
+    font-size: 30px;
 }
 
 .close {
     position: absolute;
-
     right: 18px;
-
-    top: 8px;
-
+    top: 10px;
+    color: white;
     font-size: 30px;
-
     cursor: pointer;
 }
 
 .selected-product {
     background: #080808;
-
     border: 1px solid #333;
-
     border-radius: 12px;
-
     padding: 15px;
-
     margin-bottom: 20px;
 }
 
 .selected-product strong {
-    color: var(--gold);
+    color: #d4af37;
 }
 
 .quantity-label {
     display: block;
-
     text-align: left;
-
-    color: var(--gold);
-
     font-weight: bold;
-
+    color: #d4af37;
     margin-bottom: 8px;
 }
 
 #quantity {
     width: 100%;
-
-    padding: 13px;
-
+    padding: 14px;
     background: #000;
-
     color: white;
-
     border: 1px solid #555;
-
     border-radius: 10px;
-
-    font-size: 16px;
-
+    font-size: 17px;
     margin-bottom: 18px;
 }
 
 .whatsapp {
     width: 100%;
-
     border: none;
-
-    background: var(--gold);
-
+    background: #d4af37;
     color: #111;
-
     padding: 15px;
-
     border-radius: 30px;
-
+    font-size: 17px;
     font-weight: bold;
-
-    font-size: 16px;
-
     cursor: pointer;
 }
 
@@ -505,7 +403,15 @@ footer p {
 
 body.dark {
     background: #050505;
+    color: white;
+}
 
+body.dark .categories {
+    background: #050505;
+}
+
+body.dark .category-btn {
+    background: #111;
     color: white;
 }
 
@@ -519,12 +425,11 @@ body.dark .intro p {
 
 body.dark .product {
     background: #111;
-
     color: white;
 }
 
-body.dark .product-image {
-    background: #181818;
+body.dark .product img {
+    background: #111;
 }
 
 body.dark .section-title {
@@ -538,7 +443,8 @@ body.dark .section-title {
 @media(max-width:700px) {
 
     header {
-        padding: 14px 12px;
+        padding: 15px 12px;
+        gap: 8px;
     }
 
     .logo {
@@ -548,20 +454,21 @@ body.dark .section-title {
 
     .logo span {
         font-size: 8px;
+        letter-spacing: 2px;
     }
 
     nav {
-        gap: 9px;
+        gap: 10px;
     }
 
     nav a {
-        font-size: 11px;
+        font-size: 12px;
     }
 
     .dark-toggle {
-        width: 45px;
-        height: 30px;
-        font-size: 16px;
+        width: 48px;
+        height: 32px;
+        font-size: 17px;
     }
 
     .hero {
@@ -570,15 +477,24 @@ body.dark .section-title {
 
     .hero h1 {
         font-size: 40px;
-        letter-spacing: 7px;
     }
 
     .hero p {
-        font-size: 15px;
+        font-size: 17px;
+    }
+
+    .categories {
+        padding: 25px 12px;
+        gap: 9px;
+    }
+
+    .category-btn {
+        padding: 11px 15px;
+        font-size: 13px;
     }
 
     .intro {
-        padding: 45px 20px 25px;
+        padding: 40px 20px 20px;
     }
 
     .intro h2 {
@@ -595,10 +511,11 @@ body.dark .section-title {
 
     .products {
         grid-template-columns: 1fr;
+        gap: 22px;
     }
 
-    .product-image {
-        height: 330px;
+    .product img {
+        max-height: none;
     }
 
     .promo-section {
@@ -610,9 +527,7 @@ body.dark .section-title {
 </style>
 </head>
 
-
 <body>
-
 
 <!-- =========================
      HEADER
@@ -621,31 +536,24 @@ body.dark .section-title {
 <header>
 
 <div class="logo">
-ORION
-<span>ACCESSORIES</span>
+    ORION
+    <span>ACCESSORIES</span>
 </div>
 
 <nav>
 
 <a href="#shop">Shop</a>
-
 <a href="#watches">Watches</a>
-
 <a href="#chains">Chains</a>
-
 <a href="#bracelets">Bracelets</a>
-
 <a href="#promo">Promo</a>
 
-<a
-href="https://www.instagram.com/orion___accessories_official/"
+<a href="https://www.instagram.com/orion___accessories_official/"
 target="_blank">
 Instagram
 </a>
 
-<button
-class="dark-toggle"
-onclick="toggleDarkMode()">
+<button class="dark-toggle" onclick="toggleDarkMode()">
 🌙
 </button>
 
@@ -662,7 +570,36 @@ onclick="toggleDarkMode()">
 
 <h1>ORION</h1>
 
-<p>LUXURY ACCESSORIES</p>
+<p>Luxury Accessories</p>
+
+</section>
+
+
+<!-- =========================
+     CATEGORY BUTTONS
+========================= -->
+
+<section class="categories">
+
+<a href="#shop" class="category-btn">
+🕶️ Sunglasses
+</a>
+
+<a href="#watches" class="category-btn">
+⌚ Watches
+</a>
+
+<a href="#chains" class="category-btn">
+⛓️ Chains
+</a>
+
+<a href="#bracelets" class="category-btn">
+💎 Bracelets
+</a>
+
+<a href="#promo" class="category-btn">
+🎁 Promo
+</a>
 
 </section>
 
@@ -676,7 +613,7 @@ onclick="toggleDarkMode()">
 <h2>Our Collection</h2>
 
 <p>
-Discover our latest collection.
+Discover our latest sunglasses, watches, chains, bracelets and exclusive promos.
 </p>
 
 </section>
@@ -698,213 +635,285 @@ Discover our latest collection.
 <!-- 150 DH -->
 
 <div class="product">
-
-<div class="product-image">
-<span>🕶️ Sunglasses Image</span>
-</div>
-
-<h3>ORION Sunglasses 01</h3>
-
-<p class="product-description">
-Premium Collection
-</p>
-
-<div class="price">
-150 DH
-</div>
-
-<button
-class="order-btn"
-onclick="openOrder('ORION Sunglasses 01','150 DH')">
+<img src="Glasses 150dh 7.JPG" alt="ORION Sunglasses 07">
+<h3>ORION Sunglasses 07</h3>
+<div class="price">150 DH</div>
+<button class="order-btn"
+onclick="openOrder('ORION Sunglasses 07','150 DH')">
 Order Now
 </button>
-
 </div>
-
 
 <div class="product">
-
-<div class="product-image">
-<span>🕶️ Sunglasses Image</span>
-</div>
-
-<h3>ORION Sunglasses 02</h3>
-
-<p class="product-description">
-Premium Collection
-</p>
-
-<div class="price">
-150 DH
-</div>
-
-<button
-class="order-btn"
-onclick="openOrder('ORION Sunglasses 02','150 DH')">
+<img src="Glasses 150dh 8.JPG" alt="ORION Sunglasses 08">
+<h3>ORION Sunglasses 08</h3>
+<div class="price">150 DH</div>
+<button class="order-btn"
+onclick="openOrder('ORION Sunglasses 08','150 DH')">
 Order Now
 </button>
+</div>
 
+<div class="product">
+<img src="Glasses 150dh 9.JPG" alt="ORION Sunglasses 09">
+<h3>ORION Sunglasses 09</h3>
+<div class="price">150 DH</div>
+<button class="order-btn"
+onclick="openOrder('ORION Sunglasses 09','150 DH')">
+Order Now
+</button>
+</div>
+
+<div class="product">
+<img src="Glasses 150dh 10.JPG" alt="ORION Sunglasses 10">
+<h3>ORION Sunglasses 10</h3>
+<div class="price">150 DH</div>
+<button class="order-btn"
+onclick="openOrder('ORION Sunglasses 10','150 DH')">
+Order Now
+</button>
 </div>
 
 
 <!-- 130 DH -->
 
 <div class="product">
-
-<div class="product-image">
-<span>🕶️ Sunglasses Image</span>
-</div>
-
-<h3>ORION Sunglasses 03</h3>
-
-<p class="product-description">
-Classic Collection
-</p>
-
-<div class="price">
-130 DH
-</div>
-
-<button
-class="order-btn"
-onclick="openOrder('ORION Sunglasses 03','130 DH')">
+<img src="Glasses 130dh 21.JPG" alt="ORION Sunglasses 21">
+<h3>ORION Sunglasses 21</h3>
+<div class="price">130 DH</div>
+<button class="order-btn"
+onclick="openOrder('ORION Sunglasses 21','130 DH')">
 Order Now
 </button>
-
 </div>
-
 
 <div class="product">
-
-<div class="product-image">
-<span>🕶️ Sunglasses Image</span>
-</div>
-
-<h3>ORION Sunglasses 04</h3>
-
-<p class="product-description">
-Classic Collection
-</p>
-
-<div class="price">
-130 DH
-</div>
-
-<button
-class="order-btn"
-onclick="openOrder('ORION Sunglasses 04','130 DH')">
+<img src="Glasses 130dh 24.JPG" alt="ORION Sunglasses 24">
+<h3>ORION Sunglasses 24</h3>
+<div class="price">130 DH</div>
+<button class="order-btn"
+onclick="openOrder('ORION Sunglasses 24','130 DH')">
 Order Now
 </button>
+</div>
 
+<div class="product">
+<img src="Glasses 130dh 25.JPG" alt="ORION Sunglasses 25">
+<h3>ORION Sunglasses 25</h3>
+<div class="price">130 DH</div>
+<button class="order-btn"
+onclick="openOrder('ORION Sunglasses 25','130 DH')">
+Order Now
+</button>
 </div>
 
 
 <!-- 120 DH -->
 
 <div class="product">
-
-<div class="product-image">
-<span>🕶️ Sunglasses Image</span>
+<img src="Glasses 120dh.JPG" alt="ORION Sunglasses 01">
+<h3>ORION Sunglasses 01</h3>
+<div class="price">120 DH</div>
+<button class="order-btn"
+onclick="openOrder('ORION Sunglasses 01','120 DH')">
+Order Now
+</button>
 </div>
 
+<div class="product">
+<img src="Glasses 120dh 2.JPG" alt="ORION Sunglasses 02">
+<h3>ORION Sunglasses 02</h3>
+<div class="price">120 DH</div>
+<button class="order-btn"
+onclick="openOrder('ORION Sunglasses 02','120 DH')">
+Order Now
+</button>
+</div>
+
+<div class="product">
+<img src="Glasses 120dh 3.JPG" alt="ORION Sunglasses 03">
+<h3>ORION Sunglasses 03</h3>
+<div class="price">120 DH</div>
+<button class="order-btn"
+onclick="openOrder('ORION Sunglasses 03','120 DH')">
+Order Now
+</button>
+</div>
+
+<div class="product">
+<img src="Glasses 120dh 4.JPG" alt="ORION Sunglasses 04">
+<h3>ORION Sunglasses 04</h3>
+<div class="price">120 DH</div>
+<button class="order-btn"
+onclick="openOrder('ORION Sunglasses 04','120 DH')">
+Order Now
+</button>
+</div>
+
+<div class="product">
+<img src="Glasses 120dh 5.JPG" alt="ORION Sunglasses 05">
 <h3>ORION Sunglasses 05</h3>
-
-<p class="product-description">
-Everyday Collection
-</p>
-
-<div class="price">
-120 DH
-</div>
-
-<button
-class="order-btn"
+<div class="price">120 DH</div>
+<button class="order-btn"
 onclick="openOrder('ORION Sunglasses 05','120 DH')">
 Order Now
 </button>
-
 </div>
-
 
 <div class="product">
-
-<div class="product-image">
-<span>🕶️ Sunglasses Image</span>
-</div>
-
+<img src="Glasses 120dh 6.JPG" alt="ORION Sunglasses 06">
 <h3>ORION Sunglasses 06</h3>
-
-<p class="product-description">
-Everyday Collection
-</p>
-
-<div class="price">
-120 DH
-</div>
-
-<button
-class="order-btn"
+<div class="price">120 DH</div>
+<button class="order-btn"
 onclick="openOrder('ORION Sunglasses 06','120 DH')">
 Order Now
 </button>
+</div>
 
+<div class="product">
+<img src="Glasses 120dh 11.JPG" alt="ORION Sunglasses 11">
+<h3>ORION Sunglasses 11</h3>
+<div class="price">120 DH</div>
+<button class="order-btn"
+onclick="openOrder('ORION Sunglasses 11','120 DH')">
+Order Now
+</button>
+</div>
+
+<div class="product">
+<img src="Glasses 120dh 12.JPG" alt="ORION Sunglasses 12">
+<h3>ORION Sunglasses 12</h3>
+<div class="price">120 DH</div>
+<button class="order-btn"
+onclick="openOrder('ORION Sunglasses 12','120 DH')">
+Order Now
+</button>
+</div>
+
+<div class="product">
+<img src="Glasses 120dh 13.JPG" alt="ORION Sunglasses 13">
+<h3>ORION Sunglasses 13</h3>
+<div class="price">120 DH</div>
+<button class="order-btn"
+onclick="openOrder('ORION Sunglasses 13','120 DH')">
+Order Now
+</button>
+</div>
+
+<div class="product">
+<img src="Glasses 120dh 14.JPG" alt="ORION Sunglasses 14">
+<h3>ORION Sunglasses 14</h3>
+<div class="price">120 DH</div>
+<button class="order-btn"
+onclick="openOrder('ORION Sunglasses 14','120 DH')">
+Order Now
+</button>
+</div>
+
+<div class="product">
+<img src="Glasses 120dh 15.JPG" alt="ORION Sunglasses 15">
+<h3>ORION Sunglasses 15</h3>
+<div class="price">120 DH</div>
+<button class="order-btn"
+onclick="openOrder('ORION Sunglasses 15','120 DH')">
+Order Now
+</button>
+</div>
+
+<div class="product">
+<img src="Glasses 120dh 16.JPG" alt="ORION Sunglasses 16">
+<h3>ORION Sunglasses 16</h3>
+<div class="price">120 DH</div>
+<button class="order-btn"
+onclick="openOrder('ORION Sunglasses 16','120 DH')">
+Order Now
+</button>
+</div>
+
+<div class="product">
+<img src="Glasses 120dh 17.JPG" alt="ORION Sunglasses 17">
+<h3>ORION Sunglasses 17</h3>
+<div class="price">120 DH</div>
+<button class="order-btn"
+onclick="openOrder('ORION Sunglasses 17','120 DH')">
+Order Now
+</button>
+</div>
+
+<div class="product">
+<img src="Glasses 120dh 19.JPG" alt="ORION Sunglasses 18">
+<h3>ORION Sunglasses 18</h3>
+<div class="price">120 DH</div>
+<button class="order-btn"
+onclick="openOrder('ORION Sunglasses 18','120 DH')">
+Order Now
+</button>
+</div>
+
+<div class="product">
+<img src="Glasses 120dh 20.JPG" alt="ORION Sunglasses 19">
+<h3>ORION Sunglasses 19</h3>
+<div class="price">120 DH</div>
+<button class="order-btn"
+onclick="openOrder('ORION Sunglasses 19','120 DH')">
+Order Now
+</button>
 </div>
 
 
 <!-- 100 DH -->
 
 <div class="product">
-
-<div class="product-image">
-<span>🕶️ Sunglasses Image</span>
-</div>
-
-<h3>ORION Sunglasses 07</h3>
-
-<p class="product-description">
-Essential Collection
-</p>
-
-<div class="price">
-100 DH
-</div>
-
-<button
-class="order-btn"
-onclick="openOrder('ORION Sunglasses 07','100 DH')">
+<img src="Glasses 100dh 26.JPG" alt="ORION Sunglasses 26">
+<h3>ORION Sunglasses 26</h3>
+<div class="price">100 DH</div>
+<button class="order-btn"
+onclick="openOrder('ORION Sunglasses 26','100 DH')">
 Order Now
 </button>
-
 </div>
-
 
 <div class="product">
-
-<div class="product-image">
-<span>🕶️ Sunglasses Image</span>
-</div>
-
-<h3>ORION Sunglasses 08</h3>
-
-<p class="product-description">
-Essential Collection
-</p>
-
-<div class="price">
-100 DH
-</div>
-
-<button
-class="order-btn"
-onclick="openOrder('ORION Sunglasses 08','100 DH')">
+<img src="Glasses 100dh 27.JPG" alt="ORION Sunglasses 27">
+<h3>ORION Sunglasses 27</h3>
+<div class="price">100 DH</div>
+<button class="order-btn"
+onclick="openOrder('ORION Sunglasses 27','100 DH')">
 Order Now
 </button>
-
 </div>
 
-
+<div class="product">
+<img src="Glasses 100dh 28.JPG" alt="ORION Sunglasses 28">
+<h3>ORION Sunglasses 28</h3>
+<div class="price">100 DH</div>
+<button class="order-btn"
+onclick="openOrder('ORION Sunglasses 28','100 DH')">
+Order Now
+</button>
 </div>
 
+<div class="product">
+<img src="Glasses 100dh 29.JPG" alt="ORION Sunglasses 29">
+<h3>ORION Sunglasses 29</h3>
+<div class="price">100 DH</div>
+<button class="order-btn"
+onclick="openOrder('ORION Sunglasses 29','100 DH')">
+Order Now
+</button>
+</div>
+
+<div class="product">
+<img src="Glasses 100dh 30.JPG" alt="ORION Sunglasses 30">
+<h3>ORION Sunglasses 30</h3>
+<div class="price">100 DH</div>
+<button class="order-btn"
+onclick="openOrder('ORION Sunglasses 30','100 DH')">
+Order Now
+</button>
+</div>
+
+</div>
 </section>
 
 
@@ -920,56 +929,7 @@ Order Now
 
 <div class="products">
 
-
-<div class="product">
-
-<div class="product-image">
-<span>⌚ Watch Image</span>
-</div>
-
-<h3>ORION Watch 01</h3>
-
-<p class="product-description">
-Luxury Watch
-</p>
-
-<div class="price">
-Coming Soon
-</div>
-
-<button
-class="order-btn"
-onclick="openOrder('ORION Watch 01','Coming Soon')">
-Order Now
-</button>
-
-</div>
-
-
-<div class="product">
-
-<div class="product-image">
-<span>⌚ Watch Image</span>
-</div>
-
-<h3>ORION Watch 02</h3>
-
-<p class="product-description">
-Premium Watch
-</p>
-
-<div class="price">
-Coming Soon
-</div>
-
-<button
-class="order-btn"
-onclick="openOrder('ORION Watch 02','Coming Soon')">
-Order Now
-</button>
-
-</div>
-
+<!-- أضف صور الساعات هنا -->
 
 </div>
 
@@ -988,84 +948,97 @@ Order Now
 
 <div class="products">
 
-
 <div class="product">
-
-<div class="product-image">
-<span>⛓️ Chain Image</span>
-</div>
-
+<img src="Snsla 1.JPG" alt="ORION Chain 01">
 <h3>ORION Chain 01</h3>
-
-<p class="product-description">
-Premium Chain
-</p>
-
-<div class="price">
-80 DH
-</div>
-
-<button
-class="order-btn"
+<div class="price">80 DH</div>
+<button class="order-btn"
 onclick="openOrder('ORION Chain 01','80 DH')">
 Order Now
 </button>
-
 </div>
-
 
 <div class="product">
-
-<div class="product-image">
-<span>⛓️ Chain Image</span>
-</div>
-
+<img src="Snsla 2.JPG" alt="ORION Chain 02">
 <h3>ORION Chain 02</h3>
-
-<p class="product-description">
-Premium Chain
-</p>
-
-<div class="price">
-80 DH
-</div>
-
-<button
-class="order-btn"
+<div class="price">80 DH</div>
+<button class="order-btn"
 onclick="openOrder('ORION Chain 02','80 DH')">
 Order Now
 </button>
-
 </div>
-
 
 <div class="product">
-
-<div class="product-image">
-<span>⛓️ Chain Image</span>
-</div>
-
+<img src="Snsla 3.JPG" alt="ORION Chain 03">
 <h3>ORION Chain 03</h3>
-
-<p class="product-description">
-Premium Chain
-</p>
-
-<div class="price">
-80 DH
-</div>
-
-<button
-class="order-btn"
+<div class="price">80 DH</div>
+<button class="order-btn"
 onclick="openOrder('ORION Chain 03','80 DH')">
 Order Now
 </button>
-
 </div>
 
-
+<div class="product">
+<img src="Snsla 4.JPG" alt="ORION Chain 04">
+<h3>ORION Chain 04</h3>
+<div class="price">80 DH</div>
+<button class="order-btn"
+onclick="openOrder('ORION Chain 04','80 DH')">
+Order Now
+</button>
 </div>
 
+<div class="product">
+<img src="Snsla 5.JPG" alt="ORION Chain 05">
+<h3>ORION Chain 05</h3>
+<div class="price">80 DH</div>
+<button class="order-btn"
+onclick="openOrder('ORION Chain 05','80 DH')">
+Order Now
+</button>
+</div>
+
+<div class="product">
+<img src="Snsla 6.JPG" alt="ORION Chain 06">
+<h3>ORION Chain 06</h3>
+<div class="price">80 DH</div>
+<button class="order-btn"
+onclick="openOrder('ORION Chain 06','80 DH')">
+Order Now
+</button>
+</div>
+
+<div class="product">
+<img src="Snsla 80dh 7.JPG" alt="ORION Chain 07">
+<h3>ORION Chain 07</h3>
+<div class="price">80 DH</div>
+<button class="order-btn"
+onclick="openOrder('ORION Chain 07','80 DH')">
+Order Now
+</button>
+</div>
+
+<div class="product">
+<img src="Snsla 80dh 8.JPG" alt="ORION Chain 08">
+<h3>ORION Chain 08</h3>
+<div class="price">80 DH</div>
+<button class="order-btn"
+onclick="openOrder('ORION Chain 08','80 DH')">
+Order Now
+</button>
+</div>
+
+<div class="product">
+<img src="Snsla 80dh 9.JPG" alt="ORION Chain 09">
+<h3>ORION Chain 09</h3>
+<div class="price">80 DH</div>
+<button class="order-btn"
+onclick="openOrder('ORION Chain 09','80 DH')">
+Order Now
+</button>
+</div>
+
+</div>
 </section>
 
 
@@ -1081,16 +1054,14 @@ Order Now
 
 <div class="products">
 
-
 <div class="product">
 
-<div class="product-image">
-<span>💎 Bracelet Image</span>
-</div>
+<img src="bracelet 80dh 1.JPG"
+alt="ORION Premium Bracelet">
 
-<h3>ORION Bracelet 01</h3>
+<h3>ORION Bracelet</h3>
 
-<p class="product-description">
+<p style="margin:10px 0;color:#666;">
 Premium Bracelet
 </p>
 
@@ -1098,14 +1069,12 @@ Premium Bracelet
 80 DH
 </div>
 
-<button
-class="order-btn"
-onclick="openOrder('ORION Bracelet 01','80 DH')">
+<button class="order-btn"
+onclick="openOrder('ORION Bracelet','80 DH')">
 Order Now
 </button>
 
 </div>
-
 
 </div>
 
@@ -1116,9 +1085,7 @@ Order Now
      PROMO
 ========================= -->
 
-<section
-class="promo-section"
-id="promo">
+<section class="promo-section" id="promo">
 
 <h2 class="section-title">
 🎁 Promo
@@ -1126,33 +1093,29 @@ id="promo">
 
 <div class="products">
 
-
 <div class="product promo-card">
 
-<div class="product-image">
-<span>🎁 Promo Image</span>
-</div>
+<img src="Pack 1.JPG"
+alt="ORION Sauvage Pack">
 
 <h3>
-ORION Exclusive Pack
+ORION Sauvage Pack
 </h3>
 
-<p class="product-description">
-Watch + Chain + Fragrance
+<p class="promo-text">
+Watch + Chain + Sauvage
 </p>
 
 <div class="price">
 125 DH
 </div>
 
-<button
-class="order-btn"
-onclick="openOrder('ORION Exclusive Pack','125 DH')">
+<button class="order-btn"
+onclick="openOrder('ORION Sauvage Pack - Watch + Chain + Sauvage','125 DH')">
 Order Now
 </button>
 
 </div>
-
 
 </div>
 
@@ -1163,21 +1126,21 @@ Order Now
      FOOTER
 ========================= -->
 
-<footer>
+<footer id="contact">
 
 <p>
 <strong>ORION Accessories</strong>
 </p>
 
-<p>
+<p style="margin-top:10px;">
 Luxury accessories with style.
 </p>
 
-<p>
+<p style="margin-top:10px;">
 WhatsApp: 0673830013
 </p>
 
-<p>
+<p style="margin-top:10px;">
 Instagram: @orion___accessories_official
 </p>
 
@@ -1188,17 +1151,11 @@ Instagram: @orion___accessories_official
      ORDER MODAL
 ========================= -->
 
-<div
-class="modal"
-id="orderModal">
+<div class="modal" id="orderModal">
 
 <div class="modal-box">
 
-<span
-class="close"
-onclick="closeOrder()">
-×
-</span>
+<span class="close" onclick="closeOrder()">×</span>
 
 <h2>Order</h2>
 
@@ -1225,11 +1182,10 @@ type="number"
 id="quantity"
 value="1"
 min="1"
-max="99">
+max="99"
+>
 
-<button
-class="whatsapp"
-onclick="sendWhatsApp()">
+<button class="whatsapp" onclick="sendWhatsApp()">
 Order on WhatsApp
 </button>
 
@@ -1240,44 +1196,30 @@ Order on WhatsApp
 
 <script>
 
-/* =========================
-   ORDER
-========================= */
-
 let selectedProduct = "";
 let selectedPrice = "";
 
+/* =========================
+   ORDER
+========================= */
 
 function openOrder(product, price) {
 
     selectedProduct = product;
     selectedPrice = price;
 
-    document.getElementById(
-        "selectedProduct"
-    ).textContent = product;
+    document.getElementById("selectedProduct").textContent = product;
+    document.getElementById("selectedPrice").textContent = price;
+    document.getElementById("quantity").value = 1;
 
-    document.getElementById(
-        "selectedPrice"
-    ).textContent = price;
-
-    document.getElementById(
-        "quantity"
-    ).value = 1;
-
-    document.getElementById(
-        "orderModal"
-    ).style.display = "flex";
+    document.getElementById("orderModal").style.display = "flex";
 }
-
 
 function closeOrder() {
 
-    document.getElementById(
-        "orderModal"
-    ).style.display = "none";
-}
+    document.getElementById("orderModal").style.display = "none";
 
+}
 
 /* =========================
    WHATSAPP
@@ -1286,9 +1228,7 @@ function closeOrder() {
 function sendWhatsApp() {
 
     const quantity =
-        document.getElementById(
-            "quantity"
-        ).value;
+        document.getElementById("quantity").value;
 
     if (!quantity || quantity < 1) {
 
@@ -1300,6 +1240,8 @@ function sendWhatsApp() {
     const message =
 `🛍️ ORION ACCESSORIES
 
+━━━━━━━━━━━━━━
+
 📦 PRODUCT
 ${selectedProduct}
 
@@ -1309,11 +1251,11 @@ ${selectedPrice}
 🔢 QUANTITY
 ${quantity}
 
+━━━━━━━━━━━━━━
+
 Thank you for your order 🤍`;
 
-
-    const whatsappNumber =
-        "212673830013";
+    const whatsappNumber = "212673830013";
 
     const whatsappURL =
         "https://wa.me/" +
@@ -1321,10 +1263,8 @@ Thank you for your order 🤍`;
         "?text=" +
         encodeURIComponent(message);
 
-    window.location.href =
-        whatsappURL;
+    window.location.href = whatsappURL;
 }
-
 
 /* =========================
    CLOSE MODAL
@@ -1333,16 +1273,13 @@ Thank you for your order 🤍`;
 window.onclick = function(event) {
 
     const modal =
-        document.getElementById(
-            "orderModal"
-        );
+        document.getElementById("orderModal");
 
     if (event.target === modal) {
 
         closeOrder();
     }
 };
-
 
 /* =========================
    DARK MODE
@@ -1353,50 +1290,33 @@ function toggleDarkMode() {
     document.body.classList.toggle("dark");
 
     const button =
-        document.querySelector(
-            ".dark-toggle"
-        );
+        document.querySelector(".dark-toggle");
 
-    if (
-        document.body.classList.contains("dark")
-    ) {
+    if (document.body.classList.contains("dark")) {
 
         button.textContent = "☀️";
 
-        localStorage.setItem(
-            "orionDarkMode",
-            "on"
-        );
+        localStorage.setItem("orionDarkMode", "on");
 
     } else {
 
         button.textContent = "🌙";
 
-        localStorage.setItem(
-            "orionDarkMode",
-            "off"
-        );
+        localStorage.setItem("orionDarkMode", "off");
     }
 }
 
-
 /* =========================
-   REMEMBER MODE
+   REMEMBER DARK MODE
 ========================= */
 
 window.onload = function() {
 
-    if (
-        localStorage.getItem(
-            "orionDarkMode"
-        ) === "on"
-    ) {
+    if (localStorage.getItem("orionDarkMode") === "on") {
 
         document.body.classList.add("dark");
 
-        document.querySelector(
-            ".dark-toggle"
-        ).textContent = "☀️";
+        document.querySelector(".dark-toggle").textContent = "☀️";
     }
 };
 
