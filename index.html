@@ -5,12 +5,12 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>ORION Accessories | Sunglasses & Accessories Morocco</title>
+<title>ORION Accessories | Luxury Accessories Morocco</title>
 
 <link rel="icon" type="image/png" href="favicon.PNG">
 
 <meta name="description"
-content="ORION Accessories — Sunglasses, chains, bracelets and exclusive accessories in Morocco.">
+content="ORION Accessories - Glasses, Chains, Bracelets and exclusive accessories in Morocco.">
 
 <style>
 
@@ -19,9 +19,9 @@ content="ORION Accessories — Sunglasses, chains, bracelets and exclusive acces
 ========================= */
 
 *{
-    box-sizing:border-box;
     margin:0;
     padding:0;
+    box-sizing:border-box;
 }
 
 html{
@@ -29,9 +29,10 @@ html{
 }
 
 body{
-    font-family:Arial,sans-serif;
+    font-family:Arial, sans-serif;
     background:#f5f5f3;
     color:#111;
+    transition:.3s;
 }
 
 /* =========================
@@ -39,15 +40,19 @@ body{
 ========================= */
 
 header{
-    background:#080808;
-    color:white;
-    padding:18px 30px;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
     position:sticky;
     top:0;
     z-index:1000;
+
+    background:#080808;
+    color:white;
+
+    padding:18px 35px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
     border-bottom:1px solid #d4af37;
 }
 
@@ -60,27 +65,36 @@ header{
 
 .logo span{
     display:block;
-    font-size:10px;
-    letter-spacing:4px;
     text-align:center;
-    margin-top:5px;
+    font-size:10px;
+    letter-spacing:3px;
+    margin-top:4px;
 }
 
 nav{
     display:flex;
-    gap:20px;
     align-items:center;
+    gap:20px;
 }
 
 nav a{
     color:white;
     text-decoration:none;
     font-weight:bold;
-    font-size:15px;
 }
 
 nav a:hover{
     color:#d4af37;
+}
+
+.dark-toggle{
+    width:45px;
+    height:35px;
+    border:1px solid #d4af37;
+    border-radius:25px;
+    background:#111;
+    color:#d4af37;
+    cursor:pointer;
 }
 
 /* =========================
@@ -91,7 +105,7 @@ nav a:hover{
     background:#080808;
     color:white;
     text-align:center;
-    padding:75px 20px;
+    padding:80px 20px;
 }
 
 .hero h1{
@@ -112,7 +126,7 @@ nav a:hover{
 
 .intro{
     text-align:center;
-    padding:55px 20px 25px;
+    padding:60px 20px 25px;
 }
 
 .intro h2{
@@ -120,8 +134,8 @@ nav a:hover{
 }
 
 .intro p{
-    margin-top:12px;
     color:#666;
+    margin-top:12px;
 }
 
 /* =========================
@@ -131,7 +145,7 @@ nav a:hover{
 .section{
     max-width:1200px;
     margin:auto;
-    padding:45px 20px;
+    padding:50px 20px;
 }
 
 .section-title{
@@ -146,7 +160,7 @@ nav a:hover{
     width:70px;
     height:4px;
     background:#d4af37;
-    margin:13px auto;
+    margin:14px auto;
     border-radius:10px;
 }
 
@@ -157,7 +171,7 @@ nav a:hover{
 .products{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-    gap:25px;
+    gap:28px;
 }
 
 /* =========================
@@ -169,7 +183,7 @@ nav a:hover{
     border-radius:22px;
     overflow:hidden;
     text-align:center;
-    box-shadow:0 7px 25px rgba(0,0,0,.10);
+    box-shadow:0 8px 25px rgba(0,0,0,.10);
     padding-bottom:25px;
     transition:.3s;
 }
@@ -184,36 +198,32 @@ nav a:hover{
 
 .main-image{
     width:100%;
-    height:330px;
-    object-fit:contain;
-    background:#fff;
+    height:auto;
     display:block;
-    cursor:pointer;
+    background:white;
+    object-fit:contain;
 }
 
 /* =========================
-   PRODUCT NAME
+   PRODUCT INFO
 ========================= */
 
 .product h3{
     font-size:21px;
-    margin:18px 10px 5px;
+    margin:18px 10px 8px;
 }
 
 .model-name{
     color:#777;
     font-size:15px;
+    margin-bottom:8px;
 }
-
-/* =========================
-   PRICE
-========================= */
 
 .price{
     color:#b08c20;
     font-size:25px;
     font-weight:bold;
-    margin:12px 0 15px;
+    margin:10px 0 18px;
 }
 
 /* =========================
@@ -223,37 +233,32 @@ nav a:hover{
 .variant-title{
     font-size:14px;
     font-weight:bold;
-    margin-bottom:10px;
     color:#555;
+    margin:8px 0 10px;
 }
 
 .variants{
     display:flex;
     justify-content:center;
-    gap:10px;
-    flex-wrap:wrap;
+    gap:9px;
     padding:0 12px;
     margin-bottom:18px;
 }
 
 .variant{
-    width:68px;
-    height:68px;
+    width:72px;
+    height:72px;
     object-fit:cover;
+
     border-radius:10px;
+
     border:2px solid #ddd;
-    cursor:pointer;
-    transition:.2s;
-    background:white;
+
+    display:block;
 }
 
 .variant:hover{
-    transform:scale(1.06);
     border-color:#d4af37;
-}
-
-.variant.active{
-    border:3px solid #d4af37;
 }
 
 /* =========================
@@ -264,17 +269,54 @@ nav a:hover{
     border:none;
     background:#d4af37;
     color:#111;
-    padding:14px 35px;
+
+    padding:14px 34px;
+
     border-radius:30px;
+
     font-size:17px;
     font-weight:bold;
+
     cursor:pointer;
+
     transition:.2s;
 }
 
 .order-btn:hover{
     background:#b99728;
     transform:scale(1.04);
+}
+
+/* =========================
+   PROMO
+========================= */
+
+.promo-section{
+    max-width:1200px;
+    margin:40px auto;
+    padding:50px 20px;
+
+    background:#111;
+    border-radius:30px;
+}
+
+.promo-section .section-title{
+    color:white;
+}
+
+.promo-card{
+    background:#080808;
+    border:1px solid #d4af37;
+    color:white;
+}
+
+.promo-card h3{
+    color:#d4af37;
+}
+
+.promo-text{
+    margin:10px 0 15px;
+    color:white;
 }
 
 /* =========================
@@ -285,8 +327,9 @@ footer{
     background:#080808;
     color:white;
     text-align:center;
+
     padding:40px 20px;
-    margin-top:40px;
+    margin-top:50px;
 }
 
 footer strong{
@@ -299,24 +342,35 @@ footer strong{
 
 .modal{
     display:none;
+
     position:fixed;
     inset:0;
-    background:rgba(0,0,0,.80);
+
+    background:rgba(0,0,0,.8);
+
     z-index:2000;
+
     justify-content:center;
     align-items:center;
+
     padding:20px;
 }
 
 .modal-box{
-    background:#111;
-    color:white;
     width:100%;
     max-width:420px;
+
+    background:#111;
+    color:white;
+
     border:1px solid #d4af37;
+
     border-radius:20px;
+
     padding:28px;
+
     position:relative;
+
     text-align:center;
 }
 
@@ -328,7 +382,8 @@ footer strong{
 .close{
     position:absolute;
     right:18px;
-    top:8px;
+    top:10px;
+
     color:white;
     font-size:30px;
     cursor:pointer;
@@ -337,8 +392,11 @@ footer strong{
 .selected-product{
     background:#080808;
     border:1px solid #333;
+
     border-radius:12px;
-    padding:18px;
+
+    padding:15px;
+
     margin-bottom:20px;
 }
 
@@ -349,32 +407,80 @@ footer strong{
 .quantity-label{
     display:block;
     text-align:left;
-    font-weight:bold;
+
     color:#d4af37;
+    font-weight:bold;
+
     margin-bottom:8px;
 }
 
 #quantity{
     width:100%;
+
     padding:14px;
+
     background:#000;
     color:white;
+
     border:1px solid #555;
+
     border-radius:10px;
+
     font-size:17px;
+
     margin-bottom:18px;
 }
 
 .whatsapp{
     width:100%;
+
     border:none;
+
     background:#d4af37;
     color:#111;
+
     padding:15px;
+
     border-radius:30px;
+
     font-size:17px;
     font-weight:bold;
+
     cursor:pointer;
+}
+
+/* =========================
+   DARK MODE
+========================= */
+
+body.dark{
+    background:#050505;
+    color:white;
+}
+
+body.dark .intro{
+    background:#050505;
+}
+
+body.dark .intro p{
+    color:#aaa;
+}
+
+body.dark .product{
+    background:#111;
+    color:white;
+}
+
+body.dark .main-image{
+    background:#111;
+}
+
+body.dark .variant{
+    border-color:#444;
+}
+
+body.dark .variant-title{
+    color:#aaa;
 }
 
 /* =========================
@@ -384,29 +490,30 @@ footer strong{
 @media(max-width:700px){
 
     header{
-        padding:15px 12px;
+        padding:14px 12px;
     }
 
     .logo{
-        font-size:19px;
+        font-size:18px;
         letter-spacing:3px;
     }
 
     .logo span{
-        font-size:8px;
+        font-size:7px;
     }
 
     nav{
-        gap:12px;
+        gap:10px;
     }
 
     nav a{
         font-size:12px;
     }
 
-    nav a:nth-child(3),
-    nav a:nth-child(4){
-        display:none;
+    .dark-toggle{
+        width:42px;
+        height:31px;
+        font-size:15px;
     }
 
     .hero{
@@ -421,12 +528,16 @@ footer strong{
         font-size:16px;
     }
 
+    .intro{
+        padding:45px 20px 20px;
+    }
+
     .intro h2{
         font-size:30px;
     }
 
     .section{
-        padding:35px 15px;
+        padding:40px 15px;
     }
 
     .section-title{
@@ -437,9 +548,8 @@ footer strong{
         grid-template-columns:1fr;
     }
 
-    .main-image{
-        height:auto;
-        max-height:430px;
+    .variants{
+        gap:7px;
     }
 
     .variant{
@@ -450,6 +560,7 @@ footer strong{
 }
 
 </style>
+
 </head>
 
 
@@ -470,9 +581,17 @@ footer strong{
 <nav>
 
 <a href="#glasses">Glasses</a>
+
 <a href="#chains">Chains</a>
+
 <a href="#bracelets">Bracelets</a>
+
 <a href="#promo">Promo</a>
+
+<button class="dark-toggle"
+onclick="toggleDarkMode()">
+🌙
+</button>
 
 </nav>
 
@@ -517,6 +636,7 @@ Discover our latest glasses, chains, bracelets and exclusive promos.
 🕶️ Glasses
 </h2>
 
+
 <div class="products">
 
 
@@ -526,66 +646,55 @@ Discover our latest glasses, chains, bracelets and exclusive promos.
 
 <div class="product">
 
+<!-- MAIN IMAGE -->
+
 <img
-id="mainModel01"
 class="main-image"
 src="ORION Glasses Model 01 Black.JPG"
-alt="ORION Glasses Model 01"
-onclick="openImage(this.src)"
->
+alt="ORION Glasses Model 01">
+
 
 <h3>
 ORION Glasses Model 01
 </h3>
 
+
 <p class="model-name">
 Model 01
 </p>
+
 
 <div class="price">
 150 DH
 </div>
 
-<p class="variant-title">
+
+<!-- OTHER COLORS -->
+
+<div class="variant-title">
 Available Colors
-</p>
+</div>
+
 
 <div class="variants">
 
 <img
-class="variant active"
+class="variant"
 src="ORION Glasses Model 01 Black.JPG"
-alt="Black"
-onclick="changeColor(
-'mainModel01',
-'ORION Glasses Model 01 Black.JPG',
-this
-)"
->
+alt="Black">
 
 <img
 class="variant"
 src="ORION Glasses Model 01 Blue.JPG"
-alt="Blue"
-onclick="changeColor(
-'mainModel01',
-'ORION Glasses Model 01 Blue.JPG',
-this
-)"
->
+alt="Blue">
 
 <img
 class="variant"
 src="ORION Glasses Model 01 Gold.JPG"
-alt="Gold"
-onclick="changeColor(
-'mainModel01',
-'ORION Glasses Model 01 Gold.JPG',
-this
-)"
->
+alt="Gold">
 
 </div>
+
 
 <button
 class="order-btn"
@@ -593,7 +702,9 @@ onclick="openOrder(
 'ORION Glasses Model 01',
 '150 DH'
 )">
+
 Order Now
+
 </button>
 
 </div>
@@ -606,12 +717,10 @@ Order Now
 <div class="product">
 
 <img
-id="mainModel02"
 class="main-image"
 src="ORION Glasses Model 02.JPG"
-alt="ORION Glasses Model 02"
-onclick="openImage(this.src)"
->
+alt="ORION Glasses Model 02">
+
 
 <h3>
 ORION Glasses Model 02
@@ -625,24 +734,33 @@ Model 02
 130 DH
 </div>
 
-<p class="variant-title">
+
+<div class="variant-title">
 Available Colors
-</p>
+</div>
+
 
 <div class="variants">
 
+<!-- Put Model 02 colors here -->
+
 <img
-class="variant active"
-src="ORION Glasses Model 02.JPG"
-alt="Color 01"
-onclick="changeColor(
-'mainModel02',
-'ORION Glasses Model 02.JPG',
-this
-)"
->
+class="variant"
+src="ORION Glasses Model 02 Black.JPG"
+alt="Black">
+
+<img
+class="variant"
+src="ORION Glasses Model 02 Blue.JPG"
+alt="Blue">
+
+<img
+class="variant"
+src="ORION Glasses Model 02 Gold.JPG"
+alt="Gold">
 
 </div>
+
 
 <button
 class="order-btn"
@@ -650,7 +768,73 @@ onclick="openOrder(
 'ORION Glasses Model 02',
 '130 DH'
 )">
+
 Order Now
+
+</button>
+
+</div>
+
+
+<!-- =========================
+     MODEL 03
+========================= -->
+
+<div class="product">
+
+<img
+class="main-image"
+src="ORION Glasses Model 03.JPG"
+alt="ORION Glasses Model 03">
+
+
+<h3>
+ORION Glasses Model 03
+</h3>
+
+<p class="model-name">
+Model 03
+</p>
+
+<div class="price">
+120 DH
+</div>
+
+
+<div class="variant-title">
+Available Colors
+</div>
+
+
+<div class="variants">
+
+<img
+class="variant"
+src="ORION Glasses Model 03 Black.JPG"
+alt="Black">
+
+<img
+class="variant"
+src="ORION Glasses Model 03 Blue.JPG"
+alt="Blue">
+
+<img
+class="variant"
+src="ORION Glasses Model 03 Gold.JPG"
+alt="Gold">
+
+</div>
+
+
+<button
+class="order-btn"
+onclick="openOrder(
+'ORION Glasses Model 03',
+'120 DH'
+)">
+
+Order Now
+
 </button>
 
 </div>
@@ -671,6 +855,7 @@ Order Now
 ⛓️ Chains
 </h2>
 
+
 <div class="products">
 
 
@@ -679,8 +864,8 @@ Order Now
 <img
 class="main-image"
 src="Snsla 1.JPG"
-alt="ORION Chain 01"
->
+alt="ORION Chain 01">
+
 
 <h3>
 ORION Chain 01
@@ -690,13 +875,78 @@ ORION Chain 01
 80 DH
 </div>
 
+
 <button
 class="order-btn"
 onclick="openOrder(
 'ORION Chain 01',
 '80 DH'
 )">
+
 Order Now
+
+</button>
+
+</div>
+
+
+<div class="product">
+
+<img
+class="main-image"
+src="Snsla 2.JPG"
+alt="ORION Chain 02">
+
+
+<h3>
+ORION Chain 02
+</h3>
+
+<div class="price">
+80 DH
+</div>
+
+
+<button
+class="order-btn"
+onclick="openOrder(
+'ORION Chain 02',
+'80 DH'
+)">
+
+Order Now
+
+</button>
+
+</div>
+
+
+<div class="product">
+
+<img
+class="main-image"
+src="Snsla 3.JPG"
+alt="ORION Chain 03">
+
+
+<h3>
+ORION Chain 03
+</h3>
+
+<div class="price">
+80 DH
+</div>
+
+
+<button
+class="order-btn"
+onclick="openOrder(
+'ORION Chain 03',
+'80 DH'
+)">
+
+Order Now
+
 </button>
 
 </div>
@@ -717,6 +967,7 @@ Order Now
 💎 Bracelets
 </h2>
 
+
 <div class="products">
 
 
@@ -725,20 +976,23 @@ Order Now
 <img
 class="main-image"
 src="bracelet 80dh 1.JPG"
-alt="ORION Bracelet"
->
+alt="ORION Bracelet">
+
 
 <h3>
 ORION Bracelet
 </h3>
 
+
 <p class="model-name">
 Premium Bracelet
 </p>
 
+
 <div class="price">
 80 DH
 </div>
+
 
 <button
 class="order-btn"
@@ -746,7 +1000,9 @@ onclick="openOrder(
 'ORION Bracelet',
 '80 DH'
 )">
+
 Order Now
+
 </button>
 
 </div>
@@ -761,42 +1017,48 @@ Order Now
      PROMO
 ========================= -->
 
-<section class="section" id="promo">
+<section class="promo-section" id="promo">
 
 <h2 class="section-title">
 🎁 Promo
 </h2>
 
+
 <div class="products">
 
 
-<div class="product">
+<div class="product promo-card">
 
 <img
 class="main-image"
 src="Pack 1.JPG"
-alt="ORION Sauvage Pack"
->
+alt="ORION Sauvage Pack">
+
 
 <h3>
 ORION Sauvage Pack
 </h3>
 
-<p class="model-name">
+
+<p class="promo-text">
 Watch + Chain + Sauvage
 </p>
+
 
 <div class="price">
 125 DH
 </div>
 
+
 <button
 class="order-btn"
 onclick="openOrder(
-'ORION Sauvage Pack',
+'ORION Sauvage Pack - Watch + Chain + Sauvage',
 '125 DH'
 )">
+
 Order Now
+
 </button>
 
 </div>
@@ -836,13 +1098,27 @@ Instagram: @orion___accessories_official
      ORDER MODAL
 ========================= -->
 
-<div class="modal" id="orderModal">
+<div
+class="modal"
+id="orderModal">
+
 
 <div class="modal-box">
 
-<span class="close" onclick="closeOrder()">×</span>
 
-<h2>Order</h2>
+<span
+class="close"
+onclick="closeOrder()">
+
+×
+
+</span>
+
+
+<h2>
+Order
+</h2>
+
 
 <div class="selected-product">
 
@@ -851,16 +1127,23 @@ Product:
 <strong id="selectedProduct"></strong>
 </p>
 
+
 <p style="margin-top:8px;">
+
 Price:
 <strong id="selectedPrice"></strong>
+
 </p>
 
 </div>
 
+
 <label class="quantity-label">
+
 Quantity
+
 </label>
+
 
 <input
 type="number"
@@ -870,121 +1153,59 @@ min="1"
 max="99"
 >
 
+
 <button
 class="whatsapp"
-onclick="sendWhatsApp()"
->
+onclick="sendWhatsApp()">
+
 Order on WhatsApp
+
 </button>
 
-</div>
 
 </div>
 
+</div>
 
-<!-- =========================
-     SCRIPT
-========================= -->
 
 <script>
+
+/* =========================
+   ORDER SYSTEM
+========================= */
 
 let selectedProduct = "";
 let selectedPrice = "";
 
 
-/* =========================
-   CHANGE COLOR / IMAGE
-========================= */
-
-function changeColor(mainImageId, imageSrc, element){
-
-    document.getElementById(mainImageId).src = imageSrc;
-
-    const variants =
-        element.parentElement.querySelectorAll(".variant");
-
-    variants.forEach(function(item){
-
-        item.classList.remove("active");
-
-    });
-
-    element.classList.add("active");
-}
-
-
-/* =========================
-   OPEN BIG IMAGE
-========================= */
-
-function openImage(src){
-
-    const imageWindow = window.open("");
-
-    imageWindow.document.write(`
-    
-        <html>
-        <head>
-        <title>ORION Accessories</title>
-
-        <style>
-
-        body{
-            margin:0;
-            background:#000;
-            display:flex;
-            justify-content:center;
-            align-items:center;
-            min-height:100vh;
-        }
-
-        img{
-            max-width:95%;
-            max-height:95vh;
-            object-fit:contain;
-        }
-
-        </style>
-
-        </head>
-
-        <body>
-
-        <img src="${src}">
-
-        </body>
-        </html>
-    
-    `);
-}
-
-
-/* =========================
-   ORDER
-========================= */
-
 function openOrder(product, price){
 
     selectedProduct = product;
-
     selectedPrice = price;
 
-    document.getElementById("selectedProduct").textContent =
-        product;
+    document.getElementById(
+        "selectedProduct"
+    ).textContent = product;
 
-    document.getElementById("selectedPrice").textContent =
-        price;
+    document.getElementById(
+        "selectedPrice"
+    ).textContent = price;
 
-    document.getElementById("quantity").value = 1;
+    document.getElementById(
+        "quantity"
+    ).value = 1;
 
-    document.getElementById("orderModal").style.display = "flex";
+    document.getElementById(
+        "orderModal"
+    ).style.display = "flex";
 }
 
 
 function closeOrder(){
 
-    document.getElementById("orderModal").style.display = "none";
-
+    document.getElementById(
+        "orderModal"
+    ).style.display = "none";
 }
 
 
@@ -995,7 +1216,10 @@ function closeOrder(){
 function sendWhatsApp(){
 
     const quantity =
-        document.getElementById("quantity").value;
+        document.getElementById(
+            "quantity"
+        ).value;
+
 
     if(!quantity || quantity < 1){
 
@@ -1004,7 +1228,9 @@ function sendWhatsApp(){
         return;
     }
 
+
     const message =
+
 `🛍️ ORION ACCESSORIES
 
 ━━━━━━━━━━━━━━
@@ -1023,7 +1249,9 @@ ${quantity}
 Thank you for your order 🤍`;
 
 
-    const whatsappNumber = "212673830013";
+    const whatsappNumber =
+        "212673830013";
+
 
     const whatsappURL =
         "https://wa.me/" +
@@ -1031,7 +1259,9 @@ Thank you for your order 🤍`;
         "?text=" +
         encodeURIComponent(message);
 
-    window.location.href = whatsappURL;
+
+    window.location.href =
+        whatsappURL;
 }
 
 
@@ -1042,11 +1272,82 @@ Thank you for your order 🤍`;
 window.onclick = function(event){
 
     const modal =
-        document.getElementById("orderModal");
+        document.getElementById(
+            "orderModal"
+        );
+
 
     if(event.target === modal){
 
         closeOrder();
+    }
+
+};
+
+
+/* =========================
+   DARK MODE
+========================= */
+
+function toggleDarkMode(){
+
+    document.body.classList.toggle(
+        "dark"
+    );
+
+
+    const button =
+        document.querySelector(
+            ".dark-toggle"
+        );
+
+
+    if(
+        document.body.classList.contains(
+            "dark"
+        )
+    ){
+
+        button.textContent = "☀️";
+
+        localStorage.setItem(
+            "orionDarkMode",
+            "on"
+        );
+
+    }else{
+
+        button.textContent = "🌙";
+
+        localStorage.setItem(
+            "orionDarkMode",
+            "off"
+        );
+
+    }
+
+}
+
+
+/* =========================
+   REMEMBER DARK MODE
+========================= */
+
+window.onload = function(){
+
+    if(
+        localStorage.getItem(
+            "orionDarkMode"
+        ) === "on"
+    ){
+
+        document.body.classList.add(
+            "dark"
+        );
+
+        document.querySelector(
+            ".dark-toggle"
+        ).textContent = "☀️";
 
     }
 
