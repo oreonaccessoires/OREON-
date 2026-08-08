@@ -3,189 +3,210 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>ORION Accessories</title>
 
 <style>
-* {
-    box-sizing: border-box;
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
 }
 
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: #000;
-    color: white;
+body{
+    font-family:Arial, sans-serif;
+    background:#050505;
+    color:white;
 }
 
-header {
-    text-align: center;
-    padding: 35px 15px 25px;
-    border-bottom: 1px solid #c9a227;
+header{
+    text-align:center;
+    padding:45px 15px 30px;
+    border-bottom:1px solid #c9a227;
 }
 
-.logo {
-    color: #d4af37;
-    font-size: 42px;
-    font-weight: bold;
-    letter-spacing: 9px;
+.logo{
+    font-size:48px;
+    letter-spacing:9px;
+    color:#d4af37;
+    font-weight:bold;
 }
 
-.subtitle {
-    color: #aaa;
-    font-size: 20px;
-    letter-spacing: 5px;
-    margin-top: 8px;
+.subtitle{
+    font-size:20px;
+    letter-spacing:6px;
+    color:#aaa;
+    margin-top:8px;
 }
 
-.nav {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 12px;
-    margin-top: 30px;
+nav{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:12px;
+    margin-top:35px;
 }
 
-.nav button,
-.lang {
-    background: transparent;
-    color: white;
-    border: 1px solid #d4af37;
-    border-radius: 30px;
-    padding: 13px 25px;
-    font-size: 17px;
-    cursor: pointer;
+nav button{
+    border:1px solid #d4af37;
+    background:#080808;
+    color:white;
+    padding:15px 25px;
+    border-radius:30px;
+    font-size:17px;
+    cursor:pointer;
 }
 
-.nav button.active {
-    background: #d4af37;
-    color: #000;
+nav button.active,
+nav button:hover{
+    background:#d4af37;
+    color:#000;
 }
 
-.controls {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    margin-top: 25px;
+.controls{
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    margin-top:25px;
 }
 
-select {
-    background: #111;
-    color: white;
-    border: 1px solid #d4af37;
-    border-radius: 12px;
-    padding: 12px 20px;
-    font-size: 16px;
+select,
+.theme{
+    border:1px solid #d4af37;
+    background:#080808;
+    color:white;
+    padding:12px 20px;
+    border-radius:20px;
+    font-size:16px;
 }
 
-h1 {
-    text-align: center;
-    color: #d4af37;
-    margin: 35px 0 25px;
+main{
+    max-width:1200px;
+    margin:auto;
+    padding:35px 18px;
 }
 
-.products {
-    width: 95%;
-    max-width: 1200px;
-    margin: auto;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-    padding-bottom: 50px;
+h1{
+    text-align:center;
+    color:#d4af37;
+    margin-bottom:30px;
+    font-size:38px;
 }
 
-.card {
-    background: #151515;
-    border: 1px solid #444;
-    border-radius: 20px;
-    padding: 15px;
-    overflow: hidden;
+.products{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:20px;
 }
 
-.main-image {
-    width: 100%;
-    height: 300px;
-    object-fit: cover;
-    border-radius: 15px;
-    background: #222;
-    display: block;
+.card{
+    background:#151515;
+    border:1px solid #333;
+    border-radius:25px;
+    padding:18px;
+    overflow:hidden;
 }
 
-.thumbs {
-    display: flex;
-    gap: 8px;
-    overflow-x: auto;
-    margin-top: 10px;
+.main-image{
+    width:100%;
+    aspect-ratio:1/1;
+    object-fit:cover;
+    border-radius:18px;
+    background:#222;
+    display:block;
 }
 
-.thumb {
-    width: 65px;
-    height: 65px;
-    object-fit: cover;
-    border-radius: 8px;
-    border: 1px solid #555;
-    cursor: pointer;
-    flex-shrink: 0;
+.thumbs{
+    display:flex;
+    gap:8px;
+    overflow-x:auto;
+    margin-top:10px;
+    padding-bottom:5px;
 }
 
-.thumb:hover {
-    border: 2px solid #d4af37;
+.thumb{
+    width:70px;
+    height:70px;
+    object-fit:cover;
+    border-radius:10px;
+    border:1px solid #555;
+    cursor:pointer;
+    flex-shrink:0;
 }
 
-.name {
-    font-size: 20px;
-    font-weight: bold;
-    margin-top: 18px;
+.thumb:hover{
+    border:2px solid #d4af37;
 }
 
-.price {
-    color: #d4af37;
-    font-size: 23px;
-    font-weight: bold;
-    margin: 15px 0;
+.card h2{
+    font-size:21px;
+    margin-top:18px;
 }
 
-.whatsapp {
-    display: block;
-    text-align: center;
-    background: #d4af37;
-    color: #000;
-    text-decoration: none;
-    padding: 16px;
-    border-radius: 14px;
-    font-weight: bold;
-    font-size: 17px;
+.price{
+    color:#d4af37;
+    font-size:25px;
+    font-weight:bold;
+    margin:12px 0 18px;
 }
 
-@media (max-width: 600px) {
-    .products {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 12px;
+.whatsapp{
+    width:100%;
+    border:0;
+    background:#d4af37;
+    color:#000;
+    padding:16px;
+    border-radius:15px;
+    font-size:17px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+.whatsapp:hover{
+    background:#f0cc55;
+}
+
+footer{
+    text-align:center;
+    padding:35px;
+    color:#888;
+    border-top:1px solid #333;
+    margin-top:30px;
+}
+
+@media(max-width:600px){
+    .logo{
+        font-size:38px;
     }
 
-    .card {
-        padding: 10px;
+    .subtitle{
+        font-size:15px;
     }
 
-    .main-image {
-        height: 210px;
+    .products{
+        grid-template-columns:repeat(2,1fr);
+        gap:12px;
     }
 
-    .name {
-        font-size: 17px;
+    .card{
+        padding:10px;
+        border-radius:18px;
     }
 
-    .price {
-        font-size: 20px;
+    .card h2{
+        font-size:17px;
     }
 
-    .whatsapp {
-        font-size: 14px;
-        padding: 13px 5px;
+    .price{
+        font-size:20px;
     }
 
-    .logo {
-        font-size: 34px;
+    .whatsapp{
+        font-size:14px;
+        padding:13px 5px;
+    }
+
+    h1{
+        font-size:30px;
     }
 }
 </style>
@@ -198,351 +219,443 @@ h1 {
 <div class="logo">ORION</div>
 <div class="subtitle">ACCESSORIES</div>
 
-<div class="nav">
-<button class="active">🕶️ Glasses</button>
-<button>⛓️ Chains</button>
-<button>⌚ Watches</button>
-</div>
+<nav>
+<button class="active" onclick="showCategory('glasses')">🕶️ Glasses</button>
+<button onclick="showCategory('chains')">⛓️ Chains</button>
+<button onclick="showCategory('watches')">⌚ Watches</button>
+</nav>
 
 <div class="controls">
-<button class="lang">🌙 / ☀️</button>
+<button class="theme" onclick="toggleTheme()">🌙 / ☀️</button>
 
-<select>
-<option>English</option>
-<option>Français</option>
-<option>العربية</option>
+<select id="language">
+<option value="en">English</option>
+<option value="fr">Français</option>
+<option value="ar">العربية</option>
 </select>
 </div>
 
 </header>
 
-<h1>ORION Glasses</h1>
+<main>
+
+<h1 id="title">ORION Glasses</h1>
 
 <div class="products" id="products"></div>
 
+</main>
+
+<footer>
+ORION Accessories © 2026
+</footer>
+
 <script>
 
-const WHATSAPP_NUMBER = "212XXXXXXXXX";
+/* =========================
+   WHATSAPP
+   =========================
+   بدل الرقم بالرقم ديالك
+   مثال المغرب:
+   2126XXXXXXXX
+*/
+const WHATSAPP_NUMBER = "212600000000";
 
-const products = [
 
-/* MODEL 01 */
+/* =========================
+   GLASSES
+   ========================= */
+
+const glasses = [
+
 {
-    name: "ORION Glasses Model 01",
-    price: 120,
-    images: [
-        "ORION Glasses Model 01 gold 120dh.JPG",
-        "ORION Glasses Model 01 Black 120dh.JPG",
-        "ORION Glasses Model 01 Blue 120dh.JPG"
-    ]
+model:"01",
+price:120,
+images:[
+"ORION Glasses Model 01 gold 120dh.JPG",
+"ORION Glasses Model 01 Black 120dh.JPG",
+"ORION Glasses Model 01 Blue 120dh.JPG"
+]
 },
 
-/* MODEL 02 */
 {
-    name: "ORION Glasses Model 02",
-    price: 120,
-    images: [
-        "ORION Glasses Model 02 120dh 1.JPG",
-        "ORION Glasses Model 02 120dh 2.JPG",
-        "ORION Glasses Model 02 120dh 3.JPG",
-        "ORION Glasses Model 02 120dh 4.JPG",
-        "ORION Glasses Model 02 120dh 5.JPG"
-    ]
+model:"02",
+price:120,
+images:[
+"ORION Glasses Model 02 120dh 1.JPG",
+"ORION Glasses Model 02 120dh 5.JPG",
+"ORION Glasses Model 02 120dh 3.JPG",
+"ORION Glasses Model 02 120dh 2.JPG",
+"ORION Glasses Model 02 120dh 4.JPG"
+]
 },
 
-/* MODEL 03 */
 {
-    name: "ORION Glasses Model 03",
-    price: 120,
-    images: [
-        "ORION Glasses Model 03 120dh 1.JPG",
-        "ORION Glasses Model 03 120dh 2.JPG",
-        "ORION Glasses Model 03 120dh 3.JPG",
-        "ORION Glasses Model 03 120dh 4.JPG",
-        "ORION Glasses Model 03 120dh 5.JPG",
-        "ORION Glasses Model 03 120dh 6.JPG"
-    ]
+model:"03",
+price:120,
+images:[
+"ORION Glasses Model 03 120dh 1.JPG",
+"ORION Glasses Model 03 120dh 5.JPG",
+"ORION Glasses Model 03 120dh 4.JPG",
+"ORION Glasses Model 03 120dh 3.JPG",
+"ORION Glasses Model 03 120dh 6.JPG",
+"ORION Glasses Model 03 120dh 2.JPG"
+]
 },
 
-/* MODEL 04 */
 {
-    name: "ORION Glasses Model 04",
-    price: 120,
-    images: [
-        "ORION Glasses Model 04 120dh 1.JPG",
-        "ORION Glasses Model 04 120dh 2.JPG",
-        "ORION Glasses Model 04 120dh 3.JPG",
-        "ORION Glasses Model 04 120dh 4.JPG",
-        "ORION Glasses Model 04 120dh 5.JPG",
-        "ORION Glasses Model 04 120dh 6.JPG"
-    ]
+model:"04",
+price:120,
+images:[
+"ORION Glasses Model 04 120dh 4.JPG",
+"ORION Glasses Model 04 120dh 2.JPG",
+"ORION Glasses Model 04 120dh 3.JPG",
+"ORION Glasses Model 04 120dh 1.JPG",
+"ORION Glasses Model 04 120dh 6.JPG",
+"ORION Glasses Model 04 120dh 5.JPG"
+]
 },
 
-/* MODEL 05 */
 {
-    name: "ORION Glasses Model 05",
-    price: 120,
-    images: [
-        "ORION Glasses Model 05 120dh 1.JPG",
-        "ORION Glasses Model 05 120dh 2.JPG",
-        "ORION Glasses Model 05 120dh 3.JPG",
-        "ORION Glasses Model 05 120dh 4.JPG",
-        "ORION Glasses Model 05 120dh 5.JPG"
-    ]
+model:"05",
+price:120,
+images:[
+"ORION Glasses Model 05 120dh 4.JPG",
+"ORION Glasses Model 05 120dh 5.JPG",
+"ORION Glasses Model 05 120dh 2.JPG",
+"ORION Glasses Model 05 120dh 3.JPG",
+"ORION Glasses Model 05 120dh 1.JPG"
+]
 },
 
-/* MODEL 06 */
 {
-    name: "ORION Glasses Model 06",
-    price: 120,
-    images: [
-        "ORION Glasses Model 06 120dh 1.JPG",
-        "ORION Glasses Model 06 120dh 2.JPG",
-        "ORION Glasses Model 06 120dh 3.JPG",
-        "ORION Glasses Model 06 120dh 4.JPG",
-        "ORION Glasses Model 06 120dh 5.JPG",
-        "ORION Glasses Model 06 120dh 6.JPG",
-        "ORION Glasses Model 06 120dh 7.JPG"
-    ]
+model:"06",
+price:120,
+images:[
+"ORION Glasses Model 06 120dh 6.JPG",
+"ORION Glasses Model 06 120dh 4.JPG",
+"ORION Glasses Model 06 120dh 2.JPG",
+"ORION Glasses Model 06 120dh 7.JPG",
+"ORION Glasses Model 06 120dh 1.JPG",
+"ORION Glasses Model 06 120dh 3.JPG",
+"ORION Glasses Model 06 120dh 5.JPG"
+]
 },
 
-/* MODEL 07 */
 {
-    name: "ORION Glasses Model 07",
-    price: 140,
-    images: [
-        "ORION Glasses Model 07 140dh 1.JPG",
-        "ORION Glasses Model 07 140dh 2.JPG",
-        "ORION Glasses Model 07 140dh 3.JPG",
-        "ORION Glasses Model 07 140dh 4.JPG",
-        "ORION Glasses Model 07 140dh 5.JPG"
-    ]
+model:"07",
+price:140,
+images:[
+"ORION Glasses Model 07 140dh 5.JPG",
+"ORION Glasses Model 07 140dh 1.JPG",
+"ORION Glasses Model 07 140dh 4.JPG",
+"ORION Glasses Model 07 140dh 3.JPG",
+"ORION Glasses Model 07 140dh 2.JPG"
+]
 },
 
-/* MODEL 08 */
 {
-    name: "ORION Glasses Model 08",
-    price: 130,
-    images: [
-        "ORION Glasses Model 08 130dh 1.JPG",
-        "ORION Glasses Model 08 130dh 2.JPG",
-        "ORION Glasses Model 08 130dh 3.JPG",
-        "ORION Glasses Model 08 130dh 4.JPG",
-        "ORION Glasses Model 08 130dh 5.JPG",
-        "ORION Glasses Model 08 130dh 6.JPG"
-    ]
+model:"08",
+price:130,
+images:[
+"ORION Glasses Model 08 130dh 2.JPG",
+"ORION Glasses Model 08 130dh 3.JPG",
+"ORION Glasses Model 08 130dh 4.JPG",
+"ORION Glasses Model 08 130dh 1.JPG",
+"ORION Glasses Model 08 130dh 6.JPG",
+"ORION Glasses Model 08 130dh 5.JPG"
+]
 },
 
-/* MODEL 09 */
 {
-    name: "ORION Glasses Model 09",
-    price: 120,
-    images: [
-        "ORION Glasses Model 09 120dh 1.JPG",
-        "ORION Glasses Model 09 120dh 2.JPG",
-        "ORION Glasses Model 09 120dh 3.JPG",
-        "ORION Glasses Model 09 120dh 5.JPG",
-        "ORION Glasses Model 09 120dh 6.JPG",
-        "ORION Glasses Model 09 120dh 7.JPG",
-        "ORION Glasses Model 09 120dh 8.JPG"
-    ]
+model:"09",
+price:120,
+images:[
+"ORION Glasses Model 09 120dh 5.JPG",
+"ORION Glasses Model 09 120dh 8.JPG",
+"ORION Glasses Model 09 120dh 2.JPG",
+"ORION Glasses Model 09 120dh 3.JPG",
+"ORION Glasses Model 09 120dh 6.JPG",
+"ORION Glasses Model 09 120dh 7.JPG",
+"ORION Glasses Model 09 120dh 1.JPG"
+]
 },
 
-/* MODEL 10 */
 {
-    name: "ORION Glasses Model 10",
-    price: 120,
-    images: [
-        "ORION Glasses Model 10 120dh 1.JPG",
-        "ORION Glasses Model 10 120dh 2.JPG",
-        "ORION Glasses Model 10 120dh 3.JPG",
-        "ORION Glasses Model 10 120dh 4.JPG",
-        "ORION Glasses Model 10 120dh 5.JPG"
-    ]
+model:"10",
+price:120,
+images:[
+"ORION Glasses Model 10 120dh 3.JPG",
+"ORION Glasses Model 10 120dh 4.JPG",
+"ORION Glasses Model 10 120dh 5.JPG",
+"ORION Glasses Model 10 120dh 2.JPG",
+"ORION Glasses Model 10 120dh 1.JPG"
+]
 },
 
-/* MODEL 11 */
 {
-    name: "ORION Glasses Model 11",
-    price: 120,
-    images: [
-        "ORION Glasses Model 11 120dh 1.JPG",
-        "ORION Glasses Model 11 120dh 2.JPG",
-        "ORION Glasses Model 11 120dh 3.JPG",
-        "ORION Glasses Model 11 120dh 4.JPG",
-        "ORION Glasses Model 11 120dh 5.JPG"
-    ]
+model:"11",
+price:120,
+images:[
+"ORION Glasses Model 11 120dh 3.JPG",
+"ORION Glasses Model 11 120dh 1.JPG",
+"ORION Glasses Model 11 120dh 4.JPG",
+"ORION Glasses Model 11 120dh 2.JPG",
+"ORION Glasses Model 11 120dh 5.JPG"
+]
 },
 
-/* MODEL 12 */
 {
-    name: "ORION Glasses Model 12",
-    price: 120,
-    images: [
-        "ORION Glasses Model 12 120dh 1.JPG",
-        "ORION Glasses Model 12 120dh 2.JPG",
-        "ORION Glasses Model 12 120dh 3.JPG",
-        "ORION Glasses Model 12 120dh 4.JPG",
-        "ORION Glasses Model 12 120dh 5.JPG",
-        "ORION Glasses Model 12 120dh 6.JPG",
-        "ORION Glasses Model 12 120dh 7.JPG",
-        "ORION Glasses Model 12 120dh 8.JPG",
-        "ORION Glasses Model 12 120dh 10.JPG"
-    ]
+model:"12",
+price:120,
+images:[
+"ORION Glasses Model 12 120dh 7.JPG",
+"ORION Glasses Model 12 120dh 2.JPG",
+"ORION Glasses Model 12 120dh 4.JPG",
+"ORION Glasses Model 12 120dh 3.JPG",
+"ORION Glasses Model 12 120dh 8.JPG",
+"ORION Glasses Model 12 120dh 5.JPG",
+"ORION Glasses Model 12 120dh 10.JPG",
+"ORION Glasses Model 12 120dh 1.JPG",
+"ORION Glasses Model 12 120dh 6.JPG"
+]
 },
 
-/* MODEL 13 */
 {
-    name: "ORION Glasses Model 13",
-    price: 120,
-    images: [
-        "ORION Glasses Model 13 120dh 1.JPG",
-        "ORION Glasses Model 13 120dh 2.JPG",
-        "ORION Glasses Model 13 120dh 3.JPG",
-        "ORION Glasses Model 13 120dh 4.JPG",
-        "ORION Glasses Model 13 120dh 5.JPG"
-    ]
+model:"13",
+price:120,
+images:[
+"ORION Glasses Model 13 120dh 2.JPG",
+"ORION Glasses Model 13 120dh 3.JPG",
+"ORION Glasses Model 13 120dh 4.JPG",
+"ORION Glasses Model 13 120dh 5.JPG",
+"ORION Glasses Model 13 120dh 1.JPG"
+]
 },
 
-/* MODEL 14 */
 {
-    name: "ORION Glasses Model 14",
-    price: 120,
-    images: [
-        "ORION Glasses Model 14 120dh 1.JPG",
-        "ORION Glasses Model 14 120dh 2.JPG",
-        "ORION Glasses Model 14 120dh 3.JPG"
-    ]
+model:"14",
+price:120,
+images:[
+"ORION Glasses Model 14 120dh 2.JPG",
+"ORION Glasses Model 14 120dh 1.JPG",
+"ORION Glasses Model 14 120dh 3.JPG"
+]
 },
 
-/* MODEL 15 */
 {
-    name: "ORION Glasses Model 15",
-    price: 120,
-    images: [
-        "ORION Glasses Model 15 120dh 1.JPG",
-        "ORION Glasses Model 15 120dh 2.JPG"
-    ]
+model:"15",
+price:120,
+images:[
+"ORION Glasses Model 15 120dh 1.JPG",
+"ORION Glasses Model 15 120dh 2.JPG"
+]
 },
 
-/* MODEL 16 */
 {
-    name: "ORION Glasses Model 16",
-    price: 140,
-    images: [
-        "ORION Glasses Model 16 140dh 1.JPG"
-    ]
+model:"16",
+price:140,
+images:[
+"ORION Glasses Model 16 140dh 1.JPG"
+]
 },
 
-/* MODEL 17 */
 {
-    name: "ORION Glasses Model 17",
-    price: 140,
-    images: [
-        "ORION Glasses Model 17 140dh 1.JPG"
-    ]
+model:"17",
+price:140,
+images:[
+"ORION Glasses Model 17 140dh 1.JPG"
+]
 },
 
-/* MODEL 18 */
 {
-    name: "ORION Glasses Model 18",
-    price: 120,
-    images: [
-        "ORION Glasses Model 18 120dh 1.JPG",
-        "ORION Glasses Model 18 120dh 2.JPG",
-        "ORION Glasses Model 18 120dh 3.JPG"
-    ]
+model:"18",
+price:120,
+images:[
+"ORION Glasses Model 18 120dh 1.JPG",
+"ORION Glasses Model 18 120dh 3.JPG",
+"ORION Glasses Model 18 120dh 2.JPG"
+]
 },
 
-/* MODEL 19 */
 {
-    name: "ORION Glasses Model 19",
-    price: 130,
-    images: [
-        "ORION Glasses Model 19 130dh 1.JPG",
-        "ORION Glasses Model 19 130dh 2.JPG",
-        "ORION Glasses Model 19 130dh 3.JPG",
-        "ORION Glasses Model 19 130dh 4.JPG"
-    ]
+model:"19",
+price:130,
+images:[
+"ORION Glasses Model 19 130dh 3.JPG",
+"ORION Glasses Model 19 130dh 2.JPG",
+"ORION Glasses Model 19 130dh 1.JPG",
+"ORION Glasses Model 19 130dh 4.JPG"
+]
 }
 
 ];
 
-const container = document.getElementById("products");
 
-products.forEach((product) => {
+/* =========================
+   DISPLAY
+   ========================= */
 
-    const card = document.createElement("div");
-    card.className = "card";
+function showCategory(category){
 
-    const mainImage = document.createElement("img");
-    mainImage.className = "main-image";
+if(category === "glasses"){
 
-    mainImage.src = "images/" + encodeURIComponent(product.images[0]);
+document.getElementById("title").textContent="ORION Glasses";
 
-    mainImage.onerror = function() {
-        this.src = "https://placehold.co/600x600/222/fff?text=Image+Not+Found";
-    };
+renderGlasses();
 
-    card.appendChild(mainImage);
+}
 
-    const thumbs = document.createElement("div");
-    thumbs.className = "thumbs";
+else if(category === "chains"){
 
-    product.images.forEach((image) => {
+document.getElementById("title").textContent="ORION Chains";
 
-        const thumb = document.createElement("img");
-        thumb.className = "thumb";
+document.getElementById("products").innerHTML=`
+<div style="grid-column:1/-1;text-align:center;padding:60px;color:#d4af37;font-size:22px;">
+⛓️ Chains coming soon
+</div>
+`;
 
-        thumb.src = "images/" + encodeURIComponent(image);
+}
 
-        thumb.onerror = function() {
-            this.style.display = "none";
-        };
+else if(category === "watches"){
 
-        thumb.onclick = () => {
-            mainImage.src = "images/" + encodeURIComponent(image);
-        };
+document.getElementById("title").textContent="ORION Watches";
 
-        thumbs.appendChild(thumb);
-    });
+document.getElementById("products").innerHTML=`
+<div style="grid-column:1/-1;text-align:center;padding:60px;color:#d4af37;font-size:22px;">
+⌚ Watches coming soon
+</div>
+`;
 
-    card.appendChild(thumbs);
+}
 
-    const name = document.createElement("div");
-    name.className = "name";
-    name.textContent = product.name;
+}
 
-    card.appendChild(name);
 
-    const price = document.createElement("div");
-    price.className = "price";
-    price.textContent = product.price + " DH";
+function renderGlasses(){
 
-    card.appendChild(price);
+const container=document.getElementById("products");
 
-    const whatsapp = document.createElement("a");
-    whatsapp.className = "whatsapp";
-    whatsapp.target = "_blank";
+container.innerHTML="";
 
-    const message =
-        "Hello ORION Accessories 👋%0A%0A" +
-        "I want to order:%0A" +
-        product.name + "%0A" +
-        "Price: " + product.price + " DH";
+glasses.forEach((product,index)=>{
 
-    whatsapp.href =
-        "https://wa.me/" +
-        WHATSAPP_NUMBER +
-        "?text=" +
-        message;
+const card=document.createElement("div");
 
-    whatsapp.textContent = "Commander WhatsApp";
+card.className="card";
 
-    card.appendChild(whatsapp);
+let imageHTML="";
 
-    container.appendChild(card);
+product.images.forEach((image,i)=>{
+
+imageHTML += `
+<img
+class="thumb"
+src="${image}"
+alt="ORION Glasses Model ${product.model}"
+onclick="changeImage(${index},${i})"
+onerror="this.style.display='none'"
+>
+`;
+
 });
+
+card.innerHTML=`
+
+<img
+id="main-${index}"
+class="main-image"
+src="${product.images[0]}"
+alt="ORION Glasses Model ${product.model}"
+onerror="this.onerror=null;this.src='';this.alt='Image not found';"
+>
+
+<div class="thumbs">
+${imageHTML}
+</div>
+
+<h2>ORION Glasses Model ${product.model}</h2>
+
+<div class="price">${product.price} DH</div>
+
+<button
+class="whatsapp"
+onclick="orderProduct('${product.model}',${product.price})">
+Commander WhatsApp
+</button>
+
+`;
+
+container.appendChild(card);
+
+});
+
+}
+
+
+function changeImage(productIndex,imageIndex){
+
+document.getElementById(`main-${productIndex}`).src =
+glasses[productIndex].images[imageIndex];
+
+}
+
+
+function orderProduct(model,price){
+
+const message =
+`Bonjour ORION Accessories 👋
+
+Je veux commander :
+
+🕶️ ORION Glasses Model ${model}
+💰 Prix : ${price} DH
+
+Merci.`;
+
+const url =
+"https://wa.me/" +
+WHATSAPP_NUMBER +
+"?text=" +
+encodeURIComponent(message);
+
+window.open(url,"_blank");
+
+}
+
+
+function toggleTheme(){
+
+document.body.classList.toggle("light");
+
+if(document.body.classList.contains("light")){
+
+document.body.style.background="#f5f5f5";
+document.body.style.color="#111";
+
+document.querySelectorAll(".card").forEach(card=>{
+card.style.background="#fff";
+card.style.color="#111";
+});
+
+}else{
+
+document.body.style.background="#050505";
+document.body.style.color="white";
+
+document.querySelectorAll(".card").forEach(card=>{
+card.style.background="#151515";
+card.style.color="white";
+});
+
+}
+
+}
+
+
+/* START */
+
+renderGlasses();
 
 </script>
 
