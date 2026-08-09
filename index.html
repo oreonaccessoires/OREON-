@@ -11,7 +11,6 @@
 <meta name="keywords" content="ORION Accessories, ORION Glasses, sunglasses Morocco, chains Morocco, bracelets Morocco, pack femme Morocco, accessoires Maroc">
 
 <meta name="author" content="ORION Accessories">
-
 <meta name="robots" content="index, follow">
 
 <link rel="canonical" href="https://oreonaccessoires.github.io/OREON-/">
@@ -285,7 +284,8 @@ footer{
 
 </header>
 
-<!-- GLASSES -->
+
+<!-- ================= GLASSES ================= -->
 
 <section id="glasses" class="section">
 
@@ -295,7 +295,8 @@ footer{
 
 </section>
 
-<!-- CHAINS -->
+
+<!-- ================= CHAINS ================= -->
 
 <section id="chains" class="section hidden">
 
@@ -305,7 +306,8 @@ footer{
 
 </section>
 
-<!-- BRACELETS -->
+
+<!-- ================= BRACELETS ================= -->
 
 <section id="bracelets" class="section hidden">
 
@@ -315,7 +317,8 @@ footer{
 
 </section>
 
-<!-- PROMO -->
+
+<!-- ================= PROMO ================= -->
 
 <section id="promo" class="section hidden">
 
@@ -325,7 +328,8 @@ footer{
 
 </section>
 
-<!-- WATCHES -->
+
+<!-- ================= WATCHES ================= -->
 
 <section id="watches" class="section hidden">
 
@@ -347,9 +351,11 @@ footer{
 
 </section>
 
+
 <footer>
   © 2026 ORION Accessories
 </footer>
+
 
 <script>
 
@@ -358,6 +364,9 @@ const whatsappNumber = "212673830013";
 
 /* =====================================================
    GLASSES
+   الأسعار الجديدة:
+   01,02,03,04,05,06,09,10,11,12,13,14,15,18 = 79 DH
+   07,08,16,17,19 = 99 DH
 ===================================================== */
 
 const glasses = [
@@ -587,7 +596,8 @@ const glasses = [
 
 
 /* =====================================================
-   CHAINS — 69 DH
+   CHAINS
+   جميع Chains 01-05 = 69 DH
 ===================================================== */
 
 const chains = [
@@ -637,7 +647,16 @@ const chains = [
   price:69,
   category:"Women",
   images:[
-    "ORION Chain Model 04 80dh 1.JPG"
+    "ORION Chain Model 04 79dh 1.JPG"
+  ]
+},
+
+{
+  model:"05",
+  price:69,
+  category:"Women",
+  images:[
+    "ORION Chain Model 05 99dh 1.JPG"
   ]
 }
 
@@ -645,7 +664,10 @@ const chains = [
 
 
 /* =====================================================
-   BRACELETS — 79 / 99 DH
+   BRACELETS
+   01/02/03 = 79 DH
+   04 = 99 DH
+   05 = 79 DH
 ===================================================== */
 
 const bracelets = [
@@ -706,11 +728,11 @@ const bracelets = [
   price:79,
   category:"Women",
   images:[
-    "ORION Bracelets model 05 79dh 1.JPG",
-    "ORION Bracelets model 05 79dh 2.JPG",
-    "ORION Bracelets model 05 79dh 3.JPG",
-    "ORION Bracelets model 05 79dh 4.JPG",
-    "ORION Bracelets model 05 79dh 5.JPG"
+    "ORION Bracelets model 05 79 dh 1.JPG",
+    "ORION Bracelets model 05 79 dh 2.JPG",
+    "ORION Bracelets model 05 79 dh 3.JPG",
+    "ORION Bracelets model 05 79 dh 4.JPG",
+    "ORION Bracelets model 05 79 dh 5.JPG"
   ]
 }
 
@@ -718,7 +740,8 @@ const bracelets = [
 
 
 /* =====================================================
-   PROMO — 100 DH
+   PROMO
+   Pack = 100 DH
 ===================================================== */
 
 const promo = [
@@ -739,12 +762,25 @@ const promo = [
 
 
 /* =====================================================
+   IMAGE URL
+===================================================== */
+
+function imageURL(filename){
+
+  return "./" + encodeURIComponent(filename);
+
+}
+
+
+/* =====================================================
    CREATE PRODUCTS
 ===================================================== */
 
 function createProducts(list, containerId, type){
 
   const container = document.getElementById(containerId);
+
+  container.innerHTML = "";
 
   list.forEach((product,index)=>{
 
@@ -760,14 +796,15 @@ function createProducts(list, containerId, type){
 
       thumbnails += `
         <img
-          src="${encodeURI(image)}"
+          src="${imageURL(image)}"
           onclick="changeImage('${mainId}', this.src)"
-          alt="${product.model}"
+          alt="ORION ${product.model}"
           onerror="this.style.display='none'"
         >
       `;
 
     });
+
 
     let categoryText = "";
 
@@ -781,6 +818,7 @@ function createProducts(list, containerId, type){
 
     }
 
+
     let productName = "Glasses";
 
     if(type === "chain"){
@@ -791,18 +829,21 @@ function createProducts(list, containerId, type){
       productName = "Women's Bracelet";
     }
 
+
     const message =
       `Hello ORION Accessories, I want ${productName} Model ${product.model} - ${product.price} DH`;
 
+
     const whatsappLink =
       `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+
 
     card.innerHTML = `
 
       <img
         id="${mainId}"
         class="main-image"
-        src="${encodeURI(product.images[0])}"
+        src="${imageURL(product.images[0])}"
         alt="ORION ${productName} Model ${product.model}"
         onerror="imageError(this)"
       >
@@ -831,6 +872,7 @@ function createProducts(list, containerId, type){
 
     `;
 
+
     container.appendChild(card);
 
   });
@@ -846,6 +888,8 @@ function createPromo(){
 
   const container = document.getElementById("promoProducts");
 
+  container.innerHTML = "";
+
   promo.forEach((product,index)=>{
 
     const card = document.createElement("div");
@@ -860,7 +904,7 @@ function createPromo(){
 
       thumbnails += `
         <img
-          src="${encodeURI(image)}"
+          src="${imageURL(image)}"
           onclick="changeImage('${mainId}', this.src)"
           alt="Pack Élégance Femme"
           onerror="this.style.display='none'"
@@ -869,18 +913,21 @@ function createPromo(){
 
     });
 
+
     const message =
       "Hello ORION Accessories, I want Pack Élégance Femme - 100 DH";
 
+
     const whatsappLink =
       `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+
 
     card.innerHTML = `
 
       <img
         id="${mainId}"
         class="main-image"
-        src="${encodeURI(product.images[0])}"
+        src="${imageURL(product.images[0])}"
         alt="Pack Élégance Femme ORION Accessories"
         onerror="imageError(this)"
       >
@@ -922,6 +969,7 @@ function createPromo(){
 
     `;
 
+
     container.appendChild(card);
 
   });
@@ -935,9 +983,14 @@ function createPromo(){
 
 function changeImage(id,src){
 
-  document.getElementById(id).src = src;
+  const image = document.getElementById(id);
+
+  if(image){
+    image.src = src;
+  }
 
 }
+
 
 function imageError(img){
 
@@ -966,7 +1019,9 @@ function showSection(section){
 
   document.getElementById("watches").classList.add("hidden");
 
+
   document.getElementById(section).classList.remove("hidden");
+
 
   document.getElementById("glassesBtn").classList.remove("active");
 
@@ -977,6 +1032,7 @@ function showSection(section){
   document.getElementById("promoBtn").classList.remove("active");
 
   document.getElementById("watchesBtn").classList.remove("active");
+
 
   if(section === "glasses"){
     document.getElementById("glassesBtn").classList.add("active");
@@ -1019,11 +1075,15 @@ function toggleTheme(){
 function changeLanguage(language){
 
   if(language === "fr"){
+
     alert("La version française sera ajoutée prochainement.");
+
   }
 
   if(language === "ar"){
+
     alert("النسخة العربية ستتم إضافée قريباً.");
+
   }
 
 }
@@ -1039,17 +1099,20 @@ createProducts(
   "glasses"
 );
 
+
 createProducts(
   chains,
   "chainProducts",
   "chain"
 );
 
+
 createProducts(
   bracelets,
   "braceletProducts",
   "bracelet"
 );
+
 
 createPromo();
 
