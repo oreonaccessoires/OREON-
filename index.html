@@ -122,9 +122,15 @@ select{
 }
 
 .products{
-  display:flex;
-  flex-direction:column;
+  display:grid;
+  grid-template-columns:repeat(3, 1fr);
   gap:28px;
+}
+
+@media(max-width:900px){
+  .products{
+    grid-template-columns:1fr;
+  }
 }
 
 .product{
