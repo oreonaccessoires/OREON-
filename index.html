@@ -5,8 +5,11 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 
 <title>ORION Accessories | Lunettes, Colliers & Bracelets au Maroc</title>
+
 <meta name="description" content="ORION Accessories au Maroc : lunettes de soleil, colliers, bracelets et packs élégants pour femmes et hommes. Commande WhatsApp et livraison partout au Maroc.">
+
 <meta name="keywords" content="ORION Accessories, lunettes Maroc, collier Maroc, bracelets Maroc, accessoires femme, accessoires homme, bijoux Maroc">
+
 <meta name="author" content="ORION Accessories">
 <meta name="robots" content="index,follow,max-image-preview:large">
 
@@ -55,11 +58,11 @@
 *{
  box-sizing:border-box;
  margin:0;
- padding:0
+ padding:0;
 }
 
 html{
- scroll-behavior:smooth
+ scroll-behavior:smooth;
 }
 
 body{
@@ -81,12 +84,14 @@ body.light{
 }
 
 button,input,select{
- font:inherit
+ font:inherit;
 }
 
 button{
- cursor:pointer
+ cursor:pointer;
 }
+
+/* ================= HEADER ================= */
 
 header{
  position:relative;
@@ -142,7 +147,9 @@ header{
  max-width:1000px;
 }
 
-.nav button,.control-btn,.select{
+.nav button,
+.control-btn,
+.select{
  border:1px solid var(--gold);
  background:transparent;
  color:var(--text);
@@ -151,7 +158,8 @@ header{
  transition:.25s;
 }
 
-.nav button:hover,.nav button.active{
+.nav button:hover,
+.nav button.active{
  background:var(--gold);
  color:#000;
  transform:translateY(-2px);
@@ -188,7 +196,7 @@ header{
 }
 
 .search-area input:focus{
- border-color:var(--gold)
+ border-color:var(--gold);
 }
 
 .tools{
@@ -225,6 +233,8 @@ header{
  font-weight:bold;
 }
 
+/* ================= SECTIONS ================= */
+
 .section{
  max-width:1200px;
  margin:50px auto;
@@ -232,7 +242,7 @@ header{
 }
 
 .hidden{
- display:none!important
+ display:none!important;
 }
 
 .section-title{
@@ -267,10 +277,12 @@ header{
  overflow:hidden;
  position:relative;
  box-shadow:var(--shadow);
+
  transition:
-   transform .25s ease,
-   border-color .3s ease,
-   box-shadow .3s ease;
+  transform .25s ease,
+  border-color .3s ease,
+  box-shadow .3s ease;
+
  transform-style:preserve-3d;
  perspective:1000px;
  will-change:transform;
@@ -282,12 +294,14 @@ header{
  position:absolute;
  inset:0;
  border-radius:20px;
+
  background:
-   radial-gradient(
-     circle at var(--mx,50%) var(--my,30%),
-     rgba(243,216,120,.16),
-     transparent 32%
-   );
+  radial-gradient(
+   circle at var(--mx,50%) var(--my,30%),
+   rgba(243,216,120,.16),
+   transparent 32%
+  );
+
  opacity:0;
  pointer-events:none;
  z-index:0;
@@ -300,9 +314,10 @@ header{
 
 .product:hover{
  border-color:rgba(212,175,55,.55);
+
  box-shadow:
-   0 20px 55px rgba(0,0,0,.42),
-   0 0 25px rgba(212,175,55,.06);
+  0 20px 55px rgba(0,0,0,.42),
+  0 0 25px rgba(212,175,55,.06);
 }
 
 .product .product-top{
@@ -322,9 +337,10 @@ header{
 
 .product .main-image{
  transform:translateZ(22px);
+
  transition:
-   transform .45s cubic-bezier(.2,.8,.2,1),
-   filter .45s ease;
+  transform .45s cubic-bezier(.2,.8,.2,1),
+  filter .45s ease;
 }
 
 .product:hover .main-image{
@@ -345,26 +361,35 @@ header{
 }
 
 @keyframes logoFloat{
+
  0%,100%{
-  transform:perspective(700px) rotateY(-2deg) translateY(0)
+  transform:
+   perspective(700px)
+   rotateY(-2deg)
+   translateY(0);
  }
+
  50%{
-  transform:perspective(700px) rotateY(2deg) translateY(-5px)
+  transform:
+   perspective(700px)
+   rotateY(2deg)
+   translateY(-5px);
  }
+
 }
 
-/* =========================================================
-   ORIGINAL PRODUCT DESIGN
-========================================================= */
+/* ================= PRODUCT ================= */
 
 .product-top{
  position:absolute;
  top:22px;
  left:22px;
  right:22px;
+
  display:flex;
  justify-content:space-between;
- z-index:2;
+
+ z-index:5;
  pointer-events:none;
 }
 
@@ -386,14 +411,16 @@ header{
  border:1px solid var(--gold);
  background:rgba(0,0,0,.65);
  color:#fff;
+
  width:38px;
  height:38px;
+
  border-radius:50%;
  font-size:19px;
 }
 
 .favorite.active{
- color:var(--gold)
+ color:var(--gold);
 }
 
 .main-image{
@@ -422,10 +449,15 @@ header{
  cursor:pointer;
  border:2px solid transparent;
  flex-shrink:0;
+
+ transition:
+  border-color .2s ease,
+  transform .2s ease;
 }
 
 .thumbs img:hover{
- border-color:var(--gold)
+ border-color:var(--gold);
+ transform:translateY(-2px);
 }
 
 .variant-area{
@@ -484,16 +516,19 @@ header{
  align-items:center;
  justify-content:center;
  text-decoration:none;
+
  background:var(--gold);
  color:#000;
+
  font-weight:bold;
  padding:13px 10px;
  border-radius:13px;
+
  transition:.25s;
 }
 
 .whatsapp:hover{
- background:var(--gold2)
+ background:var(--gold2);
 }
 
 .add-cart{
@@ -508,6 +543,8 @@ header{
  background:var(--gold);
  color:#000;
 }
+
+/* ================= INFO ================= */
 
 .info-grid{
  display:grid;
@@ -525,17 +562,19 @@ header{
 
 .info-card .icon{
  font-size:32px;
- margin-bottom:8px
+ margin-bottom:8px;
 }
 
 .info-card h3{
  color:var(--gold);
- margin-bottom:7px
+ margin-bottom:7px;
 }
 
 .info-card p{
- color:var(--muted)
+ color:var(--muted);
 }
+
+/* ================= STEPS ================= */
 
 .steps{
  counter-reset:steps;
@@ -559,11 +598,18 @@ header{
 }
 
 .step p{
- color:var(--muted)
+ color:var(--muted);
 }
 
+/* ================= PROMO ================= */
+
 .promo-box{
- background:linear-gradient(135deg,var(--card),var(--card2));
+ background:linear-gradient(
+  135deg,
+  var(--card),
+  var(--card2)
+ );
+
  border:1px solid var(--gold);
  border-radius:25px;
  padding:30px;
@@ -572,30 +618,39 @@ header{
 
 .promo-box h2{
  color:var(--gold);
- margin-bottom:8px
+ margin-bottom:8px;
 }
 
 .promo-box p{
- color:var(--muted)
+ color:var(--muted);
 }
+
+/* ================= CART ================= */
 
 .cart-panel{
  position:fixed;
  right:-420px;
  top:0;
+
  width:min(400px,92vw);
  height:100vh;
+
  background:var(--card);
  border-left:1px solid var(--gold);
+
  z-index:100;
+
  padding:25px;
+
  transition:.35s;
+
  box-shadow:-15px 0 50px rgba(0,0,0,.4);
+
  overflow-y:auto;
 }
 
 .cart-panel.open{
- right:0
+ right:0;
 }
 
 .cart-header{
@@ -606,7 +661,7 @@ header{
 }
 
 .cart-header h2{
- color:var(--gold)
+ color:var(--gold);
 }
 
 .close{
@@ -631,15 +686,15 @@ header{
 }
 
 .cart-item-info{
- flex:1
+ flex:1;
 }
 
 .cart-item-info strong{
- display:block
+ display:block;
 }
 
 .cart-item-info span{
- color:var(--gold)
+ color:var(--gold);
 }
 
 .cart-item-info small{
@@ -680,56 +735,74 @@ header{
 }
 
 .overlay.show{
- display:block
+ display:block;
 }
+
+/* ================= WHATSAPP ================= */
 
 .fixed-wa{
  position:fixed;
  right:18px;
  bottom:18px;
+
  width:58px;
  height:58px;
+
  border-radius:50%;
  background:#25D366;
  color:#fff;
+
  display:flex;
  align-items:center;
  justify-content:center;
+
  text-decoration:none;
  font-size:27px;
+
  z-index:80;
+
  box-shadow:0 5px 25px rgba(0,0,0,.35);
 }
 
-/* =========================================================
-   BACK TO TOP
-========================================================= */
+/* ================= BACK TO TOP ================= */
 
 .back-to-top{
  position:fixed;
+
  right:18px;
  bottom:88px;
+
  width:48px;
  height:48px;
+
  border-radius:50%;
+
  border:1px solid var(--gold);
+
  background:var(--card);
  color:var(--gold);
+
  font-size:24px;
  font-weight:bold;
+
  display:flex;
  align-items:center;
  justify-content:center;
+
  z-index:79;
+
  opacity:0;
  visibility:hidden;
+
  transform:translateY(15px);
+
  transition:
-   opacity .3s ease,
-   visibility .3s ease,
-   transform .3s ease,
-   background .25s ease,
-   color .25s ease;
+  opacity .3s ease,
+  visibility .3s ease,
+  transform .3s ease,
+  background .25s ease,
+  color .25s ease;
+
  box-shadow:0 8px 25px rgba(0,0,0,.25);
 }
 
@@ -744,6 +817,8 @@ header{
  color:#000;
  transform:translateY(-3px);
 }
+
+/* ================= OTHER ================= */
 
 .empty{
  text-align:center;
@@ -760,7 +835,7 @@ footer{
 }
 
 footer strong{
- color:var(--gold)
+ color:var(--gold);
 }
 
 .reveal{
@@ -768,63 +843,66 @@ footer strong{
 }
 
 @keyframes reveal{
+
  from{
   opacity:0;
-  transform:translateY(15px)
+  transform:translateY(15px);
  }
+
  to{
   opacity:1;
-  transform:translateY(0)
+  transform:translateY(0);
  }
+
 }
 
-/* =========================================================
-   MOBILE
-========================================================= */
+/* ================= MOBILE ================= */
 
 @media(max-width:900px){
 
  .products{
-  grid-template-columns:repeat(2,1fr)
+  grid-template-columns:repeat(2,1fr);
  }
 
- .info-grid,.steps{
-  grid-template-columns:1fr
+ .info-grid,
+ .steps{
+  grid-template-columns:1fr;
  }
 
  .tools{
   position:static;
   justify-content:center;
-  margin-bottom:10px
+  margin-bottom:10px;
  }
+
 }
 
 @media(max-width:600px){
 
  .brand-logo img{
   width:120px;
-  height:120px
+  height:120px;
  }
 
  .products{
-  grid-template-columns:1fr
+  grid-template-columns:1fr;
  }
 
  .nav{
-  gap:7px
+  gap:7px;
  }
 
  .nav button{
   padding:9px 12px;
-  font-size:14px
+  font-size:14px;
  }
 
  .search-area{
-  margin-top:15px
+  margin-top:15px;
  }
 
  .section{
-  margin:35px auto
+  margin:35px auto;
  }
 
  .back-to-top{
@@ -837,6 +915,7 @@ footer strong{
 }
 
 /* لا نطبق حركة 3D على الهواتف */
+
 @media(hover:none){
 
  .product{
@@ -854,6 +933,7 @@ footer strong{
 }
 
 /* احترام إعداد تقليل الحركة */
+
 @media(prefers-reduced-motion:reduce){
 
  *,
@@ -879,63 +959,149 @@ footer strong{
 <header>
 
 <div class="tools">
-<button class="tool" onclick="toggleFavorites()" aria-label="Favorites">
-♥<span class="count" id="favCount">0</span>
+
+<button
+ class="tool"
+ onclick="toggleFavorites()"
+ aria-label="Favorites">
+
+ ♥
+ <span class="count" id="favCount">0</span>
+
 </button>
 
-<button class="tool" onclick="openCart()" aria-label="Cart">
-🛒<span class="count" id="cartCount">0</span>
+<button
+ class="tool"
+ onclick="openCart()"
+ aria-label="Cart">
+
+ 🛒
+ <span class="count" id="cartCount">0</span>
+
 </button>
+
 </div>
+
 
 <div class="brand-logo">
-<img src="./LOGO.PNG" alt="ORION Accessories Logo" width="145" height="145">
+
+<img
+ src="./LOGO.PNG"
+ alt="ORION Accessories Logo"
+ width="145"
+ height="145">
+
 </div>
 
+
 <div class="hero">
-<h1 id="heroTitle">ORION Accessories — Accessoires & Bijoux au Maroc</h1>
+
+<h1 id="heroTitle">
+ORION Accessories — Accessoires & Bijoux au Maroc
+</h1>
 
 <p id="heroDescription">
 Découvrez notre collection de lunettes de soleil, colliers, bracelets et accessoires tendance pour femmes et hommes. Commande facile sur WhatsApp et livraison partout au Maroc.
 </p>
+
 </div>
 
-<nav class="nav" aria-label="ORION Accessories categories">
 
-<button id="glassesBtn" class="active" onclick="showSection('glasses')">
-🕶️ <span data-i18n="glasses">Lunettes</span>
+<nav
+ class="nav"
+ aria-label="ORION Accessories categories">
+
+<button
+ id="glassesBtn"
+ class="active"
+ onclick="showSection('glasses')">
+
+ 🕶️
+ <span data-i18n="glasses">
+ Lunettes
+ </span>
+
 </button>
 
-<button id="chainsBtn" onclick="showSection('chains')">
-💎 <span data-i18n="chains">Colliers</span>
+
+<button
+ id="chainsBtn"
+ onclick="showSection('chains')">
+
+ 💎
+ <span data-i18n="chains">
+ Colliers
+ </span>
+
 </button>
 
-<button id="braceletsBtn" onclick="showSection('bracelets')">
-✨ <span data-i18n="bracelets">Bracelets</span>
+
+<button
+ id="braceletsBtn"
+ onclick="showSection('bracelets')">
+
+ ✨
+ <span data-i18n="bracelets">
+ Bracelets
+ </span>
+
 </button>
 
-<button id="promoBtn" onclick="showSection('promo')">
-🔥 <span data-i18n="promo">Promo</span>
+
+<button
+ id="promoBtn"
+ onclick="showSection('promo')">
+
+ 🔥
+ <span data-i18n="promo">
+ Promo
+ </span>
+
 </button>
 
-<button id="watchesBtn" onclick="showSection('watches')">
-⌚ <span data-i18n="watches">Montres</span>
+
+<button
+ id="watchesBtn"
+ onclick="showSection('watches')">
+
+ ⌚
+ <span data-i18n="watches">
+ Montres
+ </span>
+
 </button>
 
 </nav>
 
+
 <div class="controls">
 
-<button class="control-btn" onclick="toggleTheme()">
-🌙 / ☀️
+<button
+ class="control-btn"
+ onclick="toggleTheme()">
+
+ 🌙 / ☀️
+
 </button>
 
-<select class="select" id="languageSelect" onchange="changeLanguage(this.value)">
-<option value="fr">Français</option>
-<option value="en">English</option>
+
+<select
+ class="select"
+ id="languageSelect"
+ onchange="changeLanguage(this.value)">
+
+<option value="fr">
+Français
+</option>
+
+<option value="en">
+English
+</option>
+
 </select>
 
 </div>
+
 
 <div class="search-area">
 
@@ -943,88 +1109,148 @@ Découvrez notre collection de lunettes de soleil, colliers, bracelets et access
  id="searchInput"
  type="search"
  placeholder="Rechercher un modèle..."
- oninput="searchProducts(this.value)"
->
+ oninput="searchProducts(this.value)">
 
 </div>
 
 </header>
 
+
 <main>
 
-<section id="glasses" class="section">
+<section
+ id="glasses"
+ class="section">
 
-<h2 class="section-title" data-title="glassesTitle">
+<h2
+ class="section-title"
+ data-title="glassesTitle">
+
 Lunettes de soleil ORION au Maroc
+
 </h2>
 
-<p class="section-description" id="glassesDescription">
+<p
+ class="section-description"
+ id="glassesDescription">
+
 Découvrez nos lunettes de soleil ORION pour femmes et hommes. Modèles élégants et tendance. Livraison partout au Maroc.
+
 </p>
 
-<div id="glassesProducts" class="products"></div>
+<div
+ id="glassesProducts"
+ class="products">
+</div>
 
 </section>
 
 
-<section id="chains" class="section hidden">
+<section
+ id="chains"
+ class="section hidden">
 
-<h2 class="section-title" data-title="chainsTitle">
+<h2
+ class="section-title"
+ data-title="chainsTitle">
+
 Colliers ORION pour femmes et hommes
+
 </h2>
 
-<p class="section-description" id="chainsDescription">
+<p
+ class="section-description"
+ id="chainsDescription">
+
 Colliers tendance ORION pour compléter votre style. Découvrez nos modèles disponibles au Maroc.
+
 </p>
 
-<div id="chainProducts" class="products"></div>
+<div
+ id="chainProducts"
+ class="products">
+</div>
 
 </section>
 
 
-<section id="bracelets" class="section hidden">
+<section
+ id="bracelets"
+ class="section hidden">
 
-<h2 class="section-title" data-title="braceletsTitle">
+<h2
+ class="section-title"
+ data-title="braceletsTitle">
+
 Bracelets femme ORION
+
 </h2>
 
-<p class="section-description" id="braceletsDescription">
+<p
+ class="section-description"
+ id="braceletsDescription">
+
 Découvrez nos bracelets élégants pour femmes. Des accessoires tendance à porter au quotidien ou à offrir.
+
 </p>
 
-<div id="braceletProducts" class="products"></div>
+<div
+ id="braceletProducts"
+ class="products">
+</div>
 
 </section>
 
 
-<section id="promo" class="section hidden">
+<section
+ id="promo"
+ class="section hidden">
 
-<h2 class="section-title" data-title="promoTitle">
+<h2
+ class="section-title"
+ data-title="promoTitle">
+
 Promo accessoires femme ORION
+
 </h2>
 
-<p class="section-description" id="promoDescription">
+<p
+ class="section-description"
+ id="promoDescription">
+
 Profitez de nos packs élégance ORION. Bracelet, collier, boucles d'oreilles et bague à seulement 100 DH.
+
 </p>
 
-<div id="promoProducts" class="products"></div>
+<div
+ id="promoProducts"
+ class="products">
+</div>
 
 </section>
 
 
-<section id="watches" class="section hidden">
+<section
+ id="watches"
+ class="section hidden">
 
 <h2 class="section-title">
 Montres ORION
 </h2>
 
-<p class="section-description" id="watchesDescription">
+<p
+ class="section-description"
+ id="watchesDescription">
+
 Notre collection de montres ORION arrive prochainement.
+
 </p>
 
 <div class="promo-box">
 
-<h2>⌚ ORION Watches</h2>
+<h2>
+⌚ ORION Watches
+</h2>
 
 <p id="watchesComingSoon">
 Montres disponibles prochainement.
@@ -1037,21 +1263,29 @@ Montres disponibles prochainement.
 
 <section class="section">
 
-<h2 class="section-title" id="whyTitle">
+<h2
+ class="section-title"
+ id="whyTitle">
+
 Pourquoi choisir ORION ?
+
 </h2>
+
 
 <div class="info-grid">
 
+
 <div class="info-card">
 
-<div class="icon">✨</div>
+<div class="icon">
+✨
+</div>
 
-<h3 id="why1Title">
+<h3>
 Style premium
 </h3>
 
-<p id="why1Text">
+<p>
 Des accessoires sélectionnés pour donner une touche élégante à votre style.
 </p>
 
@@ -1060,13 +1294,15 @@ Des accessoires sélectionnés pour donner une touche élégante à votre style.
 
 <div class="info-card">
 
-<div class="icon">📦</div>
+<div class="icon">
+📦
+</div>
 
-<h3 id="why2Title">
+<h3>
 Livraison au Maroc
 </h3>
 
-<p id="why2Text">
+<p>
 Nous livrons les commandes partout au Maroc.
 </p>
 
@@ -1075,13 +1311,15 @@ Nous livrons les commandes partout au Maroc.
 
 <div class="info-card">
 
-<div class="icon">💬</div>
+<div class="icon">
+💬
+</div>
 
-<h3 id="why3Title">
+<h3>
 Commande simple
 </h3>
 
-<p id="why3Text">
+<p>
 Choisissez votre modèle et commandez directement via WhatsApp.
 </p>
 
@@ -1094,15 +1332,23 @@ Choisissez votre modèle et commandez directement via WhatsApp.
 
 <section class="section">
 
-<h2 class="section-title" id="howTitle">
+<h2
+ class="section-title"
+ id="howTitle">
+
 Comment commander ?
+
 </h2>
+
 
 <div class="steps">
 
+
 <div class="step">
 
-<strong>01</strong>
+<strong>
+01
+</strong>
 
 <p id="step1">
 Choisissez votre modèle préféré.
@@ -1113,7 +1359,9 @@ Choisissez votre modèle préféré.
 
 <div class="step">
 
-<strong>02</strong>
+<strong>
+02
+</strong>
 
 <p id="step2">
 Choisissez la couleur ou la variante, puis cliquez sur Commander ou ajoutez le produit au panier.
@@ -1124,7 +1372,9 @@ Choisissez la couleur ou la variante, puis cliquez sur Commander ou ajoutez le p
 
 <div class="step">
 
-<strong>03</strong>
+<strong>
+03
+</strong>
 
 <p id="step3">
 Envoyez votre commande sur WhatsApp et confirmez vos informations de livraison.
@@ -1159,7 +1409,10 @@ Une identité moderne, des accessoires tendance et une commande simple partout a
 <footer>
 
 <p>
-<strong>ORION Accessories</strong> — Lunettes, bijoux et accessoires tendance au Maroc.
+<strong>
+ORION Accessories
+</strong>
+— Lunettes, bijoux et accessoires tendance au Maroc.
 </p>
 
 <p>
@@ -1173,10 +1426,17 @@ Commande sur WhatsApp • Livraison partout au Maroc
 </footer>
 
 
-<div class="overlay" id="overlay" onclick="closeCart()"></div>
+<div
+ class="overlay"
+ id="overlay"
+ onclick="closeCart()">
+</div>
 
 
-<aside class="cart-panel" id="cartPanel">
+<aside
+ class="cart-panel"
+ id="cartPanel">
+
 
 <div class="cart-header">
 
@@ -1184,13 +1444,20 @@ Commande sur WhatsApp • Livraison partout au Maroc
 Votre panier
 </h2>
 
-<button class="close" onclick="closeCart()">
+<button
+ class="close"
+ onclick="closeCart()">
+
 ×
+
 </button>
 
 </div>
 
-<div id="cartItems"></div>
+
+<div id="cartItems">
+</div>
+
 
 <div class="cart-total">
 
@@ -1204,11 +1471,14 @@ Total :
 
 </div>
 
+
 <button
  class="checkout"
  onclick="checkout()"
  id="checkoutBtn">
+
 Commander sur WhatsApp
+
 </button>
 
 </aside>
@@ -1220,11 +1490,11 @@ Commander sur WhatsApp
  target="_blank"
  rel="noopener"
  aria-label="ORION Accessories WhatsApp">
+
 💬
+
 </a>
 
-
-<!-- سهم الرجوع للأعلى -->
 
 <button
  id="backToTop"
@@ -1232,15 +1502,16 @@ Commander sur WhatsApp
  onclick="scrollToTop()"
  aria-label="Retour en haut"
  title="Retour en haut">
+
 ↑
+
 </button>
 
 
 <script>
 
 /* =========================================================
-   ORION ACCESSORIES V2
-   VERSION BASE + AJOUTS PREMIUM
+   ORION ACCESSORIES
 ========================================================= */
 
 const whatsappNumber="212673830013";
@@ -1396,11 +1667,15 @@ const glasses=[
 ]]
 
 ].map(x=>({
+
  model:x[0],
  price:70,
  images:x[1]
+
 }));
 
+
+/* ================= COLLIERS ================= */
 
 const chains=[
 
@@ -1438,12 +1713,16 @@ const chains=[
 ]]
 
 ].map(x=>({
+
  model:x[0],
  price:x[1],
  category:x[2],
  images:x[3]
+
 }));
 
+
+/* ================= BRACELETS ================= */
 
 const bracelets=[
 
@@ -1487,12 +1766,16 @@ const bracelets=[
 ]]
 
 ].map(x=>({
+
  model:x[0],
  price:x[1],
  category:"Women",
  images:x[2]
+
 }));
 
+
+/* ================= PROMO ================= */
 
 const promo=[
 
@@ -1500,12 +1783,14 @@ const promo=[
  model:"01",
  price:100,
  category:"Women",
+
  images:[
   "pack1.JPG",
   "pack2.JPG",
   "pack3.JPG",
   "pack4.JPG"
  ]
+
 }
 
 ];
@@ -1517,26 +1802,30 @@ let currentLanguage=
  localStorage.getItem("orionLanguage")||"fr";
 
 let cart=
- JSON.parse(localStorage.getItem("orionCart")||"[]");
+ JSON.parse(
+  localStorage.getItem("orionCart")||"[]"
+ );
 
 let favorites=
- JSON.parse(localStorage.getItem("orionFavorites")||"[]");
+ JSON.parse(
+  localStorage.getItem("orionFavorites")||"[]"
+ );
 
 
-/* ================= URL ================= */
+/* ================= IMAGE URL ================= */
 
 function imageURL(filename){
 
  return "./"+
- filename
- .split("/")
- .map(x=>encodeURIComponent(x))
- .join("/");
+  filename
+   .split("/")
+   .map(x=>encodeURIComponent(x))
+   .join("/");
 
 }
 
 
-/* ================= VARIANT / COLORS ================= */
+/* ================= VARIANTS ================= */
 
 function getVariantName(type,model,index){
 
@@ -1561,17 +1850,17 @@ function getVariantName(type,model,index){
    ];
 
    return colors[index]||(
-
     currentLanguage==="fr"
      ?"Variante "+(index+1)
      :"Variant "+(index+1)
-
    );
+
   }
 
   return currentLanguage==="fr"
    ?"Variante "+(index+1)
    :"Variant "+(index+1);
+
  }
 
  return currentLanguage==="fr"
@@ -1599,6 +1888,7 @@ fr:{
  search:"Rechercher un modèle...",
  order:"Commander sur WhatsApp",
  add:"Ajouter au panier",
+
  glasses:"Lunettes",
  chains:"Colliers",
  bracelets:"Bracelets",
@@ -1659,6 +1949,7 @@ en:{
  search:"Search for a model...",
  order:"Order on WhatsApp",
  add:"Add to cart",
+
  glasses:"Sunglasses",
  chains:"Necklaces",
  bracelets:"Bracelets",
@@ -1720,18 +2011,22 @@ en:{
 
 function tr(key){
 
- return T[currentLanguage][key]||key
+ return T[currentLanguage][key]||key;
 
 }
 
 
-/* ================= PRODUCT RENDER ================= */
+/* =========================================================
+   PRODUCT RENDER
+========================================================= */
 
 function createProducts(list,containerId,type){
 
- const container=document.getElementById(containerId);
+ const container=
+  document.getElementById(containerId);
 
  container.innerHTML="";
+
 
  if(!list.length){
 
@@ -1739,13 +2034,18 @@ function createProducts(list,containerId,type){
    '<div class="empty">Aucun produit trouvé.</div>';
 
   return;
+
  }
+
 
  list.forEach((p,index)=>{
 
-  const id=type+"-"+p.model;
+  const id=
+   type+"-"+p.model;
 
-  const liked=favorites.includes(id);
+  const liked=
+   favorites.includes(id);
+
 
   let name=
 
@@ -1757,7 +2057,7 @@ function createProducts(list,containerId,type){
        :"Sunglasses"
      )
 
-    :type==="chain"
+   :type==="chain"
 
     ?(
       currentLanguage==="fr"
@@ -1765,11 +2065,11 @@ function createProducts(list,containerId,type){
        :"Necklace"
      )
 
-    :(
-      currentLanguage==="fr"
-       ?"Bracelet femme"
-       :"Women's Bracelet"
-     );
+   :(
+     currentLanguage==="fr"
+      ?"Bracelet femme"
+      :"Women's Bracelet"
+    );
 
 
   const mainId=
@@ -1779,35 +2079,46 @@ function createProducts(list,containerId,type){
    "variant-"+type+"-"+p.model;
 
 
-  let thumbs=p.images.map(
-   (img,imgIndex)=>`
+  /* ================= THUMBNAILS ================= */
 
-   <img
-    src="${imageURL(img)}"
-    alt="${name} ORION model ${p.model} ${getVariantName(type,p.model,imgIndex)}"
-    loading="lazy"
-    onclick="selectVariant('${selectId}','${mainId}',${imgIndex})"
-    onerror="this.style.display='none'"
-   >
+  let thumbs=
+   p.images.map(
+    (img,imgIndex)=>`
 
-  `
-  ).join("");
+    <img
+     src="${imageURL(img)}"
+     alt="${name} ORION model ${p.model} ${getVariantName(type,p.model,imgIndex)}"
+     loading="lazy"
 
+     onclick="selectVariant(
+      '${selectId}',
+      '${mainId}',
+      ${imgIndex}
+     )"
+
+     onerror="this.style.display='none'">
+
+   `
+   ).join("");
+
+
+  /* ================= VARIANT SELECT ================= */
 
   let variantHTML="";
 
 
   if(type==="glasses" && p.images.length>1){
 
-   let options=p.images.map(
-    (img,imgIndex)=>`
+   let options=
+    p.images.map(
+     (img,imgIndex)=>`
 
-    <option value="${imgIndex}">
-     ${getVariantName(type,p.model,imgIndex)}
-    </option>
+     <option value="${imgIndex}">
+      ${getVariantName(type,p.model,imgIndex)}
+     </option>
 
-   `
-   ).join("");
+    `
+    ).join("");
 
 
    variantHTML=`
@@ -1817,13 +2128,21 @@ function createProducts(list,containerId,type){
      <label
       class="variant-label"
       for="${selectId}">
+
       ${variantLabel()}
+
      </label>
+
 
      <select
       id="${selectId}"
       class="variant-select"
-      onchange="selectVariant('${selectId}','${mainId}',this.value)">
+
+      onchange="selectVariant(
+       '${selectId}',
+       '${mainId}',
+       this.value
+      )">
 
       ${options}
 
@@ -1832,24 +2151,39 @@ function createProducts(list,containerId,type){
     </div>
 
    `;
+
   }
 
 
+  /* ================= BADGE ================= */
+
   let badge="";
 
-  if(type==="chain"&&p.model==="01")
+
+  if(type==="chain" && p.model==="01"){
+
    badge="BEST SELLER";
 
-  else if(type==="bracelet"&&p.model==="05")
+  }else if(type==="bracelet" && p.model==="05"){
+
    badge="NOUVEAU";
 
-  else if(type==="promo")
+  }else if(type==="promo"){
+
    badge="PROMO";
 
+  }
 
-  const card=document.createElement("article");
 
-  card.className="product reveal";
+  /* ================= CARD ================= */
+
+  const card=
+   document.createElement("article");
+
+
+  card.className=
+   "product reveal";
+
 
   card.dataset.search=(
    name+
@@ -1860,42 +2194,67 @@ function createProducts(list,containerId,type){
   ).toLowerCase();
 
 
+  /* مهم: نضيف type و model للبطاقة */
+
+  card.dataset.type=type;
+  card.dataset.model=p.model;
+
+
   card.innerHTML=`
 
    <div class="product-top">
 
     ${
      badge
-      ?`<span class="badge ${badge==="NOUVEAU"?"new":""}">
+
+      ?`
+       <span class="badge ${badge==="NOUVEAU"?"new":""}">
         ${badge}
-       </span>`
-      :"<span></span>"
+       </span>
+      `
+
+      :
+
+       "<span></span>"
     }
+
 
     <button
      class="favorite ${liked?"active":""}"
+
      onclick="toggleFavorite('${id}',this)"
+
      aria-label="Favorite">
+
      ♥
+
     </button>
 
    </div>
 
 
    <img
+
     id="${mainId}"
+
     class="main-image"
+
     src="${imageURL(p.images[0])}"
+
     alt="${name} ORION modèle ${p.model} Maroc"
+
     width="800"
     height="800"
+
     loading="${index<2?"eager":"lazy"}"
-    onerror="imageError(this)"
-   >
 
+    onerror="imageError(this)">
 
+   
    <div class="thumbs">
+
     ${thumbs}
+
    </div>
 
 
@@ -1903,35 +2262,51 @@ function createProducts(list,containerId,type){
 
 
    <h3>
+
     ORION ${name}
+
     ${currentLanguage==="fr"?"Modèle":"Model"}
+
     ${p.model}
+
    </h3>
 
 
    ${
     p.category
+
      ?`
+
       <div class="category">
+
        ${
         currentLanguage==="fr"
+
          ?(
            p.category==="Women"
             ?"Femme"
+
             :p.category==="Women & Men"
             ?"Femme & Homme"
+
             :p.category
           )
+
          :p.category
        }
+
       </div>
+
      `
+
      :""
    }
 
 
    <div class="price">
+
     ${p.price} DH
+
    </div>
 
 
@@ -1939,8 +2314,11 @@ function createProducts(list,containerId,type){
 
     <a
      class="whatsapp order-link"
+
      id="order-${type}-${p.model}"
+
      href="${buildProductWhatsApp(type,p,0)}"
+
      target="_blank"
      rel="noopener">
 
@@ -1950,8 +2328,15 @@ function createProducts(list,containerId,type){
 
 
     <button
+
      class="add-cart"
-     onclick="addSelectedToCart('${type}','${p.model}','${selectId}')"
+
+     onclick="addSelectedToCart(
+      '${type}',
+      '${p.model}',
+      '${selectId}'
+     )"
+
      aria-label="Cart">
 
      🛒
@@ -1965,19 +2350,30 @@ function createProducts(list,containerId,type){
 
   container.appendChild(card);
 
-  updateOrderLink(type,p,0);
+
+  updateOrderLink(
+   type,
+   p,
+   0
+  );
 
  });
 
- /* إضافة تأثير 3D بعد إنشاء البطاقات */
+
  init3D();
 
 }
 
 
-/* ================= WHATSAPP PRODUCT ================= */
+/* =========================================================
+   WHATSAPP
+========================================================= */
 
-function buildProductMessage(type,p,variantIndex){
+function buildProductMessage(
+ type,
+ p,
+ variantIndex
+){
 
  const name=
 
@@ -1989,7 +2385,7 @@ function buildProductMessage(type,p,variantIndex){
       :"Sunglasses"
     )
 
-   :type==="chain"
+  :type==="chain"
 
    ?(
      currentLanguage==="fr"
@@ -1997,7 +2393,7 @@ function buildProductMessage(type,p,variantIndex){
       :"Necklace"
     )
 
-   :type==="bracelet"
+  :type==="bracelet"
 
    ?(
      currentLanguage==="fr"
@@ -2005,14 +2401,20 @@ function buildProductMessage(type,p,variantIndex){
       :"Women's Bracelet"
     )
 
-   :"Pack";
+  :"Pack";
 
 
  const variant=
-  getVariantName(type,p.model,variantIndex);
+  getVariantName(
+   type,
+   p.model,
+   variantIndex
+  );
+
 
  const selectedImage=
   p.images[variantIndex]||p.images[0];
+
 
  const imageLink=
   new URL(
@@ -2053,109 +2455,203 @@ Please confirm availability.`;
 }
 
 
-function buildProductWhatsApp(type,p,variantIndex){
+function buildProductWhatsApp(
+ type,
+ p,
+ variantIndex
+){
 
  const message=
-  buildProductMessage(type,p,variantIndex);
+  buildProductMessage(
+   type,
+   p,
+   variantIndex
+  );
+
 
  return `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
 
 }
 
 
-function updateOrderLink(type,p,variantIndex){
+function updateOrderLink(
+ type,
+ p,
+ variantIndex
+){
 
  const link=
   document.getElementById(
    "order-"+type+"-"+p.model
   );
 
+
  if(link){
+
   link.href=
-   buildProductWhatsApp(type,p,variantIndex);
+   buildProductWhatsApp(
+    type,
+    p,
+    variantIndex
+   );
+
  }
 
 }
 
 
-/* ================= VARIANT SELECTION ================= */
+/* =========================================================
+   FIXED VARIANT / IMAGE FUNCTION
+========================================================= */
 
-function selectVariant(selectId,mainId,index){
+function selectVariant(
+ selectId,
+ mainId,
+ index
+){
 
  index=Number(index);
 
+
+ /*
+   هنا الإصلاح الأساسي:
+
+   Lunettes عندها select.
+   Colliers و Bracelets ليس عندها select.
+
+   لذلك لا نتوقف إذا لم يوجد select.
+ */
+
  const select=
-  document.getElementById(selectId);
+  selectId
+   ?document.getElementById(selectId)
+   :null;
+
 
  const main=
   document.getElementById(mainId);
 
- if(!select || !main)return;
+
+ if(!main)return;
+
 
  const card=
-  select.closest(".product");
+  main.closest(".product");
+
 
  if(!card)return;
 
+
+ /* ================= MAIN IMAGE ================= */
+
  const images=
-  [...card.querySelectorAll(".thumbs img")];
+  [
+   ...card.querySelectorAll(
+    ".thumbs img"
+   )
+  ];
+
 
  if(images[index]){
-  main.src=images[index].src;
+
+  main.src=
+   images[index].src;
+
+  main.removeAttribute(
+   "srcset"
+  );
+
  }
 
+
+ /* ================= SELECT SYNC ================= */
+
+ if(select){
+
+  select.value=
+   String(index);
+
+ }
+
+
+ /* ================= FIND PRODUCT ================= */
+
  const type=
-  selectId.split("-")[1];
+  card.dataset.type;
+
 
  const model=
-  selectId.split("-")[2];
+  card.dataset.model;
 
 
- const list=
+ let list;
 
-  type==="glasses"
-   ?glasses
 
-  :type==="chain"
-   ?chains
+ if(type==="glasses"){
 
-  :type==="bracelet"
-   ?bracelets
+  list=glasses;
 
-  :promo;
+ }else if(type==="chain"){
+
+  list=chains;
+
+ }else if(type==="bracelet"){
+
+  list=bracelets;
+
+ }else{
+
+  list=promo;
+
+ }
 
 
  const product=
-  list.find(p=>p.model===model);
+  list.find(
+   p=>p.model===model
+  );
 
+
+ /* ================= WHATSAPP SYNC ================= */
 
  if(product){
+
   updateOrderLink(
    type,
    product,
    index
   );
+
  }
 
 
- images.forEach((img,i)=>{
+ /* ================= THUMB ACTIVE ================= */
 
-  img.style.borderColor=
-   i===index
-    ?"var(--gold)"
-    :"transparent";
+ images.forEach(
+  (img,i)=>{
 
- });
+   img.style.borderColor=
+    i===index
+     ?"var(--gold)"
+     :"transparent";
+
+  }
+ );
 
 }
 
 
-/* ================= PROMO ================= */
+/* =========================================================
+   PROMO
+========================================================= */
 
 function createPromo(){
 
  const container=
-  document.getElementById("promoProducts");
+  document.getElementById(
+   "promoProducts"
+  );
+
 
  container.innerHTML="";
 
@@ -2175,27 +2671,37 @@ function createPromo(){
    `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
 
 
-  const mainId="promo-main";
+  const mainId=
+   "promo-main";
 
 
-  let thumbs=p.images.map(
-   (img,index)=>`
+  let thumbs=
+   p.images.map(
+    (img,index)=>`
 
-   <img
-    src="${imageURL(img)}"
-    alt="ORION Elegance Pack"
-    loading="lazy"
-    onclick="changeImage('${mainId}',this.src)"
-    onerror="this.style.display='none'"
-   >
+    <img
+     src="${imageURL(img)}"
+     alt="ORION Elegance Pack"
+     loading="lazy"
 
-  `
-  ).join("");
+     onclick="changeImage(
+      '${mainId}',
+      this.src,
+      ${index}
+     )"
+
+     onerror="this.style.display='none'">
+
+   `
+   ).join("");
 
 
   container.innerHTML=`
 
-   <article class="product reveal">
+   <article
+    class="product reveal"
+    data-type="promo"
+    data-model="01">
 
     <div class="product-top">
 
@@ -2203,10 +2709,17 @@ function createPromo(){
       PROMO
      </span>
 
+
      <button
       class="favorite ${favorites.includes("promo-01")?"active":""}"
-      onclick="toggleFavorite('promo-01',this)">
+
+      onclick="toggleFavorite(
+       'promo-01',
+       this
+      )">
+
       ♥
+
      </button>
 
     </div>
@@ -2219,22 +2732,28 @@ function createPromo(){
      alt="Pack élégance femme ORION Maroc"
      width="800"
      height="800"
-     onerror="imageError(this)"
-    >
+     onerror="imageError(this)">
 
 
     <div class="thumbs">
+
      ${thumbs}
+
     </div>
 
 
     <h3>
+
      🔥
+
      ${
       currentLanguage==="fr"
+
        ?"Pack Élégance Femme ORION"
+
        :"ORION Women's Elegance Pack"
      }
+
     </h3>
 
 
@@ -2244,7 +2763,9 @@ function createPromo(){
 
      ${
       currentLanguage==="fr"
+
        ?"Bracelet + Collier + Boucles d’oreilles + Bague"
+
        :"Bracelet + Necklace + Earrings + Ring"
      }
 
@@ -2271,7 +2792,11 @@ function createPromo(){
 
      <button
       class="add-cart"
-      onclick="addToCart('promo',promo[0])">
+      onclick="addToCart(
+       'promo',
+       promo[0],
+       0
+      )">
 
       🛒
 
@@ -2285,23 +2810,67 @@ function createPromo(){
 
  });
 
+
  init3D();
 
 }
 
 
-/* ================= IMAGE ================= */
+/* =========================================================
+   IMAGE CHANGE
+========================================================= */
 
-function changeImage(id,src){
+function changeImage(
+ id,
+ src,
+ index
+){
 
  const img=
   document.getElementById(id);
 
- if(img)
-  img.src=src;
+
+ if(!img)return;
+
+
+ img.src=src;
+
+
+ img.removeAttribute(
+  "srcset"
+ );
+
+
+ /* تحديد الصورة المصغرة */
+
+ const card=
+  img.closest(".product");
+
+
+ if(!card)return;
+
+
+ const thumbs=
+  card.querySelectorAll(
+   ".thumbs img"
+  );
+
+
+ thumbs.forEach(
+  (thumb,i)=>{
+
+   thumb.style.borderColor=
+    i===Number(index)
+     ?"var(--gold)"
+     :"transparent";
+
+  }
+ );
 
 }
 
+
+/* ================= IMAGE ERROR ================= */
 
 function imageError(img){
 
@@ -2312,7 +2881,9 @@ function imageError(img){
 }
 
 
-/* ================= SECTIONS ================= */
+/* =========================================================
+   SECTIONS
+========================================================= */
 
 function showSection(section){
 
@@ -2352,21 +2923,32 @@ function showSection(section){
 
 
  const btn=
-  document.getElementById(section+"Btn");
+  document.getElementById(
+   section+"Btn"
+  );
 
- if(btn)
+
+ if(btn){
+
   btn.classList.add("active");
+
+ }
 
 
  window.scrollTo({
+
   top:0,
+
   behavior:"smooth"
+
  });
 
 }
 
 
-/* ================= SEARCH ================= */
+/* =========================================================
+   SEARCH
+========================================================= */
 
 function searchProducts(value){
 
@@ -2393,29 +2975,42 @@ function searchProducts(value){
 }
 
 
-/* ================= FAVORITES ================= */
+/* =========================================================
+   FAVORITES
+========================================================= */
 
-function toggleFavorite(id,button){
+function toggleFavorite(
+ id,
+ button
+){
 
  if(favorites.includes(id)){
 
   favorites=
-   favorites.filter(x=>x!==id);
+   favorites.filter(
+    x=>x!==id
+   );
 
-  button.classList.remove("active");
+  button.classList.remove(
+   "active"
+  );
 
  }else{
 
   favorites.push(id);
 
-  button.classList.add("active");
+  button.classList.add(
+   "active"
+  );
 
  }
+
 
  localStorage.setItem(
   "orionFavorites",
   JSON.stringify(favorites)
  );
+
 
  updateCounts();
 
@@ -2427,12 +3022,17 @@ function toggleFavorites(){
  if(!favorites.length){
 
   alert(
+
    currentLanguage==="fr"
+
     ?"Vous n'avez encore aucun favori."
+
     :"You don't have any favorites yet."
+
   );
 
   return;
+
  }
 
 
@@ -2449,37 +3049,59 @@ function toggleFavorites(){
 }
 
 
-/* ================= CART ================= */
+/* =========================================================
+   CART
+========================================================= */
 
-function addSelectedToCart(type,model,selectId){
+function addSelectedToCart(
+ type,
+ model,
+ selectId
+){
 
  let variantIndex=0;
 
+
  const select=
-  document.getElementById(selectId);
+  document.getElementById(
+   selectId
+  );
+
 
  if(select){
+
   variantIndex=
    Number(select.value);
+
  }
 
 
- const list=
+ let list;
 
-  type==="glasses"
-   ?glasses
 
-  :type==="chain"
-   ?chains
+ if(type==="glasses"){
 
-  :type==="bracelet"
-   ?bracelets
+  list=glasses;
 
-  :promo;
+ }else if(type==="chain"){
+
+  list=chains;
+
+ }else if(type==="bracelet"){
+
+  list=bracelets;
+
+ }else{
+
+  list=promo;
+
+ }
 
 
  const p=
-  list.find(x=>x.model===model);
+  list.find(
+   x=>x.model===model
+  );
 
 
  if(!p)return;
@@ -2494,10 +3116,16 @@ function addSelectedToCart(type,model,selectId){
 }
 
 
-function addToCart(type,p,variantIndex=0){
+function addToCart(
+ type,
+ p,
+ variantIndex=0
+){
 
  const selectedImage=
-  p.images[variantIndex]||p.images[0];
+  p.images[variantIndex]||
+  p.images[0];
+
 
  const variant=
   getVariantName(
@@ -2516,7 +3144,9 @@ function addToCart(type,p,variantIndex=0){
 
 
  const existing=
-  cart.find(x=>x.key===key);
+  cart.find(
+   x=>x.key===key
+  );
 
 
  if(existing){
@@ -2560,7 +3190,10 @@ function addToCart(type,p,variantIndex=0){
 function removeFromCart(key){
 
  cart=
-  cart.filter(x=>x.key!==key);
+  cart.filter(
+   x=>x.key!==key
+  );
+
 
  saveCart();
 
@@ -2584,6 +3217,7 @@ function updateCounts(){
  document.getElementById(
   "cartCount"
  ).textContent=
+
   cart.reduce(
    (s,x)=>s+x.qty,
    0
@@ -2601,7 +3235,9 @@ function updateCounts(){
 function updateCart(){
 
  const box=
-  document.getElementById("cartItems");
+  document.getElementById(
+   "cartItems"
+  );
 
 
  if(!cart.length){
@@ -2609,11 +3245,15 @@ function updateCart(){
   box.innerHTML=`
 
    <div class="empty">
+
     ${
      currentLanguage==="fr"
+
       ?"Votre panier est vide."
+
       :"Your cart is empty."
     }
+
    </div>
 
   `;
@@ -2621,68 +3261,90 @@ function updateCart(){
 
   document.getElementById(
    "cartTotal"
-  ).textContent="0 DH";
+  ).textContent=
+   "0 DH";
 
 
   updateCounts();
 
   return;
+
  }
 
 
  box.innerHTML=
-  cart.map(item=>`
 
-  <div class="cart-item">
+  cart.map(
+   item=>`
 
-   <img
-    src="${imageURL(item.image)}"
-    alt="ORION ${item.type} ${item.model}"
-   >
+   <div class="cart-item">
+
+    <img
+     src="${imageURL(item.image)}"
+     alt="ORION ${item.type} ${item.model}">
 
 
-   <div class="cart-item-info">
+    <div class="cart-item-info">
 
-    <strong>
-     ORION
+     <strong>
+
+      ORION
+
+      ${
+       item.type==="glasses"
+
+        ?tr("glasses")
+
+        :item.type==="chain"
+
+        ?tr("chains")
+
+        :item.type==="bracelet"
+
+        ?tr("bracelets")
+
+        :"Pack"
+      }
+
+      ${item.model}
+
+     </strong>
+
+
      ${
-      item.type==="glasses"
-       ?tr("glasses")
-       :item.type==="chain"
-       ?tr("chains")
-       :item.type==="bracelet"
-       ?tr("bracelets")
-       :"Pack"
+      item.variant
+
+       ?`
+        <small>
+         🎨 ${item.variant}
+        </small>
+       `
+
+       :""
      }
-     ${item.model}
-    </strong>
 
 
-    ${
-     item.variant
-      ?`<small>🎨 ${item.variant}</small>`
-      :""
-    }
+     <span>
+
+      ${item.price} DH × ${item.qty}
+
+     </span>
+
+    </div>
 
 
-    <span>
-     ${item.price} DH × ${item.qty}
-    </span>
+    <button
+     class="remove"
+     onclick="removeFromCart('${item.key}')">
+
+     ✕
+
+    </button>
 
    </div>
 
-
-   <button
-    class="remove"
-    onclick="removeFromCart('${item.key}')">
-
-    ✕
-
-   </button>
-
-  </div>
-
- `).join("");
+  `
+  ).join("");
 
 
  const total=
@@ -2709,9 +3371,11 @@ function openCart(){
   .getElementById("cartPanel")
   .classList.add("open");
 
+
  document
   .getElementById("overlay")
   .classList.add("show");
+
 
  updateCart();
 
@@ -2724,6 +3388,7 @@ function closeCart(){
   .getElementById("cartPanel")
   .classList.remove("open");
 
+
  document
   .getElementById("overlay")
   .classList.remove("show");
@@ -2731,7 +3396,9 @@ function closeCart(){
 }
 
 
-/* ================= CHECKOUT ================= */
+/* =========================================================
+   CHECKOUT
+========================================================= */
 
 function checkout(){
 
@@ -2801,18 +3468,24 @@ function checkout(){
 }
 
 
-/* ================= THEME ================= */
+/* =========================================================
+   THEME
+========================================================= */
 
 function toggleTheme(){
 
- document.body.classList.toggle("light");
+ document.body.classList.toggle(
+  "light"
+ );
 
 
  localStorage.setItem(
 
   "orionTheme",
 
-  document.body.classList.contains("light")
+  document.body.classList.contains(
+   "light"
+  )
    ?"light"
    :"dark"
 
@@ -2821,16 +3494,20 @@ function toggleTheme(){
 }
 
 
-/* ================= LANGUAGE ================= */
+/* =========================================================
+   LANGUAGE
+========================================================= */
 
 function changeLanguage(lang){
 
  currentLanguage=lang;
 
+
  localStorage.setItem(
   "orionLanguage",
   lang
  );
+
 
  applyLanguage();
 
@@ -2908,7 +3585,9 @@ function applyLanguage(){
 
 
  document
-  .querySelectorAll("[data-i18n]")
+  .querySelectorAll(
+   "[data-i18n]"
+  )
   .forEach(el=>{
 
    el.textContent=
@@ -3011,7 +3690,9 @@ function init3D(){
    "(prefers-reduced-motion: reduce)"
   ).matches
  ){
+
   return;
+
  }
 
 
@@ -3098,6 +3779,7 @@ function init3D(){
 
      card.style.transform="";
 
+
      card.style.setProperty(
       "--mx",
       "50%"
@@ -3121,7 +3803,9 @@ function init3D(){
 ========================================================= */
 
 const backToTop=
- document.getElementById("backToTop");
+ document.getElementById(
+  "backToTop"
+ );
 
 
 window.addEventListener(
@@ -3130,11 +3814,15 @@ window.addEventListener(
 
   if(window.scrollY>450){
 
-   backToTop.classList.add("show");
+   backToTop.classList.add(
+    "show"
+   );
 
   }else{
 
-   backToTop.classList.remove("show");
+   backToTop.classList.remove(
+    "show"
+   );
 
   }
 
@@ -3146,23 +3834,35 @@ window.addEventListener(
 function scrollToTop(){
 
  window.scrollTo({
+
   top:0,
+
   behavior:"smooth"
+
  });
 
 }
 
 
-/* ================= INIT ================= */
+/* =========================================================
+   INIT
+========================================================= */
 
 function init(){
 
  const theme=
-  localStorage.getItem("orionTheme");
+  localStorage.getItem(
+   "orionTheme"
+  );
 
 
- if(theme==="light")
-  document.body.classList.add("light");
+ if(theme==="light"){
+
+  document.body.classList.add(
+   "light"
+  );
+
+ }
 
 
  document.getElementById(
@@ -3173,7 +3873,9 @@ function init(){
 
  applyLanguage();
 
+
  updateCounts();
+
 
  init3D();
 
