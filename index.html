@@ -6,18 +6,18 @@
 
 <title>ORION Accessories | Lunettes, Bijoux & Accessoires au Maroc</title>
 
-<meta name="description" content="ORION Accessories — Lunettes de soleil, chaînes, bracelets et packs élégance au Maroc. Commandez facilement sur WhatsApp avec livraison partout au Maroc.">
-<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="description" content="ORION Accessories — Découvrez nos lunettes de soleil, chaînes, bracelets et packs élégance pour femmes et hommes au Maroc. Commande facile sur WhatsApp et livraison partout au Maroc.">
 <meta name="author" content="ORION Accessories">
+<meta name="robots" content="index, follow, max-image-preview:large">
 
 <link rel="canonical" href="https://oreonaccessoires.github.io/OREON-/">
 
 <meta property="og:type" content="website">
-<meta property="og:title" content="ORION Accessories | Accessoires au Maroc">
-<meta property="og:description" content="Découvrez les accessoires ORION : lunettes, chaînes, bracelets et packs élégance. Livraison partout au Maroc.">
+<meta property="og:title" content="ORION Accessories | Accessoires & Bijoux au Maroc">
+<meta property="og:description" content="Lunettes de soleil, chaînes, bracelets et accessoires tendance. Livraison partout au Maroc. Commandez facilement sur WhatsApp.">
 <meta property="og:url" content="https://oreonaccessoires.github.io/OREON-/">
 <meta property="og:site_name" content="ORION Accessories">
-
+<meta property="og:locale" content="fr_MA">
 <meta name="twitter:card" content="summary_large_image">
 
 <script type="application/ld+json">
@@ -27,20 +27,27 @@
   "name":"ORION Accessories",
   "url":"https://oreonaccessoires.github.io/OREON-/",
   "description":"Boutique d'accessoires et bijoux tendance au Maroc.",
-  "inLanguage":["fr-MA","en"]
+  "inLanguage":"fr-MA"
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Organization",
+  "name":"ORION Accessories",
+  "url":"https://oreonaccessoires.github.io/OREON-/",
+  "logo":"https://oreonaccessoires.github.io/OREON-/favicon.PNG"
 }
 </script>
 
 <style>
-
 :root{
   --gold:#d4af37;
-  --gold-light:#f0d477;
-  --black:#050505;
-  --card:#111111;
-  --text:#ffffff;
-  --muted:#999999;
-  --border:#292929;
+  --bg:#050505;
+  --card:#151515;
+  --text:#fff;
+  --border:#333;
 }
 
 *{
@@ -55,17 +62,16 @@ html{
 
 body{
   font-family:Arial,Helvetica,sans-serif;
-  background:var(--black);
+  background:var(--bg);
   color:var(--text);
   line-height:1.6;
 }
 
 body.light{
-  --black:#ffffff;
+  --bg:#fff;
   --card:#f5f5f5;
-  --text:#111111;
-  --muted:#666666;
-  --border:#dddddd;
+  --text:#111;
+  --border:#ccc;
 }
 
 header{
@@ -82,54 +88,53 @@ header{
 }
 
 .subtitle{
-  margin-top:7px;
-  font-size:22px;
+  margin-top:8px;
+  font-size:25px;
   letter-spacing:6px;
-  color:#999;
+  color:#aaa;
 }
 
-.hero{
-  max-width:900px;
-  margin:30px auto 0;
+.hero-text{
+  max-width:850px;
+  margin:30px auto 10px;
   padding:0 20px;
+  text-align:center;
 }
 
-.hero h1{
+.hero-text h1{
   color:var(--gold);
   font-size:32px;
-  margin-bottom:12px;
+  margin-bottom:15px;
 }
 
-.hero p{
-  color:var(--muted);
+.hero-text p{
+  color:#aaa;
   font-size:18px;
+  line-height:1.8;
 }
 
 .nav{
   display:flex;
   justify-content:center;
   flex-wrap:wrap;
-  gap:10px;
-  margin-top:28px;
+  gap:15px;
+  margin-top:30px;
 }
 
 .nav button,
-.language button,
-.theme-button{
+.controls button,
+select{
   border:1px solid var(--gold);
   background:transparent;
   color:var(--text);
-  padding:11px 19px;
   border-radius:30px;
+  padding:12px 22px;
+  font-size:16px;
   cursor:pointer;
-  font-size:15px;
-  transition:.2s;
 }
 
-.nav button:hover,
 .nav button.active,
-.language button.active,
-.theme-button:hover{
+.nav button:hover{
   background:var(--gold);
   color:#000;
 }
@@ -138,105 +143,72 @@ header{
   display:flex;
   justify-content:center;
   align-items:center;
-  gap:10px;
-  margin-top:18px;
+  gap:15px;
+  margin-top:20px;
 }
 
-.language{
-  display:flex;
-  gap:7px;
+select{
+  background:var(--bg);
 }
 
 .section{
-  max-width:1200px;
-  margin:50px auto;
+  max-width:900px;
+  margin:45px auto;
   padding:0 18px;
-}
-
-.hidden{
-  display:none;
 }
 
 .section-title{
   text-align:center;
   color:var(--gold);
-  font-size:35px;
-  margin-bottom:8px;
+  font-size:36px;
+  margin:25px 0 10px;
 }
 
 .section-description{
   text-align:center;
-  max-width:800px;
+  color:#999;
+  max-width:750px;
   margin:0 auto 30px;
-  color:var(--muted);
   font-size:17px;
 }
 
 .products{
   display:grid;
   grid-template-columns:repeat(3,1fr);
-  gap:22px;
+  gap:25px;
 }
 
 .product{
   background:var(--card);
   border:1px solid var(--border);
-  border-radius:18px;
+  border-radius:22px;
+  padding:16px;
   overflow:hidden;
-  padding:0 0 18px;
-}
-
-.product-image-wrap{
-  width:100%;
-  overflow:hidden;
-  background:transparent;
 }
 
 .main-image{
   width:100%;
   height:auto;
+  max-height:none;
+  aspect-ratio:auto;
+  object-fit:initial;
   display:block;
-  object-fit:contain;
+  border-radius:18px;
   background:transparent;
-}
-
-.product-info{
-  padding:15px 16px 0;
-}
-
-.product h3{
-  font-size:21px;
-  margin-bottom:7px;
-}
-
-.category{
-  color:var(--muted);
-  margin-bottom:7px;
-}
-
-.price{
-  color:var(--gold);
-  font-size:24px;
-  font-weight:bold;
-  margin:8px 0 14px;
 }
 
 .thumbs{
   display:flex;
-  gap:8px;
+  gap:10px;
   overflow-x:auto;
-  padding:10px 15px 2px;
-}
-
-.thumbs::-webkit-scrollbar{
-  height:4px;
+  padding:12px 0 5px;
 }
 
 .thumbs img{
-  width:65px;
-  height:65px;
+  width:75px;
+  height:75px;
   object-fit:cover;
-  border-radius:9px;
+  border-radius:10px;
   cursor:pointer;
   border:2px solid transparent;
   flex-shrink:0;
@@ -246,6 +218,18 @@ header{
   border-color:var(--gold);
 }
 
+.product h3{
+  font-size:22px;
+  margin:15px 0 10px;
+}
+
+.price{
+  color:var(--gold);
+  font-size:24px;
+  font-weight:bold;
+  margin-bottom:15px;
+}
+
 .whatsapp{
   display:block;
   width:100%;
@@ -253,44 +237,30 @@ header{
   text-decoration:none;
   background:var(--gold);
   color:#000;
-  padding:13px 10px;
-  border-radius:12px;
+  font-size:17px;
   font-weight:bold;
-  font-size:16px;
+  padding:15px;
+  border-radius:16px;
 }
 
-.whatsapp:hover{
-  background:var(--gold-light);
-}
-
-.promo-info{
-  color:var(--muted);
-  margin:10px 0;
-  line-height:1.8;
+.hidden{
+  display:none;
 }
 
 footer{
-  border-top:1px solid var(--border);
   text-align:center;
-  padding:40px 15px;
-  color:var(--muted);
-  margin-top:60px;
-}
-
-footer strong{
-  color:var(--gold);
+  padding:45px 15px;
+  color:#888;
+  border-top:1px solid #222;
 }
 
 @media(max-width:900px){
-
   .products{
-    grid-template-columns:repeat(2,1fr);
+    grid-template-columns:1fr 1fr;
   }
-
 }
 
 @media(max-width:600px){
-
   .logo{
     font-size:38px;
     letter-spacing:7px;
@@ -300,28 +270,18 @@ footer strong{
     font-size:18px;
   }
 
-  .hero h1{
-    font-size:25px;
-  }
-
-  .hero p{
-    font-size:16px;
+  .hero-text h1{
+    font-size:26px;
   }
 
   .section-title{
-    font-size:28px;
+    font-size:30px;
   }
 
   .products{
     grid-template-columns:1fr;
   }
-
-  .nav button{
-    padding:10px 14px;
-  }
-
 }
-
 </style>
 </head>
 
@@ -329,591 +289,582 @@ footer strong{
 
 <header>
 
-  <div class="logo">ORION</div>
+<div class="logo">ORION</div>
+<div class="subtitle">ACCESSORIES</div>
 
-  <div class="subtitle">ACCESSORIES</div>
+<div class="hero-text">
 
-  <div class="hero">
+<h1>
+ORION Accessories — Accessoires & Bijoux au Maroc
+</h1>
 
-    <h1 id="heroTitle">
-      ORION Accessories — Accessoires tendance au Maroc
-    </h1>
+<p id="heroDescription">
+Découvrez notre collection de lunettes de soleil, chaînes,
+bracelets et accessoires tendance pour femmes et hommes.
+Commande facile sur WhatsApp et livraison partout au Maroc.
+</p>
 
-    <p id="heroText">
-      Découvrez nos lunettes de soleil, chaînes, bracelets et packs élégance.
-      Commandez facilement sur WhatsApp avec livraison partout au Maroc.
-    </p>
+</div>
 
-  </div>
+<nav class="nav" aria-label="Catégories ORION Accessories">
 
-  <nav class="nav">
+<button id="glassesBtn"
+class="active"
+onclick="showSection('glasses')">
 
-    <button id="btnGlasses"
-      class="active"
-      onclick="showSection('glasses')">
-      🕶️ <span data-fr="Lunettes" data-en="Sunglasses">Lunettes</span>
-    </button>
+🕶️ <span data-i18n="navGlasses">
+Lunettes
+</span>
 
-    <button id="btnChains"
-      onclick="showSection('chains')">
-      ⛓️ <span data-fr="Chaînes" data-en="Chains">Chaînes</span>
-    </button>
+</button>
 
-    <button id="btnBracelets"
-      onclick="showSection('bracelets')">
-      💎 <span data-fr="Bracelets" data-en="Bracelets">Bracelets</span>
-    </button>
+<button id="chainsBtn"
+onclick="showSection('chains')">
 
-    <button id="btnPromo"
-      onclick="showSection('promo')">
-      🔥 <span data-fr="Promo" data-en="Promo">Promo</span>
-    </button>
+⛓️ <span data-i18n="navChains">
+Chaînes
+</span>
 
-    <button id="btnWatches"
-      onclick="showSection('watches')">
-      ⌚ <span data-fr="Montres" data-en="Watches">Montres</span>
-    </button>
+</button>
 
-  </nav>
+<button id="braceletsBtn"
+onclick="showSection('bracelets')">
 
-  <div class="controls">
+💎 <span data-i18n="navBracelets">
+Bracelets
+</span>
 
-    <div class="language">
+</button>
 
-      <button
-        id="frBtn"
-        class="active"
-        onclick="setLanguage('fr')">
-        🇫🇷 FR
-      </button>
+<button id="promoBtn"
+onclick="showSection('promo')">
 
-      <button
-        id="enBtn"
-        onclick="setLanguage('en')">
-        🇬🇧 EN
-      </button>
+🔥 <span data-i18n="navPromo">
+Promo
+</span>
 
-    </div>
+</button>
 
-    <button
-      class="theme-button"
-      onclick="toggleTheme()">
-      🌙 / ☀️
-    </button>
+<button id="watchesBtn"
+onclick="showSection('watches')">
 
-  </div>
+⌚ <span data-i18n="navWatches">
+Montres
+</span>
+
+</button>
+
+</nav>
+
+<div class="controls">
+
+<button onclick="toggleTheme()">
+🌙 / ☀️
+</button>
+
+<select
+id="languageSelect"
+onchange="changeLanguage(this.value)"
+aria-label="Language">
+
+<option value="fr">
+Français
+</option>
+
+<option value="en">
+English
+</option>
+
+</select>
+
+</div>
 
 </header>
 
 
-<!-- ================= LUNETTES ================= -->
-
 <section id="glasses" class="section">
 
-  <h2 class="section-title" id="glassesTitle">
-    Lunettes de soleil ORION
-  </h2>
+<h2 class="section-title">
+Lunettes de soleil ORION au Maroc
+</h2>
 
-  <p class="section-description" id="glassesDescription">
-    Découvrez nos modèles de lunettes de soleil ORION pour femmes et hommes.
-    Tous les modèles sont à 70 DH.
-  </p>
+<p id="glassesDescription" class="section-description">
+Découvrez nos lunettes de soleil ORION pour femmes et hommes.
+Modèles élégants et tendance. Livraison partout au Maroc.
+</p>
 
-  <div id="glassesProducts" class="products"></div>
+<div id="glassesProducts" class="products"></div>
 
 </section>
 
-
-<!-- ================= CHAÎNES ================= -->
 
 <section id="chains" class="section hidden">
 
-  <h2 class="section-title" id="chainsTitle">
-    Chaînes ORION
-  </h2>
+<h2 class="section-title">
+Chaînes ORION pour femmes et hommes
+</h2>
 
-  <p class="section-description" id="chainsDescription">
-    Chaînes et colliers tendance ORION pour femmes et hommes.
-    Tous les modèles sont à 60 DH.
-  </p>
+<p id="chainsDescription" class="section-description">
+Chaînes et colliers tendance ORION pour compléter votre style.
+Découvrez nos modèles disponibles au Maroc.
+</p>
 
-  <div id="chainProducts" class="products"></div>
+<div id="chainProducts" class="products"></div>
 
 </section>
 
-
-<!-- ================= BRACELETS ================= -->
 
 <section id="bracelets" class="section hidden">
 
-  <h2 class="section-title" id="braceletsTitle">
-    Bracelets ORION
-  </h2>
+<h2 class="section-title">
+Bracelets femme ORION
+</h2>
 
-  <p class="section-description" id="braceletsDescription">
-    Découvrez notre collection de bracelets élégants.
-    La majorité des modèles sont à 60 DH.
-  </p>
+<p id="braceletsDescription" class="section-description">
+Découvrez nos bracelets élégants pour femmes.
+Des accessoires tendance à porter au quotidien ou à offrir.
+</p>
 
-  <div id="braceletProducts" class="products"></div>
+<div id="braceletProducts" class="products"></div>
 
 </section>
 
-
-<!-- ================= PROMO ================= -->
 
 <section id="promo" class="section hidden">
 
-  <h2 class="section-title" id="promoTitle">
-    Pack Élégance ORION
-  </h2>
+<h2 class="section-title">
+Promo accessoires femme ORION
+</h2>
 
-  <p class="section-description" id="promoDescription">
-    Profitez de notre pack élégance femme à seulement 100 DH.
-  </p>
+<p id="promoDescription" class="section-description">
+Profitez de nos packs élégance ORION.
+Bracelet, collier, boucles d'oreilles et bague à seulement 100 DH.
+</p>
 
-  <div id="promoProducts" class="products"></div>
+<div id="promoProducts" class="products"></div>
 
 </section>
 
 
-<!-- ================= MONTRES ================= -->
-
 <section id="watches" class="section hidden">
 
-  <h2 class="section-title" id="watchesTitle">
-    Montres ORION
-  </h2>
+<h2 class="section-title">
+Montres ORION
+</h2>
 
-  <p class="section-description" id="watchesDescription">
-    Collection de montres ORION disponible prochainement.
-  </p>
+<p class="section-description">
+Notre collection de montres ORION arrive prochainement.
+</p>
+
+<div class="product">
+
+<div style="
+text-align:center;
+padding:70px 20px;
+border-radius:18px;
+background:#222;
+color:#aaa;
+">
+
+<span id="watchesComingSoon">
+Montres disponibles prochainement
+</span>
+
+</div>
+
+</div>
 
 </section>
 
 
 <footer>
 
-  <p>
-    <strong>ORION Accessories</strong>
-    — <span id="footerText">
-    Lunettes, bijoux et accessoires tendance au Maroc.
-    </span>
-  </p>
+<p>
+<strong>ORION Accessories</strong>
+— Lunettes, bijoux et accessoires tendance au Maroc.
+</p>
 
-  <p>
-    WhatsApp • Livraison partout au Maroc
-  </p>
+<p>
+Commande sur WhatsApp • Livraison partout au Maroc
+</p>
 
-  <p>
-    © 2026 ORION Accessories
-  </p>
+<p>
+© 2026 ORION Accessories
+</p>
 
 </footer>
 
 
 <script>
 
-/* =====================================================
-   WHATSAPP
-===================================================== */
-
 const whatsappNumber = "212673830013";
 
 
-/* =====================================================
-   LUNETTES
-===================================================== */
+/* ================= GLASSES ================= */
 
 const glasses = [
 
 {
-  model:"01",
-  price:70,
-  images:[
-    "ORION Glasses Model 01 gold 120dh.JPG",
-    "ORION Glasses Model 01 Black 120dh.JPG",
-    "ORION Glasses Model 01 Blue 120dh.JPG"
-  ]
+model:"01",
+price:70,
+images:[
+"ORION Glasses Model 01 gold 120dh.JPG",
+"ORION Glasses Model 01 Black 120dh.JPG",
+"ORION Glasses Model 01 Blue 120dh.JPG"
+]
 },
 
 {
-  model:"02",
-  price:70,
-  images:[
-    "ORION Glasses Model 02 120dh 1.JPG",
-    "ORION Glasses Model 02 120dh 5.JPG",
-    "ORION Glasses Model 02 120dh 3.JPG",
-    "ORION Glasses Model 02 120dh 2.JPG",
-    "ORION Glasses Model 02 120dh 4.JPG"
-  ]
+model:"02",
+price:70,
+images:[
+"ORION Glasses Model 02 120dh 1.JPG",
+"ORION Glasses Model 02 120dh 5.JPG",
+"ORION Glasses Model 02 120dh 3.JPG",
+"ORION Glasses Model 02 120dh 2.JPG",
+"ORION Glasses Model 02 120dh 4.JPG"
+]
 },
 
 {
-  model:"03",
-  price:70,
-  images:[
-    "ORION Glasses Model 03 120dh 1.JPG",
-    "ORION Glasses Model 03 120dh 5.JPG",
-    "ORION Glasses Model 03 120dh 4.JPG",
-    "ORION Glasses Model 03 120dh 3.JPG",
-    "ORION Glasses Model 03 120dh 6.JPG",
-    "ORION Glasses Model 03 120dh 2.JPG"
-  ]
+model:"03",
+price:70,
+images:[
+"ORION Glasses Model 03 120dh 1.JPG",
+"ORION Glasses Model 03 120dh 5.JPG",
+"ORION Glasses Model 03 120dh 4.JPG",
+"ORION Glasses Model 03 120dh 3.JPG",
+"ORION Glasses Model 03 120dh 6.JPG",
+"ORION Glasses Model 03 120dh 2.JPG"
+]
 },
 
 {
-  model:"04",
-  price:70,
-  images:[
-    "ORION Glasses Model 04 120dh 4.JPG",
-    "ORION Glasses Model 04 120dh 2.JPG",
-    "ORION Glasses Model 04 120dh 3.JPG",
-    "ORION Glasses Model 04 120dh 1.JPG",
-    "ORION Glasses Model 04 120dh 6.JPG",
-    "ORION Glasses Model 04 120dh 5.JPG"
-  ]
+model:"04",
+price:70,
+images:[
+"ORION Glasses Model 04 120dh 4.JPG",
+"ORION Glasses Model 04 120dh 2.JPG",
+"ORION Glasses Model 04 120dh 3.JPG",
+"ORION Glasses Model 04 120dh 1.JPG",
+"ORION Glasses Model 04 120dh 6.JPG",
+"ORION Glasses Model 04 120dh 5.JPG"
+]
 },
 
 {
-  model:"05",
-  price:70,
-  images:[
-    "ORION Glasses Model 05 120dh 4.JPG",
-    "ORION Glasses Model 05 120dh 5.JPG",
-    "ORION Glasses Model 05 120dh 2.JPG",
-    "ORION Glasses Model 05 120dh 3.JPG",
-    "ORION Glasses Model 05 120dh 1.JPG"
-  ]
+model:"05",
+price:70,
+images:[
+"ORION Glasses Model 05 120dh 4.JPG",
+"ORION Glasses Model 05 120dh 5.JPG",
+"ORION Glasses Model 05 120dh 2.JPG",
+"ORION Glasses Model 05 120dh 3.JPG",
+"ORION Glasses Model 05 120dh 1.JPG"
+]
 },
 
 {
-  model:"06",
-  price:70,
-  images:[
-    "ORION Glasses Model 06 120dh 6.JPG",
-    "ORION Glasses Model 06 120dh 4.JPG",
-    "ORION Glasses Model 06 120dh 2.JPG",
-    "ORION Glasses Model 06 120dh 7.JPG",
-    "ORION Glasses Model 06 120dh 1.JPG",
-    "ORION Glasses Model 06 120dh 3.JPG",
-    "ORION Glasses Model 06 120dh 5.JPG"
-  ]
+model:"06",
+price:70,
+images:[
+"ORION Glasses Model 06 120dh 6.JPG",
+"ORION Glasses Model 06 120dh 4.JPG",
+"ORION Glasses Model 06 120dh 2.JPG",
+"ORION Glasses Model 06 120dh 7.JPG",
+"ORION Glasses Model 06 120dh 1.JPG",
+"ORION Glasses Model 06 120dh 3.JPG",
+"ORION Glasses Model 06 120dh 5.JPG"
+]
 },
 
 {
-  model:"07",
-  price:70,
-  images:[
-    "ORION Glasses Model 07 140dh 5.JPG",
-    "ORION Glasses Model 07 140dh 1.JPG",
-    "ORION Glasses Model 07 140dh 4.JPG",
-    "ORION Glasses Model 07 140dh 3.JPG",
-    "ORION Glasses Model 07 140dh 2.JPG"
-  ]
+model:"07",
+price:70,
+images:[
+"ORION Glasses Model 07 140dh 5.JPG",
+"ORION Glasses Model 07 140dh 1.JPG",
+"ORION Glasses Model 07 140dh 4.JPG",
+"ORION Glasses Model 07 140dh 3.JPG",
+"ORION Glasses Model 07 140dh 2.JPG"
+]
 },
 
 {
-  model:"08",
-  price:70,
-  images:[
-    "ORION Glasses Model 08 130dh 2.JPG",
-    "ORION Glasses Model 08 130dh 3.JPG",
-    "ORION Glasses Model 08 130dh 4.JPG",
-    "ORION Glasses Model 08 130dh 1.JPG",
-    "ORION Glasses Model 08 130dh 6.JPG",
-    "ORION Glasses Model 08 130dh 5.JPG"
-  ]
+model:"08",
+price:70,
+images:[
+"ORION Glasses Model 08 140dh 1.JPG"
+]
 },
 
 {
-  model:"09",
-  price:70,
-  images:[
-    "ORION Glasses Model 09 120dh 5.JPG",
-    "ORION Glasses Model 09 120dh 8.JPG",
-    "ORION Glasses Model 09 120dh 2.JPG",
-    "ORION Glasses Model 09 120dh 3.JPG",
-    "ORION Glasses Model 09 120dh 6.JPG",
-    "ORION Glasses Model 09 120dh 7.JPG",
-    "ORION Glasses Model 09 120dh 1.JPG"
-  ]
+model:"09",
+price:70,
+images:[
+"ORION Glasses Model 09 120dh 1.JPG"
+]
 },
 
 {
-  model:"10",
-  price:70,
-  images:[
-    "ORION Glasses Model 10 120dh 3.JPG",
-    "ORION Glasses Model 10 120dh 4.JPG",
-    "ORION Glasses Model 10 120dh 5.JPG",
-    "ORION Glasses Model 10 120dh 2.JPG",
-    "ORION Glasses Model 10 120dh 1.JPG"
-  ]
+model:"10",
+price:70,
+images:[
+"ORION Glasses Model 10 120dh 1.JPG"
+]
 },
 
 {
-  model:"11",
-  price:70,
-  images:[
-    "ORION Glasses Model 11 120dh 3.JPG",
-    "ORION Glasses Model 11 120dh 1.JPG",
-    "ORION Glasses Model 11 120dh 4.JPG",
-    "ORION Glasses Model 11 120dh 2.JPG",
-    "ORION Glasses Model 11 120dh 5.JPG"
-  ]
+model:"11",
+price:70,
+images:[
+"ORION Glasses Model 11 120dh 1.JPG"
+]
 },
 
 {
-  model:"12",
-  price:70,
-  images:[
-    "ORION Glasses Model 12 120dh 7.JPG",
-    "ORION Glasses Model 12 120dh 2.JPG",
-    "ORION Glasses Model 12 120dh 4.JPG",
-    "ORION Glasses Model 12 120dh 3.JPG",
-    "ORION Glasses Model 12 120dh 8.JPG",
-    "ORION Glasses Model 12 120dh 5.JPG",
-    "ORION Glasses Model 12 120dh 10.JPG",
-    "ORION Glasses Model 12 120dh 1.JPG",
-    "ORION Glasses Model 12 120dh 6.JPG"
-  ]
+model:"12",
+price:70,
+images:[
+"ORION Glasses Model 12 120dh 7.JPG",
+"ORION Glasses Model 12 120dh 2.JPG",
+"ORION Glasses Model 12 120dh 4.JPG",
+"ORION Glasses Model 12 120dh 3.JPG",
+"ORION Glasses Model 12 120dh 8.JPG",
+"ORION Glasses Model 12 120dh 5.JPG",
+"ORION Glasses Model 12 120dh 10.JPG",
+"ORION Glasses Model 12 120dh 1.JPG",
+"ORION Glasses Model 12 120dh 6.JPG"
+]
 },
 
 {
-  model:"13",
-  price:70,
-  images:[
-    "ORION Glasses Model 13 120dh 2.JPG",
-    "ORION Glasses Model 13 120dh 3.JPG",
-    "ORION Glasses Model 13 120dh 4.JPG",
-    "ORION Glasses Model 13 120dh 5.JPG",
-    "ORION Glasses Model 13 120dh 1.JPG"
-  ]
+model:"13",
+price:70,
+images:[
+"ORION Glasses Model 13 120dh 2.JPG",
+"ORION Glasses Model 13 120dh 3.JPG",
+"ORION Glasses Model 13 120dh 4.JPG",
+"ORION Glasses Model 13 120dh 5.JPG",
+"ORION Glasses Model 13 120dh 1.JPG"
+]
 },
 
 {
-  model:"14",
-  price:70,
-  images:[
-    "ORION Glasses Model 14 120dh 2.JPG",
-    "ORION Glasses Model 14 120dh 1.JPG",
-    "ORION Glasses Model 14 120dh 3.JPG"
-  ]
+model:"14",
+price:70,
+images:[
+"ORION Glasses Model 14 120dh 2.JPG",
+"ORION Glasses Model 14 120dh 1.JPG",
+"ORION Glasses Model 14 120dh 3.JPG"
+]
 },
 
 {
-  model:"15",
-  price:70,
-  images:[
-    "ORION Glasses Model 15 120dh 1.JPG",
-    "ORION Glasses Model 15 120dh 2.JPG"
-  ]
+model:"15",
+price:70,
+images:[
+"ORION Glasses Model 15 120dh 1.JPG",
+"ORION Glasses Model 15 120dh 2.JPG"
+]
 },
 
 {
-  model:"16",
-  price:70,
-  images:[
-    "ORION Glasses Model 16 140dh 1.JPG"
-  ]
+model:"16",
+price:70,
+images:[
+"ORION Glasses Model 16 140dh 1.JPG"
+]
 },
 
 {
-  model:"17",
-  price:70,
-  images:[
-    "ORION Glasses Model 17 140dh 1.JPG"
-  ]
+model:"17",
+price:70,
+images:[
+"ORION Glasses Model 17 140dh 1.JPG"
+]
 },
 
 {
-  model:"18",
-  price:70,
-  images:[
-    "ORION Glasses Model 18 120dh 1.JPG",
-    "ORION Glasses Model 18 120dh 3.JPG",
-    "ORION Glasses Model 18 120dh 2.JPG"
-  ]
+model:"18",
+price:70,
+images:[
+"ORION Glasses Model 18 120dh 1.JPG",
+"ORION Glasses Model 18 120dh 3.JPG",
+"ORION Glasses Model 18 120dh 2.JPG"
+]
 },
 
 {
-  model:"19",
-  price:70,
-  images:[
-    "ORION Glasses Model 19 130dh 3.JPG",
-    "ORION Glasses Model 19 130dh 2.JPG",
-    "ORION Glasses Model 19 130dh 1.JPG",
-    "ORION Glasses Model 19 130dh 4.JPG"
-  ]
+model:"19",
+price:70,
+images:[
+"ORION Glasses Model 19 130dh 3.JPG",
+"ORION Glasses Model 19 130dh 2.JPG",
+"ORION Glasses Model 19 130dh 1.JPG",
+"ORION Glasses Model 19 130dh 4.JPG"
+]
 }
 
 ];
 
 
-/* =====================================================
-   CHAÎNES
-===================================================== */
+/* ================= CHAINS ================= */
 
 const chains = [
 
 {
-  model:"01",
-  price:60,
-  category:"Women & Men",
-  images:[
-    "ORION Chain Model girl:men 01 80dh 1.JPG",
-    "ORION Chain Model girl:men 01 80dh 4.JPG",
-    "ORION Chain Model girl:men 01 80dh 3.JPG",
-    "ORION Chain Model girl:men 01 80dh 2.JPG"
-  ]
+model:"01",
+price:60,
+category:"Women & Men",
+images:[
+"ORION Chain Model girl:men 01 80dh 1.JPG",
+"ORION Chain Model girl:men 01 80dh 4.JPG",
+"ORION Chain Model girl:men 01 80dh 3.JPG",
+"ORION Chain Model girl:men 01 80dh 2.JPG"
+]
 },
 
 {
-  model:"02",
-  price:60,
-  category:"Women",
-  images:[
-    "ORION Chain Model 02 80dh 3.JPG",
-    "ORION Chain Model 02 80dh 5.JPG",
-    "ORION Chain Model 02 80dh 2.JPG",
-    "ORION Chain Model 02 80dh 1.JPG",
-    "ORION Chain Model 02 80dh 4.JPG"
-  ]
+model:"02",
+price:60,
+category:"Women",
+images:[
+"ORION Chain Model 02 80dh 3.JPG",
+"ORION Chain Model 02 80dh 5.JPG",
+"ORION Chain Model 02 80dh 2.JPG",
+"ORION Chain Model 02 80dh 1.JPG",
+"ORION Chain Model 02 80dh 4.JPG"
+]
 },
 
 {
-  model:"03",
-  price:60,
-  category:"Women",
-  images:[
-    "ORION Chain Model 03 80dh 2.JPG",
-    "ORION Chain Model 03 80dh 5.JPG",
-    "ORION Chain Model 03 80dh 4.JPG",
-    "ORION Chain Model 03 80dh 3.JPG",
-    "ORION Chain Model 03 80dh 7.JPG",
-    "ORION Chain Model 03 80dh 1.JPG",
-    "ORION Chain Model 03 80dh 6.JPG"
-  ]
+model:"03",
+price:60,
+category:"Women",
+images:[
+"ORION Chain Model 03 80dh 2.JPG",
+"ORION Chain Model 03 80dh 5.JPG",
+"ORION Chain Model 03 80dh 4.JPG",
+"ORION Chain Model 03 80dh 3.JPG",
+"ORION Chain Model 03 80dh 7.JPG",
+"ORION Chain Model 03 80dh 1.JPG",
+"ORION Chain Model 03 80dh 6.JPG"
+]
 },
 
 {
-  model:"04",
-  price:60,
-  category:"Women",
-  images:[
-    "ORION Chain Model 04 79dh 1.JPG"
-  ]
+model:"04",
+price:60,
+category:"Women",
+images:[
+"ORION Chain Model 04 79dh 1.JPG"
+]
 },
 
 {
-  model:"05",
-  price:60,
-  category:"Women",
-  images:[
-    "‏ ‏ORION Chain Model 90dh 1  .JPG"
-  ]
+model:"05",
+price:60,
+category:"Women",
+images:[
+"‏ ‏ORION Chain Model 90dh 1  .JPG"
+]
 }
 
 ];
 
 
-/* =====================================================
-   BRACELETS
-===================================================== */
+/* ================= BRACELETS ================= */
 
 const bracelets = [
 
 {
-  model:"01",
-  price:60,
-  category:"Women",
-  images:[
-    "ORION Bracelets model 01 80dh 1.JPG",
-    "ORION Bracelets model 01 80dh 4.JPG",
-    "ORION Bracelets model 01 80dh 7.JPG",
-    "ORION Bracelets model 01 80dh 2.JPG",
-    "ORION Bracelets model 01 80dh 3.JPG",
-    "ORION Bracelets model 01 80dh 5.JPG",
-    "ORION Bracelets model 01 80dh 6.JPG",
-    "ORION Bracelets model 01 80dh 8.JPG"
-  ]
+model:"01",
+price:60,
+category:"Women",
+images:[
+"ORION Bracelets model 01 80dh 1.JPG",
+"ORION Bracelets model 01 80dh 4.JPG",
+"ORION Bracelets model 01 80dh 7.JPG",
+"ORION Bracelets model 01 80dh 2.JPG",
+"ORION Bracelets model 01 80dh 3.JPG",
+"ORION Bracelets model 01 80dh 5.JPG",
+"ORION Bracelets model 01 80dh 6.JPG",
+"ORION Bracelets model 01 80dh 8.JPG"
+]
 },
 
 {
-  model:"02",
-  price:60,
-  category:"Women",
-  images:[
-    "ORION Bracelets model 02 80dh 2.JPG",
-    "ORION Bracelets model 02 80dh 4.JPG",
-    "ORION Bracelets model 02 80dh 1.JPG",
-    "ORION Bracelets model 02 80dh 3.JPG"
-  ]
+model:"02",
+price:60,
+category:"Women",
+images:[
+"ORION Bracelets model 02 80dh 2.JPG",
+"ORION Bracelets model 02 80dh 4.JPG",
+"ORION Bracelets model 02 80dh 1.JPG",
+"ORION Bracelets model 02 80dh 3.JPG"
+]
 },
 
 {
-  model:"03",
-  price:60,
-  category:"Women",
-  images:[
-    "ORION Bracelets model 03 80dh 2.JPG",
-    "ORION Bracelets model 03 80dh 4.JPG",
-    "ORION Bracelets model 03 80dh 1.JPG",
-    "ORION Bracelets model 03 80dh 3.JPG"
-  ]
+model:"03",
+price:60,
+category:"Women",
+images:[
+"ORION Bracelets model 03 80dh 2.JPG",
+"ORION Bracelets model 03 80dh 4.JPG",
+"ORION Bracelets model 03 80dh 1.JPG",
+"ORION Bracelets model 03 80dh 3.JPG"
+]
 },
 
 {
-  model:"04",
-  price:80,
-  category:"Women",
-  images:[
-    "ORION Bracelets model 04 100dh 3.JPG",
-    "ORION Bracelets model 04 100dh 2.JPG",
-    "ORION Bracelets model 04 100dh 1.JPG"
-  ]
+model:"04",
+price:80,
+category:"Women",
+images:[
+"ORION Bracelets model 04 100dh 3.JPG",
+"ORION Bracelets model 04 100dh 2.JPG",
+"ORION Bracelets model 04 100dh 1.JPG"
+]
 },
 
 {
-  model:"05",
-  price:60,
-  category:"Women",
-  images:[
-    "ORION Bracelets model 05 79 dh 1.JPG",
-    "ORION Bracelets model 05 79 dh 2.JPG",
-    "ORION Bracelets model 05 79 dh 3.JPG",
-    "ORION Bracelets model 05 79 dh 4.JPG",
-    "ORION Bracelets model 05 79 dh 5.JPG"
-  ]
+model:"05",
+price:80,
+category:"Women",
+images:[
+"ORION Bracelets model 05 79 dh 1.JPG",
+"ORION Bracelets model 05 79 dh 2.JPG",
+"ORION Bracelets model 05 79 dh 3.JPG",
+"ORION Bracelets model 05 79 dh 4.JPG",
+"ORION Bracelets model 05 79 dh 5.JPG"
+]
 }
 
 ];
 
 
-/* =====================================================
-   PROMO
-===================================================== */
+/* ================= PROMO ================= */
 
 const promo = [
 
 {
-  model:"01",
-  price:100,
-  images:[
-    "pack1.JPG",
-    "pack2.JPG",
-    "pack3.JPG",
-    "pack4.JPG"
-  ]
+model:"01",
+price:100,
+category:"Women",
+images:[
+"pack1.JPG",
+"pack2.JPG",
+"pack3.JPG",
+"pack4.JPG"
+]
 }
 
 ];
 
 
-/* =====================================================
-   IMAGE URL
-===================================================== */
+/* ================= IMAGE URL ================= */
 
 function imageURL(filename){
 
@@ -922,149 +873,204 @@ function imageURL(filename){
 }
 
 
-/* =====================================================
-   CREATE PRODUCTS
-===================================================== */
+/* ================= PRODUCTS ================= */
 
-function createProducts(list, containerId, type){
+function createProducts(list,containerId,type){
 
-  const container = document.getElementById(containerId);
+  const container=document.getElementById(containerId);
 
-  container.innerHTML = "";
+  container.innerHTML="";
 
   list.forEach((product,index)=>{
 
-    let productNameFR = "Lunettes de soleil";
-    let productNameEN = "Sunglasses";
+    const card=document.createElement("article");
 
-    if(type === "chain"){
-      productNameFR = "Chaîne";
-      productNameEN = "Chain";
+    card.className="product";
+
+    const mainId=`${type}-main-${index}`;
+
+    let productName="Lunettes de soleil";
+
+    if(type==="chain"){
+      productName="Chaîne";
     }
 
-    if(type === "bracelet"){
-      productNameFR = "Bracelet femme";
-      productNameEN = "Women's Bracelet";
+    if(type==="bracelet"){
+      productName="Bracelet femme";
     }
 
-    const mainId = type + "-main-" + index;
+    let thumbnails="";
 
-    let thumbs = "";
+    product.images.forEach((image)=>{
 
-    product.images.forEach(image=>{
+      thumbnails+=`
 
-      thumbs += `
         <img
           src="${imageURL(image)}"
-          alt="${productNameFR} ORION modèle ${product.model}"
-          loading="lazy"
           onclick="changeImage('${mainId}',this.src)"
+          alt="${productName} ORION ${
+            currentLanguage==="fr" ? "modèle" : "model"
+          } ${product.model} Morocco"
+          loading="lazy"
           onerror="this.style.display='none'"
         >
+
       `;
 
     });
 
-    const messageFR =
-      "Bonjour ORION Accessories, je veux " +
-      productNameFR +
-      " Model " +
-      product.model +
-      " - " +
-      product.price +
-      " DH";
 
-    const messageEN =
-      "Hello ORION Accessories, I want the " +
-      productNameEN +
-      " Model " +
-      product.model +
-      " - " +
-      product.price +
-      " DH";
+    let categoryText="";
 
-    const whatsappLinkFR =
-      "https://wa.me/" +
-      whatsappNumber +
-      "?text=" +
-      encodeURIComponent(messageFR);
+    if(product.category){
 
-    const whatsappLinkEN =
-      "https://wa.me/" +
-      whatsappNumber +
-      "?text=" +
-      encodeURIComponent(messageEN);
+      categoryText=`
 
-    const card = document.createElement("article");
+        <div style="
+          color:#aaa;
+          margin-bottom:8px;
+        ">
 
-    card.className = "product";
+          ${
+            currentLanguage==="fr"
+            ?
+            (
+              product.category==="Women"
+              ?
+              "Femme"
+              :
+              product.category==="Women & Men"
+              ?
+              "Femme & Homme"
+              :
+              product.category
+            )
+            :
+            (
+              product.category==="Women"
+              ?
+              "Women"
+              :
+              product.category==="Women & Men"
+              ?
+              "Women & Men"
+              :
+              product.category
+            )
+          }
 
-    card.innerHTML = `
-
-      <div class="product-image-wrap">
-
-        <img
-          id="${mainId}"
-          class="main-image"
-          src="${imageURL(product.images[0])}"
-          alt="${productNameFR} ORION modèle ${product.model} au Maroc"
-          width="800"
-          height="800"
-          loading="${index === 0 ? "eager" : "lazy"}"
-          onerror="imageError(this)"
-        >
-
-      </div>
-
-      <div class="thumbs">
-        ${thumbs}
-      </div>
-
-      <div class="product-info">
-
-        <h3>
-          <span
-            class="product-fr"
-            data-name="${productNameFR}"
-          >
-            ORION ${productNameFR} Model ${product.model}
-          </span>
-
-          <span
-            class="product-en"
-            data-name="${productNameEN}"
-            style="display:none"
-          >
-            ORION ${productNameEN} Model ${product.model}
-          </span>
-        </h3>
-
-        ${
-          product.category
-          ?
-          `<div class="category">${product.category}</div>`
-          :
-          ""
-        }
-
-        <div class="price">
-          ${product.price} DH
         </div>
 
-        <a
-          class="whatsapp whatsapp-link"
-          href="${whatsappLinkFR}"
-          data-fr-link="${whatsappLinkFR}"
-          data-en-link="${whatsappLinkEN}"
-          target="_blank"
-          rel="noopener"
-        >
-          🛍️ <span class="order-text">Commander sur WhatsApp</span>
-        </a>
+      `;
+
+    }
+
+
+    const message = currentLanguage==="fr"
+
+      ?
+
+      `Bonjour ORION Accessories, je veux ${
+        productName
+      } modèle ${
+        product.model
+      } - ${
+        product.price
+      } DH`
+
+      :
+
+      `Hello ORION Accessories, I want ${
+        productName
+      } model ${
+        product.model
+      } - ${
+        product.price
+      } DH`;
+
+
+    const whatsappLink =
+      `https://wa.me/${whatsappNumber}?text=${
+        encodeURIComponent(message)
+      }`;
+
+
+    card.innerHTML=`
+
+      <img
+        id="${mainId}"
+        class="main-image"
+        src="${imageURL(product.images[0])}"
+        alt="${productName} ORION ${
+          currentLanguage==="fr"
+          ?
+          "modèle"
+          :
+          "model"
+        } ${product.model} - accessories Morocco"
+        width="800"
+        height="800"
+        loading="${index===0?'eager':'lazy'}"
+        onerror="imageError(this)"
+      >
+
+
+      <div class="thumbs">
+
+        ${thumbnails}
 
       </div>
 
+
+      <h3>
+        ORION ${
+          productName
+        }
+        ${
+          currentLanguage==="fr"
+          ?
+          "Modèle"
+          :
+          "Model"
+        }
+        ${
+          product.model
+        }
+      </h3>
+
+
+      ${categoryText}
+
+
+      <div class="price">
+        ${product.price} DH
+      </div>
+
+
+      <a
+        class="whatsapp"
+        href="${whatsappLink}"
+        target="_blank"
+        rel="noopener"
+        aria-label="Commander ${productName} ORION modèle ${product.model} sur WhatsApp"
+      >
+
+        🛍️
+
+        <span>
+          ${
+            currentLanguage==="fr"
+            ?
+            "Commander sur WhatsApp"
+            :
+            "Order on WhatsApp"
+          }
+        </span>
+
+      </a>
+
     `;
+
 
     container.appendChild(card);
 
@@ -1073,119 +1079,152 @@ function createProducts(list, containerId, type){
 }
 
 
-/* =====================================================
-   PROMO PRODUCTS
-===================================================== */
+/* ================= PROMO ================= */
 
 function createPromo(){
 
-  const container = document.getElementById("promoProducts");
+  const container=document.getElementById("promoProducts");
 
-  container.innerHTML = "";
+  container.innerHTML="";
+
 
   promo.forEach((product,index)=>{
 
-    const mainId = "promo-main-" + index;
+    const card=document.createElement("article");
 
-    let thumbs = "";
+    card.className="product";
 
-    product.images.forEach(image=>{
+    const mainId=`promo-main-${index}`;
 
-      thumbs += `
+    let thumbnails="";
+
+
+    product.images.forEach((image)=>{
+
+      thumbnails+=`
+
         <img
           src="${imageURL(image)}"
-          alt="Pack élégance ORION"
-          loading="lazy"
           onclick="changeImage('${mainId}',this.src)"
+          alt="${
+            currentLanguage==="fr"
+            ?
+            "Pack élégance femme ORION Maroc"
+            :
+            "ORION women's elegance pack Morocco"
+          }"
+          loading="lazy"
           onerror="this.style.display='none'"
         >
+
       `;
 
     });
 
-    const messageFR =
-      "Bonjour ORION Accessories, je veux le Pack Élégance Femme - 100 DH";
 
-    const messageEN =
+    const message = currentLanguage==="fr"
+
+      ?
+
+      "Bonjour ORION Accessories, je veux le Pack Élégance Femme - 100 DH"
+
+      :
+
       "Hello ORION Accessories, I want the Women's Elegance Pack - 100 DH";
 
-    const linkFR =
-      "https://wa.me/" +
-      whatsappNumber +
-      "?text=" +
-      encodeURIComponent(messageFR);
 
-    const linkEN =
-      "https://wa.me/" +
-      whatsappNumber +
-      "?text=" +
-      encodeURIComponent(messageEN);
+    const whatsappLink =
+      `https://wa.me/${whatsappNumber}?text=${
+        encodeURIComponent(message)
+      }`;
 
-    const card = document.createElement("article");
 
-    card.className = "product";
+    card.innerHTML=`
 
-    card.innerHTML = `
+      <img
+        id="${mainId}"
+        class="main-image"
+        src="${imageURL(product.images[0])}"
+        alt="${
+          currentLanguage==="fr"
+          ?
+          "Pack élégance femme ORION - bracelet collier bague boucles d'oreilles Maroc"
+          :
+          "ORION women's elegance pack - bracelet necklace ring earrings Morocco"
+        }"
+        width="800"
+        height="800"
+        loading="eager"
+        onerror="imageError(this)"
+      >
 
-      <div class="product-image-wrap">
-
-        <img
-          id="${mainId}"
-          class="main-image"
-          src="${imageURL(product.images[0])}"
-          alt="Pack élégance femme ORION au Maroc"
-          width="800"
-          height="800"
-          loading="eager"
-          onerror="imageError(this)"
-        >
-
-      </div>
 
       <div class="thumbs">
-        ${thumbs}
-      </div>
 
-      <div class="product-info">
-
-        <h3 class="promo-name">
-          🔥 Pack Élégance Femme ORION
-        </h3>
-
-        <div class="promo-info">
-
-          <span class="promo-fr">
-            💎 Bracelet + Collier + Boucles d’oreilles + Bague
-            <br>
-            🎁 Pack cadeau femme
-          </span>
-
-          <span class="promo-en" style="display:none">
-            💎 Bracelet + Necklace + Earrings + Ring
-            <br>
-            🎁 Women's gift pack
-          </span>
-
-        </div>
-
-        <div class="price">
-          100 DH
-        </div>
-
-        <a
-          class="whatsapp whatsapp-link"
-          href="${linkFR}"
-          data-fr-link="${linkFR}"
-          data-en-link="${linkEN}"
-          target="_blank"
-          rel="noopener"
-        >
-          🛍️ <span class="order-text">Commander maintenant</span>
-        </a>
+        ${thumbnails}
 
       </div>
+
+
+      <h3>
+
+        🔥
+
+        ${
+          currentLanguage==="fr"
+          ?
+          "Pack Élégance Femme ORION"
+          :
+          "ORION Women's Elegance Pack"
+        }
+
+      </h3>
+
+
+      <div style="
+        color:#aaa;
+        font-size:18px;
+        line-height:1.8;
+        margin-bottom:15px;
+      ">
+
+        💎 Bracelet + Collier + Boucles d’oreilles + Bague
+        <br>
+
+        🎁 Pack cadeau femme
+        <br>
+
+        🎨 Disponible en plusieurs couleurs
+
+      </div>
+
+
+      <div class="price">
+        100 DH
+      </div>
+
+
+      <a
+        class="whatsapp"
+        href="${whatsappLink}"
+        target="_blank"
+        rel="noopener"
+      >
+
+        🛍️
+
+        ${
+          currentLanguage==="fr"
+          ?
+          "Commander maintenant"
+          :
+          "Order now"
+        }
+
+      </a>
 
     `;
+
 
     container.appendChild(card);
 
@@ -1194,412 +1233,402 @@ function createPromo(){
 }
 
 
-/* =====================================================
-   CHANGE IMAGE
-===================================================== */
+/* ================= IMAGE ================= */
 
 function changeImage(id,src){
 
-  const image = document.getElementById(id);
+  const image=document.getElementById(id);
 
   if(image){
-    image.src = src;
+    image.src=src;
   }
 
 }
 
 
-/* =====================================================
-   IMAGE ERROR
-===================================================== */
-
 function imageError(img){
 
-  img.style.display = "none";
+  img.style.background="#222";
+
+  img.style.objectFit="contain";
+
+  img.alt="ORION Accessories";
 
 }
 
 
-/* =====================================================
-   SHOW SECTION
-===================================================== */
+/* ================= SECTIONS ================= */
 
 function showSection(section){
 
-  const sections = [
+  [
     "glasses",
     "chains",
     "bracelets",
     "promo",
     "watches"
-  ];
-
-  sections.forEach(id=>{
+  ].forEach(id=>{
 
     document
       .getElementById(id)
-      .classList.add("hidden");
+      .classList
+      .add("hidden");
 
   });
+
 
   document
     .getElementById(section)
-    .classList.remove("hidden");
+    .classList
+    .remove("hidden");
 
 
-  const buttons = [
-    "btnGlasses",
-    "btnChains",
-    "btnBracelets",
-    "btnPromo",
-    "btnWatches"
-  ];
-
-  buttons.forEach(id=>{
+  [
+    "glassesBtn",
+    "chainsBtn",
+    "braceletsBtn",
+    "promoBtn",
+    "watchesBtn"
+  ].forEach(id=>{
 
     document
       .getElementById(id)
-      .classList.remove("active");
+      .classList
+      .remove("active");
 
   });
 
 
-  const buttonMap = {
-
-    glasses:"btnGlasses",
-    chains:"btnChains",
-    bracelets:"btnBracelets",
-    promo:"btnPromo",
-    watches:"btnWatches"
-
-  };
+  const button =
+    document.getElementById(section+"Btn");
 
 
-  document
-    .getElementById(buttonMap[section])
-    .classList.add("active");
+  if(button){
+    button.classList.add("active");
+  }
+
+
+  window.scrollTo({
+    top:0,
+    behavior:"smooth"
+  });
 
 }
 
 
-/* =====================================================
-   LANGUAGE
-===================================================== */
+/* ================= THEME ================= */
 
-let currentLanguage =
-  localStorage.getItem("orionLanguage") || "fr";
+function toggleTheme(){
+
+  document
+    .body
+    .classList
+    .toggle("light");
+
+}
 
 
-function setLanguage(language){
+/* ================= LANGUAGE ================= */
 
-  currentLanguage = language;
+const translations={
+
+fr:{
+heroTitle:
+"ORION Accessories — Accessoires & Bijoux au Maroc",
+
+hero:
+"Découvrez notre collection de lunettes de soleil, chaînes, bracelets et accessoires tendance pour femmes et hommes. Commande facile sur WhatsApp et livraison partout au Maroc.",
+
+glassesTitle:
+"Lunettes de soleil ORION au Maroc",
+
+glassesDesc:
+"Découvrez nos lunettes de soleil ORION pour femmes et hommes. Modèles élégants et tendance. Livraison partout au Maroc.",
+
+chainsTitle:
+"Chaînes ORION pour femmes et hommes",
+
+chainsDesc:
+"Chaînes et colliers tendance ORION pour compléter votre style. Découvrez nos modèles disponibles au Maroc.",
+
+braceletsTitle:
+"Bracelets femme ORION",
+
+braceletsDesc:
+"Découvrez nos bracelets élégants pour femmes. Des accessoires tendance à porter au quotidien ou à offrir.",
+
+promoTitle:
+"Promo accessoires femme ORION",
+
+promoDesc:
+"Profitez de nos packs élégance ORION. Bracelet, collier, boucles d'oreilles et bague à seulement 100 DH.",
+
+watchesTitle:
+"Montres ORION",
+
+watchesDesc:
+"Notre collection de montres ORION arrive prochainement.",
+
+coming:
+"Montres disponibles prochainement",
+
+footer1:
+"ORION Accessories — Lunettes, bijoux et accessoires tendance au Maroc.",
+
+footer2:
+"Commande sur WhatsApp • Livraison partout au Maroc"
+},
+
+
+en:{
+
+heroTitle:
+"ORION Accessories — Accessories & Jewelry in Morocco",
+
+hero:
+"Discover our collection of sunglasses, chains, women's bracelets and trendy accessories for women and men. Easy WhatsApp ordering and delivery across Morocco.",
+
+glassesTitle:
+"ORION Sunglasses in Morocco",
+
+glassesDesc:
+"Discover ORION sunglasses for women and men. Elegant and trendy models. Delivery across Morocco.",
+
+chainsTitle:
+"ORION Chains for Women & Men",
+
+chainsDesc:
+"Trendy ORION chains and necklaces to complete your style. Discover our available models in Morocco.",
+
+braceletsTitle:
+"ORION Women's Bracelets",
+
+braceletsDesc:
+"Discover our elegant women's bracelets. Trendy accessories for everyday wear or gifting.",
+
+promoTitle:
+"ORION Women's Accessories Promo",
+
+promoDesc:
+"Enjoy our ORION elegance packs. Bracelet, necklace, earrings and ring for only 100 DH.",
+
+watchesTitle:
+"ORION Watches",
+
+watchesDesc:
+"Our ORION watch collection is coming soon.",
+
+coming:
+"Watches available soon",
+
+footer1:
+"ORION Accessories — Sunglasses, jewelry and trendy accessories in Morocco.",
+
+footer2:
+"Order on WhatsApp • Delivery across Morocco"
+
+}
+
+};
+
+
+/* ================= APPLY LANGUAGE ================= */
+
+function applyLanguage(){
+
+  const t =
+    translations[currentLanguage];
+
+
+  document.documentElement.lang =
+    currentLanguage;
+
+
+  document
+    .getElementById("heroDescription")
+    .textContent=t.hero;
+
+
+  document
+    .querySelector(".hero-text h1")
+    .textContent=t.heroTitle;
+
+
+  document
+    .querySelector("#glasses .section-title")
+    .textContent=t.glassesTitle;
+
+
+  document
+    .getElementById("glassesDescription")
+    .textContent=t.glassesDesc;
+
+
+  document
+    .querySelector("#chains .section-title")
+    .textContent=t.chainsTitle;
+
+
+  document
+    .getElementById("chainsDescription")
+    .textContent=t.chainsDesc;
+
+
+  document
+    .querySelector("#bracelets .section-title")
+    .textContent=t.braceletsTitle;
+
+
+  document
+    .getElementById("braceletsDescription")
+    .textContent=t.braceletsDesc;
+
+
+  document
+    .querySelector("#promo .section-title")
+    .textContent=t.promoTitle;
+
+
+  document
+    .getElementById("promoDescription")
+    .textContent=t.promoDesc;
+
+
+  document
+    .querySelector("#watches .section-title")
+    .textContent=t.watchesTitle;
+
+
+  document
+    .querySelector("#watches .section-description")
+    .textContent=t.watchesDesc;
+
+
+  document
+    .getElementById("watchesComingSoon")
+    .textContent=t.coming;
+
+
+  const nav={
+
+    navGlasses:[
+      "Lunettes",
+      "Sunglasses"
+    ],
+
+    navChains:[
+      "Chaînes",
+      "Chains"
+    ],
+
+    navBracelets:[
+      "Bracelets",
+      "Bracelets"
+    ],
+
+    navPromo:[
+      "Promo",
+      "Deals"
+    ],
+
+    navWatches:[
+      "Montres",
+      "Watches"
+    ]
+
+  };
+
+
+  Object.entries(nav).forEach(
+    ([id,v])=>{
+
+      document
+        .querySelector(
+          `[data-i18n="${id}"]`
+        )
+        .textContent=
+        v[
+          currentLanguage==="fr"
+          ?
+          0
+          :
+          1
+        ];
+
+    }
+  );
+
+
+  document
+    .querySelector(
+      "footer p:nth-child(1)"
+    )
+    .textContent=t.footer1;
+
+
+  document
+    .querySelector(
+      "footer p:nth-child(2)"
+    )
+    .textContent=t.footer2;
+
+
+  createProducts(
+    glasses,
+    "glassesProducts",
+    "glasses"
+  );
+
+
+  createProducts(
+    chains,
+    "chainProducts",
+    "chain"
+  );
+
+
+  createProducts(
+    bracelets,
+    "braceletProducts",
+    "bracelet"
+  );
+
+
+  createPromo();
+
+}
+
+
+/* ================= CHANGE LANGUAGE ================= */
+
+function changeLanguage(language){
+
+  currentLanguage=language;
 
   localStorage.setItem(
     "orionLanguage",
     language
   );
 
-
-  document.documentElement.lang = language;
-
-
-  document
-    .getElementById("frBtn")
-    .classList.toggle(
-      "active",
-      language === "fr"
-    );
-
-
-  document
-    .getElementById("enBtn")
-    .classList.toggle(
-      "active",
-      language === "en"
-    );
-
-
-  const elements =
-    document.querySelectorAll("[data-fr][data-en]");
-
-
-  elements.forEach(element=>{
-
-    element.textContent =
-      language === "fr"
-      ?
-      element.dataset.fr
-      :
-      element.dataset.en;
-
-  });
-
-
-  updateLanguageContent();
+  applyLanguage();
 
 }
 
 
-/* =====================================================
-   LANGUAGE CONTENT
-===================================================== */
+/* ================= START ================= */
 
-function updateLanguageContent(){
+let currentLanguage =
+  localStorage.getItem("orionLanguage")
+  ||
+  "fr";
 
-  const isFR =
-    currentLanguage === "fr";
 
+document
+  .getElementById("languageSelect")
+  .value=currentLanguage;
 
-  document.getElementById("heroTitle").textContent =
-    isFR
-    ?
-    "ORION Accessories — Accessoires tendance au Maroc"
-    :
-    "ORION Accessories — Trendy Accessories in Morocco";
 
-
-  document.getElementById("heroText").textContent =
-    isFR
-    ?
-    "Découvrez nos lunettes de soleil, chaînes, bracelets et packs élégance. Commandez facilement sur WhatsApp avec livraison partout au Maroc."
-    :
-    "Discover our sunglasses, chains, bracelets and elegance packs. Order easily on WhatsApp with delivery across Morocco.";
-
-
-  document.getElementById("glassesTitle").textContent =
-    isFR
-    ?
-    "Lunettes de soleil ORION"
-    :
-    "ORION Sunglasses";
-
-
-  document.getElementById("glassesDescription").textContent =
-    isFR
-    ?
-    "Découvrez nos modèles de lunettes de soleil ORION pour femmes et hommes. Tous les modèles sont à 70 DH."
-    :
-    "Discover our ORION sunglasses for women and men. All models are 70 DH.";
-
-
-  document.getElementById("chainsTitle").textContent =
-    isFR
-    ?
-    "Chaînes ORION"
-    :
-    "ORION Chains";
-
-
-  document.getElementById("chainsDescription").textContent =
-    isFR
-    ?
-    "Chaînes et colliers tendance ORION pour femmes et hommes. Tous les modèles sont à 60 DH."
-    :
-    "Trendy ORION chains and necklaces for women and men. All models are 60 DH.";
-
-
-  document.getElementById("braceletsTitle").textContent =
-    isFR
-    ?
-    "Bracelets ORION"
-    :
-    "ORION Bracelets";
-
-
-  document.getElementById("braceletsDescription").textContent =
-    isFR
-    ?
-    "Découvrez notre collection de bracelets élégants. La majorité des modèles sont à 60 DH."
-    :
-    "Discover our elegant bracelet collection. Most models are 60 DH.";
-
-
-  document.getElementById("promoTitle").textContent =
-    isFR
-    ?
-    "Pack Élégance ORION"
-    :
-    "ORION Elegance Pack";
-
-
-  document.getElementById("promoDescription").textContent =
-    isFR
-    ?
-    "Profitez de notre pack élégance femme à seulement 100 DH."
-    :
-    "Enjoy our women's elegance pack for only 100 DH.";
-
-
-  document.getElementById("watchesTitle").textContent =
-    isFR
-    ?
-    "Montres ORION"
-    :
-    "ORION Watches";
-
-
-  document.getElementById("watchesDescription").textContent =
-    isFR
-    ?
-    "Collection de montres ORION disponible prochainement."
-    :
-    "ORION watch collection coming soon.";
-
-
-  document.getElementById("footerText").textContent =
-    isFR
-    ?
-    "Lunettes, bijoux et accessoires tendance au Maroc."
-    :
-    "Trendy sunglasses, jewelry and accessories in Morocco.";
-
-
-  document
-    .querySelectorAll(".product-fr")
-    .forEach(element=>{
-
-      element.style.display =
-        isFR ? "inline" : "none";
-
-    });
-
-
-  document
-    .querySelectorAll(".product-en")
-    .forEach(element=>{
-
-      element.style.display =
-        isFR ? "none" : "inline";
-
-    });
-
-
-  document
-    .querySelectorAll(".promo-fr")
-    .forEach(element=>{
-
-      element.style.display =
-        isFR ? "inline" : "none";
-
-    });
-
-
-  document
-    .querySelectorAll(".promo-en")
-    .forEach(element=>{
-
-      element.style.display =
-        isFR ? "none" : "inline";
-
-    });
-
-
-  document
-    .querySelectorAll(".order-text")
-    .forEach(element=>{
-
-      element.textContent =
-        isFR
-        ?
-        (
-          element.closest(".product")
-          &&
-          element.closest(".product")
-            .querySelector(".promo-name")
-          ?
-          "Commander maintenant"
-          :
-          "Commander sur WhatsApp"
-        )
-        :
-        (
-          element.closest(".product")
-          &&
-          element.closest(".product")
-            .querySelector(".promo-name")
-          ?
-          "Order now"
-          :
-          "Order on WhatsApp"
-        );
-
-    });
-
-
-  document
-    .querySelectorAll(".whatsapp-link")
-    .forEach(link=>{
-
-      link.href =
-        isFR
-        ?
-        link.dataset.frLink
-        :
-        link.dataset.enLink;
-
-    });
-
-}
-
-
-/* =====================================================
-   THEME
-===================================================== */
-
-function toggleTheme(){
-
-  document.body.classList.toggle("light");
-
-  localStorage.setItem(
-    "orionTheme",
-    document.body.classList.contains("light")
-    ?
-    "light"
-    :
-    "dark"
-  );
-
-}
-
-
-/* =====================================================
-   LOAD THEME
-===================================================== */
-
-if(
-  localStorage.getItem("orionTheme") === "light"
-){
-
-  document.body.classList.add("light");
-
-}
-
-
-/* =====================================================
-   START
-===================================================== */
-
-createProducts(
-  glasses,
-  "glassesProducts",
-  "glasses"
-);
-
-createProducts(
-  chains,
-  "chainProducts",
-  "chain"
-);
-
-createProducts(
-  bracelets,
-  "braceletProducts",
-  "bracelet"
-);
-
-createPromo();
-
-setLanguage(currentLanguage);
+applyLanguage();
 
 </script>
 
