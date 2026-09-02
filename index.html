@@ -298,6 +298,33 @@ header{
 }
 .thumbs img:hover{border-color:var(--gold)}
 
+.variant-area{
+ margin:12px 0 5px;
+ text-align:left;
+}
+
+.variant-label{
+ display:block;
+ color:var(--muted);
+ font-size:13px;
+ margin-bottom:6px;
+}
+
+.variant-select{
+ width:100%;
+ padding:11px 13px;
+ border-radius:11px;
+ border:1px solid var(--border);
+ background:var(--card2);
+ color:var(--text);
+ outline:none;
+ cursor:pointer;
+}
+
+.variant-select:focus{
+ border-color:var(--gold);
+}
+
 .product h3{
  font-size:19px;
  margin:13px 0 6px;
@@ -432,6 +459,11 @@ header{
 .cart-item-info{flex:1}
 .cart-item-info strong{display:block}
 .cart-item-info span{color:var(--gold)}
+.cart-item-info small{
+ display:block;
+ color:var(--muted);
+ margin-top:3px;
+}
 .remove{
  border:0;
  background:none;
@@ -597,7 +629,7 @@ Découvrez nos bracelets élégants pour femmes. Des accessoires tendance à por
 <p class="section-description" id="promoDescription">
 Profitez de nos packs élégance ORION. Bracelet, collier, boucles d'oreilles et bague à seulement 100 DH.
 </p>
-div id="promoProducts" class="products"></div>
+<div id="promoProducts" class="products"></div>
 </section>
 
 <section id="watches" class="section hidden">
@@ -645,7 +677,7 @@ Notre collection de montres ORION arrive prochainement.
 </div>
 <div class="step">
 <strong>02</strong>
-<p id="step2">Cliquez sur Commander ou ajoutez le produit au panier.</p>
+<p id="step2">Choisissez la couleur ou la variante, puis cliquez sur Commander ou ajoutez le produit au panier.</p>
 </div>
 <div class="step">
 <strong>03</strong>
@@ -701,6 +733,7 @@ aria-label="ORION Accessories WhatsApp">
 
 /* =========================================================
    ORION ACCESSORIES V2
+   Version avec sélection de couleur / variante
 ========================================================= */
 
 const whatsappNumber="212673830013";
@@ -766,6 +799,43 @@ function imageURL(filename){
  return "./"+filename.split("/").map(x=>encodeURIComponent(x)).join("/");
 }
 
+/* ================= VARIANT / COLORS ================= */
+
+function getVariantName(type,model,index){
+
+ if(type==="glasses"){
+
+  if(model==="01"){
+   const colors=[
+    currentLanguage==="fr"?"Gold":"Gold",
+    currentLanguage==="fr"?"Noir":"Black",
+    currentLanguage==="fr"?"Bleu":"Blue"
+   ];
+
+   return colors[index]||(
+    currentLanguage==="fr"
+    ?"Variante "+(index+1)
+    :"Variant "+(index+1)
+   );
+  }
+
+  return currentLanguage==="fr"
+   ?"Variante "+(index+1)
+   :"Variant "+(index+1);
+ }
+
+ return currentLanguage==="fr"
+  ?"Version "+(index+1)
+  :"Variant "+(index+1);
+}
+
+function variantLabel(){
+
+ return currentLanguage==="fr"
+  ?"Couleur / Variante"
+  :"Color / Variant";
+}
+
 /* ================= TRANSLATIONS ================= */
 
 const T={
@@ -794,7 +864,7 @@ fr:{
  total:"Total :",
  checkout:"Commander sur WhatsApp",
  step1:"Choisissez votre modèle préféré.",
- step2:"Cliquez sur Commander ou ajoutez le produit au panier.",
+ step2:"Choisissez la couleur ou la variante, puis cliquez sur Commander ou ajoutez le produit au panier.",
  step3:"Envoyez votre commande sur WhatsApp et confirmez vos informations de livraison."
 },
 en:{
@@ -822,12 +892,14 @@ en:{
  total:"Total:",
  checkout:"Order on WhatsApp",
  step1:"Choose your favorite model.",
- step2:"Click Order or add the product to your cart.",
+ step2:"Choose the color or variant, then click Order or add the product to your cart.",
  step3:"Send your order on WhatsApp and confirm your delivery information."
 }
 };
 
-function tr(key){return T[currentLanguage][key]||key}
+function tr(key){
+ return T[currentLanguage][key]||key
+}
 
 /* ================= PRODUCT RENDER ================= */
 
@@ -852,21 +924,41 @@ function createProducts(list,containerId,type){
    ?(currentLanguage==="fr"?"Collier":"Necklace")
    :(currentLanguage==="fr"?"Bracelet femme":"Women's Bracelet");
 
-  const message=currentLanguage==="fr"
-   ?`Bonjour ORION Accessories, je veux ${name} modèle ${p.model} - ${p.price} DH`
-   :`Hello ORION Accessories, I want ${name} model ${p.model} - ${p.price} DH`;
-
-  const wa=`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
-
   const mainId="main-"+type+"-"+p.model;
+  const selectId="variant-"+type+"-"+p.model;
 
-  let thumbs=p.images.map(img=>`
+  let thumbs=p.images.map((img,imgIndex)=>`
    <img src="${imageURL(img)}"
-   alt="${name} ORION model ${p.model}"
+   alt="${name} ORION model ${p.model} ${getVariantName(type,p.model,imgIndex)}"
    loading="lazy"
-   onclick="changeImage('${mainId}',this.src)"
+   onclick="selectVariant('${selectId}','${mainId}',${imgIndex})"
    onerror="this.style.display='none'">
   `).join("");
+
+  let variantHTML="";
+
+  if(type==="glasses" && p.images.length>1){
+
+   let options=p.images.map((img,imgIndex)=>`
+    <option value="${imgIndex}">
+     ${getVariantName(type,p.model,imgIndex)}
+    </option>
+   `).join("");
+
+   variantHTML=`
+    <div class="variant-area">
+     <label class="variant-label" for="${selectId}">
+      ${variantLabel()}
+     </label>
+     <select
+      id="${selectId}"
+      class="variant-select"
+      onchange="selectVariant('${selectId}','${mainId}',this.value)">
+      ${options}
+     </select>
+    </div>
+   `;
+  }
 
   let badge="";
   if(type==="chain"&&p.model==="01") badge="BEST SELLER";
@@ -896,6 +988,8 @@ function createProducts(list,containerId,type){
 
    <div class="thumbs">${thumbs}</div>
 
+   ${variantHTML}
+
    <h3>ORION ${name} ${currentLanguage==="fr"?"Modèle":"Model"} ${p.model}</h3>
 
    ${p.category?`<div class="category">${currentLanguage==="fr"?(p.category==="Women"?"Femme":p.category==="Women & Men"?"Femme & Homme":p.category):p.category}</div>`:""}
@@ -903,12 +997,127 @@ function createProducts(list,containerId,type){
    <div class="price">${p.price} DH</div>
 
    <div class="product-actions">
-    <a class="whatsapp" href="${wa}" target="_blank" rel="noopener">${tr("order")}</a>
-    <button class="add-cart" onclick="addToCart('${type}',${JSON.stringify(p).replace(/"/g,'&quot;')})" aria-label="Cart">🛒</button>
+    <a
+     class="whatsapp order-link"
+     id="order-${type}-${p.model}"
+     href="${buildProductWhatsApp(type,p,0)}"
+     target="_blank"
+     rel="noopener">
+     ${tr("order")}
+    </a>
+
+    <button
+     class="add-cart"
+     onclick="addSelectedToCart('${type}',${JSON.stringify(p).replace(/"/g,'&quot;')}', '${selectId}')"
+     aria-label="Cart">
+     🛒
+    </button>
    </div>
   `;
 
   container.appendChild(card);
+
+  updateOrderLink(type,p,0);
+ });
+}
+
+/* ================= WHATSAPP PRODUCT ================= */
+
+function buildProductMessage(type,p,variantIndex){
+
+ const name=type==="glasses"
+  ?(currentLanguage==="fr"?"Lunettes de soleil":"Sunglasses")
+  :type==="chain"
+  ?(currentLanguage==="fr"?"Collier":"Necklace")
+  :type==="bracelet"
+  ?(currentLanguage==="fr"?"Bracelet femme":"Women's Bracelet")
+  :"Pack";
+
+ const variant=getVariantName(type,p.model,variantIndex);
+ const selectedImage=p.images[variantIndex]||p.images[0];
+ const imageLink=new URL(imageURL(selectedImage),window.location.href).href;
+
+ if(currentLanguage==="fr"){
+  return `Bonjour ORION Accessories 👋
+
+Je souhaite commander :
+
+🛍️ ${name} modèle ${p.model}
+🎨 ${type==="glasses"?"Couleur / Variante":"Version"} : ${variant}
+💰 Prix : ${p.price} DH
+🖼️ Photo du produit :
+${imageLink}
+
+Merci de me confirmer la disponibilité.`;
+ }
+
+ return `Hello ORION Accessories 👋
+
+I would like to order:
+
+🛍️ ${name} model ${p.model}
+🎨 ${type==="glasses"?"Color / Variant":"Variant"}: ${variant}
+💰 Price: ${p.price} DH
+🖼️ Product photo:
+${imageLink}
+
+Please confirm availability.`;
+}
+
+function buildProductWhatsApp(type,p,variantIndex){
+
+ const message=buildProductMessage(type,p,variantIndex);
+
+ return `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+}
+
+function updateOrderLink(type,p,variantIndex){
+
+ const link=document.getElementById("order-"+type+"-"+p.model);
+
+ if(link){
+  link.href=buildProductWhatsApp(type,p,variantIndex);
+ }
+}
+
+/* ================= VARIANT SELECTION ================= */
+
+function selectVariant(selectId,mainId,index){
+
+ index=Number(index);
+
+ const select=document.getElementById(selectId);
+ const main=document.getElementById(mainId);
+
+ if(!select || !main)return;
+
+ const card=select.closest(".product");
+
+ if(!card)return;
+
+ const images=[...card.querySelectorAll(".thumbs img")];
+
+ if(images[index]){
+  main.src=images[index].src;
+ }
+
+ const type=selectId.split("-")[1];
+ const model=selectId.split("-")[2];
+
+ const list=
+  type==="glasses"?glasses:
+  type==="chain"?chains:
+  type==="bracelet"?bracelets:
+  promo;
+
+ const product=list.find(p=>p.model===model);
+
+ if(product){
+  updateOrderLink(type,product,index);
+ }
+
+ images.forEach((img,i)=>{
+  img.style.borderColor=i===index?"var(--gold)":"transparent";
  });
 }
 
@@ -929,7 +1138,7 @@ function createPromo(){
 
   const mainId="promo-main";
 
-  let thumbs=p.images.map(img=>`
+  let thumbs=p.images.map((img,index)=>`
    <img src="${imageURL(img)}"
    alt="ORION Elegance Pack"
    loading="lazy"
@@ -1037,15 +1246,6 @@ function toggleFavorite(id,button){
 
 function toggleFavorites(){
 
- const all=document.querySelectorAll(".product");
-
- all.forEach(card=>{
-  if(card.dataset.search){
-   const id=[...card.querySelectorAll(".favorite")][0];
-   if(!id)return;
-  }
- });
-
  if(!favorites.length){
   alert(currentLanguage==="fr"
   ?"Vous n'avez encore aucun favori."
@@ -1060,20 +1260,42 @@ function toggleFavorites(){
 
 /* ================= CART ================= */
 
-function addToCart(type,p){
+function addSelectedToCart(type,p,selectId){
 
- const key=type+"-"+p.model;
+ let variantIndex=0;
+
+ const select=document.getElementById(selectId);
+
+ if(select){
+  variantIndex=Number(select.value);
+ }
+
+ addToCart(type,p,variantIndex);
+}
+
+function addToCart(type,p,variantIndex=0){
+
+ const selectedImage=p.images[variantIndex]||p.images[0];
+ const variant=getVariantName(type,p.model,variantIndex);
+
+ const key=type+"-"+p.model+"-"+variantIndex;
+
  const existing=cart.find(x=>x.key===key);
 
- if(existing) existing.qty++;
- else cart.push({
-  key,
-  type,
-  model:p.model,
-  price:p.price,
-  image:p.images[0],
-  qty:1
- });
+ if(existing){
+  existing.qty++;
+ }else{
+  cart.push({
+   key,
+   type,
+   model:p.model,
+   price:p.price,
+   image:selectedImage,
+   variantIndex,
+   variant,
+   qty:1
+  });
+ }
 
  saveCart();
  updateCart();
@@ -1115,6 +1337,7 @@ function updateCart(){
    <img src="${imageURL(item.image)}" alt="ORION ${item.type} ${item.model}">
    <div class="cart-item-info">
     <strong>ORION ${item.type==="glasses"?tr("glasses"):item.type==="chain"?tr("chains"):item.type==="bracelet"?tr("bracelets"):"Pack"} ${item.model}</strong>
+    ${item.variant?`<small>🎨 ${item.variant}</small>`:""}
     <span>${item.price} DH × ${item.qty}</span>
    </div>
    <button class="remove" onclick="removeFromCart('${item.key}')">✕</button>
@@ -1138,27 +1361,41 @@ function closeCart(){
  document.getElementById("overlay").classList.remove("show");
 }
 
+/* ================= CHECKOUT ================= */
+
 function checkout(){
 
  if(!cart.length)return;
 
  let text=currentLanguage==="fr"
- ?"Bonjour ORION Accessories 👋%0A%0AJe souhaite commander :%0A"
- :"Hello ORION Accessories 👋%0A%0AI would like to order:%0A";
+ ?"Bonjour ORION Accessories 👋\n\nJe souhaite commander :\n"
+ :"Hello ORION Accessories 👋\n\nI would like to order:\n";
 
  cart.forEach(item=>{
-  text+=`• ${item.type} modèle ${item.model} — ${item.qty} × ${item.price} DH%0A`;
+
+  const imageLink=new URL(
+   imageURL(item.image),
+   window.location.href
+  ).href;
+
+  text+=`
+• ${item.type} modèle ${item.model}
+  🎨 ${item.variant||"Standard"}
+  🔢 ${item.qty} × ${item.price} DH
+  🖼️ ${imageLink}
+`;
  });
 
  const total=cart.reduce((s,x)=>s+x.price*x.qty,0);
 
- text+=`%0A${tr("total")} ${total} DH%0A%0A`;
+ text+=`\n${tr("total")} ${total} DH\n\n`;
+
  text+=currentLanguage==="fr"
  ?"Merci de me confirmer la disponibilité et la livraison."
  :"Please confirm availability and delivery.";
 
  window.open(
-  "https://wa.me/"+whatsappNumber+"?text="+text,
+  "https://wa.me/"+whatsappNumber+"?text="+encodeURIComponent(text),
   "_blank"
  );
 }
@@ -1223,6 +1460,8 @@ function applyLanguage(){
  createPromo();
  updateCart();
 }
+
+/* ================= INIT ================= */
 
 function init(){
 
