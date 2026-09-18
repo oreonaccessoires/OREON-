@@ -1,21 +1,124 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
 
-<title>ORION Accessories | Lunettes, Colliers & Bracelets au Maroc</title>
+<meta
+name="viewport"
+content="width=device-width,initial-scale=1,viewport-fit=cover">
 
-<meta name="description" content="ORION Accessories au Maroc : lunettes, colliers, bracelets et packs premium. Livraison partout au Maroc.">
-<meta name="keywords" content="ORION Accessories, lunettes Maroc, colliers Maroc, bracelets Maroc, accessoires Maroc">
-<meta name="robots" content="index,follow">
+<title>
+ORION Accessories | Lunettes, Colliers & Bracelets au Maroc
+</title>
 
-<link rel="canonical" href="https://oreonaccessoires.github.io/OREON-/">
+<meta
+name="description"
+content="ORION Accessories Maroc : découvrez nos lunettes, colliers, bracelets et packs modernes. Accessoires premium à prix accessibles avec livraison partout au Maroc.">
 
-<meta property="og:title" content="ORION Accessories">
-<meta property="og:description" content="Lunettes, colliers et bracelets modernes au Maroc.">
-<meta property="og:url" content="https://oreonaccessoires.github.io/OREON-/">
-<meta property="og:image" content="https://oreonaccessoires.github.io/OREON-/LOGO.PNG">
+<meta
+name="keywords"
+content="ORION Accessories, ORION Maroc, accessoires Maroc, lunettes Maroc, lunettes de soleil Maroc, colliers Maroc, bracelets Maroc, bijoux Maroc, accessoires femme Maroc, accessoires homme Maroc">
+
+<meta
+name="robots"
+content="index,follow,max-image-preview:large">
+
+<meta
+name="author"
+content="ORION Accessories">
+
+<meta
+name="theme-color"
+content="#050505">
+
+<link
+rel="canonical"
+href="https://oreonaccessoires.github.io/OREON-/">
+
+
+<!-- OPEN GRAPH -->
+
+<meta
+property="og:type"
+content="website">
+
+<meta
+property="og:site_name"
+content="ORION Accessories">
+
+<meta
+property="og:locale"
+content="fr_MA">
+
+<meta
+property="og:title"
+content="ORION Accessories | Accessoires modernes au Maroc">
+
+<meta
+property="og:description"
+content="Lunettes, colliers, bracelets et packs modernes. Découvrez ORION Accessories au Maroc.">
+
+<meta
+property="og:url"
+content="https://oreonaccessoires.github.io/OREON-/">
+
+<meta
+property="og:image"
+content="https://oreonaccessoires.github.io/OREON-/LOGO.PNG">
+
+<meta
+property="og:image:alt"
+content="ORION Accessories Maroc">
+
+
+<!-- TWITTER -->
+
+<meta
+name="twitter:card"
+content="summary_large_image">
+
+<meta
+name="twitter:title"
+content="ORION Accessories | Maroc">
+
+<meta
+name="twitter:description"
+content="Lunettes, colliers et bracelets modernes au Maroc.">
+
+<meta
+name="twitter:image"
+content="https://oreonaccessoires.github.io/OREON-/LOGO.PNG">
+
+
+<!-- FAVICON -->
+
+<link
+rel="icon"
+type="image/png"
+href="./LOGO.PNG">
+
+
+<!-- STRUCTURED DATA -->
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Store",
+  "name":"ORION Accessories",
+  "url":"https://oreonaccessoires.github.io/OREON-/",
+  "logo":"https://oreonaccessoires.github.io/OREON-/LOGO.PNG",
+  "description":"ORION Accessories propose des lunettes, colliers, bracelets et accessoires modernes au Maroc.",
+  "priceRange":"60 DH - 100 DH",
+  "currenciesAccepted":"MAD",
+  "areaServed":{
+    "@type":"Country",
+    "name":"Morocco"
+  },
+  "sameAs":[]
+}
+</script>
+
 
 <style>
 
@@ -47,7 +150,9 @@ line-height:1.5;
 transition:.3s
 }
 
-button,input,select{
+button,
+input,
+select{
 font:inherit
 }
 
@@ -298,7 +403,22 @@ color:var(--gold)
 }
 
 
-/* PRODUCT IMAGE ANIMATION */
+/* MAIN PRODUCT IMAGE */
+
+.image-stage{
+position:relative;
+overflow:hidden;
+border-radius:17px;
+touch-action:pan-y;
+user-select:none;
+-webkit-user-select:none;
+-webkit-touch-callout:none;
+cursor:grab
+}
+
+.image-stage.dragging{
+cursor:grabbing
+}
 
 .main-image{
 width:100%;
@@ -309,47 +429,120 @@ object-fit:initial;
 display:block;
 border-radius:17px;
 background:transparent;
-
 cursor:zoom-in;
-
-transform:scale(1) translateY(0);
-
+transform:translate3d(0,0,0) scale(1);
 transition:
 transform .55s cubic-bezier(.22,.61,.36,1),
 filter .55s ease,
 opacity .25s ease;
-
 will-change:transform;
+-webkit-user-drag:none;
+user-select:none
 }
 
 .product:hover .main-image{
 transform:scale(1.055) translateY(-5px);
-filter:saturate(1.06) contrast(1.03);
+filter:saturate(1.06) contrast(1.03)
 }
 
 .product:active .main-image{
-transform:scale(1.025);
+transform:scale(1.025)
+}
+
+
+/* SWIPE ANIMATION */
+
+.swipe-left{
+animation:
+swipeLeft .32s cubic-bezier(.22,.61,.36,1)
+}
+
+.swipe-right{
+animation:
+swipeRight .32s cubic-bezier(.22,.61,.36,1)
+}
+
+@keyframes swipeLeft{
+
+0%{
+opacity:1;
+transform:translateX(0) scale(1)
+}
+
+45%{
+opacity:.15;
+transform:translateX(-35px) scale(.97)
+}
+
+100%{
+opacity:1;
+transform:translateX(0) scale(1)
+}
+
+}
+
+@keyframes swipeRight{
+
+0%{
+opacity:1;
+transform:translateX(0) scale(1)
+}
+
+45%{
+opacity:.15;
+transform:translateX(35px) scale(.97)
+}
+
+100%{
+opacity:1;
+transform:translateX(0) scale(1)
+}
+
 }
 
 
 /* IMAGE CHANGE */
 
 .image-change{
-animation:orionImageChange .4s ease;
+animation:orionImageChange .4s ease
 }
 
 @keyframes orionImageChange{
 
 0%{
 opacity:.3;
-transform:scale(.97) translateX(6px);
+transform:scale(.97) translateX(6px)
 }
 
 100%{
 opacity:1;
-transform:scale(1) translateX(0);
+transform:scale(1) translateX(0)
 }
 
+}
+
+
+/* SWIPE HINT */
+
+.swipe-hint{
+position:absolute;
+bottom:10px;
+left:50%;
+transform:translateX(-50%);
+z-index:2;
+padding:5px 10px;
+border-radius:20px;
+background:rgba(0,0,0,.55);
+border:1px solid rgba(212,175,55,.4);
+color:#fff;
+font-size:10px;
+pointer-events:none;
+opacity:.85;
+transition:opacity .3s ease
+}
+
+.image-stage.used .swipe-hint{
+opacity:0
 }
 
 
@@ -373,7 +566,6 @@ border-radius:9px;
 border:2px solid transparent;
 flex-shrink:0;
 cursor:pointer;
-
 transition:
 transform .25s ease,
 border-color .25s ease
@@ -457,163 +649,129 @@ color:#000
 position:fixed;
 inset:0;
 z-index:99999;
-
 display:none;
 align-items:center;
 justify-content:center;
-
 padding:20px;
-
 background:rgba(0,0,0,.94);
-
 backdrop-filter:blur(12px);
-
 opacity:0;
-
-transition:opacity .3s ease;
+transition:opacity .3s ease
 }
 
 .image-lightbox.active{
 display:flex;
-opacity:1;
+opacity:1
 }
 
 .lightbox-content{
 position:relative;
-
 max-width:95vw;
 max-height:92vh;
-
 display:flex;
 align-items:center;
-justify-content:center;
+justify-content:center
 }
 
 .lightbox-image{
 display:block;
-
 max-width:90vw;
 max-height:88vh;
-
 width:auto;
 height:auto;
-
 object-fit:contain;
-
 border-radius:18px;
-
-box-shadow:
-0 20px 80px rgba(0,0,0,.75);
-
+box-shadow:0 20px 80px rgba(0,0,0,.75);
 animation:lightboxOpen .35s cubic-bezier(.22,.61,.36,1);
+transition:
+opacity .2s ease,
+transform .25s ease;
+-webkit-user-drag:none;
+user-select:none
 }
 
 @keyframes lightboxOpen{
 
 0%{
 opacity:0;
-transform:scale(.82);
+transform:scale(.82)
 }
 
 100%{
 opacity:1;
-transform:scale(1);
+transform:scale(1)
 }
 
 }
 
 .lightbox-close{
 position:fixed;
-
 top:18px;
 right:20px;
-
 width:46px;
 height:46px;
-
 border:1px solid rgba(212,175,55,.7);
 border-radius:50%;
-
 background:rgba(0,0,0,.65);
 color:#fff;
-
 font-size:30px;
 line-height:1;
-
 cursor:pointer;
-
 z-index:100001;
-
 transition:
 transform .25s ease,
-background .25s ease;
+background .25s ease
 }
 
 .lightbox-close:hover{
 transform:rotate(90deg) scale(1.08);
 background:var(--gold);
-color:#000;
+color:#000
 }
 
 .lightbox-arrow{
 position:fixed;
-
 top:50%;
 transform:translateY(-50%);
-
 width:48px;
 height:48px;
-
 border:1px solid rgba(212,175,55,.7);
 border-radius:50%;
-
 background:rgba(0,0,0,.65);
 color:#fff;
-
 font-size:30px;
-
 cursor:pointer;
-
 z-index:100001;
-
 transition:
 transform .25s ease,
-background .25s ease;
+background .25s ease
 }
 
 .lightbox-arrow:hover{
 background:var(--gold);
-color:#000;
+color:#000
 }
 
 .lightbox-prev{
-left:18px;
+left:18px
 }
 
 .lightbox-next{
-right:18px;
+right:18px
 }
 
 .lightbox-counter{
 position:fixed;
-
 bottom:20px;
 left:50%;
-
 transform:translateX(-50%);
-
 padding:7px 14px;
-
 border:1px solid rgba(212,175,55,.5);
 border-radius:20px;
-
 background:rgba(0,0,0,.7);
-
 color:#fff;
-
 font-size:13px;
-
-z-index:100001;
+z-index:100001
 }
 
 
@@ -1103,9 +1261,6 @@ margin:40px auto;
 padding:0 10px
 }
 
-
-/* 2 PRODUCTS PER ROW */
-
 .products{
 grid-template-columns:repeat(2,minmax(0,1fr));
 gap:10px
@@ -1137,11 +1292,20 @@ font-size:8px;
 padding:4px 6px
 }
 
+.image-stage{
+border-radius:12px
+}
+
 .main-image{
 width:100%;
 height:auto;
 display:block;
 border-radius:12px
+}
+
+.swipe-hint{
+font-size:8px;
+bottom:7px
 }
 
 .thumbs{
@@ -1302,7 +1466,8 @@ height:36px
 @media(prefers-reduced-motion:reduce){
 
 .main-image{
-transition:none;
+transition:none!important;
+animation:none!important;
 }
 
 .product:hover .main-image,
@@ -1311,10 +1476,17 @@ transform:none;
 filter:none;
 }
 
+.swipe-left,
+.swipe-right,
+.image-change{
+animation:none!important;
+}
+
 }
 
 </style>
 </head>
+
 
 <body>
 
@@ -1327,7 +1499,9 @@ filter:none;
 
 <img
 src="./LOGO.PNG"
-alt="ORION Accessories">
+alt="ORION Accessories Maroc - logo"
+width="120"
+height="120">
 
 </div>
 
@@ -1335,7 +1509,7 @@ alt="ORION Accessories">
 <div class="hero">
 
 <div class="eyebrow">
-ORION ACCESSORIES
+ORION ACCESSORIES • MAROC
 </div>
 
 
@@ -1363,7 +1537,9 @@ Découvrir la collection
 
 <a
 class="hero-btn"
-href="https://wa.me/212673830013?text=Bonjour%20ORION%20Accessories">
+href="https://wa.me/212673830013?text=Bonjour%20ORION%20Accessories"
+target="_blank"
+rel="noopener">
 
 Commander sur WhatsApp
 
@@ -1377,7 +1553,8 @@ Commander sur WhatsApp
 <button
 class="tool"
 id="themeBtn"
-onclick="toggleTheme()">
+onclick="toggleTheme()"
+aria-label="Changer le thème">
 
 ☀️
 
@@ -1386,7 +1563,8 @@ onclick="toggleTheme()">
 
 <button
 class="tool"
-onclick="openCart()">
+onclick="openCart()"
+aria-label="Ouvrir le panier">
 
 🛒
 
@@ -1407,11 +1585,20 @@ id="cartCount">
 
 <div class="search-wrap">
 
+<label
+for="searchInput"
+style="position:absolute;left:-9999px">
+
+Rechercher un produit ORION
+
+</label>
+
 <input
 id="searchInput"
 class="search"
 type="search"
 placeholder="Rechercher un produit..."
+autocomplete="off"
 oninput="searchProducts()">
 
 </div>
@@ -1422,7 +1609,9 @@ oninput="searchProducts()">
 
 <!-- NAV -->
 
-<nav class="nav">
+<nav
+class="nav"
+aria-label="Navigation principale">
 
 <button
 class="active"
@@ -1491,7 +1680,8 @@ Nos <span>Lunettes</span>
 
 <p class="section-description">
 
-Des modèles modernes pour compléter votre style.
+Découvrez nos lunettes modernes ORION au Maroc,
+idéales pour compléter votre style.
 
 </p>
 
@@ -1521,7 +1711,7 @@ Nos <span>Colliers</span>
 
 <p class="section-description">
 
-Des pièces élégantes pour femmes et hommes.
+Des colliers élégants et modernes pour femmes et hommes.
 
 </p>
 
@@ -1551,7 +1741,7 @@ Nos <span>Bracelets</span>
 
 <p class="section-description">
 
-Minimalistes, modernes et faciles à porter.
+Bracelets minimalistes et modernes pour votre style quotidien.
 
 </p>
 
@@ -1821,7 +2011,8 @@ onclick="closeClientImage()">
 
 
 <button
-onclick="closeClientImage()">
+onclick="closeClientImage()"
+aria-label="Fermer">
 
 ×
 
@@ -1918,7 +2109,7 @@ Puis-je choisir une autre photo du produit ?
 
 <div class="faq-answer">
 
-Oui. Pour les modèles possédant plusieurs photos, sélectionnez la vue souhaitée.
+Oui. Pour les modèles possédant plusieurs photos, sélectionnez la vue souhaitée ou faites glisser l'image sur votre téléphone.
 
 </div>
 
@@ -1946,8 +2137,8 @@ onclick="closeCart()">
 
 <aside
 class="cart-panel"
-id="cartPanel">
-
+id="cartPanel"
+aria-label="Panier">
 
 <div class="cart-header">
 
@@ -1958,7 +2149,8 @@ Votre panier
 
 <button
 class="close"
-onclick="closeCart()">
+onclick="closeCart()"
+aria-label="Fermer le panier">
 
 ×
 
@@ -1993,125 +2185,14 @@ Commander via WhatsApp
 
 
 </aside>
-<!-- FIXED WHATSAPP -->
-
-<a
-class="fixed-wa"
-href="https://wa.me/212673830013?text=Bonjour%20ORION%20Accessories"
-target="_blank"
-aria-label="WhatsApp">
-
-☎
-
-</a>
-
-
-
-<!-- BACK TOP -->
-
-<button
-class="back-top"
-id="backTop"
-onclick="window.scrollTo({top:0,behavior:'smooth'})">
-
-↑
-
-</button>
-
-
-
-<!-- FOOTER -->
-
-<footer>
-
-<strong>
-ORION Accessories
-</strong>
-
-<br>
-
-Lunettes • Colliers • Bracelets
-
-<br><br>
-
-© 2026 ORION Accessories — Maroc
-
-</footer>
-
-
-
-<!-- PRODUCT IMAGE LIGHTBOX -->
-
-<div
-class="image-lightbox"
-id="imageLightbox"
-onclick="closeImageLightbox(event)">
-
-
-<button
-class="lightbox-close"
-onclick="closeImageLightbox(event)"
-aria-label="Fermer">
-
-×
-
-</button>
-
-
-<button
-class="lightbox-arrow lightbox-prev"
-onclick="changeLightboxImage(-1,event)"
-aria-label="Image précédente">
-
-‹
-
-</button>
-
-
-<div
-class="lightbox-content"
-onclick="event.stopPropagation()">
-
-
-<img
-id="lightboxImage"
-class="lightbox-image"
-src=""
-alt="ORION Accessories">
-
-</div>
-
-
-<button
-class="lightbox-arrow lightbox-next"
-onclick="changeLightboxImage(1,event)"
-aria-label="Image suivante">
-
-›
-
-</button>
-
-
-<div
-id="lightboxCounter"
-class="lightbox-counter">
-
-1 / 1
-
-</div>
-
-
-</div>
-
-
-
 <script>
 
-
-/* WHATSAPP */
+/* =========================
+ORION ACCESSORIES
+MAIN JAVASCRIPT
+========================= */
 
 const WHATSAPP="212673830013";
-
 
 
 /* =========================
@@ -2125,11 +2206,9 @@ model:"01",
 price:70,
 badge:"BEST SELLER",
 images:[
-
 "ORION Glasses Model 01 gold 120dh.JPG",
 "ORION Glasses Model 01 Black 120dh.JPG",
 "ORION Glasses Model 01 Blue 120dh.JPG"
-
 ]
 },
 
@@ -2137,13 +2216,11 @@ images:[
 model:"02",
 price:70,
 images:[
-
 "ORION Glasses Model 02 120dh 1.JPG",
 "ORION Glasses Model 02 120dh 5.JPG",
 "ORION Glasses Model 02 120dh 3.JPG",
 "ORION Glasses Model 02 120dh 2.JPG",
 "ORION Glasses Model 02 120dh 4.JPG"
-
 ]
 },
 
@@ -2151,14 +2228,12 @@ images:[
 model:"03",
 price:70,
 images:[
-
 "ORION Glasses Model 03 120dh 1.JPG",
 "ORION Glasses Model 03 120dh 5.JPG",
 "ORION Glasses Model 03 120dh 4.JPG",
 "ORION Glasses Model 03 120dh 3.JPG",
 "ORION Glasses Model 03 120dh 6.JPG",
 "ORION Glasses Model 03 120dh 2.JPG"
-
 ]
 },
 
@@ -2166,14 +2241,12 @@ images:[
 model:"04",
 price:70,
 images:[
-
 "ORION Glasses Model 04 120dh 4.JPG",
 "ORION Glasses Model 04 120dh 2.JPG",
 "ORION Glasses Model 04 120dh 3.JPG",
 "ORION Glasses Model 04 120dh 1.JPG",
 "ORION Glasses Model 04 120dh 6.JPG",
 "ORION Glasses Model 04 120dh 5.JPG"
-
 ]
 },
 
@@ -2181,13 +2254,11 @@ images:[
 model:"05",
 price:70,
 images:[
-
 "ORION Glasses Model 05 120dh 4.JPG",
 "ORION Glasses Model 05 120dh 5.JPG",
 "ORION Glasses Model 05 120dh 2.JPG",
 "ORION Glasses Model 05 120dh 3.JPG",
 "ORION Glasses Model 05 120dh 1.JPG"
-
 ]
 },
 
@@ -2195,7 +2266,6 @@ images:[
 model:"06",
 price:70,
 images:[
-
 "ORION Glasses Model 06 120dh 6.JPG",
 "ORION Glasses Model 06 120dh 4.JPG",
 "ORION Glasses Model 06 120dh 2.JPG",
@@ -2203,7 +2273,6 @@ images:[
 "ORION Glasses Model 06 120dh 1.JPG",
 "ORION Glasses Model 06 120dh 3.JPG",
 "ORION Glasses Model 06 120dh 5.JPG"
-
 ]
 },
 
@@ -2211,13 +2280,11 @@ images:[
 model:"07",
 price:70,
 images:[
-
 "ORION Glasses Model 07 140dh 5.JPG",
 "ORION Glasses Model 07 140dh 1.JPG",
 "ORION Glasses Model 07 140dh 4.JPG",
 "ORION Glasses Model 07 140dh 3.JPG",
 "ORION Glasses Model 07 140dh 2.JPG"
-
 ]
 },
 
@@ -2225,14 +2292,12 @@ images:[
 model:"08",
 price:70,
 images:[
-
 "ORION Glasses Model 08 130dh 2.JPG",
 "ORION Glasses Model 08 130dh 3.JPG",
 "ORION Glasses Model 08 130dh 4.JPG",
 "ORION Glasses Model 08 130dh 1.JPG",
 "ORION Glasses Model 08 130dh 6.JPG",
 "ORION Glasses Model 08 130dh 5.JPG"
-
 ]
 },
 
@@ -2240,7 +2305,6 @@ images:[
 model:"09",
 price:70,
 images:[
-
 "ORION Glasses Model 09 120dh 5.JPG",
 "ORION Glasses Model 09 120dh 8.JPG",
 "ORION Glasses Model 09 120dh 2.JPG",
@@ -2248,7 +2312,6 @@ images:[
 "ORION Glasses Model 09 120dh 6.JPG",
 "ORION Glasses Model 09 120dh 7.JPG",
 "ORION Glasses Model 09 120dh 1.JPG"
-
 ]
 },
 
@@ -2256,13 +2319,11 @@ images:[
 model:"10",
 price:70,
 images:[
-
 "ORION Glasses Model 10 120dh 3.JPG",
 "ORION Glasses Model 10 120dh 4.JPG",
 "ORION Glasses Model 10 120dh 5.JPG",
 "ORION Glasses Model 10 120dh 2.JPG",
 "ORION Glasses Model 10 120dh 1.JPG"
-
 ]
 },
 
@@ -2270,13 +2331,11 @@ images:[
 model:"11",
 price:70,
 images:[
-
 "ORION Glasses Model 11 120dh 3.JPG",
 "ORION Glasses Model 11 120dh 1.JPG",
 "ORION Glasses Model 11 120dh 4.JPG",
 "ORION Glasses Model 11 120dh 2.JPG",
 "ORION Glasses Model 11 120dh 5.JPG"
-
 ]
 },
 
@@ -2284,7 +2343,6 @@ images:[
 model:"12",
 price:70,
 images:[
-
 "ORION Glasses Model 12 120dh 7.JPG",
 "ORION Glasses Model 12 120dh 2.JPG",
 "ORION Glasses Model 12 120dh 4.JPG",
@@ -2294,7 +2352,6 @@ images:[
 "ORION Glasses Model 12 120dh 10.JPG",
 "ORION Glasses Model 12 120dh 1.JPG",
 "ORION Glasses Model 12 120dh 6.JPG"
-
 ]
 },
 
@@ -2302,13 +2359,11 @@ images:[
 model:"13",
 price:70,
 images:[
-
 "ORION Glasses Model 13 120dh 2.JPG",
 "ORION Glasses Model 13 120dh 3.JPG",
 "ORION Glasses Model 13 120dh 4.JPG",
 "ORION Glasses Model 13 120dh 5.JPG",
 "ORION Glasses Model 13 120dh 1.JPG"
-
 ]
 },
 
@@ -2316,11 +2371,9 @@ images:[
 model:"14",
 price:70,
 images:[
-
 "ORION Glasses Model 14 120dh 2.JPG",
 "ORION Glasses Model 14 120dh 1.JPG",
 "ORION Glasses Model 14 120dh 3.JPG"
-
 ]
 },
 
@@ -2328,10 +2381,8 @@ images:[
 model:"15",
 price:70,
 images:[
-
 "ORION Glasses Model 15 120dh 1.JPG",
 "ORION Glasses Model 15 120dh 2.JPG"
-
 ]
 },
 
@@ -2339,9 +2390,7 @@ images:[
 model:"16",
 price:70,
 images:[
-
 "ORION Glasses Model 16 140dh 1.JPG"
-
 ]
 },
 
@@ -2349,9 +2398,7 @@ images:[
 model:"17",
 price:70,
 images:[
-
 "ORION Glasses Model 17 140dh 1.JPG"
-
 ]
 },
 
@@ -2359,11 +2406,9 @@ images:[
 model:"18",
 price:70,
 images:[
-
 "ORION Glasses Model 18 120dh 1.JPG",
 "ORION Glasses Model 18 120dh 3.JPG",
 "ORION Glasses Model 18 120dh 2.JPG"
-
 ]
 },
 
@@ -2371,17 +2416,14 @@ images:[
 model:"19",
 price:70,
 images:[
-
 "ORION Glasses Model 19 130dh 3.JPG",
 "ORION Glasses Model 19 130dh 2.JPG",
 "ORION Glasses Model 19 130dh 1.JPG",
 "ORION Glasses Model 19 130dh 4.JPG"
-
 ]
 }
 
 ];
-
 
 
 /* =========================
@@ -2395,12 +2437,10 @@ model:"01",
 price:60,
 gender:"Women & Men",
 images:[
-
 "ORION Chain Model girl:men 01 80dh 1.JPG",
 "ORION Chain Model girl:men 01 80dh 4.JPG",
 "ORION Chain Model girl:men 01 80dh 3.JPG",
 "ORION Chain Model girl:men 01 80dh 2.JPG"
-
 ]
 },
 
@@ -2409,13 +2449,11 @@ model:"02",
 price:60,
 gender:"Women",
 images:[
-
 "ORION Chain Model 02 80dh 3.JPG",
 "ORION Chain Model 02 80dh 5.JPG",
 "ORION Chain Model 02 80dh 2.JPG",
 "ORION Chain Model 02 80dh 1.JPG",
 "ORION Chain Model 02 80dh 4.JPG"
-
 ]
 },
 
@@ -2424,7 +2462,6 @@ model:"03",
 price:60,
 gender:"Women",
 images:[
-
 "ORION Chain Model 03 80dh 2.JPG",
 "ORION Chain Model 03 80dh 5.JPG",
 "ORION Chain Model 03 80dh 4.JPG",
@@ -2432,7 +2469,6 @@ images:[
 "ORION Chain Model 03 80dh 7.JPG",
 "ORION Chain Model 03 80dh 1.JPG",
 "ORION Chain Model 03 80dh 6.JPG"
-
 ]
 },
 
@@ -2441,9 +2477,7 @@ model:"04",
 price:60,
 gender:"Women",
 images:[
-
 "ORION Chain Model 04 79dh 1.JPG"
-
 ]
 },
 
@@ -2452,14 +2486,11 @@ model:"05",
 price:60,
 gender:"Women",
 images:[
-
 "‏ ‏ORION Chain Model 90dh 1  .JPG"
-
 ]
 }
 
 ];
-
 
 
 /* =========================
@@ -2473,7 +2504,6 @@ model:"01",
 price:60,
 gender:"Women",
 images:[
-
 "ORION Bracelets model 01 80dh 1.JPG",
 "ORION Bracelets model 01 80dh 4.JPG",
 "ORION Bracelets model 01 80dh 7.JPG",
@@ -2482,7 +2512,6 @@ images:[
 "ORION Bracelets model 01 80dh 5.JPG",
 "ORION Bracelets model 01 80dh 6.JPG",
 "ORION Bracelets model 01 80dh 8.JPG"
-
 ]
 },
 
@@ -2491,12 +2520,10 @@ model:"02",
 price:60,
 gender:"Women",
 images:[
-
 "ORION Bracelets model 02 80dh 2.JPG",
 "ORION Bracelets model 02 80dh 4.JPG",
 "ORION Bracelets model 02 80dh 1.JPG",
 "ORION Bracelets model 02 80dh 3.JPG"
-
 ]
 },
 
@@ -2505,12 +2532,10 @@ model:"03",
 price:60,
 gender:"Women",
 images:[
-
 "ORION Bracelets model 03 80dh 2.JPG",
 "ORION Bracelets model 03 80dh 4.JPG",
 "ORION Bracelets model 03 80dh 1.JPG",
 "ORION Bracelets model 03 80dh 3.JPG"
-
 ]
 },
 
@@ -2519,11 +2544,9 @@ model:"04",
 price:80,
 gender:"Women",
 images:[
-
 "ORION Bracelets model 04 100dh 3.JPG",
 "ORION Bracelets model 04 100dh 2.JPG",
 "ORION Bracelets model 04 100dh 1.JPG"
-
 ]
 },
 
@@ -2532,18 +2555,15 @@ model:"05",
 price:80,
 gender:"Women",
 images:[
-
 "ORION Bracelets model 05 79 dh 1.JPG",
 "ORION Bracelets model 05 79 dh 2.JPG",
 "ORION Bracelets model 05 79 dh 3.JPG",
 "ORION Bracelets model 05 79 dh 4.JPG",
 "ORION Bracelets model 05 79 dh 5.JPG"
-
 ]
 }
 
 ];
-
 
 
 /* =========================
@@ -2556,17 +2576,14 @@ const promo=[
 model:"Pack",
 price:100,
 images:[
-
 "pack1.JPG",
 "pack2.JPG",
 "pack3.JPG",
 "pack4.JPG"
-
 ]
 }
 
 ];
-
 
 
 /* =========================
@@ -2579,7 +2596,6 @@ localStorage.getItem("orionCart")||"[]"
 );
 
 
-
 /* =========================
 ESCAPE HTML
 ========================= */
@@ -2587,7 +2603,6 @@ ESCAPE HTML
 function esc(s){
 
 return String(s)
-
 .replace(/&/g,"&amp;")
 .replace(/</g,"&lt;")
 .replace(/>/g,"&gt;")
@@ -2597,84 +2612,58 @@ return String(s)
 }
 
 
-
 /* =========================
 CREATE PRODUCTS
 ========================= */
 
 function createProducts(list,id,type){
 
-const box=
-document.getElementById(id);
+const box=document.getElementById(id);
 
 if(!box)return;
 
 box.innerHTML="";
 
-
 list.forEach((p,n)=>{
 
-const uid=
-type+"-"+p.model+"-"+n;
+const uid=type+"-"+p.model+"-"+n;
+const main=uid+"-main";
+const sel=uid+"-select";
 
-const main=
-uid+"-main";
-
-const sel=
-uid+"-select";
-
-
-const card=
-document.createElement("article");
-
+const card=document.createElement("article");
 
 card.className="product";
-
 card.dataset.type=type;
-
 card.dataset.model=p.model;
-
 
 let badge="";
 
-
 if(type==="promo")
 badge="PROMO";
-
 else if(p.badge)
 badge=p.badge;
-
-else if(
-type==="bracelet"&&
-p.model==="05"
-)
+else if(type==="bracelet"&&p.model==="05")
 badge="NOUVEAU";
 
 
 card.innerHTML=`
 
-
 <div class="product-top">
 
 <span>
-
-${badge?
-`<span class="badge">${badge}</span>`:
-""}
-
+${badge?`<span class="badge">${badge}</span>`:""}
 </span>
-
 
 <button
 class="favorite"
-onclick="toggleFavorite(this)">
+onclick="toggleFavorite(this)"
+aria-label="Ajouter aux favoris">
 
 ♡
 
 </button>
 
 </div>
-
 
 
 <img
@@ -2684,12 +2673,10 @@ src="./${p.images[0]}"
 alt="ORION ${type} Model ${esc(p.model)}"
 loading="lazy"
 onclick="openImageLightbox('${main}')"
-onerror="this.style.display='none'">
-
+onerror="this.style.display='none'>
 
 
 <div class="thumbs">
-
 
 ${p.images.map((im,i)=>`
 
@@ -2702,128 +2689,95 @@ onerror="this.style.display='none'">
 
 `).join("")}
 
-
 </div>
-
 
 
 ${p.images.length>1?`
 
 <span class="variant-label">
-
 Choisir la vue
-
 </span>
-
 
 <select
 id="${sel}"
 class="variant-select"
 onchange="selectVariant('${sel}','${main}',this.value)">
 
-
 ${p.images.map((_,i)=>`
 
 <option value="${i}">
-
 Vue ${i+1}
-
 </option>
 
 `).join("")}
-
 
 </select>
 
 `:""}
 
 
-
 <h3>
 
 ${
 type==="glasses"
-
 ?"ORION Lunettes Model "+esc(p.model)
-
 :type==="chain"
-
 ?"ORION Collier Model "+esc(p.model)
-
 :type==="bracelet"
-
 ?"ORION Bracelet Model "+esc(p.model)
-
 :"ORION Pack"
-
 }
 
 </h3>
-
 
 
 <div class="category">
 
 ${
 type==="glasses"
-
 ?"Lunettes"
-
 :type==="chain"
-
 ?p.gender||"Collier"
-
 :type==="bracelet"
-
 ?p.gender||"Bracelet"
-
 :"Pack Promo"
-
 }
 
 </div>
 
 
-
 <div class="price">
-
 ${p.price} DH
-
 </div>
 
 
-
 <div class="product-actions">
-
 
 <a
 id="${uid}-wa"
 class="whatsapp"
 target="_blank"
+rel="noopener"
 href="#">
 
 Commander
 
 </a>
 
-
 <button
 class="add-cart"
-onclick="addToCart('${type}','${p.model}',0)">
+onclick="addToCart('${type}','${p.model}',0)"
+aria-label="Ajouter au panier">
 
 +
 
 </button>
 
-
 </div>
-
 
 `;
 
-
 box.appendChild(card);
-
 
 updateWhatsAppLink(
 card,
@@ -2837,34 +2791,25 @@ p,
 }
 
 
-
 /* =========================
-SELECT PRODUCT IMAGE
+SELECT IMAGE
 ========================= */
 
-function selectVariant(
-selectId,
-mainId,
-index
-){
+function selectVariant(selectId,mainId,index){
 
 index=Number(index);
 
-
-const main=
-document.getElementById(mainId);
+const main=document.getElementById(mainId);
 
 if(!main)return;
 
-
-const card=
-main.closest(".product");
+const card=main.closest(".product");
 
 if(!card)return;
 
-
-const imgs=
-[...card.querySelectorAll(".thumbs img")];
+const imgs=[
+...card.querySelectorAll(".thumbs img")
+];
 
 
 if(imgs[index]){
@@ -2873,8 +2818,7 @@ main.classList.remove("image-change");
 
 void main.offsetWidth;
 
-main.src=
-imgs[index].src;
+main.src=imgs[index].src;
 
 main.removeAttribute("srcset");
 
@@ -2883,8 +2827,7 @@ main.classList.add("image-change");
 }
 
 
-const select=
-document.getElementById(selectId);
+const select=document.getElementById(selectId);
 
 if(select)
 select.value=String(index);
@@ -2900,32 +2843,20 @@ i===index
 });
 
 
-const type=
-card.dataset.type;
-
-const model=
-card.dataset.model;
-
+const type=card.dataset.type;
+const model=card.dataset.model;
 
 const list=
 
 type==="glasses"
 ?glasses
-
 :type==="chain"
 ?chains
-
 :type==="bracelet"
 ?bracelets
-
 :promo;
 
-
-const p=
-list.find(
-x=>x.model===model
-);
-
+const p=list.find(x=>x.model===model);
 
 if(p)
 updateWhatsAppLink(
@@ -2938,36 +2869,27 @@ index
 }
 
 
-
 /* =========================
 IMAGE LIGHTBOX
 ========================= */
 
 let lightboxImages=[];
-
 let lightboxIndex=0;
-
 
 
 function openImageLightbox(mainId){
 
-const main=
-document.getElementById(mainId);
+const main=document.getElementById(mainId);
 
 if(!main)return;
 
-
-const card=
-main.closest(".product");
+const card=main.closest(".product");
 
 if(!card)return;
 
-
-const thumbs=
-[
+const thumbs=[
 ...card.querySelectorAll(".thumbs img")
 ];
-
 
 if(thumbs.length){
 
@@ -2978,46 +2900,28 @@ thumbs
 
 }else{
 
-lightboxImages=[
-main.src
-];
+lightboxImages=[main.src];
 
 }
 
 
-lightboxIndex=
-Math.max(
+lightboxIndex=Math.max(
 0,
 lightboxImages.indexOf(main.src)
 );
 
-
-const box=
-document.getElementById(
-"imageLightbox"
-);
-
-
-const image=
-document.getElementById(
-"lightboxImage"
-);
-
+const box=document.getElementById("imageLightbox");
+const image=document.getElementById("lightboxImage");
 
 box.classList.add("active");
 
-
-image.src=
-lightboxImages[lightboxIndex];
-
+image.src=lightboxImages[lightboxIndex];
 
 updateLightboxCounter();
-
 
 document.body.style.overflow="hidden";
 
 }
-
 
 
 function closeImageLightbox(event){
@@ -3035,65 +2939,39 @@ return;
 
 }
 
-
-const box=
-document.getElementById(
-"imageLightbox"
-);
-
+const box=document.getElementById("imageLightbox");
 
 box.classList.remove("active");
-
 
 document.body.style.overflow="";
 
 }
 
 
-
-function changeLightboxImage(
-direction,
-event
-){
+function changeLightboxImage(direction,event){
 
 if(event)
 event.stopPropagation();
 
-
 if(lightboxImages.length<=1)
 return;
 
-
 lightboxIndex+=direction;
 
-
 if(lightboxIndex<0)
-
 lightboxIndex=
 lightboxImages.length-1;
 
-
-if(
-lightboxIndex>=
-lightboxImages.length
-)
-
+if(lightboxIndex>=lightboxImages.length)
 lightboxIndex=0;
 
-
-const image=
-document.getElementById(
-"lightboxImage"
-);
-
+const image=document.getElementById("lightboxImage");
 
 image.style.opacity="0";
 
-
 setTimeout(()=>{
 
-image.src=
-lightboxImages[lightboxIndex];
+image.src=lightboxImages[lightboxIndex];
 
 updateLightboxCounter();
 
@@ -3104,28 +2982,21 @@ image.style.opacity="1";
 }
 
 
-
 function updateLightboxCounter(){
 
 const counter=
-document.getElementById(
-"lightboxCounter"
-);
-
+document.getElementById("lightboxCounter");
 
 if(!counter)return;
 
-
 counter.textContent=
-
 `${lightboxIndex+1} / ${lightboxImages.length}`;
 
 }
 
 
-
 /* =========================
-WHATSAPP PRODUCT LINK
+WHATSAPP
 ========================= */
 
 function updateWhatsAppLink(
@@ -3135,96 +3006,66 @@ p,
 index
 ){
 
-const a=
-card.querySelector(".whatsapp");
+const a=card.querySelector(".whatsapp");
 
 if(!a)return;
-
 
 const name=
 
 type==="glasses"
-
 ?`Lunettes ORION Model ${p.model}`
-
 :type==="chain"
-
 ?`Collier ORION Model ${p.model}`
-
 :type==="bracelet"
-
 ?`Bracelet ORION Model ${p.model}`
-
 :"Pack ORION";
 
-
 a.href=
-
 `https://wa.me/${WHATSAPP}?text=${
 encodeURIComponent(
 
 "Bonjour ORION Accessories\n\n"+
-
 "Je souhaite commander : "+
 name+
-
 "\nPrix : "+
 p.price+
 " DH"+
-
 "\nVue : "+
 (index+1)
 
 )
-
 }`;
 
 }
 
 
-
 /* =========================
-ADD TO CART
+ADD CART
 ========================= */
 
-function addToCart(
-type,
-model,
-index
-){
+function addToCart(type,model,index){
 
 const list=
 
 type==="glasses"
 ?glasses
-
 :type==="chain"
 ?chains
-
 :type==="bracelet"
 ?bracelets
-
 :promo;
 
-
-const p=
-list.find(
+const p=list.find(
 x=>x.model===model
 );
 
-
 if(!p)return;
-
 
 const key=
 `${type}-${model}-${index}`;
 
-
 const old=
-cart.find(
-x=>x.key===key
-);
-
+cart.find(x=>x.key===key);
 
 if(old)
 
@@ -3244,15 +3085,11 @@ qty:1
 
 });
 
-
 saveCart();
-
 renderCart();
-
 openCart();
 
 }
-
 
 
 /* =========================
@@ -3269,7 +3106,6 @@ JSON.stringify(cart)
 }
 
 
-
 /* =========================
 RENDER CART
 ========================= */
@@ -3277,10 +3113,9 @@ RENDER CART
 function renderCart(){
 
 const box=
-document.getElementById(
-"cartItems"
-);
+document.getElementById("cartItems");
 
+if(!box)return;
 
 if(!cart.length){
 
@@ -3308,6 +3143,7 @@ cart.map((x,i)=>`
 
 <img
 src="./${x.image}"
+alt="ORION ${x.type} ${esc(x.model)}"
 onerror="this.style.display='none'">
 
 <div class="cart-item-info">
@@ -3317,15 +3153,11 @@ onerror="this.style.display='none'">
 ${
 x.type==="glasses"
 ?"Lunettes"
-
 :x.type==="chain"
 ?"Collier"
-
 :x.type==="bracelet"
 ?"Bracelet"
-
 :"Pack"
-
 }
 
 ${esc(x.model)}
@@ -3333,37 +3165,25 @@ ${esc(x.model)}
 </strong>
 
 <span>
-
 ${x.price*x.qty} DH
-
 </span>
 
 <small>
-
 Vue ${Number(x.index)+1}
-
 </small>
 
 <div class="quantity-control">
 
-<button
-onclick="changeQty(${i},-1)">
-
+<button onclick="changeQty(${i},-1)">
 −
-
 </button>
 
 <span class="quantity-value">
-
 ${x.qty}
-
 </span>
 
-<button
-onclick="changeQty(${i},1)">
-
+<button onclick="changeQty(${i},1)">
 +
-
 </button>
 
 <button
@@ -3385,27 +3205,27 @@ Supprimer
 }
 
 
-document.getElementById(
-"cartTotal"
-).textContent=
-
+const total=
 cart.reduce(
 (s,x)=>s+x.price*x.qty,
 0
-)+" DH";
+);
+
+document.getElementById(
+"cartTotal"
+).textContent=
+total+" DH";
 
 
 document.getElementById(
 "cartCount"
 ).textContent=
-
 cart.reduce(
 (s,x)=>s+x.qty,
 0
 );
 
 }
-
 
 
 /* =========================
@@ -3416,25 +3236,19 @@ function changeQty(i,a){
 
 if(!cart[i])return;
 
-
 cart[i].qty+=a;
 
-
 if(cart[i].qty<=0)
-
 cart.splice(i,1);
 
-
 saveCart();
-
 renderCart();
 
 }
 
 
-
 /* =========================
-REMOVE CART
+REMOVE
 ========================= */
 
 function removeCart(i){
@@ -3442,11 +3256,9 @@ function removeCart(i){
 cart.splice(i,1);
 
 saveCart();
-
 renderCart();
 
 }
-
 
 
 /* =========================
@@ -3459,13 +3271,11 @@ document
 .getElementById("cartPanel")
 .classList.add("open");
 
-
 document
 .getElementById("overlay")
 .classList.add("show");
 
 }
-
 
 
 /* =========================
@@ -3478,13 +3288,11 @@ document
 .getElementById("cartPanel")
 .classList.remove("open");
 
-
 document
 .getElementById("overlay")
 .classList.remove("show");
 
 }
-
 
 
 /* =========================
@@ -3503,60 +3311,41 @@ return;
 
 }
 
-
 let m=
 "Bonjour ORION Accessories.\n\n"+
 "Je souhaite commander :\n\n";
-
 
 cart.forEach((x,i)=>{
 
 const t=
 
 x.type==="glasses"
-
 ?"Lunettes"
-
 :x.type==="chain"
-
 ?"Collier"
-
 :x.type==="bracelet"
-
 ?"Bracelet"
-
 :"Pack";
 
-
 m+=
-
 `${i+1}. ${t} Model ${x.model} - ${x.qty} x ${x.price} DH - Vue ${Number(x.index)+1}\n`;
 
 });
 
-
 m+=
-
 "\nTotal : "+
-
 cart.reduce(
 (s,x)=>s+x.price*x.qty,
 0
 )+
-
 " DH";
 
-
 window.open(
-
 `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(m)}`,
-
 "_blank"
-
 );
 
 }
-
 
 
 /* =========================
@@ -3567,27 +3356,19 @@ function toggleFavorite(b){
 
 b.classList.toggle("active");
 
-
 b.textContent=
-
 b.classList.contains("active")
-
 ?"♥"
-
 :"♡";
 
 }
-
 
 
 /* =========================
 CATEGORY
 ========================= */
 
-function showCategory(
-cat,
-b
-){
+function showCategory(cat,b){
 
 document
 .querySelectorAll(".nav button")
@@ -3595,23 +3376,17 @@ document
 x=>x.classList.remove("active")
 );
 
-
 if(b)
 b.classList.add("active");
-
 
 const map={
 
 glasses:"glasses",
-
 chain:"chains",
-
 bracelet:"bracelets",
-
 promo:"promo"
 
 };
-
 
 [
 "glasses",
@@ -3626,14 +3401,10 @@ document.getElementById(id);
 
 if(!section)return;
 
-
 section.classList.toggle(
-
 "hidden",
-
 cat!=="all"&&
 map[cat]!==id
-
 );
 
 });
@@ -3655,7 +3426,6 @@ behavior:"smooth"
 }
 
 
-
 /* =========================
 SEARCH
 ========================= */
@@ -3663,34 +3433,27 @@ SEARCH
 function searchProducts(){
 
 const q=
-
 document
 .getElementById("searchInput")
 .value
 .toLowerCase()
 .trim();
 
-
 document
 .querySelectorAll(".product")
 .forEach(c=>{
 
 c.style.display=
-
 !q||
-
 c.innerText
 .toLowerCase()
 .includes(q)
-
 ?""
-
 :"none";
 
 });
 
 }
-
 
 
 /* =========================
@@ -3700,70 +3463,49 @@ THEME
 function toggleTheme(){
 
 document.body
-.classList.toggle("light");
-
+.classList
+.toggle("light");
 
 const light=
-
 document.body
 .classList
 .contains("light");
 
-
 localStorage.setItem(
-
 "orionTheme",
-
 light
 ?"light"
 :"dark"
-
 );
-
 
 updateThemeButton();
 
 }
 
 
-
-/* =========================
-THEME BUTTON
-========================= */
-
 function updateThemeButton(){
 
 const b=
-document.getElementById(
-"themeBtn"
-);
-
+document.getElementById("themeBtn");
 
 if(!b)return;
 
-
 const light=
-
 document.body
 .classList
 .contains("light");
 
-
 b.textContent=
-
 light
 ?"🌙"
 :"☀️";
 
-
 b.title=
-
 light
 ?"Mode nuit"
 :"Mode jour";
 
 }
-
 
 
 /* =========================
@@ -3779,7 +3521,6 @@ b.parentElement
 }
 
 
-
 /* =========================
 COMING SOON
 ========================= */
@@ -3793,7 +3534,6 @@ alert(
 }
 
 
-
 /* =========================
 CLIENT IMAGE
 ========================= */
@@ -3801,34 +3541,25 @@ CLIENT IMAGE
 function openClientImage(src){
 
 document
-.getElementById(
-"clientViewerImage"
-)
+.getElementById("clientViewerImage")
 .src=src;
 
-
 document
-.getElementById(
-"clientViewer"
-)
+.getElementById("clientViewer")
 .classList
 .add("show");
 
 }
 
 
-
 function closeClientImage(){
 
 document
-.getElementById(
-"clientViewer"
-)
+.getElementById("clientViewer")
 .classList
 .remove("show");
 
 }
-
 
 
 /* =========================
@@ -3850,7 +3581,6 @@ scrollY>400
 );
 
 
-
 /* =========================
 KEYBOARD LIGHTBOX
 ========================= */
@@ -3867,30 +3597,62 @@ document.getElementById(
 if(!box.classList.contains("active"))
 return;
 
-
-if(e.key==="Escape"){
-
+if(e.key==="Escape")
 closeImageLightbox();
 
-}
-
-
-if(e.key==="ArrowLeft"){
-
+if(e.key==="ArrowLeft")
 changeLightboxImage(-1);
 
-}
-
-
-if(e.key==="ArrowRight"){
-
+if(e.key==="ArrowRight")
 changeLightboxImage(1);
-
-}
 
 }
 );
 
+
+/* =========================
+TOUCH SWIPE
+========================= */
+
+let touchStartX=0;
+let touchEndX=0;
+
+const lightbox=
+document.getElementById("imageLightbox");
+
+lightbox.addEventListener(
+"touchstart",
+e=>{
+
+touchStartX=
+e.changedTouches[0].screenX;
+
+},
+{passive:true}
+);
+
+lightbox.addEventListener(
+"touchend",
+e=>{
+
+touchEndX=
+e.changedTouches[0].screenX;
+
+const distance=
+touchEndX-touchStartX;
+
+if(Math.abs(distance)<50)
+return;
+
+if(distance<0)
+changeLightboxImage(1);
+
+else
+changeLightboxImage(-1);
+
+},
+{passive:true}
+);
 
 
 /* =========================
@@ -3898,15 +3660,15 @@ LOAD THEME
 ========================= */
 
 if(
-localStorage.getItem(
-"orionTheme"
-)==="light"
-)
+localStorage.getItem("orionTheme")
+==="light"
+){
 
 document.body
 .classList
 .add("light");
 
+}
 
 
 /* =========================
@@ -3919,20 +3681,17 @@ glasses,
 "glasses"
 );
 
-
 createProducts(
 chains,
 "chainProducts",
 "chain"
 );
 
-
 createProducts(
 bracelets,
 "braceletProducts",
 "bracelet"
 );
-
 
 createProducts(
 promo,
@@ -3941,13 +3700,11 @@ promo,
 );
 
 
-
 /* =========================
 LOAD CART
 ========================= */
 
 renderCart();
-
 
 
 /* =========================
