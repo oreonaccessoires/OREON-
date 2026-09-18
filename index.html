@@ -1,24 +1,23 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr-MA">
+
 <head>
 
 <meta charset="UTF-8">
 
 <meta
 name="viewport"
-content="width=device-width,initial-scale=1,viewport-fit=cover">
+content="width=device-width, initial-scale=1, viewport-fit=cover">
 
-<title>
-ORION Accessories | Lunettes, Colliers & Bracelets au Maroc
-</title>
+<title>ORION Accessories Maroc | Lunettes, Colliers & Bracelets</title>
 
 <meta
 name="description"
-content="ORION Accessories Maroc : découvrez nos lunettes, colliers, bracelets et packs modernes. Accessoires premium à prix accessibles avec livraison partout au Maroc.">
+content="ORION Accessories au Maroc : lunettes, colliers, bracelets et packs modernes à prix accessibles. Découvrez notre collection et commandez facilement via WhatsApp avec livraison partout au Maroc.">
 
 <meta
 name="keywords"
-content="ORION Accessories, ORION Maroc, accessoires Maroc, lunettes Maroc, lunettes de soleil Maroc, colliers Maroc, bracelets Maroc, bijoux Maroc, accessoires femme Maroc, accessoires homme Maroc">
+content="ORION Accessories Maroc, accessoires Maroc, lunettes Maroc, colliers Maroc, bracelets Maroc, bijoux Maroc, accessoires femme Maroc, accessoires homme Maroc">
 
 <meta
 name="robots"
@@ -35,6 +34,11 @@ content="#050505">
 <link
 rel="canonical"
 href="https://oreonaccessoires.github.io/OREON-/">
+
+<link
+rel="icon"
+type="image/png"
+href="./LOGO.PNG">
 
 
 <!-- OPEN GRAPH -->
@@ -53,11 +57,11 @@ content="fr_MA">
 
 <meta
 property="og:title"
-content="ORION Accessories | Accessoires modernes au Maroc">
+content="ORION Accessories Maroc | Lunettes, Colliers & Bracelets">
 
 <meta
 property="og:description"
-content="Lunettes, colliers, bracelets et packs modernes. Découvrez ORION Accessories au Maroc.">
+content="Découvrez les lunettes, colliers, bracelets et packs ORION Accessories au Maroc.">
 
 <meta
 property="og:url"
@@ -80,7 +84,7 @@ content="summary_large_image">
 
 <meta
 name="twitter:title"
-content="ORION Accessories | Maroc">
+content="ORION Accessories Maroc">
 
 <meta
 name="twitter:description"
@@ -91,1407 +95,2687 @@ name="twitter:image"
 content="https://oreonaccessoires.github.io/OREON-/LOGO.PNG">
 
 
-<!-- FAVICON -->
-
-<link
-rel="icon"
-type="image/png"
-href="./LOGO.PNG">
-
-
 <!-- STRUCTURED DATA -->
 
 <script type="application/ld+json">
+
 {
   "@context":"https://schema.org",
-  "@type":"Store",
-  "name":"ORION Accessories",
-  "url":"https://oreonaccessoires.github.io/OREON-/",
-  "logo":"https://oreonaccessoires.github.io/OREON-/LOGO.PNG",
-  "description":"ORION Accessories propose des lunettes, colliers, bracelets et accessoires modernes au Maroc.",
-  "priceRange":"60 DH - 100 DH",
-  "currenciesAccepted":"MAD",
-  "areaServed":{
-    "@type":"Country",
-    "name":"Morocco"
-  },
-  "sameAs":[]
+  "@graph":[
+
+    {
+      "@type":"Organization",
+      "@id":"https://oreonaccessoires.github.io/OREON-/#organization",
+      "name":"ORION Accessories",
+      "url":"https://oreonaccessoires.github.io/OREON-/",
+      "logo":"https://oreonaccessoires.github.io/OREON-/LOGO.PNG",
+      "description":"ORION Accessories propose des lunettes, colliers, bracelets et accessoires modernes au Maroc.",
+      "contactPoint":{
+        "@type":"ContactPoint",
+        "telephone":"+212673830013",
+        "contactType":"customer service",
+        "areaServed":"MA",
+        "availableLanguage":["fr"]
+      }
+    },
+
+    {
+      "@type":"WebSite",
+      "@id":"https://oreonaccessoires.github.io/OREON-/#website",
+      "url":"https://oreonaccessoires.github.io/OREON-/",
+      "name":"ORION Accessories",
+      "publisher":{
+        "@id":"https://oreonaccessoires.github.io/OREON-/#organization"
+      },
+      "inLanguage":"fr-MA"
+    }
+
+  ]
 }
+
 </script>
 
 
 <style>
 
+/* =========================
+ORION ACCESSORIES
+PREMIUM STYLE
+========================= */
+
 :root{
+
 --gold:#d4af37;
+
 --bg:#050505;
+
 --card:#101010;
+
 --card2:#171717;
---text:#fff;
---muted:#999;
---border:#292929
+
+--text:#ffffff;
+
+--muted:#999999;
+
+--border:#292929;
+
 }
+
 
 *{
+
 box-sizing:border-box;
+
 margin:0;
-padding:0
+
+padding:0;
+
 }
+
 
 html{
-scroll-behavior:smooth
+
+scroll-behavior:smooth;
+
 }
 
+
 body{
-font-family:Arial,Helvetica,sans-serif;
+
+font-family:
+Arial,
+Helvetica,
+sans-serif;
+
 background:var(--bg);
+
 color:var(--text);
+
 line-height:1.5;
-transition:.3s
+
+transition:
+background .3s ease,
+color .3s ease;
+
 }
+
 
 button,
 input,
 select{
-font:inherit
+
+font:inherit;
+
 }
+
 
 button{
-cursor:pointer
+
+cursor:pointer;
+
 }
+
 
 a{
-color:inherit
+
+color:inherit;
+
 }
 
 
-/* HEADER */
+/* =========================
+HEADER
+========================= */
 
 header{
+
 text-align:center;
-padding:18px 15px 30px;
-border-bottom:1px solid rgba(212,175,55,.3)
+
+padding:
+18px 15px 30px;
+
+border-bottom:
+1px solid rgba(212,175,55,.3);
+
 }
+
 
 .logo img{
+
 width:120px;
+
 height:120px;
+
 object-fit:contain;
-filter:drop-shadow(0 10px 25px rgba(212,175,55,.18))
+
+filter:
+drop-shadow(
+0 10px 25px
+rgba(212,175,55,.18)
+);
+
 }
+
 
 .hero{
+
 max-width:950px;
-margin:auto
+
+margin:auto;
+
 }
+
 
 .eyebrow{
+
 display:inline-block;
+
 color:var(--gold);
-border:1px solid rgba(212,175,55,.5);
+
+border:
+1px solid
+rgba(212,175,55,.5);
+
 border-radius:50px;
-padding:6px 14px;
+
+padding:
+6px 14px;
+
 font-size:11px;
+
 letter-spacing:2px;
-margin:8px 0 12px
+
+margin:
+8px 0 12px;
+
 }
 
+
 h1{
-font-size:clamp(32px,7vw,58px);
+
+font-size:
+clamp(32px,7vw,58px);
+
 line-height:1.05;
-margin-bottom:12px
+
+margin-bottom:12px;
+
 }
+
 
 h1 span,
 .section-title span{
-color:var(--gold)
+
+color:var(--gold);
+
 }
+
 
 .hero p{
+
 max-width:700px;
+
 margin:auto;
-color:var(--muted)
+
+color:var(--muted);
+
 }
+
 
 .hero-actions{
+
 display:flex;
+
 justify-content:center;
+
 gap:10px;
+
 flex-wrap:wrap;
-margin-top:20px
+
+margin-top:20px;
+
 }
+
 
 .hero-btn{
-padding:12px 20px;
+
+padding:
+12px 20px;
+
 border-radius:50px;
+
 text-decoration:none;
+
 font-weight:bold;
-border:1px solid var(--gold)
+
+border:
+1px solid var(--gold);
+
 }
+
 
 .hero-btn.primary{
+
 background:var(--gold);
-color:#000
+
+color:#000;
+
 }
+
 
 .tools{
+
 display:flex;
+
 justify-content:center;
+
 gap:9px;
-margin-top:18px
+
+margin-top:18px;
+
 }
+
 
 .tool{
+
 position:relative;
+
 width:44px;
+
 height:44px;
+
 border-radius:50%;
-border:1px solid var(--gold);
+
+border:
+1px solid var(--gold);
+
 background:var(--card);
-color:var(--text)
+
+color:var(--text);
+
 }
+
 
 .count{
+
 position:absolute;
+
 top:-6px;
+
 right:-5px;
+
 min-width:19px;
+
 height:19px;
+
 border-radius:50%;
+
 background:var(--gold);
+
 color:#000;
+
 font-size:11px;
+
 font-weight:bold;
+
 display:flex;
+
 align-items:center;
-justify-content:center
+
+justify-content:center;
+
 }
 
 
-/* NAVIGATION */
+/* =========================
+SEARCH
+========================= */
+
+.search-wrap{
+
+max-width:700px;
+
+margin:
+20px auto 0;
+
+padding:
+0 15px;
+
+}
+
+
+.search{
+
+width:100%;
+
+padding:
+14px 18px;
+
+border:
+1px solid var(--border);
+
+border-radius:50px;
+
+background:var(--card);
+
+color:var(--text);
+
+outline:none;
+
+}
+
+
+.search::placeholder{
+
+color:#777;
+
+}
+
+
+.search:focus{
+
+border-color:var(--gold);
+
+}
+
+
+/* =========================
+NAV
+========================= */
 
 .nav{
+
 position:sticky;
+
 top:0;
+
 z-index:50;
+
 display:flex;
+
 justify-content:center;
+
 gap:8px;
+
 overflow-x:auto;
-padding:13px 10px;
-background:rgba(5,5,5,.9);
+
+padding:
+13px 10px;
+
+background:
+rgba(5,5,5,.92);
+
 backdrop-filter:blur(15px);
-border-bottom:1px solid rgba(212,175,55,.12)
+
+border-bottom:
+1px solid
+rgba(212,175,55,.12);
+
+scrollbar-width:none;
+
 }
 
-.nav button{
-white-space:nowrap;
-border:1px solid var(--border);
-background:var(--card);
-color:var(--text);
-padding:9px 15px;
-border-radius:50px
+
+.nav::-webkit-scrollbar{
+
+display:none;
+
 }
+
+
+.nav button{
+
+white-space:nowrap;
+
+border:
+1px solid var(--border);
+
+background:var(--card);
+
+color:var(--text);
+
+padding:
+9px 15px;
+
+border-radius:50px;
+
+transition:.25s;
+
+}
+
 
 .nav button.active,
 .nav button:hover{
+
 background:var(--gold);
+
 color:#000;
-border-color:var(--gold)
+
+border-color:var(--gold);
+
 }
 
 
-/* SEARCH */
-
-.search-wrap{
-max-width:700px;
-margin:20px auto 0;
-padding:0 15px
-}
-
-.search{
-width:100%;
-padding:14px 18px;
-border:1px solid var(--border);
-border-radius:50px;
-background:var(--card);
-color:var(--text);
-outline:none
-}
-
-.search:focus{
-border-color:var(--gold)
-}
-
-
-/* SECTIONS */
+/* =========================
+SECTIONS
+========================= */
 
 .section{
+
 max-width:1250px;
-margin:52px auto;
-padding:0 15px
+
+margin:
+55px auto;
+
+padding:
+0 15px;
+
 }
+
 
 .section-title{
+
 text-align:center;
-font-size:clamp(27px,5vw,40px);
-margin-bottom:6px
+
+font-size:
+clamp(27px,5vw,40px);
+
+margin-bottom:7px;
+
 }
+
 
 .section-description{
+
 text-align:center;
+
 color:var(--muted);
+
 max-width:720px;
-margin:0 auto 28px
+
+margin:
+0 auto 28px;
+
 }
 
 
-/* PRODUCTS */
+/* =========================
+PRODUCT GRID
+========================= */
 
 .products{
+
 display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:20px
+
+grid-template-columns:
+repeat(3,minmax(0,1fr));
+
+gap:20px;
+
 }
+
+
+/* =========================
+PRODUCT CARD
+========================= */
 
 .product{
+
 position:relative;
+
 padding:11px;
-background:linear-gradient(145deg,#151515,#0b0b0b);
-border:1px solid var(--border);
+
+background:
+linear-gradient(
+145deg,
+#151515,
+#0b0b0b
+);
+
+border:
+1px solid var(--border);
+
 border-radius:22px;
+
 overflow:hidden;
-transition:.3s
+
+transition:
+transform .3s ease,
+border-color .3s ease,
+box-shadow .3s ease;
+
 }
+
 
 .product:hover{
+
 transform:translateY(-5px);
-border-color:rgba(212,175,55,.7)
+
+border-color:
+rgba(212,175,55,.7);
+
+box-shadow:
+0 18px 45px
+rgba(0,0,0,.25);
+
 }
+
 
 .product-top{
+
 position:absolute;
+
 top:21px;
+
 left:21px;
+
 right:21px;
-z-index:3;
+
+z-index:5;
+
 display:flex;
-justify-content:space-between
+
+justify-content:space-between;
+
+pointer-events:none;
+
 }
+
+
+.product-top>*{
+
+pointer-events:auto;
+
+}
+
 
 .badge{
+
 background:var(--gold);
+
 color:#000;
+
 border-radius:50px;
-padding:5px 9px;
+
+padding:
+5px 9px;
+
 font-size:10px;
-font-weight:bold
+
+font-weight:bold;
+
 }
+
 
 .favorite{
+
 width:38px;
+
 height:38px;
+
 border-radius:50%;
-border:1px solid var(--gold);
-background:rgba(0,0,0,.65);
+
+border:
+1px solid var(--gold);
+
+background:
+rgba(0,0,0,.65);
+
 color:#fff;
-font-size:19px
+
+font-size:19px;
+
 }
+
 
 .favorite.active{
-color:var(--gold)
+
+color:var(--gold);
+
 }
 
 
-/* MAIN PRODUCT IMAGE */
+/* =========================
+IMAGE STAGE
+========================= */
 
 .image-stage{
+
 position:relative;
+
 overflow:hidden;
+
 border-radius:17px;
+
 touch-action:pan-y;
+
 user-select:none;
+
 -webkit-user-select:none;
+
 -webkit-touch-callout:none;
-cursor:grab
+
+cursor:grab;
+
 }
+
 
 .image-stage.dragging{
-cursor:grabbing
+
+cursor:grabbing;
+
 }
+
 
 .main-image{
+
 width:100%;
+
 height:auto;
+
 max-height:none;
+
 aspect-ratio:auto;
+
 object-fit:initial;
+
 display:block;
+
 border-radius:17px;
+
 background:transparent;
+
 cursor:zoom-in;
-transform:translate3d(0,0,0) scale(1);
+
+transform:
+translate3d(0,0,0)
+scale(1);
+
 transition:
-transform .55s cubic-bezier(.22,.61,.36,1),
+transform .55s
+cubic-bezier(.22,.61,.36,1),
 filter .55s ease,
 opacity .25s ease;
+
 will-change:transform;
+
 -webkit-user-drag:none;
-user-select:none
+
+user-select:none;
+
+touch-action:pan-y;
+
 }
+
 
 .product:hover .main-image{
-transform:scale(1.055) translateY(-5px);
-filter:saturate(1.06) contrast(1.03)
+
+transform:
+scale(1.055)
+translateY(-5px);
+
+filter:
+saturate(1.06)
+contrast(1.03);
+
 }
+
 
 .product:active .main-image{
-transform:scale(1.025)
+
+transform:scale(1.025);
+
 }
 
 
-/* SWIPE ANIMATION */
+/* =========================
+SWIPE ANIMATION
+========================= */
 
 .swipe-left{
+
 animation:
-swipeLeft .32s cubic-bezier(.22,.61,.36,1)
+swipeLeft .35s
+cubic-bezier(.22,.61,.36,1);
+
 }
 
+
 .swipe-right{
+
 animation:
-swipeRight .32s cubic-bezier(.22,.61,.36,1)
+swipeRight .35s
+cubic-bezier(.22,.61,.36,1);
+
 }
+
 
 @keyframes swipeLeft{
 
 0%{
+
 opacity:1;
-transform:translateX(0) scale(1)
+
+transform:
+translateX(0)
+scale(1);
+
 }
 
 45%{
-opacity:.15;
-transform:translateX(-35px) scale(.97)
+
+opacity:.12;
+
+transform:
+translateX(-35px)
+scale(.97);
+
 }
 
 100%{
+
 opacity:1;
-transform:translateX(0) scale(1)
+
+transform:
+translateX(0)
+scale(1);
+
 }
 
 }
+
 
 @keyframes swipeRight{
 
 0%{
+
 opacity:1;
-transform:translateX(0) scale(1)
+
+transform:
+translateX(0)
+scale(1);
+
 }
 
 45%{
-opacity:.15;
-transform:translateX(35px) scale(.97)
+
+opacity:.12;
+
+transform:
+translateX(35px)
+scale(.97);
+
 }
 
 100%{
+
 opacity:1;
-transform:translateX(0) scale(1)
-}
+
+transform:
+translateX(0)
+scale(1);
 
 }
 
+}
 
-/* IMAGE CHANGE */
+
+/* =========================
+IMAGE CHANGE
+========================= */
 
 .image-change{
-animation:orionImageChange .4s ease
+
+animation:
+orionImageChange .4s ease;
+
 }
+
 
 @keyframes orionImageChange{
 
 0%{
+
 opacity:.3;
-transform:scale(.97) translateX(6px)
+
+transform:
+scale(.97)
+translateX(7px);
+
 }
 
 100%{
+
 opacity:1;
-transform:scale(1) translateX(0)
-}
+
+transform:
+scale(1)
+translateX(0);
 
 }
 
+}
 
-/* SWIPE HINT */
+
+/* =========================
+SWIPE HINT
+========================= */
 
 .swipe-hint{
+
 position:absolute;
+
 bottom:10px;
+
 left:50%;
-transform:translateX(-50%);
-z-index:2;
-padding:5px 10px;
+
+transform:
+translateX(-50%);
+
+z-index:3;
+
+padding:
+5px 10px;
+
 border-radius:20px;
-background:rgba(0,0,0,.55);
-border:1px solid rgba(212,175,55,.4);
+
+background:
+rgba(0,0,0,.55);
+
+border:
+1px solid
+rgba(212,175,55,.4);
+
 color:#fff;
+
 font-size:10px;
+
 pointer-events:none;
+
 opacity:.85;
-transition:opacity .3s ease
+
+transition:.3s;
+
 }
+
 
 .image-stage.used .swipe-hint{
-opacity:0
+
+opacity:0;
+
 }
 
+
+/* =========================
+THUMBNAILS
+========================= */
 
 .thumbs{
+
 display:flex;
+
 gap:7px;
+
 overflow-x:auto;
-padding:9px 1px 3px;
-scrollbar-width:none
+
+padding:
+9px 1px 3px;
+
+scrollbar-width:none;
+
 }
+
 
 .thumbs::-webkit-scrollbar{
-display:none
+
+display:none;
+
 }
+
 
 .thumbs img{
+
 width:58px;
+
 height:58px;
+
 object-fit:cover;
+
 border-radius:9px;
-border:2px solid transparent;
+
+border:
+2px solid transparent;
+
 flex-shrink:0;
+
 cursor:pointer;
+
 transition:
 transform .25s ease,
-border-color .25s ease
+border-color .25s ease;
+
 }
+
 
 .thumbs img:hover{
+
 transform:scale(1.06);
-border-color:var(--gold)!important
+
+border-color:
+var(--gold)!important;
+
 }
+
+
+/* =========================
+PRODUCT TEXT
+========================= */
 
 .product h3{
+
 font-size:19px;
-margin:12px 3px 2px
+
+margin:
+12px 3px 2px;
+
 }
+
 
 .category{
+
 color:var(--muted);
+
 font-size:13px;
-margin:0 3px
+
+margin:
+0 3px;
+
 }
+
 
 .price{
+
 color:var(--gold);
+
 font-size:23px;
+
 font-weight:bold;
-margin:4px 3px 11px
+
+margin:
+4px 3px 11px;
+
 }
+
 
 .variant-label{
+
 display:block;
+
 color:var(--muted);
+
 font-size:12px;
-margin:7px 2px 4px
+
+margin:
+7px 2px 4px;
+
 }
+
 
 .variant-select{
+
 width:100%;
+
 padding:10px;
+
 border-radius:10px;
-border:1px solid var(--border);
+
+border:
+1px solid var(--border);
+
 background:var(--card2);
-color:var(--text)
+
+color:var(--text);
+
+outline:none;
+
 }
+
+
+.variant-select:focus{
+
+border-color:var(--gold);
+
+}
+
+
+/* =========================
+PRODUCT ACTIONS
+========================= */
 
 .product-actions{
+
 display:grid;
-grid-template-columns:1fr 48px;
+
+grid-template-columns:
+1fr 48px;
+
 gap:8px;
-margin-top:9px
+
+margin-top:9px;
+
 }
+
 
 .whatsapp{
+
 display:flex;
+
 align-items:center;
+
 justify-content:center;
+
 text-decoration:none;
+
 background:var(--gold);
+
 color:#000;
+
 font-weight:bold;
+
 border-radius:12px;
-padding:12px
+
+padding:12px;
+
 }
+
 
 .add-cart{
-border:1px solid var(--gold);
+
+border:
+1px solid var(--gold);
+
 border-radius:12px;
+
 background:transparent;
+
 color:var(--gold);
-font-size:20px
+
+font-size:20px;
+
 }
+
 
 .add-cart:hover{
+
 background:var(--gold);
-color:#000
-}
 
-
-/* IMAGE LIGHTBOX */
-
-.image-lightbox{
-position:fixed;
-inset:0;
-z-index:99999;
-display:none;
-align-items:center;
-justify-content:center;
-padding:20px;
-background:rgba(0,0,0,.94);
-backdrop-filter:blur(12px);
-opacity:0;
-transition:opacity .3s ease
-}
-
-.image-lightbox.active{
-display:flex;
-opacity:1
-}
-
-.lightbox-content{
-position:relative;
-max-width:95vw;
-max-height:92vh;
-display:flex;
-align-items:center;
-justify-content:center
-}
-
-.lightbox-image{
-display:block;
-max-width:90vw;
-max-height:88vh;
-width:auto;
-height:auto;
-object-fit:contain;
-border-radius:18px;
-box-shadow:0 20px 80px rgba(0,0,0,.75);
-animation:lightboxOpen .35s cubic-bezier(.22,.61,.36,1);
-transition:
-opacity .2s ease,
-transform .25s ease;
--webkit-user-drag:none;
-user-select:none
-}
-
-@keyframes lightboxOpen{
-
-0%{
-opacity:0;
-transform:scale(.82)
-}
-
-100%{
-opacity:1;
-transform:scale(1)
-}
+color:#000;
 
 }
 
-.lightbox-close{
-position:fixed;
-top:18px;
-right:20px;
-width:46px;
-height:46px;
-border:1px solid rgba(212,175,55,.7);
-border-radius:50%;
-background:rgba(0,0,0,.65);
-color:#fff;
-font-size:30px;
-line-height:1;
-cursor:pointer;
-z-index:100001;
-transition:
-transform .25s ease,
-background .25s ease
-}
 
-.lightbox-close:hover{
-transform:rotate(90deg) scale(1.08);
-background:var(--gold);
-color:#000
-}
-
-.lightbox-arrow{
-position:fixed;
-top:50%;
-transform:translateY(-50%);
-width:48px;
-height:48px;
-border:1px solid rgba(212,175,55,.7);
-border-radius:50%;
-background:rgba(0,0,0,.65);
-color:#fff;
-font-size:30px;
-cursor:pointer;
-z-index:100001;
-transition:
-transform .25s ease,
-background .25s ease
-}
-
-.lightbox-arrow:hover{
-background:var(--gold);
-color:#000
-}
-
-.lightbox-prev{
-left:18px
-}
-
-.lightbox-next{
-right:18px
-}
-
-.lightbox-counter{
-position:fixed;
-bottom:20px;
-left:50%;
-transform:translateX(-50%);
-padding:7px 14px;
-border:1px solid rgba(212,175,55,.5);
-border-radius:20px;
-background:rgba(0,0,0,.7);
-color:#fff;
-font-size:13px;
-z-index:100001
-}
-
-
-/* INFO */
-
-.info-grid,
-.steps{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:16px
-}
-
-.info-card,
-.step{
-background:linear-gradient(145deg,#151515,#0c0c0c);
-border:1px solid var(--border);
-border-radius:20px;
-padding:24px;
-text-align:center
-}
-
-.info-card .icon{
-font-size:30px
-}
-
-.info-card h3{
-color:var(--gold);
-margin:5px 0
-}
-
-.info-card p,
-.step p{
-color:var(--muted)
-}
-
-.step{
-text-align:left
-}
-
-.step strong{
-display:block;
-color:var(--gold);
-font-size:27px;
-margin-bottom:5px
-}
-
-
-/* PROMO */
+/* =========================
+PROMO
+========================= */
 
 .promo-box{
-padding:28px 18px;
-border:1px solid var(--gold);
+
+padding:
+28px 18px;
+
+border:
+1px solid var(--gold);
+
 border-radius:24px;
+
 background:
 radial-gradient(
 circle at 50% 0%,
 rgba(212,175,55,.13),
 transparent 55%
 ),
-#101010
+#101010;
+
 }
+
 
 .promo-box h2{
+
 text-align:center;
-color:var(--gold)
+
+color:var(--gold);
+
+margin-bottom:5px;
+
 }
+
 
 .promo-box>p{
+
 text-align:center;
+
 color:var(--muted);
-margin-bottom:22px
+
+margin-bottom:22px;
+
 }
 
 
-/* CLIENT REVIEWS */
+/* =========================
+INFO
+========================= */
+
+.info-grid,
+.steps{
+
+display:grid;
+
+grid-template-columns:
+repeat(3,1fr);
+
+gap:16px;
+
+}
+
+
+.info-card,
+.step{
+
+background:
+linear-gradient(
+145deg,
+#151515,
+#0c0c0c
+);
+
+border:
+1px solid var(--border);
+
+border-radius:20px;
+
+padding:24px;
+
+text-align:center;
+
+}
+
+
+.info-card .icon{
+
+font-size:30px;
+
+}
+
+
+.info-card h3{
+
+color:var(--gold);
+
+margin:
+5px 0;
+
+}
+
+
+.info-card p,
+.step p{
+
+color:var(--muted);
+
+}
+
+
+.step{
+
+text-align:left;
+
+}
+
+
+.step strong{
+
+display:block;
+
+color:var(--gold);
+
+font-size:27px;
+
+margin-bottom:5px;
+
+}
+
+
+/* =========================
+CLIENT REVIEWS
+========================= */
 
 .client-reviews{
+
 display:grid;
-grid-template-columns:repeat(4,1fr);
-gap:15px
+
+grid-template-columns:
+repeat(4,1fr);
+
+gap:15px;
+
 }
+
 
 .client-review{
+
 padding:7px;
+
 background:var(--card);
-border:1px solid var(--border);
+
+border:
+1px solid var(--border);
+
 border-radius:19px;
-transition:.25s
+
+transition:.25s;
+
 }
+
 
 .client-review:hover{
+
 transform:translateY(-4px);
-border-color:var(--gold)
+
+border-color:var(--gold);
+
 }
+
 
 .client-review img{
+
 display:block;
+
 width:100%;
+
 height:410px;
+
 object-fit:cover;
+
 border-radius:13px;
-cursor:pointer
+
+cursor:pointer;
+
 }
 
 
-/* CLIENT IMAGE VIEWER */
+/* =========================
+CLIENT VIEWER
+========================= */
 
 .client-viewer{
+
 position:fixed;
+
 inset:0;
-background:rgba(0,0,0,.94);
+
+background:
+rgba(0,0,0,.94);
+
 z-index:200;
+
 display:none;
+
 align-items:center;
+
 justify-content:center;
-padding:20px
+
+padding:20px;
+
 }
+
 
 .client-viewer.show{
-display:flex
+
+display:flex;
+
 }
+
 
 .client-viewer img{
+
 max-width:95%;
+
 max-height:90vh;
+
 object-fit:contain;
-border-radius:12px
+
+border-radius:12px;
+
 }
+
 
 .client-viewer button{
+
 position:absolute;
+
 top:18px;
+
 right:20px;
+
 width:45px;
+
 height:45px;
+
 border-radius:50%;
-border:1px solid var(--gold);
+
+border:
+1px solid var(--gold);
+
 background:#111;
+
 color:#fff;
-font-size:30px
+
+font-size:30px;
+
 }
 
 
-/* FAQ */
+/* =========================
+FAQ
+========================= */
 
 .faq-list{
+
 max-width:850px;
+
 margin:auto;
+
 display:grid;
-gap:10px
+
+gap:10px;
+
 }
+
 
 .faq-item{
+
 background:var(--card);
-border:1px solid var(--border);
+
+border:
+1px solid var(--border);
+
 border-radius:15px;
-overflow:hidden
+
+overflow:hidden;
+
 }
+
 
 .faq-question{
+
 width:100%;
+
 background:none;
+
 border:0;
+
 color:var(--text);
+
 text-align:left;
+
 padding:17px;
+
 display:flex;
+
 justify-content:space-between;
-font-weight:bold
+
+font-weight:bold;
+
 }
+
 
 .faq-question span{
+
 color:var(--gold);
-font-size:22px
+
+font-size:22px;
+
 }
+
 
 .faq-answer{
+
 max-height:0;
+
 overflow:hidden;
+
 color:var(--muted);
-padding:0 17px;
-transition:.3s
+
+padding:
+0 17px;
+
+transition:.3s;
+
 }
+
 
 .faq-item.open .faq-answer{
+
 max-height:180px;
-padding:0 17px 17px
+
+padding:
+0 17px 17px;
+
 }
 
 
-/* CART */
+/* =========================
+CART
+========================= */
 
 .overlay{
+
 position:fixed;
+
 inset:0;
-background:rgba(0,0,0,.65);
+
+background:
+rgba(0,0,0,.65);
+
 z-index:90;
-display:none
+
+display:none;
+
 }
+
 
 .overlay.show{
-display:block
+
+display:block;
+
 }
+
 
 .cart-panel{
+
 position:fixed;
+
 right:-430px;
+
 top:0;
+
 width:min(410px,94vw);
+
 height:100vh;
+
 background:#101010;
-border-left:1px solid var(--gold);
+
+border-left:
+1px solid var(--gold);
+
 z-index:100;
+
 padding:22px;
+
 transition:.35s;
-overflow-y:auto
+
+overflow-y:auto;
+
 }
+
 
 .cart-panel.open{
-right:0
+
+right:0;
+
 }
+
 
 .cart-header{
+
 display:flex;
+
 justify-content:space-between;
+
 align-items:center;
-margin-bottom:15px
+
+margin-bottom:15px;
+
 }
+
 
 .cart-header h2{
-color:var(--gold)
+
+color:var(--gold);
+
 }
+
 
 .close{
+
 background:none;
+
 border:0;
+
 color:var(--text);
-font-size:28px
+
+font-size:28px;
+
 }
+
 
 .cart-item{
+
 display:flex;
+
 gap:10px;
-padding:12px 0;
-border-bottom:1px solid var(--border)
+
+padding:
+12px 0;
+
+border-bottom:
+1px solid var(--border);
+
 }
+
 
 .cart-item img{
+
 width:65px;
+
 height:65px;
+
 object-fit:cover;
-border-radius:10px
+
+border-radius:10px;
+
 }
+
 
 .cart-item-info{
-flex:1
+
+flex:1;
+
 }
+
 
 .cart-item-info strong{
-display:block
+
+display:block;
+
 }
+
 
 .cart-item-info span{
-color:var(--gold)
+
+color:var(--gold);
+
 }
+
 
 .cart-item-info small{
+
 display:block;
-color:var(--muted)
+
+color:var(--muted);
+
 }
+
 
 .quantity-control{
+
 display:flex;
+
 align-items:center;
+
 gap:7px;
-margin-top:7px
+
+margin-top:7px;
+
 }
+
 
 .quantity-control button{
+
 width:28px;
+
 height:28px;
+
 border-radius:7px;
-border:1px solid var(--gold);
+
+border:
+1px solid var(--gold);
+
 background:none;
-color:var(--gold)
+
+color:var(--gold);
+
 }
+
 
 .quantity-value{
+
 min-width:20px;
-text-align:center
+
+text-align:center;
+
 }
+
 
 .remove{
+
 border:0!important;
+
 color:#f66!important;
-width:auto!important
+
+width:auto!important;
+
 }
+
 
 .cart-total{
+
 font-size:22px;
+
 font-weight:bold;
+
 color:var(--gold);
-margin:20px 0
+
+margin:
+20px 0;
+
 }
+
 
 .checkout{
+
 width:100%;
+
 padding:14px;
+
 border:0;
+
 border-radius:13px;
+
 background:var(--gold);
+
 color:#000;
-font-weight:bold
+
+font-weight:bold;
+
 }
 
 
-/* FIXED BUTTONS */
+/* =========================
+IMAGE LIGHTBOX
+========================= */
+
+.image-lightbox{
+
+position:fixed;
+
+inset:0;
+
+z-index:99999;
+
+display:none;
+
+align-items:center;
+
+justify-content:center;
+
+padding:20px;
+
+background:
+rgba(0,0,0,.94);
+
+backdrop-filter:blur(12px);
+
+opacity:0;
+
+transition:opacity .3s ease;
+
+}
+
+
+.image-lightbox.active{
+
+display:flex;
+
+opacity:1;
+
+}
+
+
+.lightbox-content{
+
+position:relative;
+
+max-width:95vw;
+
+max-height:92vh;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+}
+
+
+.lightbox-image{
+
+display:block;
+
+max-width:90vw;
+
+max-height:88vh;
+
+width:auto;
+
+height:auto;
+
+object-fit:contain;
+
+border-radius:18px;
+
+box-shadow:
+0 20px 80px
+rgba(0,0,0,.75);
+
+animation:
+lightboxOpen .35s
+cubic-bezier(.22,.61,.36,1);
+
+transition:
+opacity .2s ease,
+transform .25s ease;
+
+-webkit-user-drag:none;
+
+user-select:none;
+
+}
+
+
+@keyframes lightboxOpen{
+
+0%{
+
+opacity:0;
+
+transform:scale(.82);
+
+}
+
+100%{
+
+opacity:1;
+
+transform:scale(1);
+
+}
+
+}
+
+
+.lightbox-close{
+
+position:fixed;
+
+top:18px;
+
+right:20px;
+
+width:46px;
+
+height:46px;
+
+border:
+1px solid
+rgba(212,175,55,.7);
+
+border-radius:50%;
+
+background:
+rgba(0,0,0,.65);
+
+color:#fff;
+
+font-size:30px;
+
+line-height:1;
+
+cursor:pointer;
+
+z-index:100001;
+
+transition:.25s;
+
+}
+
+
+.lightbox-close:hover{
+
+transform:
+rotate(90deg)
+scale(1.08);
+
+background:var(--gold);
+
+color:#000;
+
+}
+
+
+.lightbox-arrow{
+
+position:fixed;
+
+top:50%;
+
+transform:
+translateY(-50%);
+
+width:48px;
+
+height:48px;
+
+border:
+1px solid
+rgba(212,175,55,.7);
+
+border-radius:50%;
+
+background:
+rgba(0,0,0,.65);
+
+color:#fff;
+
+font-size:30px;
+
+cursor:pointer;
+
+z-index:100001;
+
+transition:.25s;
+
+}
+
+
+.lightbox-arrow:hover{
+
+background:var(--gold);
+
+color:#000;
+
+}
+
+
+.lightbox-prev{
+
+left:18px;
+
+}
+
+
+.lightbox-next{
+
+right:18px;
+
+}
+
+
+.lightbox-counter{
+
+position:fixed;
+
+bottom:20px;
+
+left:50%;
+
+transform:
+translateX(-50%);
+
+padding:
+7px 14px;
+
+border:
+1px solid
+rgba(212,175,55,.5);
+
+border-radius:20px;
+
+background:
+rgba(0,0,0,.7);
+
+color:#fff;
+
+font-size:13px;
+
+z-index:100001;
+
+}
+
+
+/* =========================
+FIXED BUTTONS
+========================= */
 
 .fixed-wa{
+
 position:fixed;
+
 right:17px;
+
 bottom:17px;
+
 width:57px;
+
 height:57px;
+
 border-radius:50%;
+
 background:#25D366;
+
 color:#fff;
+
 display:flex;
+
 align-items:center;
+
 justify-content:center;
+
 text-decoration:none;
+
 font-size:25px;
-z-index:80
+
+z-index:80;
+
+box-shadow:
+0 8px 25px
+rgba(37,211,102,.25);
+
 }
+
 
 .back-top{
+
 position:fixed;
+
 right:18px;
+
 bottom:85px;
+
 width:45px;
+
 height:45px;
+
 border-radius:50%;
-border:1px solid var(--gold);
+
+border:
+1px solid var(--gold);
+
 background:#111;
+
 color:var(--gold);
+
 font-size:22px;
+
 z-index:79;
+
 opacity:0;
-visibility:hidden
+
+visibility:hidden;
+
+transition:.25s;
+
 }
+
 
 .back-top.show{
+
 opacity:1;
-visibility:visible
+
+visibility:visible;
+
 }
 
 
-/* FOOTER */
+/* =========================
+FOOTER
+========================= */
 
 footer{
+
 text-align:center;
-padding:42px 15px;
+
+padding:
+42px 15px;
+
 margin-top:55px;
-border-top:1px solid var(--border);
-color:var(--muted)
+
+border-top:
+1px solid var(--border);
+
+color:var(--muted);
+
 }
+
 
 footer strong{
-color:var(--gold)
+
+color:var(--gold);
+
 }
 
 
-/* LIGHT MODE */
+/* =========================
+LIGHT MODE
+========================= */
 
 body.light{
+
 --bg:#f7f7f5;
+
 --card:#fff;
+
 --card2:#f0f0ed;
+
 --text:#111;
+
 --muted:#666;
+
 --border:#ddd;
+
 background:
 radial-gradient(
 circle at 50% -10%,
 rgba(212,175,55,.13),
 transparent 35%
 ),
-var(--bg)
+var(--bg);
+
 }
 
-body.light header{
-background:linear-gradient(#fff,#f7f7f5)
-}
 
 body.light .nav{
-background:rgba(255,255,255,.92)
+
+background:
+rgba(255,255,255,.92);
+
 }
+
 
 body.light .product,
 body.light .info-card,
 body.light .step,
 body.light .client-review{
-background:linear-gradient(145deg,#fff,#f4f4f1);
-box-shadow:0 12px 35px rgba(0,0,0,.06)
+
+background:
+linear-gradient(
+145deg,
+#fff,
+#f4f4f1
+);
+
+box-shadow:
+0 12px 35px
+rgba(0,0,0,.06);
+
 }
+
 
 body.light .favorite{
+
 background:#fff;
-color:#111
+
+color:#111;
+
 }
+
 
 body.light .cart-panel{
-background:#fff
+
+background:#fff;
+
 }
 
 
-/* HIDDEN */
+/* =========================
+HIDDEN
+========================= */
 
 .hidden{
-display:none!important
+
+display:none!important;
+
 }
 
 
-/* TABLET */
+/* =========================
+TABLET
+========================= */
 
 @media(max-width:900px){
 
 .products{
-grid-template-columns:repeat(2,minmax(0,1fr));
-gap:14px
+
+grid-template-columns:
+repeat(2,minmax(0,1fr));
+
+gap:14px;
+
 }
+
 
 .info-grid,
 .steps{
-grid-template-columns:1fr
+
+grid-template-columns:1fr;
+
 }
+
 
 .client-reviews{
-grid-template-columns:repeat(2,1fr)
-}
+
+grid-template-columns:
+repeat(2,1fr);
 
 }
 
+}
 
-/* MOBILE */
+
+/* =========================
+MOBILE
+========================= */
 
 @media(max-width:600px){
 
 .logo img{
+
 width:105px;
-height:105px
+
+height:105px;
+
 }
+
 
 .hero{
-padding:0 5px
+
+padding:
+0 5px;
+
 }
+
 
 .hero-actions{
-gap:8px
+
+gap:8px;
+
 }
+
 
 .hero-btn{
-padding:11px 15px;
-font-size:14px
+
+padding:
+11px 15px;
+
+font-size:14px;
+
 }
+
 
 .tools{
-margin-top:15px
+
+margin-top:15px;
+
 }
+
 
 .search-wrap{
-padding:0 10px
+
+padding:
+0 10px;
+
 }
+
 
 .nav{
+
 justify-content:flex-start;
-padding:11px 8px
+
+padding:
+11px 8px;
+
 }
+
 
 .nav button{
+
 font-size:14px;
-padding:8px 14px
+
+padding:
+8px 14px;
+
 }
+
 
 .section{
-margin:40px auto;
-padding:0 10px
+
+margin:
+42px auto;
+
+padding:
+0 10px;
+
 }
+
 
 .products{
-grid-template-columns:repeat(2,minmax(0,1fr));
-gap:10px
+
+grid-template-columns:
+repeat(2,minmax(0,1fr));
+
+gap:10px;
+
 }
+
 
 .product{
+
 padding:7px;
-border-radius:16px
+
+border-radius:16px;
+
 }
+
 
 .product:hover{
-transform:none
+
+transform:none;
+
 }
+
 
 .product-top{
+
 top:12px;
+
 left:12px;
-right:12px
+
+right:12px;
+
 }
+
 
 .favorite{
+
 width:32px;
+
 height:32px;
-font-size:16px
+
+font-size:16px;
+
 }
+
 
 .badge{
+
 font-size:8px;
-padding:4px 6px
+
+padding:
+4px 6px;
+
 }
+
 
 .image-stage{
-border-radius:12px
+
+border-radius:12px;
+
 }
+
 
 .main-image{
+
 width:100%;
+
 height:auto;
-display:block;
-border-radius:12px
+
+border-radius:12px;
+
 }
+
 
 .swipe-hint{
+
 font-size:8px;
-bottom:7px
+
+bottom:7px;
+
 }
+
 
 .thumbs{
+
 gap:4px;
-padding:6px 1px 2px
+
+padding:
+6px 1px 2px;
+
 }
+
 
 .thumbs img{
+
 width:40px;
+
 height:40px;
-border-radius:7px
+
+border-radius:7px;
+
 }
+
 
 .product h3{
+
 font-size:14px;
+
 line-height:1.25;
-margin:8px 2px 1px
+
+margin:
+8px 2px 1px;
+
 }
+
 
 .category{
+
 font-size:10px;
-margin:0 2px
+
+margin:
+0 2px;
+
 }
+
 
 .price{
+
 font-size:18px;
-margin:3px 2px 7px
+
+margin:
+3px 2px 7px;
+
 }
+
 
 .variant-label{
+
 font-size:10px;
-margin:5px 1px 3px
+
+margin:
+5px 1px 3px;
+
 }
+
 
 .variant-select{
+
 font-size:11px;
-padding:8px
+
+padding:8px;
+
 }
+
 
 .product-actions{
-grid-template-columns:1fr 38px;
+
+grid-template-columns:
+1fr 38px;
+
 gap:5px;
-margin-top:6px
+
+margin-top:6px;
+
 }
+
 
 .whatsapp{
+
 font-size:11px;
-padding:9px 4px;
-border-radius:9px
+
+padding:
+9px 4px;
+
+border-radius:9px;
+
 }
+
 
 .add-cart{
+
 font-size:17px;
-border-radius:9px
+
+border-radius:9px;
+
 }
+
 
 .client-reviews{
-grid-template-columns:repeat(2,1fr);
-gap:9px
+
+grid-template-columns:
+repeat(2,1fr);
+
+gap:9px;
+
 }
+
 
 .client-review img{
-height:290px
+
+height:290px;
+
 }
+
 
 .promo-box{
-padding:20px 10px
+
+padding:
+20px 10px;
+
 }
+
 
 .section-title{
-font-size:28px
+
+font-size:28px;
+
 }
+
 
 .section-description{
-font-size:14px
+
+font-size:14px;
+
 }
 
 
-/* LIGHTBOX MOBILE */
+/* LIGHTBOX */
 
 .image-lightbox{
-padding:10px
+
+padding:10px;
+
 }
+
 
 .lightbox-image{
+
 max-width:94vw;
+
 max-height:82vh;
-border-radius:12px
+
+border-radius:12px;
+
 }
+
 
 .lightbox-close{
+
 top:12px;
+
 right:12px;
+
 width:42px;
+
 height:42px;
-font-size:27px
+
+font-size:27px;
+
 }
+
 
 .lightbox-arrow{
+
 width:40px;
+
 height:40px;
-font-size:24px
+
+font-size:24px;
+
 }
+
 
 .lightbox-prev{
-left:8px
+
+left:8px;
+
 }
+
 
 .lightbox-next{
-right:8px
+
+right:8px;
+
 }
+
 
 .lightbox-counter{
-bottom:12px
-}
+
+bottom:12px;
 
 }
 
+}
 
-/* VERY SMALL PHONES */
+
+/* =========================
+VERY SMALL
+========================= */
 
 @media(max-width:380px){
 
 .products{
-gap:7px
+
+gap:7px;
+
 }
+
 
 .product{
-padding:6px
+
+padding:6px;
+
 }
+
 
 .product h3{
-font-size:13px
+
+font-size:13px;
+
 }
+
 
 .price{
-font-size:17px
+
+font-size:17px;
+
 }
+
 
 .whatsapp{
-font-size:10px
+
+font-size:10px;
+
 }
+
 
 .add-cart{
-width:35px
+
+width:35px;
+
 }
+
 
 .thumbs img{
+
 width:36px;
-height:36px
-}
+
+height:36px;
 
 }
 
+}
 
-/* REDUCED MOTION */
+
+/* =========================
+REDUCED MOTION
+========================= */
 
 @media(prefers-reduced-motion:reduce){
 
+*{
+
+scroll-behavior:auto!important;
+
+}
+
 .main-image{
+
 transition:none!important;
+
 animation:none!important;
+
 }
 
 .product:hover .main-image,
 .product:active .main-image{
+
 transform:none;
+
 filter:none;
+
 }
 
 .swipe-left,
 .swipe-right,
 .image-change{
+
 animation:none!important;
+
 }
 
 }
 
 </style>
+
 </head>
 
 
 <body>
 
 
-<!-- HEADER -->
+<!-- =========================
+HEADER
+========================= -->
 
 <header id="home">
 
@@ -1499,7 +2783,7 @@ animation:none!important;
 
 <img
 src="./LOGO.PNG"
-alt="ORION Accessories Maroc - logo"
+alt="ORION Accessories Maroc"
 width="120"
 height="120">
 
@@ -1509,22 +2793,29 @@ height="120">
 <div class="hero">
 
 <div class="eyebrow">
+
 ORION ACCESSORIES • MAROC
+
 </div>
 
 
 <h1>
+
 Style <span>Without Limits.</span>
+
 </h1>
 
 
 <p>
+
 Lunettes, colliers et bracelets modernes.
 Un style premium accessible partout au Maroc.
+
 </p>
 
 
 <div class="hero-actions">
+
 
 <a
 class="hero-btn primary"
@@ -1545,10 +2836,12 @@ Commander sur WhatsApp
 
 </a>
 
+
 </div>
 
 
 <div class="tools">
+
 
 <button
 class="tool"
@@ -1578,6 +2871,7 @@ id="cartCount">
 
 </button>
 
+
 </div>
 
 </div>
@@ -1587,11 +2881,14 @@ id="cartCount">
 
 <label
 for="searchInput"
-style="position:absolute;left:-9999px">
+style="
+position:absolute;
+left:-9999px;">
 
 Rechercher un produit ORION
 
 </label>
+
 
 <input
 id="searchInput"
@@ -1607,11 +2904,14 @@ oninput="searchProducts()">
 
 
 
-<!-- NAV -->
+<!-- =========================
+NAVIGATION
+========================= -->
 
 <nav
 class="nav"
 aria-label="Navigation principale">
+
 
 <button
 class="active"
@@ -1661,8 +2961,16 @@ Montres
 
 </button>
 
+
 </nav>
 
+
+
+<!-- =========================
+MAIN
+========================= -->
+
+<main>
 
 
 <!-- GLASSES -->
@@ -1696,7 +3004,7 @@ id="glassesProducts">
 
 
 
-<!-- CHAINS -->
+<!-- COLLIERS -->
 
 <section
 class="section"
@@ -1765,7 +3073,9 @@ id="promo">
 <div class="promo-box">
 
 <h2>
+
 ORION PROMO
+
 </h2>
 
 
@@ -1773,8 +3083,11 @@ ORION PROMO
 
 Découvrez notre pack spécial à
 
-<strong style="color:var(--gold)">
+<strong
+style="color:var(--gold)">
+
 100 DH
+
 </strong>.
 
 </p>
@@ -1792,7 +3105,9 @@ id="promoProducts">
 
 
 
-<!-- WHY ORION -->
+<!-- =========================
+WHY ORION
+========================= -->
 
 <section class="section">
 
@@ -1809,15 +3124,21 @@ Pourquoi <span>ORION ?</span>
 <div class="info-card">
 
 <div class="icon">
+
 ✦
+
 </div>
 
 <h3>
+
 Style Premium
+
 </h3>
 
 <p>
+
 Des designs modernes sélectionnés pour votre style.
+
 </p>
 
 </div>
@@ -1827,15 +3148,21 @@ Des designs modernes sélectionnés pour votre style.
 <div class="info-card">
 
 <div class="icon">
+
 🇲🇦
+
 </div>
 
 <h3>
+
 Partout au Maroc
+
 </h3>
 
 <p>
+
 Livraison disponible dans les villes marocaines.
+
 </p>
 
 </div>
@@ -1845,15 +3172,21 @@ Livraison disponible dans les villes marocaines.
 <div class="info-card">
 
 <div class="icon">
+
 💬
+
 </div>
 
 <h3>
+
 Commande Simple
+
 </h3>
 
 <p>
+
 Commandez directement avec ORION via WhatsApp.
+
 </p>
 
 </div>
@@ -1865,7 +3198,9 @@ Commandez directement avec ORION via WhatsApp.
 
 
 
-<!-- HOW TO ORDER -->
+<!-- =========================
+HOW TO ORDER
+========================= -->
 
 <section class="section">
 
@@ -1882,11 +3217,15 @@ Comment <span>commander ?</span>
 <div class="step">
 
 <strong>
+
 01
+
 </strong>
 
 <p>
+
 Choisissez votre produit et votre modèle.
+
 </p>
 
 </div>
@@ -1896,11 +3235,15 @@ Choisissez votre produit et votre modèle.
 <div class="step">
 
 <strong>
+
 02
+
 </strong>
 
 <p>
+
 Cliquez sur Commander via WhatsApp.
+
 </p>
 
 </div>
@@ -1910,11 +3253,15 @@ Cliquez sur Commander via WhatsApp.
 <div class="step">
 
 <strong>
+
 03
+
 </strong>
 
 <p>
+
 Confirmez vos informations et votre adresse.
+
 </p>
 
 </div>
@@ -1926,7 +3273,9 @@ Confirmez vos informations et votre adresse.
 
 
 
-<!-- REAL CLIENT REVIEWS -->
+<!-- =========================
+CLIENT REVIEWS
+========================= -->
 
 <section
 class="section"
@@ -1960,7 +3309,6 @@ onclick="openClientImage(this.src)">
 </div>
 
 
-
 <div class="client-review">
 
 <img
@@ -1972,7 +3320,6 @@ onclick="openClientImage(this.src)">
 </div>
 
 
-
 <div class="client-review">
 
 <img
@@ -1982,7 +3329,6 @@ loading="lazy"
 onclick="openClientImage(this.src)">
 
 </div>
-
 
 
 <div class="client-review">
@@ -2002,33 +3348,9 @@ onclick="openClientImage(this.src)">
 
 
 
-<!-- CLIENT IMAGE VIEWER -->
-
-<div
-class="client-viewer"
-id="clientViewer"
-onclick="closeClientImage()">
-
-
-<button
-onclick="closeClientImage()"
-aria-label="Fermer">
-
-×
-
-</button>
-
-
-<img
-id="clientViewerImage"
-src=""
-alt="Avis client ORION">
-
-</div>
-
-
-
-<!-- FAQ -->
+<!-- =========================
+FAQ
+========================= -->
 
 <section class="section">
 
@@ -2050,9 +3372,7 @@ onclick="toggleFaq(this)">
 
 Où livrez-vous ?
 
-<span>
-+
-</span>
+<span>+</span>
 
 </button>
 
@@ -2075,9 +3395,7 @@ onclick="toggleFaq(this)">
 
 Comment commander ?
 
-<span>
-+
-</span>
+<span>+</span>
 
 </button>
 
@@ -2100,16 +3418,16 @@ onclick="toggleFaq(this)">
 
 Puis-je choisir une autre photo du produit ?
 
-<span>
-+
-</span>
+<span>+</span>
 
 </button>
 
 
 <div class="faq-answer">
 
-Oui. Pour les modèles possédant plusieurs photos, sélectionnez la vue souhaitée ou faites glisser l'image sur votre téléphone.
+Oui. Pour les modèles possédant plusieurs photos,
+sélectionnez la vue souhaitée ou faites glisser l'image
+sur votre téléphone.
 
 </div>
 
@@ -2122,7 +3440,9 @@ Oui. Pour les modèles possédant plusieurs photos, sélectionnez la vue souhait
 
 
 
-<!-- CART OVERLAY -->
+<!-- =========================
+CART
+========================= -->
 
 <div
 class="overlay"
@@ -2132,18 +3452,18 @@ onclick="closeCart()">
 </div>
 
 
-
-<!-- CART -->
-
 <aside
 class="cart-panel"
 id="cartPanel"
 aria-label="Panier">
 
+
 <div class="cart-header">
 
 <h2>
+
 Votre panier
+
 </h2>
 
 
@@ -2169,7 +3489,9 @@ aria-label="Fermer le panier">
 Total :
 
 <span id="cartTotal">
+
 0 DH
+
 </span>
 
 </div>
@@ -2185,21 +3507,185 @@ Commander via WhatsApp
 
 
 </aside>
-<script>
-
-/* =========================
-ORION ACCESSORIES
-MAIN JAVASCRIPT
-========================= */
-
-const WHATSAPP="212673830013";
 
 
-/* =========================
-GLASSES
-========================= */
 
-const glasses=[
+<!-- =========================
+IMAGE LIGHTBOX
+========================= -->
+
+<div
+class="image-lightbox"
+id="imageLightbox"
+onclick="closeImageLightbox(event)">
+
+
+<button
+class="lightbox-close"
+onclick="closeImageLightbox(event)"
+aria-label="Fermer">
+
+×
+
+</button>
+
+
+<button
+class="lightbox-arrow lightbox-prev"
+onclick="changeLightboxImage(-1,event)"
+aria-label="Image précédente">
+
+‹
+
+</button>
+
+
+<div
+class="lightbox-content"
+onclick="event.stopPropagation()">
+
+
+<img
+id="lightboxImage"
+class="lightbox-image"
+src=""
+alt="ORION Accessories - aperçu du produit">
+
+
+</div>
+
+
+<button
+class="lightbox-arrow lightbox-next"
+onclick="changeLightboxImage(1,event)"
+aria-label="Image suivante">
+
+›
+
+</button>
+
+
+<div
+id="lightboxCounter"
+class="lightbox-counter">
+
+1 / 1
+
+</div>
+
+
+</div>
+
+
+
+<!-- =========================
+CLIENT VIEWER
+========================= -->
+
+<div
+class="client-viewer"
+id="clientViewer"
+onclick="closeClientImage()">
+
+
+<button
+onclick="closeClientImage()"
+aria-label="Fermer">
+
+×
+
+</button>
+
+
+<img
+id="clientViewerImage"
+src=""
+alt="Avis client ORION">
+
+</div>
+
+
+
+<!-- =========================
+FIXED WHATSAPP
+========================= -->
+
+<a
+class="fixed-wa"
+href="https://wa.me/212673830013?text=Bonjour%20ORION%20Accessories"
+target="_blank"
+rel="noopener"
+aria-label="Contacter ORION sur WhatsApp">
+
+✆
+
+</a>
+
+
+
+<!-- =========================
+BACK TO TOP
+========================= -->
+
+<button
+id="backTop"
+class="back-top"
+onclick="window.scrollTo({top:0,behavior:'smooth'})"
+aria-label="Retour en haut">
+
+↑
+
+</button>
+
+
+
+</main>
+
+
+
+<!-- =========================
+FOOTER
+========================= -->
+
+<footer>
+
+<strong>
+
+ORION Accessories
+
+</strong>
+
+<br>
+
+Lunettes • Colliers • Bracelets
+
+<br>
+
+Livraison partout au Maroc
+
+</footer>
+
+
+<!-- =========================
+PART 1 END
+========================= -->
+  <script>
+
+/* =========================================================
+   ORION ACCESSORIES — JAVASCRIPT
+   VERSION 2 PREMIUM
+   ========================================================= */
+
+"use strict";
+
+const WHATSAPP = "212673830013";
+
+
+/* =========================================================
+   PRODUCTS
+   ========================================================= */
+
+const glasses = [
 
 {
 model:"01",
@@ -2426,11 +3912,7 @@ images:[
 ];
 
 
-/* =========================
-COLLIERS
-========================= */
-
-const chains=[
+const chains = [
 
 {
 model:"01",
@@ -2493,11 +3975,7 @@ images:[
 ];
 
 
-/* =========================
-BRACELETS
-========================= */
-
-const bracelets=[
+const bracelets = [
 
 {
 model:"01",
@@ -2566,11 +4044,7 @@ images:[
 ];
 
 
-/* =========================
-PROMO
-========================= */
-
-const promo=[
+const promo = [
 
 {
 model:"Pack",
@@ -2586,23 +4060,37 @@ images:[
 ];
 
 
-/* =========================
-CART
-========================= */
+/* =========================================================
+   CART
+   ========================================================= */
 
-let cart=
+let cart = [];
+
+try{
+
+cart =
 JSON.parse(
-localStorage.getItem("orionCart")||"[]"
+localStorage.getItem("orionCart") || "[]"
 );
 
+if(!Array.isArray(cart)){
+cart=[];
+}
 
-/* =========================
-ESCAPE HTML
-========================= */
+}catch(e){
 
-function esc(s){
+cart=[];
 
-return String(s)
+}
+
+
+/* =========================================================
+   ESCAPE HTML
+   ========================================================= */
+
+function esc(value){
+
+return String(value)
 .replace(/&/g,"&amp;")
 .replace(/</g,"&lt;")
 .replace(/>/g,"&gt;")
@@ -2612,52 +4100,134 @@ return String(s)
 }
 
 
-/* =========================
-CREATE PRODUCTS
-========================= */
+/* =========================================================
+   GET PRODUCT LIST
+   ========================================================= */
+
+function getProductList(type){
+
+if(type==="glasses") return glasses;
+
+if(type==="chain") return chains;
+
+if(type==="bracelet") return bracelets;
+
+if(type==="promo") return promo;
+
+return [];
+
+}
+
+
+/* =========================================================
+   PRODUCT NAME
+   ========================================================= */
+
+function getProductName(type,model){
+
+if(type==="glasses")
+return `Lunettes ORION Model ${model}`;
+
+if(type==="chain")
+return `Collier ORION Model ${model}`;
+
+if(type==="bracelet")
+return `Bracelet ORION Model ${model}`;
+
+return "Pack ORION";
+
+}
+
+
+/* =========================================================
+   CREATE PRODUCTS
+   ========================================================= */
 
 function createProducts(list,id,type){
 
-const box=document.getElementById(id);
+const box =
+document.getElementById(id);
 
-if(!box)return;
+if(!box){
+
+console.error(
+"ORION: product container not found:",
+id
+);
+
+return;
+
+}
 
 box.innerHTML="";
 
 list.forEach((p,n)=>{
 
-const uid=type+"-"+p.model+"-"+n;
-const main=uid+"-main";
-const sel=uid+"-select";
+const uid =
+`${type}-${p.model}-${n}`;
 
-const card=document.createElement("article");
+const main =
+`${uid}-main`;
+
+const sel =
+`${uid}-select`;
+
+const card =
+document.createElement("article");
 
 card.className="product";
+
 card.dataset.type=type;
 card.dataset.model=p.model;
 
 let badge="";
 
-if(type==="promo")
+if(type==="promo"){
+
 badge="PROMO";
-else if(p.badge)
+
+}else if(p.badge){
+
 badge=p.badge;
-else if(type==="bracelet"&&p.model==="05")
+
+}else if(
+type==="bracelet" &&
+p.model==="05"
+){
+
 badge="NOUVEAU";
 
+}
 
-card.innerHTML=`
+
+const productTitle =
+getProductName(type,p.model);
+
+
+const firstImage =
+p.images[0];
+
+
+card.innerHTML = `
 
 <div class="product-top">
 
 <span>
-${badge?`<span class="badge">${badge}</span>`:""}
+
+${
+badge
+?`<span class="badge">${esc(badge)}</span>`
+:""
+}
+
 </span>
+
 
 <button
 class="favorite"
+type="button"
 onclick="toggleFavorite(this)"
-aria-label="Ajouter aux favoris">
+aria-label="Ajouter ${esc(productTitle)} aux favoris">
 
 ♡
 
@@ -2666,14 +4236,34 @@ aria-label="Ajouter aux favoris">
 </div>
 
 
+<div
+class="image-stage"
+data-main="${main}">
+
 <img
 id="${main}"
 class="main-image"
-src="./${p.images[0]}"
-alt="ORION ${type} Model ${esc(p.model)}"
-loading="lazy"
-onclick="openImageLightbox('${main}')"
-onerror="this.style.display='none'>
+src="./${firstImage}"
+alt="${esc(productTitle)} - vue principale"
+width="800"
+height="800"
+loading="${n===0 ? "eager" : "lazy"}"
+${n===0 ? 'fetchpriority="high"' : ""}
+draggable="false"
+onclick="handleMainImageClick('${main}')"
+onerror="handleImageError(this)">
+
+${
+p.images.length>1
+?`
+<div class="swipe-hint">
+← Glisser pour changer →
+</div>
+`
+:""
+}
+
+</div>
 
 
 <div class="thumbs">
@@ -2682,26 +4272,41 @@ ${p.images.map((im,i)=>`
 
 <img
 src="./${im}"
-alt="ORION ${type} ${esc(p.model)} vue ${i+1}"
-onclick="selectVariant('${sel}','${main}',${i})"
-style="${i===0?"border-color:var(--gold)":""}"
-onerror="this.style.display='none'">
+alt="${esc(productTitle)} - vue ${i+1}"
+width="58"
+height="58"
+loading="lazy"
+draggable="false"
+onclick="selectVariant('${sel}','${main}',${i},0)"
+style="${
+i===0
+?"border-color:var(--gold)"
+:"border-color:transparent"
+}"
+onerror="handleThumbError(this)">
 
 `).join("")}
 
 </div>
 
 
-${p.images.length>1?`
+${
+p.images.length>1
+?`
 
-<span class="variant-label">
+<label
+class="variant-label"
+for="${sel}">
+
 Choisir la vue
-</span>
+
+</label>
+
 
 <select
 id="${sel}"
 class="variant-select"
-onchange="selectVariant('${sel}','${main}',this.value)">
+onchange="selectVariant('${sel}','${main}',this.value,0)">
 
 ${p.images.map((_,i)=>`
 
@@ -2713,21 +4318,13 @@ Vue ${i+1}
 
 </select>
 
-`:""}
+`
+:""
+}
 
 
 <h3>
-
-${
-type==="glasses"
-?"ORION Lunettes Model "+esc(p.model)
-:type==="chain"
-?"ORION Collier Model "+esc(p.model)
-:type==="bracelet"
-?"ORION Bracelet Model "+esc(p.model)
-:"ORION Pack"
-}
-
+${esc(productTitle)}
 </h3>
 
 
@@ -2737,9 +4334,9 @@ ${
 type==="glasses"
 ?"Lunettes"
 :type==="chain"
-?p.gender||"Collier"
+?(p.gender || "Collier")
 :type==="bracelet"
-?p.gender||"Bracelet"
+?(p.gender || "Bracelet")
 :"Pack Promo"
 }
 
@@ -2747,7 +4344,9 @@ type==="glasses"
 
 
 <div class="price">
+
 ${p.price} DH
+
 </div>
 
 
@@ -2757,17 +4356,19 @@ ${p.price} DH
 id="${uid}-wa"
 class="whatsapp"
 target="_blank"
-rel="noopener"
+rel="noopener noreferrer"
 href="#">
 
 Commander
 
 </a>
 
+
 <button
 class="add-cart"
-onclick="addToCart('${type}','${p.model}',0)"
-aria-label="Ajouter au panier">
+type="button"
+onclick="addCurrentToCart('${type}','${p.model}','${main}')"
+aria-label="Ajouter ${esc(productTitle)} au panier">
 
 +
 
@@ -2791,51 +4392,166 @@ p,
 }
 
 
-/* =========================
-SELECT IMAGE
-========================= */
+/* =========================================================
+   IMAGE ERROR HANDLING
+   ========================================================= */
 
-function selectVariant(selectId,mainId,index){
+function handleImageError(img){
 
-index=Number(index);
+console.warn(
+"ORION image not found:",
+img.src
+);
 
-const main=document.getElementById(mainId);
+img.style.display="none";
 
-if(!main)return;
+const stage =
+img.closest(".image-stage");
 
-const card=main.closest(".product");
+if(stage){
 
-if(!card)return;
+const hint =
+stage.querySelector(".swipe-hint");
 
-const imgs=[
-...card.querySelectorAll(".thumbs img")
-];
+if(hint)
+hint.style.display="none";
 
-
-if(imgs[index]){
-
-main.classList.remove("image-change");
-
-void main.offsetWidth;
-
-main.src=imgs[index].src;
-
-main.removeAttribute("srcset");
-
-main.classList.add("image-change");
+}
 
 }
 
 
-const select=document.getElementById(selectId);
+function handleThumbError(img){
 
-if(select)
+console.warn(
+"ORION thumbnail not found:",
+img.src
+);
+
+img.style.display="none";
+
+}
+
+
+/* =========================================================
+   SELECT PRODUCT IMAGE
+   ========================================================= */
+
+function selectVariant(
+selectId,
+mainId,
+index,
+direction=0
+){
+
+index=Number(index);
+
+const main =
+document.getElementById(mainId);
+
+if(!main)
+return;
+
+
+const card =
+main.closest(".product");
+
+if(!card)
+return;
+
+
+const imgs =
+[
+...card.querySelectorAll(".thumbs img")
+].filter(
+img=>img.style.display!=="none"
+);
+
+
+if(!imgs.length)
+return;
+
+
+if(index<0)
+index=imgs.length-1;
+
+if(index>=imgs.length)
+index=0;
+
+
+const selected =
+imgs[index];
+
+if(!selected)
+return;
+
+
+const newSrc =
+selected.currentSrc ||
+selected.src;
+
+
+if(!newSrc)
+return;
+
+
+main.classList.remove(
+"image-change",
+"swipe-left",
+"swipe-right"
+);
+
+void main.offsetWidth;
+
+
+main.src=newSrc;
+
+
+if(direction<0){
+
+main.classList.add(
+"swipe-right"
+);
+
+}else if(direction>0){
+
+main.classList.add(
+"swipe-left"
+);
+
+}else{
+
+main.classList.add(
+"image-change"
+);
+
+}
+
+
+setTimeout(()=>{
+
+main.classList.remove(
+"image-change",
+"swipe-left",
+"swipe-right"
+);
+
+},450);
+
+
+const select =
+document.getElementById(selectId);
+
+if(select){
+
 select.value=String(index);
 
+}
 
-imgs.forEach((x,i)=>{
 
-x.style.borderColor=
+imgs.forEach((img,i)=>{
+
+img.style.borderColor =
 i===index
 ?"var(--gold)"
 :"transparent";
@@ -2843,22 +4559,22 @@ i===index
 });
 
 
-const type=card.dataset.type;
-const model=card.dataset.model;
+const type =
+card.dataset.type;
 
-const list=
+const model =
+card.dataset.model;
 
-type==="glasses"
-?glasses
-:type==="chain"
-?chains
-:type==="bracelet"
-?bracelets
-:promo;
+const list =
+getProductList(type);
 
-const p=list.find(x=>x.model===model);
+const p =
+list.find(
+item=>String(item.model)===String(model)
+);
 
-if(p)
+if(p){
+
 updateWhatsAppLink(
 card,
 type,
@@ -2868,10 +4584,218 @@ index
 
 }
 
+}
 
-/* =========================
-IMAGE LIGHTBOX
-========================= */
+
+/* =========================================================
+   SWIPE PRODUCT IMAGE
+   ========================================================= */
+
+function swipeProductImage(
+mainId,
+direction
+){
+
+const main =
+document.getElementById(mainId);
+
+if(!main)
+return;
+
+
+const card =
+main.closest(".product");
+
+if(!card)
+return;
+
+
+const imgs =
+[
+...card.querySelectorAll(".thumbs img")
+].filter(
+img=>img.style.display!=="none"
+);
+
+
+if(imgs.length<=1)
+return;
+
+
+let current =
+imgs.findIndex(
+img=>
+(img.currentSrc || img.src) ===
+main.src
+);
+
+
+if(current<0)
+current=0;
+
+
+let next =
+current + direction;
+
+
+if(next<0)
+next=imgs.length-1;
+
+if(next>=imgs.length)
+next=0;
+
+
+const select =
+card.querySelector(".variant-select");
+
+const selectId =
+select ? select.id : "";
+
+
+selectVariant(
+selectId,
+mainId,
+next,
+direction
+);
+
+
+const stage =
+main.closest(".image-stage");
+
+if(stage){
+
+stage.classList.add("used");
+
+}
+
+}
+
+
+/* =========================================================
+   PRODUCT TOUCH SWIPE
+   ========================================================= */
+
+let lastProductSwipe=0;
+
+
+function enableProductSwipe(){
+
+document
+.querySelectorAll(".main-image")
+.forEach(img=>{
+
+let startX=0;
+let startY=0;
+
+let touching=false;
+
+
+img.addEventListener(
+"touchstart",
+function(e){
+
+if(e.touches.length!==1)
+return;
+
+startX =
+e.touches[0].clientX;
+
+startY =
+e.touches[0].clientY;
+
+touching=true;
+
+},
+{
+passive:true
+}
+);
+
+
+img.addEventListener(
+"touchend",
+function(e){
+
+if(!touching)
+return;
+
+touching=false;
+
+
+const touch =
+e.changedTouches[0];
+
+const endX =
+touch.clientX;
+
+const endY =
+touch.clientY;
+
+
+const dx =
+endX-startX;
+
+const dy =
+endY-startY;
+
+
+const absX =
+Math.abs(dx);
+
+const absY =
+Math.abs(dy);
+
+
+if(
+absX>45 &&
+absX>absY*1.15
+){
+
+lastProductSwipe =
+Date.now();
+
+
+swipeProductImage(
+img.id,
+dx<0 ? 1 : -1
+);
+
+}
+
+},
+{
+passive:true
+}
+);
+
+});
+
+}
+
+
+/* =========================================================
+   IMAGE CLICK
+   ========================================================= */
+
+function handleMainImageClick(mainId){
+
+if(
+Date.now()-lastProductSwipe<550
+){
+
+return;
+
+}
+
+openImageLightbox(mainId);
+
+}
+
+
+/* =========================================================
+   IMAGE LIGHTBOX
+   ========================================================= */
 
 let lightboxImages=[];
 let lightboxIndex=0;
@@ -2879,43 +4803,78 @@ let lightboxIndex=0;
 
 function openImageLightbox(mainId){
 
-const main=document.getElementById(mainId);
+const main =
+document.getElementById(mainId);
 
-if(!main)return;
+if(!main)
+return;
 
-const card=main.closest(".product");
 
-if(!card)return;
+const card =
+main.closest(".product");
 
-const thumbs=[
+if(!card)
+return;
+
+
+const thumbs =
+[
 ...card.querySelectorAll(".thumbs img")
-];
+]
+.filter(
+img=>img.style.display!=="none"
+);
+
 
 if(thumbs.length){
 
-lightboxImages=
-thumbs
-.filter(img=>img.src)
-.map(img=>img.src);
+lightboxImages =
+thumbs.map(
+img=>img.currentSrc || img.src
+);
 
 }else{
 
-lightboxImages=[main.src];
+lightboxImages=[
+main.currentSrc || main.src
+];
 
 }
 
 
-lightboxIndex=Math.max(
-0,
-lightboxImages.indexOf(main.src)
+let current =
+lightboxImages.indexOf(
+main.currentSrc || main.src
 );
 
-const box=document.getElementById("imageLightbox");
-const image=document.getElementById("lightboxImage");
+
+if(current<0)
+current=0;
+
+
+lightboxIndex=current;
+
+
+const box =
+document.getElementById(
+"imageLightbox"
+);
+
+const image =
+document.getElementById(
+"lightboxImage"
+);
+
+
+if(!box || !image)
+return;
+
+
+image.src =
+lightboxImages[lightboxIndex];
+
 
 box.classList.add("active");
-
-image.src=lightboxImages[lightboxIndex];
 
 updateLightboxCounter();
 
@@ -2924,13 +4883,19 @@ document.body.style.overflow="hidden";
 }
 
 
+/* =========================================================
+   CLOSE LIGHTBOX
+   ========================================================= */
+
 function closeImageLightbox(event){
 
 if(event){
 
 if(
 event.target.id!=="imageLightbox" &&
-!event.target.classList.contains("lightbox-close")
+!event.target.classList.contains(
+"lightbox-close"
+)
 ){
 
 return;
@@ -2939,7 +4904,15 @@ return;
 
 }
 
-const box=document.getElementById("imageLightbox");
+
+const box =
+document.getElementById(
+"imageLightbox"
+);
+
+if(!box)
+return;
+
 
 box.classList.remove("active");
 
@@ -2948,30 +4921,59 @@ document.body.style.overflow="";
 }
 
 
-function changeLightboxImage(direction,event){
+/* =========================================================
+   LIGHTBOX NAVIGATION
+   ========================================================= */
+
+function changeLightboxImage(
+direction,
+event
+){
 
 if(event)
 event.stopPropagation();
 
+
 if(lightboxImages.length<=1)
 return;
 
-lightboxIndex+=direction;
 
-if(lightboxIndex<0)
-lightboxIndex=
+lightboxIndex += direction;
+
+
+if(lightboxIndex<0){
+
+lightboxIndex =
 lightboxImages.length-1;
 
-if(lightboxIndex>=lightboxImages.length)
+}
+
+
+if(
+lightboxIndex>=lightboxImages.length
+){
+
 lightboxIndex=0;
 
-const image=document.getElementById("lightboxImage");
+}
+
+
+const image =
+document.getElementById(
+"lightboxImage"
+);
+
+if(!image)
+return;
+
 
 image.style.opacity="0";
 
+
 setTimeout(()=>{
 
-image.src=lightboxImages[lightboxIndex];
+image.src =
+lightboxImages[lightboxIndex];
 
 updateLightboxCounter();
 
@@ -2982,22 +4984,106 @@ image.style.opacity="1";
 }
 
 
+/* =========================================================
+   LIGHTBOX COUNTER
+   ========================================================= */
+
 function updateLightboxCounter(){
 
-const counter=
-document.getElementById("lightboxCounter");
+const counter =
+document.getElementById(
+"lightboxCounter"
+);
 
-if(!counter)return;
+if(!counter)
+return;
 
-counter.textContent=
+
+counter.textContent =
 `${lightboxIndex+1} / ${lightboxImages.length}`;
 
 }
 
 
-/* =========================
-WHATSAPP
-========================= */
+/* =========================================================
+   LIGHTBOX TOUCH SWIPE
+   ========================================================= */
+
+let lightboxStartX=0;
+let lightboxStartY=0;
+
+
+const lightbox =
+document.getElementById(
+"imageLightbox"
+);
+
+
+if(lightbox){
+
+lightbox.addEventListener(
+"touchstart",
+e=>{
+
+if(e.touches.length!==1)
+return;
+
+lightboxStartX =
+e.touches[0].clientX;
+
+lightboxStartY =
+e.touches[0].clientY;
+
+},
+{
+passive:true
+}
+);
+
+
+lightbox.addEventListener(
+"touchend",
+e=>{
+
+const touch =
+e.changedTouches[0];
+
+const dx =
+touch.clientX-lightboxStartX;
+
+const dy =
+touch.clientY-lightboxStartY;
+
+
+if(
+Math.abs(dx)>50 &&
+Math.abs(dx)>Math.abs(dy)*1.1
+){
+
+if(dx<0){
+
+changeLightboxImage(1);
+
+}else{
+
+changeLightboxImage(-1);
+
+}
+
+}
+
+},
+{
+passive:true
+}
+);
+
+}
+
+
+/* =========================================================
+   WHATSAPP LINK
+   ========================================================= */
 
 function updateWhatsAppLink(
 card,
@@ -3006,24 +5092,21 @@ p,
 index
 ){
 
-const a=card.querySelector(".whatsapp");
+const link =
+card.querySelector(".whatsapp");
 
-if(!a)return;
+if(!link)
+return;
 
-const name=
 
-type==="glasses"
-?`Lunettes ORION Model ${p.model}`
-:type==="chain"
-?`Collier ORION Model ${p.model}`
-:type==="bracelet"
-?`Bracelet ORION Model ${p.model}`
-:"Pack ORION";
+const name =
+getProductName(
+type,
+p.model
+);
 
-a.href=
-`https://wa.me/${WHATSAPP}?text=${
-encodeURIComponent(
 
+const message =
 "Bonjour ORION Accessories\n\n"+
 "Je souhaite commander : "+
 name+
@@ -3031,91 +5114,191 @@ name+
 p.price+
 " DH"+
 "\nVue : "+
-(index+1)
+(Number(index)+1);
 
-)
+
+link.href =
+`https://wa.me/${WHATSAPP}?text=${
+encodeURIComponent(message)
 }`;
 
 }
 
 
-/* =========================
-ADD CART
-========================= */
+/* =========================================================
+   ADD CURRENT PRODUCT TO CART
+   ========================================================= */
 
-function addToCart(type,model,index){
+function addCurrentToCart(
+type,
+model,
+mainId
+){
 
-const list=
+const main =
+document.getElementById(mainId);
 
-type==="glasses"
-?glasses
-:type==="chain"
-?chains
-:type==="bracelet"
-?bracelets
-:promo;
+if(!main)
+return;
 
-const p=list.find(
-x=>x.model===model
+
+const card =
+main.closest(".product");
+
+if(!card)
+return;
+
+
+const thumbs =
+[
+...card.querySelectorAll(".thumbs img")
+]
+.filter(
+img=>img.style.display!=="none"
 );
 
-if(!p)return;
 
-const key=
+let index =
+thumbs.findIndex(
+img=>
+(img.currentSrc || img.src)===
+(main.currentSrc || main.src)
+);
+
+
+if(index<0)
+index=0;
+
+
+addToCart(
+type,
+model,
+index
+);
+
+}
+
+
+/* =========================================================
+   ADD TO CART
+   ========================================================= */
+
+function addToCart(
+type,
+model,
+index
+){
+
+const list =
+getProductList(type);
+
+const product =
+list.find(
+p=>String(p.model)===String(model)
+);
+
+if(!product)
+return;
+
+
+index=Number(index);
+
+
+if(
+index<0 ||
+index>=product.images.length
+){
+
+index=0;
+
+}
+
+
+const key =
 `${type}-${model}-${index}`;
 
-const old=
-cart.find(x=>x.key===key);
 
-if(old)
+const existing =
+cart.find(
+item=>item.key===key
+);
 
-old.qty++;
 
-else
+if(existing){
+
+existing.qty++;
+
+}else{
 
 cart.push({
 
-key,
-type,
-model,
-index,
-price:p.price,
-image:p.images[index],
+key:key,
+
+type:type,
+
+model:model,
+
+index:index,
+
+price:product.price,
+
+image:product.images[index],
+
 qty:1
 
 });
 
+}
+
+
 saveCart();
+
 renderCart();
+
 openCart();
 
 }
 
 
-/* =========================
-SAVE CART
-========================= */
+/* =========================================================
+   SAVE CART
+   ========================================================= */
 
 function saveCart(){
+
+try{
 
 localStorage.setItem(
 "orionCart",
 JSON.stringify(cart)
 );
 
+}catch(e){
+
+console.warn(
+"ORION cart storage error",
+e
+);
+
+}
+
 }
 
 
-/* =========================
-RENDER CART
-========================= */
+/* =========================================================
+   RENDER CART
+   ========================================================= */
 
 function renderCart(){
 
-const box=
-document.getElementById("cartItems");
+const box =
+document.getElementById(
+"cartItems"
+);
 
-if(!box)return;
+if(!box)
+return;
+
 
 if(!cart.length){
 
@@ -3135,15 +5318,14 @@ Votre panier est vide.
 
 }else{
 
-box.innerHTML=
-
-cart.map((x,i)=>`
+box.innerHTML =
+cart.map((item,i)=>`
 
 <div class="cart-item">
 
 <img
-src="./${x.image}"
-alt="ORION ${x.type} ${esc(x.model)}"
+src="./${item.image}"
+alt="ORION ${esc(item.type)} ${esc(item.model)}"
 onerror="this.style.display='none'">
 
 <div class="cart-item-info">
@@ -3151,42 +5333,65 @@ onerror="this.style.display='none'">
 <strong>
 
 ${
-x.type==="glasses"
+item.type==="glasses"
 ?"Lunettes"
-:x.type==="chain"
+:item.type==="chain"
 ?"Collier"
-:x.type==="bracelet"
+:item.type==="bracelet"
 ?"Bracelet"
 :"Pack"
 }
 
-${esc(x.model)}
+${esc(item.model)}
 
 </strong>
 
+
 <span>
-${x.price*x.qty} DH
+
+${item.price * item.qty} DH
+
 </span>
 
+
 <small>
-Vue ${Number(x.index)+1}
+
+Vue ${Number(item.index)+1}
+
 </small>
+
 
 <div class="quantity-control">
 
-<button onclick="changeQty(${i},-1)">
+<button
+type="button"
+onclick="changeQty(${i},-1)"
+aria-label="Diminuer la quantité">
+
 −
+
 </button>
+
 
 <span class="quantity-value">
-${x.qty}
+
+${item.qty}
+
 </span>
 
-<button onclick="changeQty(${i},1)">
-+
-</button>
 
 <button
+type="button"
+onclick="changeQty(${i},1)"
+aria-label="Augmenter la quantité">
+
++
+
+</button>
+
+
+<button
+type="button"
 class="remove"
 onclick="removeCart(${i})">
 
@@ -3205,99 +5410,145 @@ Supprimer
 }
 
 
-const total=
+const total =
 cart.reduce(
-(s,x)=>s+x.price*x.qty,
+(sum,item)=>
+sum+(item.price*item.qty),
 0
 );
 
+
+const totalElement =
 document.getElementById(
 "cartTotal"
-).textContent=
+);
+
+if(totalElement){
+
+totalElement.textContent =
 total+" DH";
 
+}
 
+
+const countElement =
 document.getElementById(
 "cartCount"
-).textContent=
+);
+
+if(countElement){
+
+countElement.textContent =
 cart.reduce(
-(s,x)=>s+x.qty,
+(sum,item)=>
+sum+Number(item.qty),
 0
 );
 
 }
 
+}
 
-/* =========================
-QUANTITY
-========================= */
 
-function changeQty(i,a){
+/* =========================================================
+   CHANGE QUANTITY
+   ========================================================= */
 
-if(!cart[i])return;
+function changeQty(i,amount){
 
-cart[i].qty+=a;
+if(!cart[i])
+return;
 
-if(cart[i].qty<=0)
+
+cart[i].qty += amount;
+
+
+if(cart[i].qty<=0){
+
 cart.splice(i,1);
 
+}
+
+
 saveCart();
+
 renderCart();
 
 }
 
 
-/* =========================
-REMOVE
-========================= */
+/* =========================================================
+   REMOVE CART ITEM
+   ========================================================= */
 
 function removeCart(i){
 
+if(!cart[i])
+return;
+
+
 cart.splice(i,1);
 
 saveCart();
+
 renderCart();
 
 }
 
 
-/* =========================
-OPEN CART
-========================= */
+/* =========================================================
+   OPEN CART
+   ========================================================= */
 
 function openCart(){
 
-document
-.getElementById("cartPanel")
-.classList.add("open");
+const panel =
+document.getElementById(
+"cartPanel"
+);
 
-document
-.getElementById("overlay")
-.classList.add("show");
+const overlay =
+document.getElementById(
+"overlay"
+);
+
+if(panel)
+panel.classList.add("open");
+
+if(overlay)
+overlay.classList.add("show");
 
 }
 
 
-/* =========================
-CLOSE CART
-========================= */
+/* =========================================================
+   CLOSE CART
+   ========================================================= */
 
 function closeCart(){
 
-document
-.getElementById("cartPanel")
-.classList.remove("open");
+const panel =
+document.getElementById(
+"cartPanel"
+);
 
-document
-.getElementById("overlay")
-.classList.remove("show");
+const overlay =
+document.getElementById(
+"overlay"
+);
+
+if(panel)
+panel.classList.remove("open");
+
+if(overlay)
+overlay.classList.remove("show");
 
 }
 
 
-/* =========================
-CHECKOUT
-========================= */
+/* =========================================================
+   CHECKOUT
+   ========================================================= */
 
 function checkout(){
 
@@ -3311,73 +5562,94 @@ return;
 
 }
 
-let m=
+
+let message =
 "Bonjour ORION Accessories.\n\n"+
 "Je souhaite commander :\n\n";
 
-cart.forEach((x,i)=>{
 
-const t=
+cart.forEach((item,i)=>{
 
-x.type==="glasses"
+const type =
+item.type==="glasses"
 ?"Lunettes"
-:x.type==="chain"
+:item.type==="chain"
 ?"Collier"
-:x.type==="bracelet"
+:item.type==="bracelet"
 ?"Bracelet"
 :"Pack";
 
-m+=
-`${i+1}. ${t} Model ${x.model} - ${x.qty} x ${x.price} DH - Vue ${Number(x.index)+1}\n`;
+
+message +=
+`${i+1}. ${type} Model ${item.model} — `+
+`${item.qty} x ${item.price} DH — `+
+`Vue ${Number(item.index)+1}\n`;
 
 });
 
-m+=
-"\nTotal : "+
+
+const total =
 cart.reduce(
-(s,x)=>s+x.price*x.qty,
+(sum,item)=>
+sum+(item.price*item.qty),
 0
-)+
-" DH";
+);
+
+
+message +=
+"\nTotal : "+total+" DH";
+
 
 window.open(
-`https://wa.me/${WHATSAPP}?text=${encodeURIComponent(m)}`,
+`https://wa.me/${WHATSAPP}?text=${
+encodeURIComponent(message)
+}`,
 "_blank"
 );
 
 }
 
 
-/* =========================
-FAVORITES
-========================= */
+/* =========================================================
+   FAVORITES
+   ========================================================= */
 
-function toggleFavorite(b){
+function toggleFavorite(button){
 
-b.classList.toggle("active");
+if(!button)
+return;
 
-b.textContent=
-b.classList.contains("active")
+
+button.classList.toggle("active");
+
+
+button.textContent =
+button.classList.contains("active")
 ?"♥"
 :"♡";
 
 }
 
 
-/* =========================
-CATEGORY
-========================= */
+/* =========================================================
+   CATEGORY FILTER
+   ========================================================= */
 
-function showCategory(cat,b){
+function showCategory(
+category,
+button
+){
 
 document
 .querySelectorAll(".nav button")
-.forEach(
-x=>x.classList.remove("active")
-);
+.forEach(btn=>{
+btn.classList.remove("active");
+});
 
-if(b)
-b.classList.add("active");
+
+if(button)
+button.classList.add("active");
+
 
 const map={
 
@@ -3388,142 +5660,297 @@ promo:"promo"
 
 };
 
-[
+
+const sections=[
 "glasses",
 "chains",
 "bracelets",
 "promo"
-]
-.forEach(id=>{
+];
 
-const section=
+
+sections.forEach(id=>{
+
+const section =
 document.getElementById(id);
 
-if(!section)return;
+if(!section)
+return;
+
+
+if(category==="all"){
+
+section.classList.remove("hidden");
+
+}else{
 
 section.classList.toggle(
 "hidden",
-cat!=="all"&&
-map[cat]!==id
+map[category]!==id
 );
+
+}
+
+});
+
+
+/* RESET SEARCH */
+
+const search =
+document.getElementById(
+"searchInput"
+);
+
+if(search){
+
+search.value="";
+
+}
+
+
+document
+.querySelectorAll(".product")
+.forEach(product=>{
+
+product.style.display="";
 
 });
 
 
 if(
-cat!=="all"&&
-map[cat]
+category!=="all" &&
+map[category]
 ){
 
-document
-.getElementById(map[cat])
-.scrollIntoView({
-behavior:"smooth"
+const section =
+document.getElementById(
+map[category]
+);
+
+if(section){
+
+setTimeout(()=>{
+
+section.scrollIntoView({
+behavior:"smooth",
+block:"start"
 });
 
+},50);
+
+}
+
 }
 
 }
 
 
-/* =========================
-SEARCH
-========================= */
+/* =========================================================
+   SEARCH PRODUCTS
+   ========================================================= */
 
 function searchProducts(){
 
-const q=
-document
-.getElementById("searchInput")
-.value
+const input =
+document.getElementById(
+"searchInput"
+);
+
+if(!input)
+return;
+
+
+const query =
+input.value
 .toLowerCase()
 .trim();
 
+
+const sections=[
+"glasses",
+"chains",
+"bracelets",
+"promo"
+];
+
+
+if(!query){
+
 document
 .querySelectorAll(".product")
-.forEach(c=>{
-
-c.style.display=
-!q||
-c.innerText
-.toLowerCase()
-.includes(q)
-?""
-:"none";
-
+.forEach(product=>{
+product.style.display="";
 });
+
+return;
 
 }
 
 
-/* =========================
-THEME
-========================= */
+let foundAny=false;
+
+
+document
+.querySelectorAll(".product")
+.forEach(product=>{
+
+const text =
+product.innerText
+.toLowerCase();
+
+
+const match =
+text.includes(query);
+
+
+product.style.display =
+match ? "" : "none";
+
+
+if(match)
+foundAny=true;
+
+});
+
+
+/* SHOW ALL SECTIONS WHILE SEARCHING */
+
+sections.forEach(id=>{
+
+const section =
+document.getElementById(id);
+
+if(section)
+section.classList.remove("hidden");
+
+});
+
+
+/* REMOVE ACTIVE NAV */
+
+document
+.querySelectorAll(".nav button")
+.forEach(btn=>{
+btn.classList.remove("active");
+});
+
+
+if(!foundAny){
+
+/* No fake product result.
+   Keep page clean. */
+
+}
+
+}
+
+
+/* =========================================================
+   THEME
+   ========================================================= */
 
 function toggleTheme(){
 
-document.body
-.classList
-.toggle("light");
+document.body.classList.toggle("light");
 
-const light=
-document.body
-.classList
-.contains("light");
+
+const isLight =
+document.body.classList.contains(
+"light"
+);
+
+
+try{
 
 localStorage.setItem(
 "orionTheme",
-light
+isLight
 ?"light"
 :"dark"
 );
+
+}catch(e){}
+
 
 updateThemeButton();
 
 }
 
 
+/* =========================================================
+   UPDATE THEME BUTTON
+   ========================================================= */
+
 function updateThemeButton(){
 
-const b=
-document.getElementById("themeBtn");
+const button =
+document.getElementById(
+"themeBtn"
+);
 
-if(!b)return;
+if(!button)
+return;
 
-const light=
-document.body
-.classList
-.contains("light");
 
-b.textContent=
-light
+const isLight =
+document.body.classList.contains(
+"light"
+);
+
+
+button.textContent =
+isLight
 ?"🌙"
 :"☀️";
 
-b.title=
-light
+
+button.title =
+isLight
 ?"Mode nuit"
 :"Mode jour";
 
 }
 
 
-/* =========================
-FAQ
-========================= */
+/* =========================================================
+   FAQ
+   ========================================================= */
 
-function toggleFaq(b){
+function toggleFaq(button){
 
-b.parentElement
-.classList
-.toggle("open");
+if(!button)
+return;
+
+
+const item =
+button.parentElement;
+
+if(!item)
+return;
+
+
+item.classList.toggle("open");
+
+
+const icon =
+button.querySelector("span");
+
+
+if(icon){
+
+icon.textContent =
+item.classList.contains("open")
+?"−"
+:"+";
+
+}
 
 }
 
 
-/* =========================
-COMING SOON
-========================= */
+/* =========================================================
+   COMING SOON
+   ========================================================= */
 
 function showComingSoon(){
 
@@ -3534,146 +5961,150 @@ alert(
 }
 
 
-/* =========================
-CLIENT IMAGE
-========================= */
+/* =========================================================
+   CLIENT IMAGE VIEWER
+   ========================================================= */
 
 function openClientImage(src){
 
-document
-.getElementById("clientViewerImage")
-.src=src;
+const viewer =
+document.getElementById(
+"clientViewer"
+);
 
-document
-.getElementById("clientViewer")
-.classList
-.add("show");
+const image =
+document.getElementById(
+"clientViewerImage"
+);
+
+if(!viewer || !image)
+return;
+
+
+image.src=src;
+
+viewer.classList.add("show");
+
+document.body.style.overflow="hidden";
 
 }
 
 
 function closeClientImage(){
 
-document
-.getElementById("clientViewer")
-.classList
-.remove("show");
+const viewer =
+document.getElementById(
+"clientViewer"
+);
+
+if(viewer)
+viewer.classList.remove("show");
+
+document.body.style.overflow="";
 
 }
 
 
-/* =========================
-BACK TO TOP
-========================= */
+/* =========================================================
+   BACK TO TOP
+   ========================================================= */
 
 window.addEventListener(
 "scroll",
-()=>{
+function(){
 
-document
-.getElementById("backTop")
-.classList.toggle(
-"show",
-scrollY>400
+const button =
+document.getElementById(
+"backTop"
 );
 
+if(!button)
+return;
+
+
+button.classList.toggle(
+"show",
+window.scrollY>400
+);
+
+},
+{
+passive:true
 }
 );
 
 
-/* =========================
-KEYBOARD LIGHTBOX
-========================= */
+/* =========================================================
+   KEYBOARD
+   ========================================================= */
 
 document.addEventListener(
 "keydown",
-(e)=>{
+function(e){
 
-const box=
+const box =
 document.getElementById(
 "imageLightbox"
 );
 
-if(!box.classList.contains("active"))
+
+if(
+!box ||
+!box.classList.contains("active")
+){
+
 return;
 
-if(e.key==="Escape")
+}
+
+
+if(e.key==="Escape"){
+
 closeImageLightbox();
 
-if(e.key==="ArrowLeft")
+}
+
+
+if(e.key==="ArrowLeft"){
+
 changeLightboxImage(-1);
 
-if(e.key==="ArrowRight")
+}
+
+
+if(e.key==="ArrowRight"){
+
 changeLightboxImage(1);
+
+}
 
 }
 );
 
 
-/* =========================
-TOUCH SWIPE
-========================= */
+/* =========================================================
+   LOAD SAVED THEME
+   ========================================================= */
 
-let touchStartX=0;
-let touchEndX=0;
-
-const lightbox=
-document.getElementById("imageLightbox");
-
-lightbox.addEventListener(
-"touchstart",
-e=>{
-
-touchStartX=
-e.changedTouches[0].screenX;
-
-},
-{passive:true}
-);
-
-lightbox.addEventListener(
-"touchend",
-e=>{
-
-touchEndX=
-e.changedTouches[0].screenX;
-
-const distance=
-touchEndX-touchStartX;
-
-if(Math.abs(distance)<50)
-return;
-
-if(distance<0)
-changeLightboxImage(1);
-
-else
-changeLightboxImage(-1);
-
-},
-{passive:true}
-);
-
-
-/* =========================
-LOAD THEME
-========================= */
+try{
 
 if(
 localStorage.getItem("orionTheme")
 ==="light"
 ){
 
-document.body
-.classList
-.add("light");
+document.body.classList.add(
+"light"
+);
 
 }
 
+}catch(e){}
 
-/* =========================
-LOAD PRODUCTS
-========================= */
+
+/* =========================================================
+   LOAD PRODUCTS
+   ========================================================= */
 
 createProducts(
 glasses,
@@ -3681,17 +6112,20 @@ glasses,
 "glasses"
 );
 
+
 createProducts(
 chains,
 "chainProducts",
 "chain"
 );
 
+
 createProducts(
 bracelets,
 "braceletProducts",
 "bracelet"
 );
+
 
 createProducts(
 promo,
@@ -3700,19 +6134,219 @@ promo,
 );
 
 
-/* =========================
-LOAD CART
-========================= */
+/* =========================================================
+   ENABLE SWIPE
+   ========================================================= */
+
+enableProductSwipe();
+
+
+/* =========================================================
+   LOAD CART
+   ========================================================= */
 
 renderCart();
 
 
-/* =========================
-UPDATE THEME
-========================= */
+/* =========================================================
+   UPDATE THEME
+   ========================================================= */
 
 updateThemeButton();
 
+
+/* =========================================================
+   CREATE LIGHTBOX IF MISSING
+   ========================================================= */
+
+if(
+!document.getElementById("imageLightbox")
+){
+
+const lightboxHTML = `
+
+<div
+class="image-lightbox"
+id="imageLightbox"
+onclick="closeImageLightbox(event)">
+
+<button
+class="lightbox-close"
+type="button"
+onclick="closeImageLightbox(event)"
+aria-label="Fermer">
+
+×
+
+</button>
+
+
+<button
+class="lightbox-arrow lightbox-prev"
+type="button"
+onclick="changeLightboxImage(-1,event)"
+aria-label="Image précédente">
+
+‹
+
+</button>
+
+
+<div
+class="lightbox-content"
+onclick="event.stopPropagation()">
+
+<img
+id="lightboxImage"
+class="lightbox-image"
+src=""
+alt="ORION Accessories - image produit">
+
+</div>
+
+
+<button
+class="lightbox-arrow lightbox-next"
+type="button"
+onclick="changeLightboxImage(1,event)"
+aria-label="Image suivante">
+
+›
+
+</button>
+
+
+<div
+class="lightbox-counter"
+id="lightboxCounter">
+
+1 / 1
+
+</div>
+
+</div>
+
+`;
+
+document.body.insertAdjacentHTML(
+"beforeend",
+lightboxHTML
+);
+
+}
+
+
+/* =========================================================
+   BACK TO TOP BUTTON IF MISSING
+   ========================================================= */
+
+if(
+!document.getElementById("backTop")
+){
+
+document.body.insertAdjacentHTML(
+"beforeend",
+`
+
+<button
+id="backTop"
+class="back-top"
+type="button"
+onclick="window.scrollTo({
+top:0,
+behavior:'smooth'
+})"
+aria-label="Retour en haut">
+
+↑
+
+</button>
+
+`
+);
+
+}
+
+
+/* =========================================================
+   FIXED WHATSAPP BUTTON IF MISSING
+   ========================================================= */
+
+if(
+!document.querySelector(".fixed-wa")
+){
+
+document.body.insertAdjacentHTML(
+"beforeend",
+`
+
+<a
+class="fixed-wa"
+href="https://wa.me/${WHATSAPP}?text=Bonjour%20ORION%20Accessories"
+target="_blank"
+rel="noopener noreferrer"
+aria-label="Contacter ORION Accessories sur WhatsApp">
+
+⌕︎
+
+</a>
+
+`
+);
+
+}
+
+
+/* =========================================================
+   NOSCRIPT
+   ========================================================= */
+
+if(
+!document.getElementById("orionNoScript")
+){
+
+const noscript =
+document.createElement("noscript");
+
+noscript.id="orionNoScript";
+
+noscript.innerHTML=`
+
+<div
+style="
+max-width:900px;
+margin:30px auto;
+padding:20px;
+text-align:center;
+font-family:Arial;
+color:#fff;
+background:#101010;
+border:1px solid #292929;
+border-radius:15px">
+
+<strong>
+ORION Accessories Maroc
+</strong>
+
+<br><br>
+
+Lunettes, colliers, bracelets et packs modernes
+à prix accessibles au Maroc.
+
+</div>
+
+`;
+
+document.body.appendChild(
+noscript
+);
+
+}
+
+
+console.log(
+"ORION Accessories loaded successfully."
+);
 
 </script>
 
