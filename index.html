@@ -297,6 +297,9 @@ font-size:19px
 color:var(--gold)
 }
 
+
+/* PRODUCT IMAGE ANIMATION */
+
 .main-image{
 width:100%;
 height:auto;
@@ -305,8 +308,50 @@ aspect-ratio:auto;
 object-fit:initial;
 display:block;
 border-radius:17px;
-background:transparent
+background:transparent;
+
+cursor:zoom-in;
+
+transform:scale(1) translateY(0);
+
+transition:
+transform .55s cubic-bezier(.22,.61,.36,1),
+filter .55s ease,
+opacity .25s ease;
+
+will-change:transform;
 }
+
+.product:hover .main-image{
+transform:scale(1.055) translateY(-5px);
+filter:saturate(1.06) contrast(1.03);
+}
+
+.product:active .main-image{
+transform:scale(1.025);
+}
+
+
+/* IMAGE CHANGE */
+
+.image-change{
+animation:orionImageChange .4s ease;
+}
+
+@keyframes orionImageChange{
+
+0%{
+opacity:.3;
+transform:scale(.97) translateX(6px);
+}
+
+100%{
+opacity:1;
+transform:scale(1) translateX(0);
+}
+
+}
+
 
 .thumbs{
 display:flex;
@@ -327,7 +372,16 @@ object-fit:cover;
 border-radius:9px;
 border:2px solid transparent;
 flex-shrink:0;
-cursor:pointer
+cursor:pointer;
+
+transition:
+transform .25s ease,
+border-color .25s ease
+}
+
+.thumbs img:hover{
+transform:scale(1.06);
+border-color:var(--gold)!important
 }
 
 .product h3{
@@ -394,6 +448,172 @@ font-size:20px
 .add-cart:hover{
 background:var(--gold);
 color:#000
+}
+
+
+/* IMAGE LIGHTBOX */
+
+.image-lightbox{
+position:fixed;
+inset:0;
+z-index:99999;
+
+display:none;
+align-items:center;
+justify-content:center;
+
+padding:20px;
+
+background:rgba(0,0,0,.94);
+
+backdrop-filter:blur(12px);
+
+opacity:0;
+
+transition:opacity .3s ease;
+}
+
+.image-lightbox.active{
+display:flex;
+opacity:1;
+}
+
+.lightbox-content{
+position:relative;
+
+max-width:95vw;
+max-height:92vh;
+
+display:flex;
+align-items:center;
+justify-content:center;
+}
+
+.lightbox-image{
+display:block;
+
+max-width:90vw;
+max-height:88vh;
+
+width:auto;
+height:auto;
+
+object-fit:contain;
+
+border-radius:18px;
+
+box-shadow:
+0 20px 80px rgba(0,0,0,.75);
+
+animation:lightboxOpen .35s cubic-bezier(.22,.61,.36,1);
+}
+
+@keyframes lightboxOpen{
+
+0%{
+opacity:0;
+transform:scale(.82);
+}
+
+100%{
+opacity:1;
+transform:scale(1);
+}
+
+}
+
+.lightbox-close{
+position:fixed;
+
+top:18px;
+right:20px;
+
+width:46px;
+height:46px;
+
+border:1px solid rgba(212,175,55,.7);
+border-radius:50%;
+
+background:rgba(0,0,0,.65);
+color:#fff;
+
+font-size:30px;
+line-height:1;
+
+cursor:pointer;
+
+z-index:100001;
+
+transition:
+transform .25s ease,
+background .25s ease;
+}
+
+.lightbox-close:hover{
+transform:rotate(90deg) scale(1.08);
+background:var(--gold);
+color:#000;
+}
+
+.lightbox-arrow{
+position:fixed;
+
+top:50%;
+transform:translateY(-50%);
+
+width:48px;
+height:48px;
+
+border:1px solid rgba(212,175,55,.7);
+border-radius:50%;
+
+background:rgba(0,0,0,.65);
+color:#fff;
+
+font-size:30px;
+
+cursor:pointer;
+
+z-index:100001;
+
+transition:
+transform .25s ease,
+background .25s ease;
+}
+
+.lightbox-arrow:hover{
+background:var(--gold);
+color:#000;
+}
+
+.lightbox-prev{
+left:18px;
+}
+
+.lightbox-next{
+right:18px;
+}
+
+.lightbox-counter{
+position:fixed;
+
+bottom:20px;
+left:50%;
+
+transform:translateX(-50%);
+
+padding:7px 14px;
+
+border:1px solid rgba(212,175,55,.5);
+border-radius:20px;
+
+background:rgba(0,0,0,.7);
+
+color:#fff;
+
+font-size:13px;
+
+z-index:100001;
 }
 
 
@@ -999,6 +1219,45 @@ font-size:28px
 font-size:14px
 }
 
+
+/* LIGHTBOX MOBILE */
+
+.image-lightbox{
+padding:10px
+}
+
+.lightbox-image{
+max-width:94vw;
+max-height:82vh;
+border-radius:12px
+}
+
+.lightbox-close{
+top:12px;
+right:12px;
+width:42px;
+height:42px;
+font-size:27px
+}
+
+.lightbox-arrow{
+width:40px;
+height:40px;
+font-size:24px
+}
+
+.lightbox-prev{
+left:8px
+}
+
+.lightbox-next{
+right:8px
+}
+
+.lightbox-counter{
+bottom:12px
+}
+
 }
 
 
@@ -1037,9 +1296,25 @@ height:36px
 
 }
 
+
+/* REDUCED MOTION */
+
+@media(prefers-reduced-motion:reduce){
+
+.main-image{
+transition:none;
+}
+
+.product:hover .main-image,
+.product:active .main-image{
+transform:none;
+filter:none;
+}
+
+}
+
 </style>
 </head>
-
 
 <body>
 
@@ -1718,9 +1993,6 @@ Commander via WhatsApp
 
 
 </aside>
-
-
-
 <!-- FIXED WHATSAPP -->
 
 <a
@@ -1768,6 +2040,71 @@ Lunettes • Colliers • Bracelets
 
 
 
+<!-- PRODUCT IMAGE LIGHTBOX -->
+
+<div
+class="image-lightbox"
+id="imageLightbox"
+onclick="closeImageLightbox(event)">
+
+
+<button
+class="lightbox-close"
+onclick="closeImageLightbox(event)"
+aria-label="Fermer">
+
+×
+
+</button>
+
+
+<button
+class="lightbox-arrow lightbox-prev"
+onclick="changeLightboxImage(-1,event)"
+aria-label="Image précédente">
+
+‹
+
+</button>
+
+
+<div
+class="lightbox-content"
+onclick="event.stopPropagation()">
+
+
+<img
+id="lightboxImage"
+class="lightbox-image"
+src=""
+alt="ORION Accessories">
+
+</div>
+
+
+<button
+class="lightbox-arrow lightbox-next"
+onclick="changeLightboxImage(1,event)"
+aria-label="Image suivante">
+
+›
+
+</button>
+
+
+<div
+id="lightboxCounter"
+class="lightbox-counter">
+
+1 / 1
+
+</div>
+
+
+</div>
+
+
+
 <script>
 
 
@@ -1783,7 +2120,6 @@ GLASSES
 
 const glasses=[
 
-
 {
 model:"01",
 price:70,
@@ -1791,15 +2127,11 @@ badge:"BEST SELLER",
 images:[
 
 "ORION Glasses Model 01 gold 120dh.JPG",
-
 "ORION Glasses Model 01 Black 120dh.JPG",
-
 "ORION Glasses Model 01 Blue 120dh.JPG"
 
 ]
 },
-
-
 
 {
 model:"02",
@@ -1807,19 +2139,13 @@ price:70,
 images:[
 
 "ORION Glasses Model 02 120dh 1.JPG",
-
 "ORION Glasses Model 02 120dh 5.JPG",
-
 "ORION Glasses Model 02 120dh 3.JPG",
-
 "ORION Glasses Model 02 120dh 2.JPG",
-
 "ORION Glasses Model 02 120dh 4.JPG"
 
 ]
 },
-
-
 
 {
 model:"03",
@@ -1827,21 +2153,14 @@ price:70,
 images:[
 
 "ORION Glasses Model 03 120dh 1.JPG",
-
 "ORION Glasses Model 03 120dh 5.JPG",
-
 "ORION Glasses Model 03 120dh 4.JPG",
-
 "ORION Glasses Model 03 120dh 3.JPG",
-
 "ORION Glasses Model 03 120dh 6.JPG",
-
 "ORION Glasses Model 03 120dh 2.JPG"
 
 ]
 },
-
-
 
 {
 model:"04",
@@ -1849,21 +2168,14 @@ price:70,
 images:[
 
 "ORION Glasses Model 04 120dh 4.JPG",
-
 "ORION Glasses Model 04 120dh 2.JPG",
-
 "ORION Glasses Model 04 120dh 3.JPG",
-
 "ORION Glasses Model 04 120dh 1.JPG",
-
 "ORION Glasses Model 04 120dh 6.JPG",
-
 "ORION Glasses Model 04 120dh 5.JPG"
 
 ]
 },
-
-
 
 {
 model:"05",
@@ -1871,19 +2183,13 @@ price:70,
 images:[
 
 "ORION Glasses Model 05 120dh 4.JPG",
-
 "ORION Glasses Model 05 120dh 5.JPG",
-
 "ORION Glasses Model 05 120dh 2.JPG",
-
 "ORION Glasses Model 05 120dh 3.JPG",
-
 "ORION Glasses Model 05 120dh 1.JPG"
 
 ]
 },
-
-
 
 {
 model:"06",
@@ -1891,23 +2197,15 @@ price:70,
 images:[
 
 "ORION Glasses Model 06 120dh 6.JPG",
-
 "ORION Glasses Model 06 120dh 4.JPG",
-
 "ORION Glasses Model 06 120dh 2.JPG",
-
 "ORION Glasses Model 06 120dh 7.JPG",
-
 "ORION Glasses Model 06 120dh 1.JPG",
-
 "ORION Glasses Model 06 120dh 3.JPG",
-
 "ORION Glasses Model 06 120dh 5.JPG"
 
 ]
 },
-
-
 
 {
 model:"07",
@@ -1915,19 +2213,13 @@ price:70,
 images:[
 
 "ORION Glasses Model 07 140dh 5.JPG",
-
 "ORION Glasses Model 07 140dh 1.JPG",
-
 "ORION Glasses Model 07 140dh 4.JPG",
-
 "ORION Glasses Model 07 140dh 3.JPG",
-
 "ORION Glasses Model 07 140dh 2.JPG"
 
 ]
 },
-
-
 
 {
 model:"08",
@@ -1935,21 +2227,14 @@ price:70,
 images:[
 
 "ORION Glasses Model 08 130dh 2.JPG",
-
 "ORION Glasses Model 08 130dh 3.JPG",
-
 "ORION Glasses Model 08 130dh 4.JPG",
-
 "ORION Glasses Model 08 130dh 1.JPG",
-
 "ORION Glasses Model 08 130dh 6.JPG",
-
 "ORION Glasses Model 08 130dh 5.JPG"
 
 ]
 },
-
-
 
 {
 model:"09",
@@ -1957,23 +2242,15 @@ price:70,
 images:[
 
 "ORION Glasses Model 09 120dh 5.JPG",
-
 "ORION Glasses Model 09 120dh 8.JPG",
-
 "ORION Glasses Model 09 120dh 2.JPG",
-
 "ORION Glasses Model 09 120dh 3.JPG",
-
 "ORION Glasses Model 09 120dh 6.JPG",
-
 "ORION Glasses Model 09 120dh 7.JPG",
-
 "ORION Glasses Model 09 120dh 1.JPG"
 
 ]
 },
-
-
 
 {
 model:"10",
@@ -1981,19 +2258,13 @@ price:70,
 images:[
 
 "ORION Glasses Model 10 120dh 3.JPG",
-
 "ORION Glasses Model 10 120dh 4.JPG",
-
 "ORION Glasses Model 10 120dh 5.JPG",
-
 "ORION Glasses Model 10 120dh 2.JPG",
-
 "ORION Glasses Model 10 120dh 1.JPG"
 
 ]
 },
-
-
 
 {
 model:"11",
@@ -2001,19 +2272,13 @@ price:70,
 images:[
 
 "ORION Glasses Model 11 120dh 3.JPG",
-
 "ORION Glasses Model 11 120dh 1.JPG",
-
 "ORION Glasses Model 11 120dh 4.JPG",
-
 "ORION Glasses Model 11 120dh 2.JPG",
-
 "ORION Glasses Model 11 120dh 5.JPG"
 
 ]
 },
-
-
 
 {
 model:"12",
@@ -2021,27 +2286,17 @@ price:70,
 images:[
 
 "ORION Glasses Model 12 120dh 7.JPG",
-
 "ORION Glasses Model 12 120dh 2.JPG",
-
 "ORION Glasses Model 12 120dh 4.JPG",
-
 "ORION Glasses Model 12 120dh 3.JPG",
-
 "ORION Glasses Model 12 120dh 8.JPG",
-
 "ORION Glasses Model 12 120dh 5.JPG",
-
 "ORION Glasses Model 12 120dh 10.JPG",
-
 "ORION Glasses Model 12 120dh 1.JPG",
-
 "ORION Glasses Model 12 120dh 6.JPG"
 
 ]
 },
-
-
 
 {
 model:"13",
@@ -2049,19 +2304,13 @@ price:70,
 images:[
 
 "ORION Glasses Model 13 120dh 2.JPG",
-
 "ORION Glasses Model 13 120dh 3.JPG",
-
 "ORION Glasses Model 13 120dh 4.JPG",
-
 "ORION Glasses Model 13 120dh 5.JPG",
-
 "ORION Glasses Model 13 120dh 1.JPG"
 
 ]
 },
-
-
 
 {
 model:"14",
@@ -2069,15 +2318,11 @@ price:70,
 images:[
 
 "ORION Glasses Model 14 120dh 2.JPG",
-
 "ORION Glasses Model 14 120dh 1.JPG",
-
 "ORION Glasses Model 14 120dh 3.JPG"
 
 ]
 },
-
-
 
 {
 model:"15",
@@ -2085,13 +2330,10 @@ price:70,
 images:[
 
 "ORION Glasses Model 15 120dh 1.JPG",
-
 "ORION Glasses Model 15 120dh 2.JPG"
 
 ]
 },
-
-
 
 {
 model:"16",
@@ -2103,8 +2345,6 @@ images:[
 ]
 },
 
-
-
 {
 model:"17",
 price:70,
@@ -2115,23 +2355,17 @@ images:[
 ]
 },
 
-
-
 {
 model:"18",
 price:70,
 images:[
 
 "ORION Glasses Model 18 120dh 1.JPG",
-
 "ORION Glasses Model 18 120dh 3.JPG",
-
 "ORION Glasses Model 18 120dh 2.JPG"
 
 ]
 },
-
-
 
 {
 model:"19",
@@ -2139,11 +2373,8 @@ price:70,
 images:[
 
 "ORION Glasses Model 19 130dh 3.JPG",
-
 "ORION Glasses Model 19 130dh 2.JPG",
-
 "ORION Glasses Model 19 130dh 1.JPG",
-
 "ORION Glasses Model 19 130dh 4.JPG"
 
 ]
@@ -2159,7 +2390,6 @@ COLLIERS
 
 const chains=[
 
-
 {
 model:"01",
 price:60,
@@ -2167,17 +2397,12 @@ gender:"Women & Men",
 images:[
 
 "ORION Chain Model girl:men 01 80dh 1.JPG",
-
 "ORION Chain Model girl:men 01 80dh 4.JPG",
-
 "ORION Chain Model girl:men 01 80dh 3.JPG",
-
 "ORION Chain Model girl:men 01 80dh 2.JPG"
 
 ]
 },
-
-
 
 {
 model:"02",
@@ -2186,19 +2411,13 @@ gender:"Women",
 images:[
 
 "ORION Chain Model 02 80dh 3.JPG",
-
 "ORION Chain Model 02 80dh 5.JPG",
-
 "ORION Chain Model 02 80dh 2.JPG",
-
 "ORION Chain Model 02 80dh 1.JPG",
-
 "ORION Chain Model 02 80dh 4.JPG"
 
 ]
 },
-
-
 
 {
 model:"03",
@@ -2207,23 +2426,15 @@ gender:"Women",
 images:[
 
 "ORION Chain Model 03 80dh 2.JPG",
-
 "ORION Chain Model 03 80dh 5.JPG",
-
 "ORION Chain Model 03 80dh 4.JPG",
-
 "ORION Chain Model 03 80dh 3.JPG",
-
 "ORION Chain Model 03 80dh 7.JPG",
-
 "ORION Chain Model 03 80dh 1.JPG",
-
 "ORION Chain Model 03 80dh 6.JPG"
 
 ]
 },
-
-
 
 {
 model:"04",
@@ -2235,8 +2446,6 @@ images:[
 
 ]
 },
-
-
 
 {
 model:"05",
@@ -2259,7 +2468,6 @@ BRACELETS
 
 const bracelets=[
 
-
 {
 model:"01",
 price:60,
@@ -2267,25 +2475,16 @@ gender:"Women",
 images:[
 
 "ORION Bracelets model 01 80dh 1.JPG",
-
 "ORION Bracelets model 01 80dh 4.JPG",
-
 "ORION Bracelets model 01 80dh 7.JPG",
-
 "ORION Bracelets model 01 80dh 2.JPG",
-
 "ORION Bracelets model 01 80dh 3.JPG",
-
 "ORION Bracelets model 01 80dh 5.JPG",
-
 "ORION Bracelets model 01 80dh 6.JPG",
-
 "ORION Bracelets model 01 80dh 8.JPG"
 
 ]
 },
-
-
 
 {
 model:"02",
@@ -2294,17 +2493,12 @@ gender:"Women",
 images:[
 
 "ORION Bracelets model 02 80dh 2.JPG",
-
 "ORION Bracelets model 02 80dh 4.JPG",
-
 "ORION Bracelets model 02 80dh 1.JPG",
-
 "ORION Bracelets model 02 80dh 3.JPG"
 
 ]
 },
-
-
 
 {
 model:"03",
@@ -2313,17 +2507,12 @@ gender:"Women",
 images:[
 
 "ORION Bracelets model 03 80dh 2.JPG",
-
 "ORION Bracelets model 03 80dh 4.JPG",
-
 "ORION Bracelets model 03 80dh 1.JPG",
-
 "ORION Bracelets model 03 80dh 3.JPG"
 
 ]
 },
-
-
 
 {
 model:"04",
@@ -2332,15 +2521,11 @@ gender:"Women",
 images:[
 
 "ORION Bracelets model 04 100dh 3.JPG",
-
 "ORION Bracelets model 04 100dh 2.JPG",
-
 "ORION Bracelets model 04 100dh 1.JPG"
 
 ]
 },
-
-
 
 {
 model:"05",
@@ -2349,13 +2534,9 @@ gender:"Women",
 images:[
 
 "ORION Bracelets model 05 79 dh 1.JPG",
-
 "ORION Bracelets model 05 79 dh 2.JPG",
-
 "ORION Bracelets model 05 79 dh 3.JPG",
-
 "ORION Bracelets model 05 79 dh 4.JPG",
-
 "ORION Bracelets model 05 79 dh 5.JPG"
 
 ]
@@ -2408,13 +2589,9 @@ function esc(s){
 return String(s)
 
 .replace(/&/g,"&amp;")
-
 .replace(/</g,"&lt;")
-
 .replace(/>/g,"&gt;")
-
 .replace(/"/g,"&quot;")
-
 .replace(/'/g,"&#039;");
 
 }
@@ -2436,7 +2613,6 @@ box.innerHTML="";
 
 
 list.forEach((p,n)=>{
-
 
 const uid=
 type+"-"+p.model+"-"+n;
@@ -2507,6 +2683,7 @@ class="main-image"
 src="./${p.images[0]}"
 alt="ORION ${type} Model ${esc(p.model)}"
 loading="lazy"
+onclick="openImageLightbox('${main}')"
 onerror="this.style.display='none'">
 
 
@@ -2564,7 +2741,6 @@ Vue ${i+1}
 
 <h3>
 
-
 ${
 type==="glasses"
 
@@ -2582,13 +2758,11 @@ type==="glasses"
 
 }
 
-
 </h3>
 
 
 
 <div class="category">
-
 
 ${
 type==="glasses"
@@ -2606,7 +2780,6 @@ type==="glasses"
 :"Pack Promo"
 
 }
-
 
 </div>
 
@@ -2696,10 +2869,16 @@ const imgs=
 
 if(imgs[index]){
 
+main.classList.remove("image-change");
+
+void main.offsetWidth;
+
 main.src=
 imgs[index].src;
 
 main.removeAttribute("srcset");
+
+main.classList.add("image-change");
 
 }
 
@@ -2761,6 +2940,191 @@ index
 
 
 /* =========================
+IMAGE LIGHTBOX
+========================= */
+
+let lightboxImages=[];
+
+let lightboxIndex=0;
+
+
+
+function openImageLightbox(mainId){
+
+const main=
+document.getElementById(mainId);
+
+if(!main)return;
+
+
+const card=
+main.closest(".product");
+
+if(!card)return;
+
+
+const thumbs=
+[
+...card.querySelectorAll(".thumbs img")
+];
+
+
+if(thumbs.length){
+
+lightboxImages=
+thumbs
+.filter(img=>img.src)
+.map(img=>img.src);
+
+}else{
+
+lightboxImages=[
+main.src
+];
+
+}
+
+
+lightboxIndex=
+Math.max(
+0,
+lightboxImages.indexOf(main.src)
+);
+
+
+const box=
+document.getElementById(
+"imageLightbox"
+);
+
+
+const image=
+document.getElementById(
+"lightboxImage"
+);
+
+
+box.classList.add("active");
+
+
+image.src=
+lightboxImages[lightboxIndex];
+
+
+updateLightboxCounter();
+
+
+document.body.style.overflow="hidden";
+
+}
+
+
+
+function closeImageLightbox(event){
+
+if(event){
+
+if(
+event.target.id!=="imageLightbox" &&
+!event.target.classList.contains("lightbox-close")
+){
+
+return;
+
+}
+
+}
+
+
+const box=
+document.getElementById(
+"imageLightbox"
+);
+
+
+box.classList.remove("active");
+
+
+document.body.style.overflow="";
+
+}
+
+
+
+function changeLightboxImage(
+direction,
+event
+){
+
+if(event)
+event.stopPropagation();
+
+
+if(lightboxImages.length<=1)
+return;
+
+
+lightboxIndex+=direction;
+
+
+if(lightboxIndex<0)
+
+lightboxIndex=
+lightboxImages.length-1;
+
+
+if(
+lightboxIndex>=
+lightboxImages.length
+)
+
+lightboxIndex=0;
+
+
+const image=
+document.getElementById(
+"lightboxImage"
+);
+
+
+image.style.opacity="0";
+
+
+setTimeout(()=>{
+
+image.src=
+lightboxImages[lightboxIndex];
+
+updateLightboxCounter();
+
+image.style.opacity="1";
+
+},120);
+
+}
+
+
+
+function updateLightboxCounter(){
+
+const counter=
+document.getElementById(
+"lightboxCounter"
+);
+
+
+if(!counter)return;
+
+
+counter.textContent=
+
+`${lightboxIndex+1} / ${lightboxImages.length}`;
+
+}
+
+
+
+/* =========================
 WHATSAPP PRODUCT LINK
 ========================= */
 
@@ -2795,6 +3159,7 @@ type==="glasses"
 
 
 a.href=
+
 `https://wa.me/${WHATSAPP}?text=${
 encodeURIComponent(
 
@@ -2865,7 +3230,6 @@ if(old)
 
 old.qty++;
 
-
 else
 
 cart.push({
@@ -2913,7 +3277,9 @@ RENDER CART
 function renderCart(){
 
 const box=
-document.getElementById("cartItems");
+document.getElementById(
+"cartItems"
+);
 
 
 if(!cart.length){
@@ -2934,36 +3300,28 @@ Votre panier est vide.
 
 }else{
 
-
 box.innerHTML=
+
 cart.map((x,i)=>`
 
-
 <div class="cart-item">
-
 
 <img
 src="./${x.image}"
 onerror="this.style.display='none'">
 
-
 <div class="cart-item-info">
-
 
 <strong>
 
-
 ${
 x.type==="glasses"
-
 ?"Lunettes"
 
 :x.type==="chain"
-
 ?"Collier"
 
 :x.type==="bracelet"
-
 ?"Bracelet"
 
 :"Pack"
@@ -2972,9 +3330,7 @@ x.type==="glasses"
 
 ${esc(x.model)}
 
-
 </strong>
-
 
 <span>
 
@@ -2982,16 +3338,13 @@ ${x.price*x.qty} DH
 
 </span>
 
-
 <small>
 
 Vue ${Number(x.index)+1}
 
 </small>
 
-
 <div class="quantity-control">
-
 
 <button
 onclick="changeQty(${i},-1)">
@@ -3000,13 +3353,11 @@ onclick="changeQty(${i},-1)">
 
 </button>
 
-
 <span class="quantity-value">
 
 ${x.qty}
 
 </span>
-
 
 <button
 onclick="changeQty(${i},1)">
@@ -3014,7 +3365,6 @@ onclick="changeQty(${i},1)">
 +
 
 </button>
-
 
 <button
 class="remove"
@@ -3024,15 +3374,11 @@ Supprimer
 
 </button>
 
+</div>
 
 </div>
 
-
 </div>
-
-
-</div>
-
 
 `).join("");
 
@@ -3165,7 +3511,6 @@ let m=
 
 cart.forEach((x,i)=>{
 
-
 const t=
 
 x.type==="glasses"
@@ -3276,10 +3621,8 @@ promo:"promo"
 ]
 .forEach(id=>{
 
-
 const section=
 document.getElementById(id);
-
 
 if(!section)return;
 
@@ -3332,7 +3675,6 @@ document
 .querySelectorAll(".product")
 .forEach(c=>{
 
-
 c.style.display=
 
 !q||
@@ -3344,7 +3686,6 @@ c.innerText
 ?""
 
 :"none";
-
 
 });
 
@@ -3393,7 +3734,9 @@ THEME BUTTON
 function updateThemeButton(){
 
 const b=
-document.getElementById("themeBtn");
+document.getElementById(
+"themeBtn"
+);
 
 
 if(!b)return;
@@ -3468,7 +3811,8 @@ document
 .getElementById(
 "clientViewer"
 )
-.classList.add("show");
+.classList
+.add("show");
 
 }
 
@@ -3480,7 +3824,8 @@ document
 .getElementById(
 "clientViewer"
 )
-.classList.remove("show");
+.classList
+.remove("show");
 
 }
 
@@ -3494,16 +3839,54 @@ window.addEventListener(
 "scroll",
 ()=>{
 
-
 document
 .getElementById("backTop")
 .classList.toggle(
-
 "show",
-
 scrollY>400
-
 );
+
+}
+);
+
+
+
+/* =========================
+KEYBOARD LIGHTBOX
+========================= */
+
+document.addEventListener(
+"keydown",
+(e)=>{
+
+const box=
+document.getElementById(
+"imageLightbox"
+);
+
+if(!box.classList.contains("active"))
+return;
+
+
+if(e.key==="Escape"){
+
+closeImageLightbox();
+
+}
+
+
+if(e.key==="ArrowLeft"){
+
+changeLightboxImage(-1);
+
+}
+
+
+if(e.key==="ArrowRight"){
+
+changeLightboxImage(1);
+
+}
 
 }
 );
@@ -3564,6 +3947,7 @@ LOAD CART
 ========================= */
 
 renderCart();
+
 
 
 /* =========================
