@@ -3,837 +3,374 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-
 <title>ORION Accessories | Lunettes, Colliers & Bracelets au Maroc</title>
-
-<meta name="description" content="ORION Accessories au Maroc : lunettes, colliers, bracelets et packs premium. Livraison partout au Maroc. Commande rapide via WhatsApp.">
-<meta name="keywords" content="ORION Accessories, lunettes Maroc, colliers Maroc, bracelets Maroc, accessoires Maroc, bijoux Maroc">
-<meta name="author" content="ORION Accessories">
-<meta name="robots" content="index,follow,max-image-preview:large">
-
+<meta name="description" content="ORION Accessories au Maroc : lunettes, colliers, bracelets et packs premium. Livraison partout au Maroc.">
+<meta name="keywords" content="ORION Accessories, lunettes Maroc, colliers Maroc, bracelets Maroc, accessoires Maroc">
+<meta name="robots" content="index,follow">
 <link rel="canonical" href="https://oreonaccessoires.github.io/OREON-/">
-
-<meta property="og:type" content="website">
-<meta property="og:title" content="ORION Accessories | Accessoires Premium au Maroc">
-<meta property="og:description" content="Lunettes, colliers, bracelets et packs ORION. Livraison partout au Maroc.">
+<meta property="og:title" content="ORION Accessories">
+<meta property="og:description" content="Lunettes, colliers et bracelets modernes au Maroc.">
 <meta property="og:url" content="https://oreonaccessoires.github.io/OREON-/">
-<meta property="og:site_name" content="ORION Accessories">
-<meta property="og:locale" content="fr_MA">
 <meta property="og:image" content="https://oreonaccessoires.github.io/OREON-/LOGO.PNG">
 
 <style>
 :root{
- --gold:#d4af37;
- --gold2:#f5dc7a;
- --black:#050505;
- --black2:#0b0b0b;
- --card:#111;
- --card2:#171717;
- --white:#fff;
- --muted:#999;
- --border:#292929;
- --radius:22px;
+--gold:#d4af37;--bg:#050505;--card:#101010;--card2:#171717;
+--text:#fff;--muted:#999;--border:#292929
 }
-
-*{
- box-sizing:border-box;
- margin:0;
- padding:0;
-}
-
-html{
- scroll-behavior:smooth;
-}
-
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
 body{
- font-family:Arial,Helvetica,sans-serif;
- background:
- radial-gradient(circle at 50% -10%,rgba(212,175,55,.08),transparent 35%),
- var(--black);
- color:var(--white);
- line-height:1.6;
+font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:var(--text);
+line-height:1.5;transition:.3s
 }
-
-button,input,select{
- font:inherit;
-}
-
-button{
- cursor:pointer;
-}
-
-a{
- color:inherit;
-}
-
-.hidden{
- display:none!important;
-}
-
-/* ================= HEADER ================= */
+button,input,select{font:inherit}
+button{cursor:pointer}
+a{color:inherit}
 
 header{
- position:relative;
- padding:18px 15px 35px;
- text-align:center;
- border-bottom:1px solid rgba(212,175,55,.35);
- background:
- linear-gradient(180deg,#080808,#050505);
+text-align:center;padding:18px 15px 30px;
+border-bottom:1px solid rgba(212,175,55,.3)
 }
-
-.brand{
- display:flex;
- justify-content:center;
- align-items:center;
- margin:5px 0 15px;
+.logo img{
+width:120px;height:120px;object-fit:contain;
+filter:drop-shadow(0 10px 25px rgba(212,175,55,.18))
 }
-
-.brand img{
- width:125px;
- height:125px;
- object-fit:contain;
- filter:drop-shadow(0 10px 30px rgba(212,175,55,.18));
+.hero{max-width:950px;margin:auto}
+.eyebrow{
+display:inline-block;color:var(--gold);
+border:1px solid rgba(212,175,55,.5);
+border-radius:50px;padding:6px 14px;font-size:11px;
+letter-spacing:2px;margin:8px 0 12px
 }
-
-.hero{
- max-width:950px;
- margin:auto;
+h1{
+font-size:clamp(32px,7vw,58px);line-height:1.05;
+margin-bottom:12px
 }
-
-.hero .eyebrow{
- display:inline-block;
- color:var(--gold);
- border:1px solid rgba(212,175,55,.45);
- border-radius:50px;
- padding:6px 14px;
- font-size:11px;
- letter-spacing:2px;
- text-transform:uppercase;
- margin-bottom:13px;
-}
-
-.hero h1{
- font-size:clamp(30px,6vw,55px);
- line-height:1.08;
- letter-spacing:-1px;
- margin-bottom:13px;
-}
-
-.hero h1 span{
- color:var(--gold);
-}
-
+h1 span,.section-title span{color:var(--gold)}
 .hero p{
- max-width:700px;
- margin:auto;
- color:var(--muted);
- font-size:16px;
+max-width:700px;margin:auto;color:var(--muted)
 }
-
-.hero-buttons{
- display:flex;
- justify-content:center;
- gap:10px;
- flex-wrap:wrap;
- margin-top:22px;
+.hero-actions{
+display:flex;justify-content:center;gap:10px;
+flex-wrap:wrap;margin-top:20px
 }
-
 .hero-btn{
- display:inline-flex;
- align-items:center;
- justify-content:center;
- padding:12px 21px;
- border-radius:50px;
- text-decoration:none;
- font-weight:bold;
- border:1px solid var(--gold);
- transition:.25s;
+padding:12px 20px;border-radius:50px;
+text-decoration:none;font-weight:bold;
+border:1px solid var(--gold)
 }
-
-.hero-btn.primary{
- background:var(--gold);
- color:#000;
-}
-
-.hero-btn.secondary{
- background:transparent;
- color:var(--white);
-}
-
-.hero-btn:hover{
- transform:translateY(-2px);
- box-shadow:0 10px 30px rgba(212,175,55,.12);
-}
-
-/* ================= TOOLS ================= */
-
+.hero-btn.primary{background:var(--gold);color:#000}
 .tools{
- display:flex;
- justify-content:center;
- gap:8px;
- margin-top:20px;
+display:flex;justify-content:center;gap:9px;margin-top:18px
 }
-
 .tool{
- width:43px;
- height:43px;
- border-radius:50%;
- border:1px solid var(--gold);
- background:rgba(255,255,255,.03);
- color:var(--white);
+position:relative;width:44px;height:44px;border-radius:50%;
+border:1px solid var(--gold);background:var(--card);color:var(--text)
 }
-
 .count{
- position:absolute;
- transform:translate(14px,-8px);
- background:var(--gold);
- color:#000;
- min-width:19px;
- height:19px;
- border-radius:50%;
- display:flex;
- align-items:center;
- justify-content:center;
- font-size:11px;
- font-weight:bold;
+position:absolute;top:-6px;right:-5px;
+min-width:19px;height:19px;border-radius:50%;
+background:var(--gold);color:#000;font-size:11px;font-weight:bold;
+display:flex;align-items:center;justify-content:center
 }
-
-/* ================= NAV ================= */
 
 .nav{
- display:flex;
- justify-content:center;
- flex-wrap:wrap;
- gap:8px;
- padding:18px 12px;
- position:sticky;
- top:0;
- z-index:50;
- background:rgba(5,5,5,.88);
- backdrop-filter:blur(15px);
- border-bottom:1px solid rgba(212,175,55,.15);
+position:sticky;top:0;z-index:50;
+display:flex;justify-content:center;gap:8px;
+overflow-x:auto;padding:13px 10px;
+background:rgba(5,5,5,.9);
+backdrop-filter:blur(15px);
+border-bottom:1px solid rgba(212,175,55,.12)
 }
-
 .nav button{
- border:1px solid var(--border);
- background:#101010;
- color:#ddd;
- padding:9px 15px;
- border-radius:50px;
- transition:.25s;
+white-space:nowrap;border:1px solid var(--border);
+background:var(--card);color:var(--text);
+padding:9px 15px;border-radius:50px
+}
+.nav button.active,.nav button:hover{
+background:var(--gold);color:#000;border-color:var(--gold)
 }
 
-.nav button:hover,
-.nav button.active{
- background:var(--gold);
- color:#000;
- border-color:var(--gold);
-}
-
-/* ================= SEARCH ================= */
-
-.search-wrap{
- max-width:700px;
- margin:25px auto 0;
- padding:0 15px;
-}
-
+.search-wrap{max-width:700px;margin:20px auto 0;padding:0 15px}
 .search{
- width:100%;
- border:1px solid var(--border);
- background:#101010;
- color:#fff;
- padding:14px 18px;
- border-radius:50px;
- outline:none;
+width:100%;padding:14px 18px;
+border:1px solid var(--border);border-radius:50px;
+background:var(--card);color:var(--text);outline:none
 }
-
-.search:focus{
- border-color:var(--gold);
- box-shadow:0 0 0 3px rgba(212,175,55,.07);
-}
-
-/* ================= SECTIONS ================= */
+.search:focus{border-color:var(--gold)}
 
 .section{
- max-width:1250px;
- margin:55px auto;
- padding:0 16px;
+max-width:1250px;margin:52px auto;padding:0 15px
 }
-
 .section-title{
- text-align:center;
- font-size:clamp(27px,5vw,40px);
- margin-bottom:7px;
+text-align:center;font-size:clamp(27px,5vw,40px);
+margin-bottom:6px
 }
-
-.section-title span{
- color:var(--gold);
-}
-
 .section-description{
- text-align:center;
- color:var(--muted);
- max-width:720px;
- margin:0 auto 30px;
+text-align:center;color:var(--muted);
+max-width:720px;margin:0 auto 28px
 }
-
-/* ================= PRODUCTS ================= */
 
 .products{
- display:grid;
- grid-template-columns:repeat(3,1fr);
- gap:20px;
+display:grid;grid-template-columns:repeat(3,1fr);gap:20px
 }
-
 .product{
- position:relative;
- background:
- linear-gradient(145deg,#151515,#0c0c0c);
- border:1px solid var(--border);
- border-radius:var(--radius);
- padding:12px;
- overflow:hidden;
- transition:.3s ease;
- box-shadow:0 15px 45px rgba(0,0,0,.25);
+position:relative;padding:11px;
+background:linear-gradient(145deg,#151515,#0b0b0b);
+border:1px solid var(--border);border-radius:22px;
+overflow:hidden;transition:.3s
 }
-
 .product:hover{
- transform:translateY(-5px);
- border-color:rgba(212,175,55,.65);
- box-shadow:
- 0 20px 55px rgba(0,0,0,.45),
- 0 0 25px rgba(212,175,55,.06);
+transform:translateY(-5px);
+border-color:rgba(212,175,55,.7)
 }
-
 .product-top{
- position:absolute;
- top:22px;
- left:22px;
- right:22px;
- display:flex;
- justify-content:space-between;
- align-items:center;
- z-index:5;
- pointer-events:none;
+position:absolute;top:21px;left:21px;right:21px;
+z-index:3;display:flex;justify-content:space-between
 }
-
 .badge{
- background:var(--gold);
- color:#000;
- padding:5px 9px;
- border-radius:50px;
- font-size:10px;
- font-weight:bold;
+background:var(--gold);color:#000;border-radius:50px;
+padding:5px 9px;font-size:10px;font-weight:bold
 }
-
 .favorite{
- pointer-events:auto;
- width:38px;
- height:38px;
- border-radius:50%;
- border:1px solid var(--gold);
- background:rgba(0,0,0,.65);
- color:#fff;
- font-size:19px;
+width:38px;height:38px;border-radius:50%;
+border:1px solid var(--gold);
+background:rgba(0,0,0,.65);color:#fff;font-size:19px
 }
-
-.favorite.active{
- color:var(--gold);
-}
+.favorite.active{color:var(--gold)}
 
 .main-image{
- width:100%;
- height:auto;
- display:block;
- border-radius:17px;
- background:transparent;
+width:100%;height:auto;display:block;
+border-radius:17px;background:transparent
 }
-
 .thumbs{
- display:flex;
- gap:7px;
- overflow-x:auto;
- padding:9px 1px 3px;
- scrollbar-width:thin;
+display:flex;gap:7px;overflow-x:auto;padding:9px 1px 3px
 }
-
 .thumbs img{
- width:58px;
- height:58px;
- object-fit:cover;
- border-radius:9px;
- border:2px solid transparent;
- flex-shrink:0;
- cursor:pointer;
- transition:.2s;
+width:58px;height:58px;object-fit:cover;
+border-radius:9px;border:2px solid transparent;
+flex-shrink:0;cursor:pointer
 }
-
-.thumbs img:hover{
- transform:translateY(-2px);
- border-color:var(--gold);
-}
-
-.product h3{
- font-size:19px;
- margin:13px 3px 3px;
-}
-
-.category{
- color:var(--muted);
- font-size:13px;
- margin:0 3px;
-}
-
+.product h3{font-size:19px;margin:12px 3px 2px}
+.category{color:var(--muted);font-size:13px;margin:0 3px}
 .price{
- color:var(--gold);
- font-size:23px;
- font-weight:bold;
- margin:5px 3px 12px;
+color:var(--gold);font-size:23px;
+font-weight:bold;margin:4px 3px 11px
 }
-
-.variant-area{
- margin:10px 2px;
-}
-
 .variant-label{
- color:var(--muted);
- display:block;
- font-size:12px;
- margin-bottom:5px;
+display:block;color:var(--muted);font-size:12px;margin:7px 2px 4px
 }
-
 .variant-select{
- width:100%;
- padding:10px;
- border-radius:10px;
- border:1px solid var(--border);
- background:var(--card2);
- color:#fff;
- outline:none;
+width:100%;padding:10px;border-radius:10px;
+border:1px solid var(--border);
+background:var(--card2);color:var(--text)
 }
-
-.variant-select:focus{
- border-color:var(--gold);
-}
-
 .product-actions{
- display:grid;
- grid-template-columns:1fr 48px;
- gap:8px;
- margin-top:10px;
+display:grid;grid-template-columns:1fr 48px;gap:8px;margin-top:9px
 }
-
 .whatsapp{
- display:flex;
- align-items:center;
- justify-content:center;
- text-decoration:none;
- background:var(--gold);
- color:#000;
- font-weight:bold;
- border-radius:12px;
- padding:12px 8px;
- transition:.2s;
+display:flex;align-items:center;justify-content:center;
+text-decoration:none;background:var(--gold);color:#000;
+font-weight:bold;border-radius:12px;padding:12px
 }
-
-.whatsapp:hover{
- background:var(--gold2);
-}
-
 .add-cart{
- border:1px solid var(--gold);
- border-radius:12px;
- background:transparent;
- color:var(--gold);
- font-size:20px;
+border:1px solid var(--gold);border-radius:12px;
+background:transparent;color:var(--gold);font-size:20px
 }
+.add-cart:hover{background:var(--gold);color:#000}
 
-.add-cart:hover{
- background:var(--gold);
- color:#000;
+.info-grid,.steps{
+display:grid;grid-template-columns:repeat(3,1fr);gap:16px
 }
-
-/* ================= INFO ================= */
-
-.info-grid{
- display:grid;
- grid-template-columns:repeat(3,1fr);
- gap:16px;
+.info-card,.step{
+background:linear-gradient(145deg,#151515,#0c0c0c);
+border:1px solid var(--border);
+border-radius:20px;padding:24px;text-align:center
 }
-
-.info-card{
- background:linear-gradient(145deg,#151515,#0c0c0c);
- border:1px solid var(--border);
- border-radius:20px;
- padding:25px 20px;
- text-align:center;
-}
-
-.info-card .icon{
- font-size:31px;
- margin-bottom:8px;
-}
-
-.info-card h3{
- color:var(--gold);
- margin-bottom:5px;
-}
-
-.info-card p{
- color:var(--muted);
-}
-
-/* ================= STEPS ================= */
-
-.steps{
- display:grid;
- grid-template-columns:repeat(3,1fr);
- gap:16px;
-}
-
-.step{
- background:#101010;
- border:1px solid var(--border);
- border-radius:20px;
- padding:25px;
-}
-
+.info-card .icon{font-size:30px}
+.info-card h3{color:var(--gold);margin:5px 0}
+.info-card p,.step p{color:var(--muted)}
+.step{text-align:left}
 .step strong{
- color:var(--gold);
- font-size:27px;
- display:block;
- margin-bottom:8px;
+display:block;color:var(--gold);
+font-size:27px;margin-bottom:5px
 }
-
-.step p{
- color:var(--muted);
-}
-
-/* ================= PROMO ================= */
 
 .promo-box{
- border:1px solid var(--gold);
- border-radius:25px;
- padding:30px 20px;
- text-align:center;
- background:
- radial-gradient(circle at 50% 0%,rgba(212,175,55,.13),transparent 50%),
- #101010;
+padding:28px 18px;border:1px solid var(--gold);
+border-radius:24px;
+background:radial-gradient(circle at 50% 0%,rgba(212,175,55,.13),transparent 55%),#101010
+}
+.promo-box h2{text-align:center;color:var(--gold)}
+.promo-box>p{text-align:center;color:var(--muted);margin-bottom:22px}
+
+.client-reviews{
+display:grid;grid-template-columns:repeat(4,1fr);gap:15px
+}
+.client-review{
+padding:7px;background:var(--card);
+border:1px solid var(--border);
+border-radius:19px;transition:.25s
+}
+.client-review:hover{
+transform:translateY(-4px);border-color:var(--gold)
+}
+.client-review img{
+display:block;width:100%;height:410px;
+object-fit:cover;border-radius:13px;cursor:pointer
 }
 
-.promo-box h2{
- color:var(--gold);
- margin-bottom:5px;
+.client-viewer{
+position:fixed;inset:0;background:rgba(0,0,0,.94);
+z-index:200;display:none;
+align-items:center;justify-content:center;padding:20px
 }
-
-.promo-box p{
- color:var(--muted);
+.client-viewer.show{display:flex}
+.client-viewer img{
+max-width:95%;max-height:90vh;
+object-fit:contain;border-radius:12px
 }
-
-/* ================= FAQ ================= */
+.client-viewer button{
+position:absolute;top:18px;right:20px;
+width:45px;height:45px;border-radius:50%;
+border:1px solid var(--gold);
+background:#111;color:#fff;font-size:30px
+}
 
 .faq-list{
- max-width:850px;
- margin:auto;
- display:grid;
- gap:10px;
+max-width:850px;margin:auto;display:grid;gap:10px
 }
-
 .faq-item{
- background:#101010;
- border:1px solid var(--border);
- border-radius:15px;
- overflow:hidden;
+background:var(--card);border:1px solid var(--border);
+border-radius:15px;overflow:hidden
 }
-
 .faq-question{
- width:100%;
- background:none;
- border:0;
- color:#fff;
- text-align:left;
- padding:17px;
- display:flex;
- justify-content:space-between;
- align-items:center;
- font-weight:bold;
+width:100%;background:none;border:0;color:var(--text);
+text-align:left;padding:17px;
+display:flex;justify-content:space-between;font-weight:bold
 }
-
-.faq-question span{
- color:var(--gold);
- font-size:22px;
-}
-
+.faq-question span{color:var(--gold);font-size:22px}
 .faq-answer{
- max-height:0;
- overflow:hidden;
- color:var(--muted);
- padding:0 17px;
- transition:.3s;
+max-height:0;overflow:hidden;color:var(--muted);
+padding:0 17px;transition:.3s
 }
-
 .faq-item.open .faq-answer{
- max-height:200px;
- padding:0 17px 17px;
+max-height:180px;padding:0 17px 17px
 }
-
-/* ================= CART ================= */
 
 .overlay{
- position:fixed;
- inset:0;
- background:rgba(0,0,0,.65);
- z-index:90;
- display:none;
+position:fixed;inset:0;background:rgba(0,0,0,.65);
+z-index:90;display:none
 }
-
-.overlay.show{
- display:block;
-}
-
+.overlay.show{display:block}
 .cart-panel{
- position:fixed;
- right:-430px;
- top:0;
- width:min(410px,94vw);
- height:100vh;
- background:#101010;
- border-left:1px solid var(--gold);
- z-index:100;
- padding:22px;
- transition:.35s;
- overflow-y:auto;
- box-shadow:-20px 0 60px rgba(0,0,0,.5);
+position:fixed;right:-430px;top:0;
+width:min(410px,94vw);height:100vh;
+background:#101010;border-left:1px solid var(--gold);
+z-index:100;padding:22px;transition:.35s;overflow-y:auto
 }
-
-.cart-panel.open{
- right:0;
-}
-
+.cart-panel.open{right:0}
 .cart-header{
- display:flex;
- justify-content:space-between;
- align-items:center;
- margin-bottom:15px;
+display:flex;justify-content:space-between;
+align-items:center;margin-bottom:15px
 }
-
-.cart-header h2{
- color:var(--gold);
-}
-
+.cart-header h2{color:var(--gold)}
 .close{
- background:none;
- border:0;
- color:#fff;
- font-size:28px;
+background:none;border:0;color:var(--text);font-size:28px
 }
-
 .cart-item{
- display:flex;
- gap:10px;
- padding:12px 0;
- border-bottom:1px solid var(--border);
+display:flex;gap:10px;padding:12px 0;
+border-bottom:1px solid var(--border)
 }
-
 .cart-item img{
- width:65px;
- height:65px;
- object-fit:cover;
- border-radius:10px;
+width:65px;height:65px;object-fit:cover;border-radius:10px
 }
-
-.cart-item-info{
- flex:1;
-}
-
-.cart-item-info strong{
- display:block;
-}
-
-.cart-item-info span{
- color:var(--gold);
-}
-
+.cart-item-info{flex:1}
+.cart-item-info strong{display:block}
+.cart-item-info span{color:var(--gold)}
 .cart-item-info small{
- color:var(--muted);
- display:block;
+display:block;color:var(--muted)
 }
-
 .quantity-control{
- display:flex;
- align-items:center;
- gap:7px;
- margin-top:7px;
+display:flex;align-items:center;gap:7px;margin-top:7px
 }
-
 .quantity-control button{
- width:28px;
- height:28px;
- border-radius:7px;
- border:1px solid var(--gold);
- background:none;
- color:var(--gold);
+width:28px;height:28px;border-radius:7px;
+border:1px solid var(--gold);
+background:none;color:var(--gold)
 }
-
-.quantity-value{
- min-width:20px;
- text-align:center;
-}
-
+.quantity-value{min-width:20px;text-align:center}
 .remove{
- border:0;
- background:none;
- color:#f66;
- margin-left:5px;
+border:0!important;color:#f66!important;width:auto!important
 }
-
 .cart-total{
- font-size:22px;
- font-weight:bold;
- color:var(--gold);
- margin:20px 0;
+font-size:22px;font-weight:bold;
+color:var(--gold);margin:20px 0
 }
-
 .checkout{
- width:100%;
- padding:14px;
- border:0;
- border-radius:13px;
- background:var(--gold);
- color:#000;
- font-weight:bold;
+width:100%;padding:14px;border:0;
+border-radius:13px;background:var(--gold);
+color:#000;font-weight:bold
 }
-
-/* ================= FLOATING ================= */
 
 .fixed-wa{
- position:fixed;
- right:17px;
- bottom:17px;
- width:57px;
- height:57px;
- border-radius:50%;
- background:#25D366;
- color:#fff;
- display:flex;
- align-items:center;
- justify-content:center;
- text-decoration:none;
- font-size:27px;
- z-index:80;
- box-shadow:0 7px 25px rgba(0,0,0,.4);
+position:fixed;right:17px;bottom:17px;
+width:57px;height:57px;border-radius:50%;
+background:#25D366;color:#fff;
+display:flex;align-items:center;justify-content:center;
+text-decoration:none;font-size:25px;z-index:80
 }
-
 .back-top{
- position:fixed;
- right:18px;
- bottom:85px;
- width:45px;
- height:45px;
- border-radius:50%;
- border:1px solid var(--gold);
- background:#111;
- color:var(--gold);
- font-size:22px;
- z-index:79;
- opacity:0;
- visibility:hidden;
- transition:.25s;
+position:fixed;right:18px;bottom:85px;
+width:45px;height:45px;border-radius:50%;
+border:1px solid var(--gold);
+background:#111;color:var(--gold);
+font-size:22px;z-index:79;
+opacity:0;visibility:hidden
 }
-
-.back-top.show{
- opacity:1;
- visibility:visible;
-}
-
-/* ================= FOOTER ================= */
+.back-top.show{opacity:1;visibility:visible}
 
 footer{
- text-align:center;
- padding:45px 15px;
- margin-top:60px;
- border-top:1px solid var(--border);
- color:var(--muted);
+text-align:center;padding:42px 15px;margin-top:55px;
+border-top:1px solid var(--border);color:var(--muted)
 }
+footer strong{color:var(--gold)}
 
-footer strong{
- color:var(--gold);
+body.light{
+--bg:#f7f7f5;--card:#fff;--card2:#f0f0ed;
+--text:#111;--muted:#666;--border:#ddd;
+background:radial-gradient(circle at 50% -10%,rgba(212,175,55,.13),transparent 35%),var(--bg)
 }
+body.light header{background:linear-gradient(#fff,#f7f7f5)}
+body.light .nav{background:rgba(255,255,255,.92)}
+body.light .product,
+body.light .info-card,
+body.light .step,
+body.light .client-review{
+background:linear-gradient(145deg,#fff,#f4f4f1);
+box-shadow:0 12px 35px rgba(0,0,0,.06)
+}
+body.light .favorite{
+background:#fff;color:#111
+}
+body.light .cart-panel{background:#fff}
 
-/* ================= MOBILE ================= */
+.hidden{display:none!important}
 
 @media(max-width:900px){
-
- .products{
-  grid-template-columns:repeat(2,1fr);
- }
-
- .info-grid,
- .steps{
-  grid-template-columns:1fr;
- }
-
+.products{grid-template-columns:repeat(2,1fr)}
+.info-grid,.steps{grid-template-columns:1fr}
+.client-reviews{grid-template-columns:repeat(2,1fr)}
 }
-
 @media(max-width:600px){
-
- header{
-  padding-top:12px;
- }
-
- .brand img{
-  width:105px;
-  height:105px;
- }
-
- .hero h1{
-  font-size:32px;
- }
-
- .hero p{
-  font-size:14px;
- }
-
- .nav{
-  justify-content:flex-start;
-  overflow-x:auto;
-  flex-wrap:nowrap;
- }
-
- .nav button{
-  white-space:nowrap;
- }
-
- .products{
-  grid-template-columns:1fr;
- }
-
- .section{
-  margin:40px auto;
- }
-
- .product{
-  border-radius:19px;
- }
-
- .main-image{
-  border-radius:15px;
- }
-
- .tools{
-  margin-top:15px;
- }
-
+.logo img{width:105px;height:105px}
+.products{grid-template-columns:1fr}
+.section{margin:40px auto}
+.client-reviews{
+grid-template-columns:repeat(2,1fr);gap:9px
 }
-
-/* ================= REDUCED MOTION ================= */
-
-@media(prefers-reduced-motion:reduce){
- *{
-  scroll-behavior:auto!important;
-  transition:none!important;
- }
+.client-review img{height:290px}
 }
 </style>
 </head>
@@ -841,1419 +378,1247 @@ footer strong{
 <body>
 
 <header id="home">
+<div class="logo">
+<img src="./LOGO.PNG" alt="ORION Accessories">
+</div>
 
- <div class="brand">
-  <img src="./LOGO.PNG" alt="ORION Accessories">
- </div>
+<div class="hero">
+<div class="eyebrow">ORION ACCESSORIES</div>
 
- <div class="hero">
+<h1>Style <span>Without Limits.</span></h1>
 
-  <div class="eyebrow">
-   ORION ACCESSORIES
-  </div>
+<p>
+Lunettes, colliers et bracelets modernes.
+Un style premium accessible partout au Maroc.
+</p>
 
-  <h1>
-   Style <span>Without Limits.</span>
-  </h1>
+<div class="hero-actions">
+<a class="hero-btn primary" href="#glasses">
+Découvrir la collection
+</a>
 
-  <p>
-   Lunettes, colliers et bracelets modernes.
-   Un style premium accessible partout au Maroc.
-  </p>
+<a class="hero-btn" href="https://wa.me/212673830013?text=Bonjour%20ORION%20Accessories">
+Commander sur WhatsApp
+</a>
+</div>
 
-  <div class="hero-buttons">
-   <a class="hero-btn primary" href="#glasses">
-    Découvrir la collection
-   </a>
+<div class="tools">
+<button class="tool" id="themeBtn" onclick="toggleTheme()">☀️</button>
 
-   <a class="hero-btn secondary"
-      href="https://wa.me/212673830013?text=Bonjour%20ORION%20Accessories">
-    Commander sur WhatsApp
-   </a>
-  </div>
+<button class="tool" onclick="openCart()">
+🛒
+<span class="count" id="cartCount">0</span>
+</button>
+</div>
+</div>
 
-  <div class="tools">
-
-   <button class="tool" onclick="toggleTheme()" title="Theme">
-    ◐
-   </button>
-
-   <button class="tool" onclick="openCart()" title="Panier">
-    🛒
-    <span class="count" id="cartCount">0</span>
-   </button>
-
-  </div>
-
- </div>
-
- <div class="search-wrap">
-  <input
-   id="searchInput"
-   class="search"
-   type="search"
-   placeholder="Rechercher un produit..."
-   oninput="searchProducts()">
- </div>
-
+<div class="search-wrap">
+<input
+id="searchInput"
+class="search"
+type="search"
+placeholder="Rechercher un produit..."
+oninput="searchProducts()">
+</div>
 </header>
 
 
 <nav class="nav">
 
- <button class="active" onclick="showCategory('all',this)">
-  Tout
- </button>
+<button class="active" onclick="showCategory('all',this)">
+Tout
+</button>
 
- <button onclick="showCategory('glasses',this)">
-  Lunettes
- </button>
+<button onclick="showCategory('glasses',this)">
+Lunettes
+</button>
 
- <button onclick="showCategory('chain',this)">
-  Colliers
- </button>
+<button onclick="showCategory('chain',this)">
+Colliers
+</button>
 
- <button onclick="showCategory('bracelet',this)">
-  Bracelets
- </button>
+<button onclick="showCategory('bracelet',this)">
+Bracelets
+</button>
 
- <button onclick="showCategory('promo',this)">
-  Promo
- </button>
+<button onclick="showCategory('promo',this)">
+Promo
+</button>
 
- <button onclick="showComingSoon()">
-  Montres
- </button>
+<button onclick="showComingSoon()">
+Montres
+</button>
 
 </nav>
 
 
-<!-- ================= GLASSES ================= -->
-
 <section class="section" id="glasses">
 
- <h2 class="section-title">
-  Nos <span>Lunettes</span>
- </h2>
+<h2 class="section-title">
+Nos <span>Lunettes</span>
+</h2>
 
- <p class="section-description">
-  Des modèles modernes pour compléter votre style.
- </p>
+<p class="section-description">
+Des modèles modernes pour compléter votre style.
+</p>
 
- <div class="products" id="glassesProducts"></div>
+<div class="products" id="glassesProducts"></div>
 
 </section>
 
-
-<!-- ================= CHAINS ================= -->
 
 <section class="section" id="chains">
 
- <h2 class="section-title">
-  Nos <span>Colliers</span>
- </h2>
+<h2 class="section-title">
+Nos <span>Colliers</span>
+</h2>
 
- <p class="section-description">
-  Des pièces élégantes pour femmes et hommes.
- </p>
+<p class="section-description">
+Des pièces élégantes pour femmes et hommes.
+</p>
 
- <div class="products" id="chainProducts"></div>
+<div class="products" id="chainProducts"></div>
 
 </section>
 
-
-<!-- ================= BRACELETS ================= -->
 
 <section class="section" id="bracelets">
 
- <h2 class="section-title">
-  Nos <span>Bracelets</span>
- </h2>
+<h2 class="section-title">
+Nos <span>Bracelets</span>
+</h2>
 
- <p class="section-description">
-  Minimalistes, modernes et faciles à porter.
- </p>
+<p class="section-description">
+Minimalistes, modernes et faciles à porter.
+</p>
 
- <div class="products" id="braceletProducts"></div>
+<div class="products" id="braceletProducts"></div>
 
 </section>
 
-
-<!-- ================= PROMO ================= -->
 
 <section class="section" id="promo">
 
- <div class="promo-box">
+<div class="promo-box">
 
-  <h2>ORION PROMO</h2>
+<h2>ORION PROMO</h2>
 
-  <p>
-   Découvrez notre pack spécial à seulement
-   <strong style="color:#d4af37">100 DH</strong>.
-  </p>
+<p>
+Découvrez notre pack spécial à
+<strong style="color:var(--gold)">100 DH</strong>.
+</p>
 
-  <div class="products" id="promoProducts" style="margin-top:25px;text-align:left"></div>
+<div class="products" id="promoProducts"></div>
 
- </div>
+</div>
 
 </section>
 
-
-<!-- ================= WHY ORION ================= -->
 
 <section class="section">
 
- <h2 class="section-title">
-  Pourquoi <span>ORION ?</span>
- </h2>
+<h2 class="section-title">
+Pourquoi <span>ORION ?</span>
+</h2>
 
- <div class="info-grid">
+<div class="info-grid">
 
-  <div class="info-card">
-   <div class="icon">✦</div>
-   <h3>Style Premium</h3>
-   <p>
-    Des designs modernes sélectionnés pour votre style.
-   </p>
-  </div>
+<div class="info-card">
+<div class="icon">✦</div>
+<h3>Style Premium</h3>
+<p>Des designs modernes sélectionnés pour votre style.</p>
+</div>
 
-  <div class="info-card">
-   <div class="icon">🇲🇦</div>
-   <h3>Partout au Maroc</h3>
-   <p>
-    Livraison disponible dans les villes marocaines.
-   </p>
-  </div>
+<div class="info-card">
+<div class="icon">🇲🇦</div>
+<h3>Partout au Maroc</h3>
+<p>Livraison disponible dans les villes marocaines.</p>
+</div>
 
-  <div class="info-card">
-   <div class="icon">💬</div>
-   <h3>Commande Simple</h3>
-   <p>
-    Commandez directement avec ORION via WhatsApp.
-   </p>
-  </div>
+<div class="info-card">
+<div class="icon">💬</div>
+<h3>Commande Simple</h3>
+<p>Commandez directement avec ORION via WhatsApp.</p>
+</div>
 
- </div>
-
+</div>
 </section>
 
-
-<!-- ================= HOW TO ORDER ================= -->
 
 <section class="section">
 
- <h2 class="section-title">
-  Comment <span>commander ?</span>
- </h2>
+<h2 class="section-title">
+Comment <span>commander ?</span>
+</h2>
 
- <div class="steps">
+<div class="steps">
 
-  <div class="step">
-   <strong>01</strong>
-   <p>
-    Choisissez votre produit et votre modèle.
-   </p>
-  </div>
+<div class="step">
+<strong>01</strong>
+<p>Choisissez votre produit et votre modèle.</p>
+</div>
 
-  <div class="step">
-   <strong>02</strong>
-   <p>
-    Cliquez sur Commander via WhatsApp.
-   </p>
-  </div>
+<div class="step">
+<strong>02</strong>
+<p>Cliquez sur Commander via WhatsApp.</p>
+</div>
 
-  <div class="step">
-   <strong>03</strong>
-   <p>
-    Confirmez vos informations et votre adresse.
-   </p>
-  </div>
+<div class="step">
+<strong>03</strong>
+<p>Confirmez vos informations et votre adresse.</p>
+</div>
 
- </div>
-
+</div>
 </section>
 
 
-<!-- ================= FAQ ================= -->
+<!-- AVIS CLIENTS REELS -->
+
+<section class="section" id="clientReviews">
+
+<h2 class="section-title">
+Avis de nos <span>clients</span>
+</h2>
+
+<p class="section-description">
+Découvrez quelques retours et expériences de nos clients ORION.
+</p>
+
+<div class="client-reviews">
+
+<div class="client-review">
+<img src="./Client 1.jpg"
+alt="Avis client ORION"
+loading="lazy"
+onclick="openClientImage(this.src)">
+</div>
+
+<div class="client-review">
+<img src="./Client 2.jpg"
+alt="Avis client ORION"
+loading="lazy"
+onclick="openClientImage(this.src)">
+</div>
+
+<div class="client-review">
+<img src="./Client 3.jpg"
+alt="Avis client ORION"
+loading="lazy"
+onclick="openClientImage(this.src)">
+</div>
+
+<div class="client-review">
+<img src="./Client 4.jpg"
+alt="Avis client ORION"
+loading="lazy"
+onclick="openClientImage(this.src)">
+</div>
+
+</div>
+</section>
+
+
+<div class="client-viewer"
+id="clientViewer"
+onclick="closeClientImage()">
+
+<button onclick="closeClientImage()">×</button>
+
+<img id="clientViewerImage"
+src=""
+alt="Avis client ORION">
+
+</div>
+
 
 <section class="section">
 
- <h2 class="section-title">
-  Questions <span>fréquentes</span>
- </h2>
+<h2 class="section-title">
+Questions <span>fréquentes</span>
+</h2>
 
- <div class="faq-list">
+<div class="faq-list">
 
-  <div class="faq-item">
+<div class="faq-item">
 
-   <button class="faq-question" onclick="toggleFaq(this)">
-    Où livrez-vous ?
-    <span>+</span>
-   </button>
+<button class="faq-question"
+onclick="toggleFaq(this)">
+Où livrez-vous ?
+<span>+</span>
+</button>
 
-   <div class="faq-answer">
-    Nous livrons partout au Maroc.
-   </div>
+<div class="faq-answer">
+Nous livrons partout au Maroc.
+</div>
 
-  </div>
-
-
-  <div class="faq-item">
-
-   <button class="faq-question" onclick="toggleFaq(this)">
-    Comment commander ?
-    <span>+</span>
-   </button>
-
-   <div class="faq-answer">
-    Choisissez votre produit puis contactez-nous directement sur WhatsApp.
-   </div>
-
-  </div>
+</div>
 
 
-  <div class="faq-item">
+<div class="faq-item">
 
-   <button class="faq-question" onclick="toggleFaq(this)">
-    Puis-je choisir une autre photo du produit ?
-    <span>+</span>
-   </button>
+<button class="faq-question"
+onclick="toggleFaq(this)">
+Comment commander ?
+<span>+</span>
+</button>
 
-   <div class="faq-answer">
-    Oui. Pour les modèles possédant plusieurs photos, sélectionnez simplement la vue souhaitée.
-   </div>
+<div class="faq-answer">
+Choisissez votre produit puis contactez-nous directement sur WhatsApp.
+</div>
 
-  </div>
+</div>
 
- </div>
 
+<div class="faq-item">
+
+<button class="faq-question"
+onclick="toggleFaq(this)">
+Puis-je choisir une autre photo du produit ?
+<span>+</span>
+</button>
+
+<div class="faq-answer">
+Oui. Pour les modèles possédant plusieurs photos, sélectionnez la vue souhaitée.
+</div>
+
+</div>
+
+</div>
 </section>
 
 
-<!-- ================= CART ================= -->
+<div class="overlay"
+id="overlay"
+onclick="closeCart()">
+</div>
 
-<div class="overlay" id="overlay" onclick="closeCart()"></div>
 
 <aside class="cart-panel" id="cartPanel">
 
- <div class="cart-header">
+<div class="cart-header">
 
-  <h2>Votre panier</h2>
+<h2>Votre panier</h2>
 
-  <button class="close" onclick="closeCart()">
-   ×
-  </button>
+<button class="close"
+onclick="closeCart()">×</button>
 
- </div>
+</div>
 
- <div id="cartItems"></div>
+<div id="cartItems"></div>
 
- <div class="cart-total">
-  Total : <span id="cartTotal">0 DH</span>
- </div>
+<div class="cart-total">
+Total : <span id="cartTotal">0 DH</span>
+</div>
 
- <button class="checkout" onclick="checkout()">
-  Commander via WhatsApp
- </button>
+<button class="checkout"
+onclick="checkout()">
+Commander via WhatsApp
+</button>
 
 </aside>
 
 
 <a
- class="fixed-wa"
- href="https://wa.me/212673830013?text=Bonjour%20ORION%20Accessories"
- target="_blank"
- aria-label="WhatsApp">
- ☎
+class="fixed-wa"
+href="https://wa.me/212673830013?text=Bonjour%20ORION%20Accessories"
+target="_blank"
+aria-label="WhatsApp">
+☎
 </a>
 
+
 <button
- class="back-top"
- id="backTop"
- onclick="window.scrollTo({top:0,behavior:'smooth'})">
- ↑
+class="back-top"
+id="backTop"
+onclick="window.scrollTo({top:0,behavior:'smooth'})">
+↑
 </button>
 
 
 <footer>
 
- <strong>ORION Accessories</strong>
+<strong>ORION Accessories</strong>
 
- <br>
+<br>
 
- Lunettes • Colliers • Bracelets
+Lunettes • Colliers • Bracelets
 
- <br><br>
+<br><br>
 
- © 2026 ORION Accessories — Maroc
+© 2026 ORION Accessories — Maroc
 
 </footer>
 
 
 <script>
 
-/* =========================================================
-   WHATSAPP
-========================================================= */
-
-const WHATSAPP = "212673830013";
+const WHATSAPP="212673830013";
 
 
-/* =========================================================
-   PRODUCTS
-========================================================= */
+const glasses=[
 
-const glasses = [
+{model:"01",price:70,badge:"BEST SELLER",images:[
+"ORION Glasses Model 01 gold 120dh.JPG",
+"ORION Glasses Model 01 Black 120dh.JPG",
+"ORION Glasses Model 01 Blue 120dh.JPG"]},
 
-{
- model:"01",
- price:70,
- badge:"BEST SELLER",
- images:[
- "ORION Glasses Model 01 gold 120dh.JPG",
- "ORION Glasses Model 01 Black 120dh.JPG",
- "ORION Glasses Model 01 Blue 120dh.JPG"
- ]
-},
+{model:"02",price:70,images:[
+"ORION Glasses Model 02 120dh 1.JPG",
+"ORION Glasses Model 02 120dh 5.JPG",
+"ORION Glasses Model 02 120dh 3.JPG",
+"ORION Glasses Model 02 120dh 2.JPG",
+"ORION Glasses Model 02 120dh 4.JPG"]},
 
-{
- model:"02",
- price:70,
- images:[
- "ORION Glasses Model 02 120dh 1.JPG",
- "ORION Glasses Model 02 120dh 5.JPG",
- "ORION Glasses Model 02 120dh 3.JPG",
- "ORION Glasses Model 02 120dh 2.JPG",
- "ORION Glasses Model 02 120dh 4.JPG"
- ]
-},
+{model:"03",price:70,images:[
+"ORION Glasses Model 03 120dh 1.JPG",
+"ORION Glasses Model 03 120dh 5.JPG",
+"ORION Glasses Model 03 120dh 4.JPG",
+"ORION Glasses Model 03 120dh 3.JPG",
+"ORION Glasses Model 03 120dh 6.JPG",
+"ORION Glasses Model 03 120dh 2.JPG"]},
 
-{
- model:"03",
- price:70,
- images:[
- "ORION Glasses Model 03 120dh 1.JPG",
- "ORION Glasses Model 03 120dh 5.JPG",
- "ORION Glasses Model 03 120dh 4.JPG",
- "ORION Glasses Model 03 120dh 3.JPG",
- "ORION Glasses Model 03 120dh 6.JPG",
- "ORION Glasses Model 03 120dh 2.JPG"
- ]
-},
+{model:"04",price:70,images:[
+"ORION Glasses Model 04 120dh 4.JPG",
+"ORION Glasses Model 04 120dh 2.JPG",
+"ORION Glasses Model 04 120dh 3.JPG",
+"ORION Glasses Model 04 120dh 1.JPG",
+"ORION Glasses Model 04 120dh 6.JPG",
+"ORION Glasses Model 04 120dh 5.JPG"]},
 
-{
- model:"04",
- price:70,
- images:[
- "ORION Glasses Model 04 120dh 4.JPG",
- "ORION Glasses Model 04 120dh 2.JPG",
- "ORION Glasses Model 04 120dh 3.JPG",
- "ORION Glasses Model 04 120dh 1.JPG",
- "ORION Glasses Model 04 120dh 6.JPG",
- "ORION Glasses Model 04 120dh 5.JPG"
- ]
-},
+{model:"05",price:70,images:[
+"ORION Glasses Model 05 120dh 4.JPG",
+"ORION Glasses Model 05 120dh 5.JPG",
+"ORION Glasses Model 05 120dh 2.JPG",
+"ORION Glasses Model 05 120dh 3.JPG",
+"ORION Glasses Model 05 120dh 1.JPG"]},
 
-{
- model:"05",
- price:70,
- images:[
- "ORION Glasses Model 05 120dh 4.JPG",
- "ORION Glasses Model 05 120dh 5.JPG",
- "ORION Glasses Model 05 120dh 2.JPG",
- "ORION Glasses Model 05 120dh 3.JPG",
- "ORION Glasses Model 05 120dh 1.JPG"
- ]
-},
+{model:"06",price:70,images:[
+"ORION Glasses Model 06 120dh 6.JPG",
+"ORION Glasses Model 06 120dh 4.JPG",
+"ORION Glasses Model 06 120dh 2.JPG",
+"ORION Glasses Model 06 120dh 7.JPG",
+"ORION Glasses Model 06 120dh 1.JPG",
+"ORION Glasses Model 06 120dh 3.JPG",
+"ORION Glasses Model 06 120dh 5.JPG"]},
 
-{
- model:"06",
- price:70,
- images:[
- "ORION Glasses Model 06 120dh 6.JPG",
- "ORION Glasses Model 06 120dh 4.JPG",
- "ORION Glasses Model 06 120dh 2.JPG",
- "ORION Glasses Model 06 120dh 7.JPG",
- "ORION Glasses Model 06 120dh 1.JPG",
- "ORION Glasses Model 06 120dh 3.JPG",
- "ORION Glasses Model 06 120dh 5.JPG"
- ]
-},
+{model:"07",price:70,images:[
+"ORION Glasses Model 07 140dh 5.JPG",
+"ORION Glasses Model 07 140dh 1.JPG",
+"ORION Glasses Model 07 140dh 4.JPG",
+"ORION Glasses Model 07 140dh 3.JPG",
+"ORION Glasses Model 07 140dh 2.JPG"]},
 
-{
- model:"07",
- price:70,
- images:[
- "ORION Glasses Model 07 140dh 5.JPG",
- "ORION Glasses Model 07 140dh 1.JPG",
- "ORION Glasses Model 07 140dh 4.JPG",
- "ORION Glasses Model 07 140dh 3.JPG",
- "ORION Glasses Model 07 140dh 2.JPG"
- ]
-},
+{model:"08",price:70,images:[
+"ORION Glasses Model 08 130dh 2.JPG",
+"ORION Glasses Model 08 130dh 3.JPG",
+"ORION Glasses Model 08 130dh 4.JPG",
+"ORION Glasses Model 08 130dh 1.JPG",
+"ORION Glasses Model 08 130dh 6.JPG",
+"ORION Glasses Model 08 130dh 5.JPG"]},
 
-{
- model:"08",
- price:70,
- images:[
- "ORION Glasses Model 08 130dh 2.JPG",
- "ORION Glasses Model 08 130dh 3.JPG",
- "ORION Glasses Model 08 130dh 4.JPG",
- "ORION Glasses Model 08 130dh 1.JPG",
- "ORION Glasses Model 08 130dh 6.JPG",
- "ORION Glasses Model 08 130dh 5.JPG"
- ]
-},
+{model:"09",price:70,images:[
+"ORION Glasses Model 09 120dh 5.JPG",
+"ORION Glasses Model 09 120dh 8.JPG",
+"ORION Glasses Model 09 120dh 2.JPG",
+"ORION Glasses Model 09 120dh 3.JPG",
+"ORION Glasses Model 09 120dh 6.JPG",
+"ORION Glasses Model 09 120dh 7.JPG",
+"ORION Glasses Model 09 120dh 1.JPG"]},
 
-{
- model:"09",
- price:70,
- images:[
- "ORION Glasses Model 09 120dh 5.JPG",
- "ORION Glasses Model 09 120dh 8.JPG",
- "ORION Glasses Model 09 120dh 2.JPG",
- "ORION Glasses Model 09 120dh 3.JPG",
- "ORION Glasses Model 09 120dh 6.JPG",
- "ORION Glasses Model 09 120dh 7.JPG",
- "ORION Glasses Model 09 120dh 1.JPG"
- ]
-},
+{model:"10",price:70,images:[
+"ORION Glasses Model 10 120dh 3.JPG",
+"ORION Glasses Model 10 120dh 4.JPG",
+"ORION Glasses Model 10 120dh 5.JPG",
+"ORION Glasses Model 10 120dh 2.JPG",
+"ORION Glasses Model 10 120dh 1.JPG"]},
 
-{
- model:"10",
- price:70,
- images:[
- "ORION Glasses Model 10 120dh 3.JPG",
- "ORION Glasses Model 10 120dh 4.JPG",
- "ORION Glasses Model 10 120dh 5.JPG",
- "ORION Glasses Model 10 120dh 2.JPG",
- "ORION Glasses Model 10 120dh 1.JPG"
- ]
-},
+{model:"11",price:70,images:[
+"ORION Glasses Model 11 120dh 3.JPG",
+"ORION Glasses Model 11 120dh 1.JPG",
+"ORION Glasses Model 11 120dh 4.JPG",
+"ORION Glasses Model 11 120dh 2.JPG",
+"ORION Glasses Model 11 120dh 5.JPG"]},
 
-{
- model:"11",
- price:70,
- images:[
- "ORION Glasses Model 11 120dh 3.JPG",
- "ORION Glasses Model 11 120dh 1.JPG",
- "ORION Glasses Model 11 120dh 4.JPG",
- "ORION Glasses Model 11 120dh 2.JPG",
- "ORION Glasses Model 11 120dh 5.JPG"
- ]
-},
+{model:"12",price:70,images:[
+"ORION Glasses Model 12 120dh 7.JPG",
+"ORION Glasses Model 12 120dh 2.JPG",
+"ORION Glasses Model 12 120dh 4.JPG",
+"ORION Glasses Model 12 120dh 3.JPG",
+"ORION Glasses Model 12 120dh 8.JPG",
+"ORION Glasses Model 12 120dh 5.JPG",
+"ORION Glasses Model 12 120dh 10.JPG",
+"ORION Glasses Model 12 120dh 1.JPG",
+"ORION Glasses Model 12 120dh 6.JPG"]},
 
-{
- model:"12",
- price:70,
- images:[
- "ORION Glasses Model 12 120dh 7.JPG",
- "ORION Glasses Model 12 120dh 2.JPG",
- "ORION Glasses Model 12 120dh 4.JPG",
- "ORION Glasses Model 12 120dh 3.JPG",
- "ORION Glasses Model 12 120dh 8.JPG",
- "ORION Glasses Model 12 120dh 5.JPG",
- "ORION Glasses Model 12 120dh 10.JPG",
- "ORION Glasses Model 12 120dh 1.JPG",
- "ORION Glasses Model 12 120dh 6.JPG"
- ]
-},
+{model:"13",price:70,images:[
+"ORION Glasses Model 13 120dh 2.JPG",
+"ORION Glasses Model 13 120dh 3.JPG",
+"ORION Glasses Model 13 120dh 4.JPG",
+"ORION Glasses Model 13 120dh 5.JPG",
+"ORION Glasses Model 13 120dh 1.JPG"]},
 
-{
- model:"13",
- price:70,
- images:[
- "ORION Glasses Model 13 120dh 2.JPG",
- "ORION Glasses Model 13 120dh 3.JPG",
- "ORION Glasses Model 13 120dh 4.JPG",
- "ORION Glasses Model 13 120dh 5.JPG",
- "ORION Glasses Model 13 120dh 1.JPG"
- ]
-},
+{model:"14",price:70,images:[
+"ORION Glasses Model 14 120dh 2.JPG",
+"ORION Glasses Model 14 120dh 1.JPG",
+"ORION Glasses Model 14 120dh 3.JPG"]},
 
-{
- model:"14",
- price:70,
- images:[
- "ORION Glasses Model 14 120dh 2.JPG",
- "ORION Glasses Model 14 120dh 1.JPG",
- "ORION Glasses Model 14 120dh 3.JPG"
- ]
-},
+{model:"15",price:70,images:[
+"ORION Glasses Model 15 120dh 1.JPG",
+"ORION Glasses Model 15 120dh 2.JPG"]},
 
-{
- model:"15",
- price:70,
- images:[
- "ORION Glasses Model 15 120dh 1.JPG",
- "ORION Glasses Model 15 120dh 2.JPG"
- ]
-},
+{model:"16",price:70,images:[
+"ORION Glasses Model 16 140dh 1.JPG"]},
 
-{
- model:"16",
- price:70,
- images:[
- "ORION Glasses Model 16 140dh 1.JPG"
- ]
-},
+{model:"17",price:70,images:[
+"ORION Glasses Model 17 140dh 1.JPG"]},
 
-{
- model:"17",
- price:70,
- images:[
- "ORION Glasses Model 17 140dh 1.JPG"
- ]
-},
+{model:"18",price:70,images:[
+"ORION Glasses Model 18 120dh 1.JPG",
+"ORION Glasses Model 18 120dh 3.JPG",
+"ORION Glasses Model 18 120dh 2.JPG"]},
 
-{
- model:"18",
- price:70,
- images:[
- "ORION Glasses Model 18 120dh 1.JPG",
- "ORION Glasses Model 18 120dh 3.JPG",
- "ORION Glasses Model 18 120dh 2.JPG"
- ]
-},
-
-{
- model:"19",
- price:70,
- images:[
- "ORION Glasses Model 19 130dh 3.JPG",
- "ORION Glasses Model 19 130dh 2.JPG",
- "ORION Glasses Model 19 130dh 1.JPG",
- "ORION Glasses Model 19 130dh 4.JPG"
- ]
-}
+{model:"19",price:70,images:[
+"ORION Glasses Model 19 130dh 3.JPG",
+"ORION Glasses Model 19 130dh 2.JPG",
+"ORION Glasses Model 19 130dh 1.JPG",
+"ORION Glasses Model 19 130dh 4.JPG"]}
 
 ];
 
 
-const chains = [
+const chains=[
 
-{
- model:"01",
- price:60,
- gender:"Women & Men",
- images:[
- "ORION Chain Model girl:men 01 80dh 1.JPG",
- "ORION Chain Model girl:men 01 80dh 4.JPG",
- "ORION Chain Model girl:men 01 80dh 3.JPG",
- "ORION Chain Model girl:men 01 80dh 2.JPG"
- ]
-},
+{model:"01",price:60,gender:"Women & Men",images:[
+"ORION Chain Model girl:men 01 80dh 1.JPG",
+"ORION Chain Model girl:men 01 80dh 4.JPG",
+"ORION Chain Model girl:men 01 80dh 3.JPG",
+"ORION Chain Model girl:men 01 80dh 2.JPG"]},
 
-{
- model:"02",
- price:60,
- gender:"Women",
- images:[
- "ORION Chain Model 02 80dh 3.JPG",
- "ORION Chain Model 02 80dh 5.JPG",
- "ORION Chain Model 02 80dh 2.JPG",
- "ORION Chain Model 02 80dh 1.JPG",
- "ORION Chain Model 02 80dh 4.JPG"
- ]
-},
+{model:"02",price:60,gender:"Women",images:[
+"ORION Chain Model 02 80dh 3.JPG",
+"ORION Chain Model 02 80dh 5.JPG",
+"ORION Chain Model 02 80dh 2.JPG",
+"ORION Chain Model 02 80dh 1.JPG",
+"ORION Chain Model 02 80dh 4.JPG"]},
 
-{
- model:"03",
- price:60,
- gender:"Women",
- images:[
- "ORION Chain Model 03 80dh 2.JPG",
- "ORION Chain Model 03 80dh 5.JPG",
- "ORION Chain Model 03 80dh 4.JPG",
- "ORION Chain Model 03 80dh 3.JPG",
- "ORION Chain Model 03 80dh 7.JPG",
- "ORION Chain Model 03 80dh 1.JPG",
- "ORION Chain Model 03 80dh 6.JPG"
- ]
-},
+{model:"03",price:60,gender:"Women",images:[
+"ORION Chain Model 03 80dh 2.JPG",
+"ORION Chain Model 03 80dh 5.JPG",
+"ORION Chain Model 03 80dh 4.JPG",
+"ORION Chain Model 03 80dh 3.JPG",
+"ORION Chain Model 03 80dh 7.JPG",
+"ORION Chain Model 03 80dh 1.JPG",
+"ORION Chain Model 03 80dh 6.JPG"]},
 
-{
- model:"04",
- price:60,
- gender:"Women",
- images:[
- "ORION Chain Model 04 79dh 1.JPG"
- ]
-},
+{model:"04",price:60,gender:"Women",images:[
+"ORION Chain Model 04 79dh 1.JPG"]},
 
-{
- model:"05",
- price:60,
- gender:"Women",
- images:[
- "‏ ‏ORION Chain Model 90dh 1  .JPG"
- ]
-}
+{model:"05",price:60,gender:"Women",images:[
+"‏ ‏ORION Chain Model 90dh 1  .JPG"]}
 
 ];
 
 
-const bracelets = [
+const bracelets=[
 
-{
- model:"01",
- price:60,
- gender:"Women",
- images:[
- "ORION Bracelets model 01 80dh 1.JPG",
- "ORION Bracelets model 01 80dh 4.JPG",
- "ORION Bracelets model 01 80dh 7.JPG",
- "ORION Bracelets model 01 80dh 2.JPG",
- "ORION Bracelets model 01 80dh 3.JPG",
- "ORION Bracelets model 01 80dh 5.JPG",
- "ORION Bracelets model 01 80dh 6.JPG",
- "ORION Bracelets model 01 80dh 8.JPG"
- ]
-},
+{model:"01",price:60,gender:"Women",images:[
+"ORION Bracelets model 01 80dh 1.JPG",
+"ORION Bracelets model 01 80dh 4.JPG",
+"ORION Bracelets model 01 80dh 7.JPG",
+"ORION Bracelets model 01 80dh 2.JPG",
+"ORION Bracelets model 01 80dh 3.JPG",
+"ORION Bracelets model 01 80dh 5.JPG",
+"ORION Bracelets model 01 80dh 6.JPG",
+"ORION Bracelets model 01 80dh 8.JPG"]},
 
-{
- model:"02",
- price:60,
- gender:"Women",
- images:[
- "ORION Bracelets model 02 80dh 2.JPG",
- "ORION Bracelets model 02 80dh 4.JPG",
- "ORION Bracelets model 02 80dh 1.JPG",
- "ORION Bracelets model 02 80dh 3.JPG"
- ]
-},
+{model:"02",price:60,gender:"Women",images:[
+"ORION Bracelets model 02 80dh 2.JPG",
+"ORION Bracelets model 02 80dh 4.JPG",
+"ORION Bracelets model 02 80dh 1.JPG",
+"ORION Bracelets model 02 80dh 3.JPG"]},
 
-{
- model:"03",
- price:60,
- gender:"Women",
- images:[
- "ORION Bracelets model 03 80dh 2.JPG",
- "ORION Bracelets model 03 80dh 4.JPG",
- "ORION Bracelets model 03 80dh 1.JPG",
- "ORION Bracelets model 03 80dh 3.JPG"
- ]
-},
+{model:"03",price:60,gender:"Women",images:[
+"ORION Bracelets model 03 80dh 2.JPG",
+"ORION Bracelets model 03 80dh 4.JPG",
+"ORION Bracelets model 03 80dh 1.JPG",
+"ORION Bracelets model 03 80dh 3.JPG"]},
 
-{
- model:"04",
- price:80,
- gender:"Women",
- images:[
- "ORION Bracelets model 04 100dh 3.JPG",
- "ORION Bracelets model 04 100dh 2.JPG",
- "ORION Bracelets model 04 100dh 1.JPG"
- ]
-},
+{model:"04",price:80,gender:"Women",images:[
+"ORION Bracelets model 04 100dh 3.JPG",
+"ORION Bracelets model 04 100dh 2.JPG",
+"ORION Bracelets model 04 100dh 1.JPG"]},
 
-{
- model:"05",
- price:80,
- gender:"Women",
- images:[
- "ORION Bracelets model 05 79 dh 1.JPG",
- "ORION Bracelets model 05 79 dh 2.JPG",
- "ORION Bracelets model 05 79 dh 3.JPG",
- "ORION Bracelets model 05 79 dh 4.JPG",
- "ORION Bracelets model 05 79 dh 5.JPG"
- ]
-}
+{model:"05",price:80,gender:"Women",images:[
+"ORION Bracelets model 05 79 dh 1.JPG",
+"ORION Bracelets model 05 79 dh 2.JPG",
+"ORION Bracelets model 05 79 dh 3.JPG",
+"ORION Bracelets model 05 79 dh 4.JPG",
+"ORION Bracelets model 05 79 dh 5.JPG"]}
 
 ];
 
 
-const promo = [
-
+const promo=[
 {
- model:"Pack",
- price:100,
- images:[
-  "pack1.JPG",
-  "pack2.JPG",
-  "pack3.JPG",
-  "pack4.JPG"
- ]
+model:"Pack",
+price:100,
+images:["pack1.JPG","pack2.JPG","pack3.JPG","pack4.JPG"]
 }
-
 ];
 
 
-/* =========================================================
-   STATE
-========================================================= */
-
-let cart = JSON.parse(localStorage.getItem("orionCart") || "[]");
-let currentCategory = "all";
+let cart=JSON.parse(localStorage.getItem("orionCart")||"[]");
 
 
-/* =========================================================
-   HELPERS
-========================================================= */
-
-function imagePath(name){
- return "./" + name;
-}
-
-function escapeHtml(text){
- return String(text)
-  .replace(/&/g,"&amp;")
-  .replace(/</g,"&lt;")
-  .replace(/>/g,"&gt;")
-  .replace(/"/g,"&quot;")
-  .replace(/'/g,"&#039;");
+function esc(s){
+return String(s)
+.replace(/&/g,"&amp;")
+.replace(/</g,"&lt;")
+.replace(/>/g,"&gt;")
+.replace(/"/g,"&quot;")
+.replace(/'/g,"&#039;");
 }
 
 
-/* =========================================================
-   CREATE PRODUCTS
-========================================================= */
+function createProducts(list,id,type){
 
-function createProducts(list,containerId,type){
+const box=document.getElementById(id);
 
- const container=document.getElementById(containerId);
+if(!box)return;
 
- if(!container)return;
+box.innerHTML="";
 
- container.innerHTML="";
+list.forEach((p,n)=>{
 
- list.forEach((p,index)=>{
+const uid=type+"-"+p.model+"-"+n;
+const main=uid+"-main";
+const sel=uid+"-select";
 
-  const id=type+"-"+p.model+"-"+index;
-  const mainId=id+"-main";
-  const selectId=id+"-select";
+const card=document.createElement("article");
 
-  const firstImage=imagePath(p.images[0]);
+card.className="product";
+card.dataset.type=type;
+card.dataset.model=p.model;
 
-  const card=document.createElement("article");
+let badge="";
 
-  card.className="product";
+if(type==="promo")badge="PROMO";
+else if(p.badge)badge=p.badge;
+else if(type==="bracelet"&&p.model==="05")badge="NOUVEAU";
 
-  card.dataset.type=type;
-  card.dataset.model=p.model;
+card.innerHTML=`
 
-  const badge=
-   type==="promo" ? "PROMO" :
-   p.model==="01" && type==="glasses" ? "BEST SELLER" :
-   p.model==="05" && type==="bracelet" ? "NOUVEAU" :
-   "";
+<div class="product-top">
+<span>${badge?`<span class="badge">${badge}</span>`:""}</span>
 
-  card.innerHTML=`
+<button class="favorite"
+onclick="toggleFavorite(this)">
+♡
+</button>
+</div>
 
-   <div class="product-top">
+<img
+id="${main}"
+class="main-image"
+src="./${p.images[0]}"
+alt="ORION ${type} Model ${esc(p.model)}"
+loading="lazy">
 
-    ${
-     badge
-      ? `<span class="badge">${badge}</span>`
-      : `<span></span>`
-    }
+<div class="thumbs">
 
-    <button
-     class="favorite"
-     onclick="toggleFavorite(this)"
-     aria-label="Favorite">
-     ♡
-    </button>
+${p.images.map((im,i)=>`
 
-   </div>
+<img
+src="./${im}"
+alt="ORION ${type} ${esc(p.model)} vue ${i+1}"
+onclick="selectVariant('${sel}','${main}',${i})"
+style="${i===0?"border-color:var(--gold)":""}">
 
-   <img
-    id="${mainId}"
-    class="main-image"
-    src="${firstImage}"
-    alt="ORION ${type} Model ${escapeHtml(p.model)}"
-    loading="lazy">
+`).join("")}
 
-   <div class="thumbs">
+</div>
 
-    ${p.images.map((img,i)=>`
+${p.images.length>1?`
 
-     <img
-      src="${imagePath(img)}"
-      alt="ORION ${type} ${escapeHtml(p.model)}"
-      onclick="selectVariant('${selectId}','${mainId}',${i})"
-      style="${i===0?'border-color:var(--gold)':''}">
+<span class="variant-label">
+Choisir la vue
+</span>
 
-    `).join("")}
+<select
+id="${sel}"
+class="variant-select"
+onchange="selectVariant('${sel}','${main}',this.value)">
 
-   </div>
+${p.images.map((_,i)=>`
+<option value="${i}">
+Vue ${i+1}
+</option>
+`).join("")}
 
-   ${
-    p.images.length>1
-    ? `
-    <div class="variant-area">
+</select>
 
-     <span class="variant-label">
-      Choisir la vue
-     </span>
+`:""}
 
-     <select
-      class="variant-select"
-      id="${selectId}"
-      onchange="selectVariant('${selectId}','${mainId}',this.value)">
+<h3>
 
-      ${p.images.map((_,i)=>`
-       <option value="${i}">
-        Vue ${i+1}
-       </option>
-      `).join("")}
+${
+type==="glasses"
+?"ORION Lunettes Model "+esc(p.model)
+:type==="chain"
+?"ORION Collier Model "+esc(p.model)
+:type==="bracelet"
+?"ORION Bracelet Model "+esc(p.model)
+:"ORION Pack"
+}
 
-     </select>
+</h3>
 
-    </div>
-    `
-    : ""
-   }
+<div class="category">
 
-   <h3>
-    ${
-     type==="glasses"
-      ? "ORION Lunettes Model "+escapeHtml(p.model)
-      : type==="chain"
-      ? "ORION Collier Model "+escapeHtml(p.model)
-      : type==="bracelet"
-      ? "ORION Bracelet Model "+escapeHtml(p.model)
-      : "ORION Pack"
-    }
-   </h3>
+${
+type==="glasses"
+?"Lunettes"
+:type==="chain"
+?p.gender||"Collier"
+:type==="bracelet"
+?p.gender||"Bracelet"
+:"Pack Promo"
+}
 
-   <div class="category">
-    ${
-     type==="glasses"
-      ? "Lunettes"
-      : type==="chain"
-      ? (p.gender || "Collier")
-      : type==="bracelet"
-      ? (p.gender || "Bracelet")
-      : "Pack Promo"
-    }
-   </div>
+</div>
 
-   <div class="price">
-    ${p.price} DH
-   </div>
+<div class="price">
+${p.price} DH
+</div>
 
-   <div class="product-actions">
+<div class="product-actions">
 
-    <a
-     id="${id}-wa"
-     class="whatsapp"
-     target="_blank"
-     href="#">
-     Commander
-    </a>
+<a
+id="${uid}-wa"
+class="whatsapp"
+target="_blank"
+href="#">
+Commander
+</a>
 
-    <button
-     class="add-cart"
-     onclick="addToCart('${type}','${p.model}',0)">
-     +
-    </button>
+<button
+class="add-cart"
+onclick="addToCart('${type}','${p.model}',0)">
++
+</button>
 
-   </div>
-  `;
+</div>
+`;
 
-  container.appendChild(card);
+box.appendChild(card);
 
-  updateWhatsAppLink(card,type,p,0);
+updateWhatsAppLink(card,type,p,0);
 
- });
+});
 
 }
 
-
-/* =========================================================
-   VARIANT
-========================================================= */
 
 function selectVariant(selectId,mainId,index){
 
- index=Number(index);
+index=Number(index);
 
- const main=document.getElementById(mainId);
+const main=document.getElementById(mainId);
 
- if(!main)return;
+if(!main)return;
 
- const card=main.closest(".product");
+const card=main.closest(".product");
 
- if(!card)return;
+if(!card)return;
 
- const images=[...card.querySelectorAll(".thumbs img")];
+const imgs=[...card.querySelectorAll(".thumbs img")];
 
- if(images[index]){
+if(imgs[index]){
 
-  main.src=images[index].src;
-  main.removeAttribute("srcset");
+main.src=imgs[index].src;
 
- }
-
- const select=document.getElementById(selectId);
-
- if(select){
-  select.value=String(index);
- }
-
- images.forEach((img,i)=>{
-  img.style.borderColor=
-   i===index ? "var(--gold)" : "transparent";
- });
-
- const type=card.dataset.type;
- const model=card.dataset.model;
-
- const list=
-  type==="glasses" ? glasses :
-  type==="chain" ? chains :
-  type==="bracelet" ? bracelets :
-  promo;
-
- const product=list.find(p=>p.model===model);
-
- if(product){
-  updateWhatsAppLink(card,type,product,index);
- }
+main.removeAttribute("srcset");
 
 }
 
+const select=document.getElementById(selectId);
 
-/* =========================================================
-   WHATSAPP PRODUCT LINK
-========================================================= */
+if(select)
+select.value=String(index);
+
+imgs.forEach((x,i)=>{
+x.style.borderColor=
+i===index?"var(--gold)":"transparent";
+});
+
+const type=card.dataset.type;
+const model=card.dataset.model;
+
+const list=
+type==="glasses"
+?glasses
+:type==="chain"
+?chains
+:type==="bracelet"
+?bracelets
+:promo;
+
+const p=list.find(x=>x.model===model);
+
+if(p)
+updateWhatsAppLink(card,type,p,index);
+
+}
+
 
 function updateWhatsAppLink(card,type,p,index){
 
- const wa=card.querySelector(".whatsapp");
+const a=card.querySelector(".whatsapp");
 
- if(!wa)return;
+if(!a)return;
 
- let name=
-  type==="glasses"
-   ? `Lunettes ORION Model ${p.model}`
-   : type==="chain"
-   ? `Collier ORION Model ${p.model}`
-   : type==="bracelet"
-   ? `Bracelet ORION Model ${p.model}`
-   : "Pack ORION";
+const name=
+type==="glasses"
+?`Lunettes ORION Model ${p.model}`
+:type==="chain"
+?`Collier ORION Model ${p.model}`
+:type==="bracelet"
+?`Bracelet ORION Model ${p.model}`
+:"Pack ORION";
 
- const text=
-  `Bonjour ORION Accessories%0A%0A`+
-  `Je souhaite commander : ${encodeURIComponent(name)}%0A`+
-  `Prix : ${p.price} DH%0A`+
-  `Vue : ${index+1}`;
-
- wa.href=`https://wa.me/${WHATSAPP}?text=${text}`;
+a.href=
+`https://wa.me/${WHATSAPP}?text=${
+encodeURIComponent(
+"Bonjour ORION Accessories\n\n"+
+"Je souhaite commander : "+name+
+"\nPrix : "+p.price+" DH"+
+"\nVue : "+(index+1)
+)
+}`;
 
 }
 
 
-/* =========================================================
-   CART
-========================================================= */
+function addToCart(type,model,index){
 
-function addToCart(type,model,index=0){
+const list=
+type==="glasses"
+?glasses
+:type==="chain"
+?chains
+:type==="bracelet"
+?bracelets
+:promo;
 
- const list=
-  type==="glasses" ? glasses :
-  type==="chain" ? chains :
-  type==="bracelet" ? bracelets :
-  promo;
+const p=list.find(x=>x.model===model);
 
- const p=list.find(x=>x.model===model);
+if(!p)return;
 
- if(!p)return;
+const key=
+`${type}-${model}-${index}`;
 
- const key=`${type}-${model}-${index}`;
+const old=cart.find(x=>x.key===key);
 
- const existing=cart.find(x=>x.key===key);
+if(old)
+old.qty++;
 
- if(existing){
-  existing.qty++;
- }else{
+else
+cart.push({
+key,type,model,index,
+price:p.price,
+image:p.images[index],
+qty:1
+});
 
-  cart.push({
-   key,
-   type,
-   model,
-   index,
-   price:p.price,
-   image:p.images[index],
-   qty:1
-  });
-
- }
-
- saveCart();
- renderCart();
- openCart();
+saveCart();
+renderCart();
+openCart();
 
 }
 
 
 function saveCart(){
 
- localStorage.setItem(
-  "orionCart",
-  JSON.stringify(cart)
- );
+localStorage.setItem(
+"orionCart",
+JSON.stringify(cart)
+);
 
 }
 
 
 function renderCart(){
 
- const box=document.getElementById("cartItems");
+const box=document.getElementById("cartItems");
 
- if(!box)return;
+if(!cart.length){
 
- if(!cart.length){
+box.innerHTML=`
+<div style="text-align:center;color:var(--muted);padding:35px 5px">
+Votre panier est vide.
+</div>`;
 
-  box.innerHTML=`
-   <div style="text-align:center;color:#999;padding:35px 5px">
-    Votre panier est vide.
-   </div>
-  `;
+}else{
 
- }else{
+box.innerHTML=cart.map((x,i)=>`
 
-  box.innerHTML=cart.map((item,i)=>`
+<div class="cart-item">
 
-   <div class="cart-item">
+<img src="./${x.image}">
 
-    <img src="${imagePath(item.image)}">
+<div class="cart-item-info">
 
-    <div class="cart-item-info">
+<strong>
 
-     <strong>
-      ${item.type==="glasses"
-       ?"Lunettes"
-       :item.type==="chain"
-       ?"Collier"
-       :item.type==="bracelet"
-       ?"Bracelet"
-       :"Pack"}
-      ${item.model}
-     </strong>
+${
+x.type==="glasses"
+?"Lunettes"
+:x.type==="chain"
+?"Collier"
+:x.type==="bracelet"
+?"Bracelet"
+:"Pack"
+}
 
-     <span>
-      ${item.price * item.qty} DH
-     </span>
+ ${esc(x.model)}
 
-     <small>
-      Vue ${Number(item.index)+1}
-     </small>
+</strong>
 
-     <div class="quantity-control">
+<span>
+${x.price*x.qty} DH
+</span>
 
-      <button onclick="changeQty(${i},-1)">
-       −
-      </button>
+<small>
+Vue ${Number(x.index)+1}
+</small>
 
-      <span class="quantity-value">
-       ${item.qty}
-      </span>
+<div class="quantity-control">
 
-      <button onclick="changeQty(${i},1)">
-       +
-      </button>
+<button onclick="changeQty(${i},-1)">
+−
+</button>
 
-      <button class="remove" onclick="removeCart(${i})">
-       Supprimer
-      </button>
+<span class="quantity-value">
+${x.qty}
+</span>
 
-     </div>
+<button onclick="changeQty(${i},1)">
++
+</button>
 
-    </div>
+<button
+class="remove"
+onclick="removeCart(${i})">
+Supprimer
+</button>
 
-   </div>
+</div>
 
-  `).join("");
+</div>
 
- }
+</div>
 
- const total=cart.reduce(
-  (sum,item)=>sum+(item.price*item.qty),
-  0
- );
+`).join("");
 
- document.getElementById("cartTotal").textContent=
-  total+" DH";
+}
 
- document.getElementById("cartCount").textContent=
-  cart.reduce((sum,item)=>sum+item.qty,0);
+document.getElementById("cartTotal").textContent=
+cart.reduce((s,x)=>s+x.price*x.qty,0)+" DH";
+
+document.getElementById("cartCount").textContent=
+cart.reduce((s,x)=>s+x.qty,0);
 
 }
 
 
-function changeQty(index,amount){
+function changeQty(i,a){
 
- if(!cart[index])return;
+if(!cart[i])return;
 
- cart[index].qty+=amount;
+cart[i].qty+=a;
 
- if(cart[index].qty<=0){
-  cart.splice(index,1);
- }
+if(cart[i].qty<=0)
+cart.splice(i,1);
 
- saveCart();
- renderCart();
+saveCart();
+renderCart();
 
 }
 
 
-function removeCart(index){
+function removeCart(i){
 
- cart.splice(index,1);
+cart.splice(i,1);
 
- saveCart();
- renderCart();
+saveCart();
+renderCart();
 
 }
 
 
 function openCart(){
 
- document.getElementById("cartPanel").classList.add("open");
- document.getElementById("overlay").classList.add("show");
+document.getElementById("cartPanel")
+.classList.add("open");
+
+document.getElementById("overlay")
+.classList.add("show");
 
 }
 
 
 function closeCart(){
 
- document.getElementById("cartPanel").classList.remove("open");
- document.getElementById("overlay").classList.remove("show");
+document.getElementById("cartPanel")
+.classList.remove("open");
+
+document.getElementById("overlay")
+.classList.remove("show");
 
 }
 
 
 function checkout(){
 
- if(!cart.length){
+if(!cart.length){
 
-  alert("Votre panier est vide.");
+alert("Votre panier est vide.");
 
-  return;
+return;
 
- }
+}
 
- let message="Bonjour ORION Accessories.%0A%0AJe souhaite commander :%0A%0A";
+let m=
+"Bonjour ORION Accessories.\n\n"+
+"Je souhaite commander :\n\n";
 
- cart.forEach((item,i)=>{
+cart.forEach((x,i)=>{
 
-  const type=
-   item.type==="glasses" ? "Lunettes" :
-   item.type==="chain" ? "Collier" :
-   item.type==="bracelet" ? "Bracelet" :
-   "Pack";
+const t=
+x.type==="glasses"
+?"Lunettes"
+:x.type==="chain"
+?"Collier"
+:x.type==="bracelet"
+?"Bracelet"
+:"Pack";
 
-  message+=
-   `${i+1}. ${type} Model ${item.model} - `+
-   `${item.qty} x ${item.price} DH - Vue ${Number(item.index)+1}%0A`;
+m+=
+`${i+1}. ${t} Model ${x.model} - ${x.qty} x ${x.price} DH - Vue ${Number(x.index)+1}\n`;
 
- });
+});
 
- const total=cart.reduce(
-  (sum,item)=>sum+(item.price*item.qty),
-  0
- );
+m+=
+"\nTotal : "+
+cart.reduce((s,x)=>s+x.price*x.qty,0)+
+" DH";
 
- message+=`%0ATotal : ${total} DH`;
-
- window.open(
-  `https://wa.me/${WHATSAPP}?text=${message}`,
-  "_blank"
- );
+window.open(
+`https://wa.me/${WHATSAPP}?text=${encodeURIComponent(m)}`,
+"_blank"
+);
 
 }
 
 
-/* =========================================================
-   FAVORITES
-========================================================= */
+function toggleFavorite(b){
 
-function toggleFavorite(button){
+b.classList.toggle("active");
 
- button.classList.toggle("active");
-
- button.textContent=
-  button.classList.contains("active")
-   ? "♥"
-   : "♡";
+b.textContent=
+b.classList.contains("active")
+?"♥"
+:"♡";
 
 }
 
 
-/* =========================================================
-   CATEGORY
-========================================================= */
+function showCategory(cat,b){
 
-function showCategory(category,button){
+document
+.querySelectorAll(".nav button")
+.forEach(x=>x.classList.remove("active"));
 
- currentCategory=category;
+if(b)
+b.classList.add("active");
 
- document.querySelectorAll(".nav button")
-  .forEach(b=>b.classList.remove("active"));
+const map={
+glasses:"glasses",
+chain:"chains",
+bracelet:"bracelets",
+promo:"promo"
+};
 
- if(button){
-  button.classList.add("active");
- }
+["glasses","chains","bracelets","promo"]
+.forEach(id=>{
 
- const sections={
-  all:["glasses","chains","bracelets","promo"],
-  glasses:["glasses"],
-  chain:["chains"],
-  bracelet:["bracelets"],
-  promo:["promo"]
- };
+const section=document.getElementById(id);
 
- Object.keys({
-  glasses:"glasses",
-  chains:"chains",
-  bracelets:"bracelets",
-  promo:"promo"
- }).forEach(id=>{
+if(!section)return;
 
-  const section=document.getElementById(id);
+section.classList.toggle(
+"hidden",
+cat!=="all"&&map[cat]!==id
+);
 
-  if(!section)return;
+});
 
-  if(category==="all"){
-   section.classList.remove("hidden");
-  }else{
+if(cat!=="all"&&map[cat]){
 
-   const allowed=sections[category] || [];
-
-   section.classList.toggle(
-    "hidden",
-    !allowed.includes(id)
-   );
-
-  }
-
- });
-
- if(category!=="all"){
-
-  const target=
-   category==="glasses" ? "glasses" :
-   category==="chain" ? "chains" :
-   category==="bracelet" ? "bracelets" :
-   "promo";
-
-  document.getElementById(target)
-   ?.scrollIntoView({behavior:"smooth",block:"start"});
-
- }
+document
+.getElementById(map[cat])
+.scrollIntoView({
+behavior:"smooth"
+});
 
 }
 
+}
 
-/* =========================================================
-   SEARCH
-========================================================= */
 
 function searchProducts(){
 
- const query=
-  document.getElementById("searchInput")
-   .value
-   .toLowerCase()
-   .trim();
+const q=
+document
+.getElementById("searchInput")
+.value
+.toLowerCase()
+.trim();
 
- document.querySelectorAll(".product")
-  .forEach(card=>{
+document
+.querySelectorAll(".product")
+.forEach(c=>{
 
-   const text=card.innerText.toLowerCase();
+c.style.display=
+!q||
+c.innerText.toLowerCase().includes(q)
+?""
+:"none";
 
-   card.style.display=
-    !query || text.includes(query)
-     ? ""
-     : "none";
-
-  });
+});
 
 }
 
-
-/* =========================================================
-   THEME
-========================================================= */
 
 function toggleTheme(){
 
- document.body.classList.toggle("light");
+document.body.classList.toggle("light");
+
+const light=
+document.body.classList.contains("light");
+
+localStorage.setItem(
+"orionTheme",
+light?"light":"dark"
+);
+
+updateThemeButton();
 
 }
 
 
-/* =========================================================
-   FAQ
-========================================================= */
+function updateThemeButton(){
 
-function toggleFaq(button){
+const b=
+document.getElementById("themeBtn");
 
- const item=button.parentElement;
+if(!b)return;
 
- item.classList.toggle("open");
+const light=
+document.body.classList.contains("light");
+
+b.textContent=
+light?"🌙":"☀️";
+
+b.title=
+light?"Mode nuit":"Mode jour";
 
 }
 
 
-/* =========================================================
-   COMING SOON
-========================================================= */
+function toggleFaq(b){
+
+b.parentElement.classList.toggle("open");
+
+}
+
 
 function showComingSoon(){
 
- alert("Les montres ORION seront bientôt disponibles.");
+alert(
+"Les montres ORION seront bientôt disponibles."
+);
 
 }
 
 
-/* =========================================================
-   BACK TO TOP
-========================================================= */
+function openClientImage(src){
+
+document
+.getElementById("clientViewerImage")
+.src=src;
+
+document
+.getElementById("clientViewer")
+.classList.add("show");
+
+}
+
+
+function closeClientImage(){
+
+document
+.getElementById("clientViewer")
+.classList.remove("show");
+
+}
+
 
 window.addEventListener("scroll",()=>{
 
- const button=document.getElementById("backTop");
-
- if(window.scrollY>400){
-  button.classList.add("show");
- }else{
-  button.classList.remove("show");
- }
+document
+.getElementById("backTop")
+.classList.toggle(
+"show",
+scrollY>400
+);
 
 });
 
 
-/* =========================================================
-   INIT
-========================================================= */
+if(
+localStorage.getItem("orionTheme")==="light"
+)
+document.body.classList.add("light");
+
 
 createProducts(
- glasses,
- "glassesProducts",
- "glasses"
+glasses,
+"glassesProducts",
+"glasses"
 );
 
 createProducts(
- chains,
- "chainProducts",
- "chain"
+chains,
+"chainProducts",
+"chain"
 );
 
 createProducts(
- bracelets,
- "braceletProducts",
- "bracelet"
+bracelets,
+"braceletProducts",
+"bracelet"
 );
 
 createProducts(
- promo,
- "promoProducts",
- "promo"
+promo,
+"promoProducts",
+"promo"
 );
 
 renderCart();
+
+updateThemeButton();
 
 </script>
 
