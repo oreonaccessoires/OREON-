@@ -1,17 +1,82 @@
-/* ORION ACCESSORIES — PART 1/3 : CSS
-   Colle ce contenu ENTRE <style> et </style> (remplace tout l'ancien CSS) */
+<!DOCTYPE html>
+<html lang="fr-MA">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>ORION Accessories Maroc | Lunettes, Colliers & Bracelets</title>
+<meta name="description" content="ORION Accessories au Maroc : lunettes, colliers, bracelets et packs modernes à prix accessibles. Découvrez notre collection et commandez facilement via WhatsApp avec livraison partout au Maroc.">
+<meta name="keywords" content="ORION Accessories Maroc, accessoires Maroc, lunettes Maroc, colliers Maroc, bracelets Maroc, bijoux Maroc, accessoires femme Maroc, accessoires homme Maroc">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="author" content="ORION Accessories">
+<meta name="theme-color" content="#050505">
+<link rel="canonical" href="https://oreonaccessoires.github.io/OREON-/">
+<link rel="icon" type="image/png" href="./LOGO.PNG">
 
-:root{--gold:#d4af37;--bg:#050505;--card:#101010;--card2:#171717;--text:#fff;--muted:#999;--border:#292929}
+<!-- OPEN GRAPH -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="ORION Accessories">
+<meta property="og:locale" content="fr_MA">
+<meta property="og:title" content="ORION Accessories Maroc | Lunettes, Colliers & Bracelets">
+<meta property="og:description" content="Découvrez les lunettes, colliers, bracelets et packs ORION Accessories au Maroc.">
+<meta property="og:url" content="https://oreonaccessoires.github.io/OREON-/">
+<meta property="og:image" content="https://oreonaccessoires.github.io/OREON-/LOGO.PNG">
+<meta property="og:image:alt" content="ORION Accessories Maroc">
+
+<!-- TWITTER -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="ORION Accessories Maroc">
+<meta name="twitter:description" content="Lunettes, colliers et bracelets modernes au Maroc.">
+<meta name="twitter:image" content="https://oreonaccessoires.github.io/OREON-/LOGO.PNG">
+
+<!-- STRUCTURED DATA -->
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@graph":[
+    {
+      "@type":"Organization",
+      "@id":"https://oreonaccessoires.github.io/OREON-/#organization",
+      "name":"ORION Accessories",
+      "url":"https://oreonaccessoires.github.io/OREON-/",
+      "logo":"https://oreonaccessoires.github.io/OREON-/LOGO.PNG",
+      "description":"ORION Accessories propose des lunettes, colliers, bracelets et accessoires modernes au Maroc.",
+      "sameAs":[
+        "https://www.instagram.com/orion___accessories_official",
+        "https://www.facebook.com/share/1AQPyEsQKQ/",
+        "https://www.tiktok.com/@orion.accessoires"
+      ],
+      "contactPoint":{
+        "@type":"ContactPoint",
+        "telephone":"+212673830013",
+        "contactType":"customer service",
+        "areaServed":"MA",
+        "availableLanguage":["fr","ar"]
+      }
+    },
+    {
+      "@type":"WebSite",
+      "@id":"https://oreonaccessoires.github.io/OREON-/#website",
+      "url":"https://oreonaccessoires.github.io/OREON-/",
+      "name":"ORION Accessories",
+      "publisher":{"@id":"https://oreonaccessoires.github.io/OREON-/#organization"},
+      "inLanguage":"fr-MA"
+    }
+  ]
+}
+</script>
+
+<style>
+:root{--gold:#d4af37;--purple:#a974ff;--grad:linear-gradient(135deg,#5b21b6,#8b5cf6);--bg:#050505;--card:#0f0b14;--card2:#171122;--text:#fff;--muted:#a39bb3;--border:#2a2236}
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:var(--text);line-height:1.5;transition:background .3s ease,color .3s ease}
+body{font-family:Arial,Helvetica,sans-serif;background:radial-gradient(circle at 50% -10%,rgba(169,116,255,.16),transparent 42%),var(--bg);color:var(--text);line-height:1.5;transition:background .3s ease,color .3s ease}
 button,input,select{font:inherit}
 button{cursor:pointer}
 a{color:inherit}
 
 /* HEADER */
 header{text-align:center;padding:18px 15px 30px;border-bottom:1px solid rgba(212,175,55,.3)}
-.logo img{width:120px;height:120px;object-fit:contain;filter:drop-shadow(0 10px 25px rgba(212,175,55,.18))}
+.logo img{width:120px;height:120px;object-fit:contain;filter:drop-shadow(0 10px 30px rgba(169,116,255,.35))}
 .hero{max-width:950px;margin:auto}
 .eyebrow{display:inline-block;color:var(--gold);border:1px solid rgba(212,175,55,.5);border-radius:50px;padding:6px 14px;font-size:11px;letter-spacing:2px;margin:8px 0 12px}
 h1{font-size:clamp(32px,7vw,58px);line-height:1.05;margin-bottom:12px}
@@ -19,22 +84,22 @@ h1 span,.section-title span{color:var(--gold)}
 .hero p{max-width:700px;margin:auto;color:var(--muted)}
 .hero-actions{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-top:20px}
 .hero-btn{padding:12px 20px;border-radius:50px;text-decoration:none;font-weight:bold;border:1px solid var(--gold)}
-.hero-btn.primary{background:var(--gold);color:#000}
+.hero-btn.primary{background:var(--grad);color:#fff}
 .tools{display:flex;justify-content:center;gap:9px;margin-top:18px}
 .tool{position:relative;width:44px;height:44px;border-radius:50%;border:1px solid var(--gold);background:var(--card);color:var(--text)}
-.count{position:absolute;top:-6px;right:-5px;min-width:19px;height:19px;border-radius:50%;background:var(--gold);color:#000;font-size:11px;font-weight:bold;display:flex;align-items:center;justify-content:center}
+.count{position:absolute;top:-6px;right:-5px;min-width:19px;height:19px;border-radius:50%;background:var(--grad);color:#fff;font-size:11px;font-weight:bold;display:flex;align-items:center;justify-content:center}
 
 /* SEARCH */
 .search-wrap{max-width:700px;margin:20px auto 0;padding:0 15px}
 .search{width:100%;padding:14px 18px;border:1px solid var(--border);border-radius:50px;background:var(--card);color:var(--text);outline:none}
-.search::placeholder{color:#777}
+.search::placeholder{color:#8a7ca3}
 .search:focus{border-color:var(--gold)}
 
 /* NAV */
 .nav{position:sticky;top:0;z-index:50;display:flex;justify-content:center;gap:8px;overflow-x:auto;padding:13px 10px;background:rgba(5,5,5,.92);backdrop-filter:blur(15px);border-bottom:1px solid rgba(212,175,55,.12);scrollbar-width:none}
 .nav::-webkit-scrollbar{display:none}
 .nav button{white-space:nowrap;border:1px solid var(--border);background:var(--card);color:var(--text);padding:9px 15px;border-radius:50px;transition:.25s}
-.nav button.active,.nav button:hover{background:var(--gold);color:#000;border-color:var(--gold)}
+.nav button.active,.nav button:hover{background:var(--grad);color:#fff;border-color:var(--gold)}
 
 /* SECTIONS */
 .section{max-width:1250px;margin:55px auto;padding:0 15px}
@@ -43,11 +108,11 @@ h1 span,.section-title span{color:var(--gold)}
 
 /* PRODUCTS */
 .products{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
-.product{position:relative;padding:11px;background:linear-gradient(145deg,#151515,#0b0b0b);border:1px solid var(--border);border-radius:22px;overflow:hidden;transition:transform .3s ease,border-color .3s ease,box-shadow .3s ease}
-.product:hover{transform:translateY(-5px);border-color:rgba(212,175,55,.7);box-shadow:0 18px 45px rgba(0,0,0,.25)}
+.product{position:relative;padding:11px;background:linear-gradient(145deg,#14101b,#0a0810);border:1px solid var(--border);border-radius:22px;overflow:hidden;transition:transform .3s ease,border-color .3s ease,box-shadow .3s ease}
+.product:hover{transform:translateY(-5px);border-color:rgba(212,175,55,.7);box-shadow:0 18px 45px rgba(139,92,246,.28)}
 .product-top{position:absolute;top:21px;left:21px;right:21px;z-index:5;display:flex;justify-content:space-between;pointer-events:none}
 .product-top>*{pointer-events:auto}
-.badge{background:var(--gold);color:#000;border-radius:50px;padding:5px 9px;font-size:10px;font-weight:bold}
+.badge{background:var(--grad);color:#fff;border-radius:50px;padding:5px 9px;font-size:10px;font-weight:bold}
 .favorite{width:38px;height:38px;border-radius:50%;border:1px solid var(--gold);background:rgba(0,0,0,.65);color:#fff;font-size:19px}
 .favorite.active{color:var(--gold)}
 
@@ -86,18 +151,18 @@ h1 span,.section-title span{color:var(--gold)}
 
 /* PRODUCT ACTIONS */
 .product-actions{display:grid;grid-template-columns:1fr 48px;gap:8px;margin-top:9px}
-.whatsapp{display:flex;align-items:center;justify-content:center;text-decoration:none;background:var(--gold);color:#000;font-weight:bold;border-radius:12px;padding:12px}
+.whatsapp{display:flex;align-items:center;justify-content:center;text-decoration:none;background:var(--grad);color:#fff;font-weight:bold;border-radius:12px;padding:12px}
 .add-cart{border:1px solid var(--gold);border-radius:12px;background:transparent;color:var(--gold);font-size:20px}
-.add-cart:hover{background:var(--gold);color:#000}
+.add-cart:hover{background:var(--grad);color:#fff}
 
 /* PROMO */
-.promo-box{padding:28px 18px;border:1px solid var(--gold);border-radius:24px;background:radial-gradient(circle at 50% 0%,rgba(212,175,55,.13),transparent 55%),#101010}
+.promo-box{padding:28px 18px;border:1px solid var(--gold);border-radius:24px;background:radial-gradient(circle at 50% 0%,rgba(169,116,255,.16),transparent 55%),#0f0b14}
 .promo-box h2{text-align:center;color:var(--gold);margin-bottom:5px}
 .promo-box>p{text-align:center;color:var(--muted);margin-bottom:22px}
 
 /* INFO / STEPS */
 .info-grid,.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-.info-card,.step{background:linear-gradient(145deg,#151515,#0c0c0c);border:1px solid var(--border);border-radius:20px;padding:24px;text-align:center}
+.info-card,.step{background:linear-gradient(145deg,#14101b,#0a0810);border:1px solid var(--border);border-radius:20px;padding:24px;text-align:center}
 .info-card .icon{font-size:30px}
 .info-card h3{color:var(--gold);margin:5px 0}
 .info-card p,.step p{color:var(--muted)}
@@ -120,7 +185,7 @@ h1 span,.section-title span{color:var(--gold)}
 .client-viewer{position:fixed;inset:0;background:rgba(0,0,0,.94);z-index:200;display:none;align-items:center;justify-content:center;padding:20px}
 .client-viewer.show{display:flex}
 .client-viewer img{max-width:95%;max-height:90vh;object-fit:contain;border-radius:12px}
-.client-viewer button{position:absolute;top:18px;right:20px;width:45px;height:45px;border-radius:50%;border:1px solid var(--gold);background:#111;color:#fff;font-size:30px}
+.client-viewer button{position:absolute;top:18px;right:20px;width:45px;height:45px;border-radius:50%;border:1px solid var(--gold);background:#1d1129;color:#fff;font-size:30px}
 
 /* FAQ */
 .faq-list{max-width:850px;margin:auto;display:grid;gap:10px}
@@ -133,7 +198,7 @@ h1 span,.section-title span{color:var(--gold)}
 /* CART */
 .overlay{position:fixed;inset:0;background:rgba(0,0,0,.65);z-index:90;display:none}
 .overlay.show{display:block}
-.cart-panel{position:fixed;right:-430px;top:0;width:min(410px,94vw);height:100vh;background:#101010;border-left:1px solid var(--gold);z-index:100;padding:22px;transition:.35s;overflow-y:auto}
+.cart-panel{position:fixed;right:-430px;top:0;width:min(410px,94vw);height:100vh;background:#0f0b14;border-left:1px solid var(--gold);z-index:100;padding:22px;transition:.35s;overflow-y:auto}
 .cart-panel.open{right:0}
 .cart-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:15px}
 .cart-header h2{color:var(--gold)}
@@ -149,7 +214,7 @@ h1 span,.section-title span{color:var(--gold)}
 .quantity-value{min-width:20px;text-align:center}
 .remove{border:0!important;color:#f66!important;width:auto!important}
 .cart-total{font-size:22px;font-weight:bold;color:var(--gold);margin:20px 0}
-.checkout{width:100%;padding:14px;border:0;border-radius:13px;background:var(--gold);color:#000;font-weight:bold}
+.checkout{width:100%;padding:14px;border:0;border-radius:13px;background:var(--grad);color:#fff;font-weight:bold}
 
 /* IMAGE LIGHTBOX */
 .image-lightbox{position:fixed;inset:0;z-index:99999;display:none;align-items:center;justify-content:center;padding:20px;background:rgba(0,0,0,.94);backdrop-filter:blur(12px);opacity:0;transition:opacity .3s ease}
@@ -158,16 +223,16 @@ h1 span,.section-title span{color:var(--gold)}
 .lightbox-image{display:block;max-width:90vw;max-height:88vh;width:auto;height:auto;object-fit:contain;border-radius:18px;box-shadow:0 20px 80px rgba(0,0,0,.75);animation:lightboxOpen .35s cubic-bezier(.22,.61,.36,1);transition:opacity .2s ease,transform .25s ease;-webkit-user-drag:none;user-select:none}
 @keyframes lightboxOpen{0%{opacity:0;transform:scale(.82)}100%{opacity:1;transform:scale(1)}}
 .lightbox-close{position:fixed;top:18px;right:20px;width:46px;height:46px;border:1px solid rgba(212,175,55,.7);border-radius:50%;background:rgba(0,0,0,.65);color:#fff;font-size:30px;line-height:1;cursor:pointer;z-index:100001;transition:.25s}
-.lightbox-close:hover{transform:rotate(90deg) scale(1.08);background:var(--gold);color:#000}
+.lightbox-close:hover{transform:rotate(90deg) scale(1.08);background:var(--grad);color:#fff}
 .lightbox-arrow{position:fixed;top:50%;transform:translateY(-50%);width:48px;height:48px;border:1px solid rgba(212,175,55,.7);border-radius:50%;background:rgba(0,0,0,.65);color:#fff;font-size:30px;cursor:pointer;z-index:100001;transition:.25s}
-.lightbox-arrow:hover{background:var(--gold);color:#000}
+.lightbox-arrow:hover{background:var(--grad);color:#fff}
 .lightbox-prev{left:18px}
 .lightbox-next{right:18px}
 .lightbox-counter{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);padding:7px 14px;border:1px solid rgba(212,175,55,.5);border-radius:20px;background:rgba(0,0,0,.7);color:#fff;font-size:13px;z-index:100001}
 
 /* FIXED BUTTONS */
 .fixed-wa{position:fixed;right:17px;bottom:17px;width:57px;height:57px;border-radius:50%;background:#25D366;color:#fff;display:flex;align-items:center;justify-content:center;text-decoration:none;font-size:25px;z-index:80;box-shadow:0 8px 25px rgba(37,211,102,.25)}
-.back-top{position:fixed;right:18px;bottom:85px;width:45px;height:45px;border-radius:50%;border:1px solid var(--gold);background:#111;color:var(--gold);font-size:22px;z-index:79;opacity:0;visibility:hidden;transition:.25s}
+.back-top{position:fixed;right:18px;bottom:85px;width:45px;height:45px;border-radius:50%;border:1px solid var(--gold);background:#1d1129;color:var(--gold);font-size:22px;z-index:79;opacity:0;visibility:hidden;transition:.25s}
 .back-top.show{opacity:1;visibility:visible}
 
 /* FOOTER */
@@ -175,7 +240,7 @@ footer{text-align:center;padding:42px 15px;margin-top:55px;border-top:1px solid 
 footer strong{color:var(--gold)}
 
 /* LIGHT MODE */
-body.light{--bg:#f7f7f5;--card:#fff;--card2:#f0f0ed;--text:#111;--muted:#666;--border:#ddd;background:radial-gradient(circle at 50% -10%,rgba(212,175,55,.13),transparent 35%),var(--bg)}
+body.light{--bg:#f8f5fc;--card:#fff;--card2:#f1ebf9;--text:#1a1030;--muted:#6b5f80;--border:#e2d8f0;background:radial-gradient(circle at 50% -10%,rgba(169,116,255,.13),transparent 35%),var(--bg)}
 body.light .nav{background:rgba(255,255,255,.92)}
 body.light .product,body.light .info-card,body.light .step,body.light .client-review{background:linear-gradient(145deg,#fff,#f4f4f1);box-shadow:0 12px 35px rgba(0,0,0,.06)}
 body.light .favorite{background:#fff;color:#111}
@@ -246,260 +311,24 @@ body.light .cart-panel{background:#fff}
 .thumbs img{width:36px;height:36px}
 }
 
-/* REDUCED MOTION */
-@media(prefers-reduced-motion:reduce){
-*{scroll-behavior:auto!important}
-.main-image{transition:none!important;animation:none!important}
-.product:hover .main-image,.product:active .main-image{transform:none;filter:none}
-.swipe-left,.swipe-right,.image-change{animation:none!important}
-}
-/* ORION ACCESSORIES — PART 1/3 : CSS
-   Colle ce contenu ENTRE <style> et </style> (remplace tout l'ancien CSS) */
-
-:root{--gold:#d4af37;--bg:#050505;--card:#101010;--card2:#171717;--text:#fff;--muted:#999;--border:#292929}
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:var(--text);line-height:1.5;transition:background .3s ease,color .3s ease}
-button,input,select{font:inherit}
-button{cursor:pointer}
-a{color:inherit}
-
-/* HEADER */
-header{text-align:center;padding:18px 15px 30px;border-bottom:1px solid rgba(212,175,55,.3)}
-.logo img{width:120px;height:120px;object-fit:contain;filter:drop-shadow(0 10px 25px rgba(212,175,55,.18))}
-.hero{max-width:950px;margin:auto}
-.eyebrow{display:inline-block;color:var(--gold);border:1px solid rgba(212,175,55,.5);border-radius:50px;padding:6px 14px;font-size:11px;letter-spacing:2px;margin:8px 0 12px}
-h1{font-size:clamp(32px,7vw,58px);line-height:1.05;margin-bottom:12px}
-h1 span,.section-title span{color:var(--gold)}
-.hero p{max-width:700px;margin:auto;color:var(--muted)}
-.hero-actions{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-top:20px}
-.hero-btn{padding:12px 20px;border-radius:50px;text-decoration:none;font-weight:bold;border:1px solid var(--gold)}
-.hero-btn.primary{background:var(--gold);color:#000}
-.tools{display:flex;justify-content:center;gap:9px;margin-top:18px}
-.tool{position:relative;width:44px;height:44px;border-radius:50%;border:1px solid var(--gold);background:var(--card);color:var(--text)}
-.count{position:absolute;top:-6px;right:-5px;min-width:19px;height:19px;border-radius:50%;background:var(--gold);color:#000;font-size:11px;font-weight:bold;display:flex;align-items:center;justify-content:center}
-
-/* SEARCH */
-.search-wrap{max-width:700px;margin:20px auto 0;padding:0 15px}
-.search{width:100%;padding:14px 18px;border:1px solid var(--border);border-radius:50px;background:var(--card);color:var(--text);outline:none}
-.search::placeholder{color:#777}
-.search:focus{border-color:var(--gold)}
-
-/* NAV */
-.nav{position:sticky;top:0;z-index:50;display:flex;justify-content:center;gap:8px;overflow-x:auto;padding:13px 10px;background:rgba(5,5,5,.92);backdrop-filter:blur(15px);border-bottom:1px solid rgba(212,175,55,.12);scrollbar-width:none}
-.nav::-webkit-scrollbar{display:none}
-.nav button{white-space:nowrap;border:1px solid var(--border);background:var(--card);color:var(--text);padding:9px 15px;border-radius:50px;transition:.25s}
-.nav button.active,.nav button:hover{background:var(--gold);color:#000;border-color:var(--gold)}
-
-/* SECTIONS */
-.section{max-width:1250px;margin:55px auto;padding:0 15px}
-.section-title{text-align:center;font-size:clamp(27px,5vw,40px);margin-bottom:7px}
-.section-description{text-align:center;color:var(--muted);max-width:720px;margin:0 auto 28px}
-
-/* PRODUCTS */
-.products{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
-.product{position:relative;padding:11px;background:linear-gradient(145deg,#151515,#0b0b0b);border:1px solid var(--border);border-radius:22px;overflow:hidden;transition:transform .3s ease,border-color .3s ease,box-shadow .3s ease}
-.product:hover{transform:translateY(-5px);border-color:rgba(212,175,55,.7);box-shadow:0 18px 45px rgba(0,0,0,.25)}
-.product-top{position:absolute;top:21px;left:21px;right:21px;z-index:5;display:flex;justify-content:space-between;pointer-events:none}
-.product-top>*{pointer-events:auto}
-.badge{background:var(--gold);color:#000;border-radius:50px;padding:5px 9px;font-size:10px;font-weight:bold}
-.favorite{width:38px;height:38px;border-radius:50%;border:1px solid var(--gold);background:rgba(0,0,0,.65);color:#fff;font-size:19px}
-.favorite.active{color:var(--gold)}
-
-/* IMAGE STAGE */
-.image-stage{position:relative;overflow:hidden;border-radius:17px;touch-action:pan-y;user-select:none;-webkit-user-select:none;-webkit-touch-callout:none;cursor:grab}
-.image-stage.dragging{cursor:grabbing}
-.main-image{width:100%;height:auto;max-height:none;aspect-ratio:auto;object-fit:initial;display:block;border-radius:17px;background:transparent;cursor:zoom-in;transform:translate3d(0,0,0) scale(1);transition:transform .55s cubic-bezier(.22,.61,.36,1),filter .55s ease,opacity .25s ease;will-change:transform;-webkit-user-drag:none;user-select:none;touch-action:pan-y}
-.product:hover .main-image{transform:scale(1.055) translateY(-5px);filter:saturate(1.06) contrast(1.03)}
-.product:active .main-image{transform:scale(1.025)}
-
-/* SWIPE / IMAGE CHANGE ANIMATIONS */
-.swipe-left{animation:swipeLeft .35s cubic-bezier(.22,.61,.36,1)}
-.swipe-right{animation:swipeRight .35s cubic-bezier(.22,.61,.36,1)}
-@keyframes swipeLeft{0%{opacity:1;transform:translateX(0) scale(1)}45%{opacity:.12;transform:translateX(-35px) scale(.97)}100%{opacity:1;transform:translateX(0) scale(1)}}
-@keyframes swipeRight{0%{opacity:1;transform:translateX(0) scale(1)}45%{opacity:.12;transform:translateX(35px) scale(.97)}100%{opacity:1;transform:translateX(0) scale(1)}}
-.image-change{animation:orionImageChange .4s ease}
-@keyframes orionImageChange{0%{opacity:.3;transform:scale(.97) translateX(7px)}100%{opacity:1;transform:scale(1) translateX(0)}}
-
-/* SWIPE HINT */
-.swipe-hint{position:absolute;bottom:10px;left:50%;transform:translateX(-50%);z-index:3;padding:5px 10px;border-radius:20px;background:rgba(0,0,0,.55);border:1px solid rgba(212,175,55,.4);color:#fff;font-size:10px;pointer-events:none;opacity:.85;transition:.3s}
-.image-stage.used .swipe-hint{opacity:0}
-
-/* THUMBNAILS */
-.thumbs{display:flex;gap:7px;overflow-x:auto;padding:9px 1px 3px;scrollbar-width:none}
-.thumbs::-webkit-scrollbar{display:none}
-.thumbs img{width:58px;height:58px;object-fit:cover;border-radius:9px;border:2px solid transparent;flex-shrink:0;cursor:pointer;transition:transform .25s ease,border-color .25s ease}
-.thumbs img:hover{transform:scale(1.06);border-color:var(--gold)!important}
-
-/* PRODUCT TEXT */
-.product h3{font-size:19px;margin:12px 3px 2px}
-.category{color:var(--muted);font-size:13px;margin:0 3px}
-.price{color:var(--gold);font-size:23px;font-weight:bold;margin:4px 3px 11px}
-.variant-label{display:block;color:var(--muted);font-size:12px;margin:7px 2px 4px}
-.variant-select{width:100%;padding:10px;border-radius:10px;border:1px solid var(--border);background:var(--card2);color:var(--text);outline:none}
-.variant-select:focus{border-color:var(--gold)}
-
-/* PRODUCT ACTIONS */
-.product-actions{display:grid;grid-template-columns:1fr 48px;gap:8px;margin-top:9px}
-.whatsapp{display:flex;align-items:center;justify-content:center;text-decoration:none;background:var(--gold);color:#000;font-weight:bold;border-radius:12px;padding:12px}
-.add-cart{border:1px solid var(--gold);border-radius:12px;background:transparent;color:var(--gold);font-size:20px}
-.add-cart:hover{background:var(--gold);color:#000}
-
-/* PROMO */
-.promo-box{padding:28px 18px;border:1px solid var(--gold);border-radius:24px;background:radial-gradient(circle at 50% 0%,rgba(212,175,55,.13),transparent 55%),#101010}
-.promo-box h2{text-align:center;color:var(--gold);margin-bottom:5px}
-.promo-box>p{text-align:center;color:var(--muted);margin-bottom:22px}
-
-/* INFO / STEPS */
-.info-grid,.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-.info-card,.step{background:linear-gradient(145deg,#151515,#0c0c0c);border:1px solid var(--border);border-radius:20px;padding:24px;text-align:center}
-.info-card .icon{font-size:30px}
-.info-card h3{color:var(--gold);margin:5px 0}
-.info-card p,.step p{color:var(--muted)}
-.step{text-align:left}
-.step strong{display:block;color:var(--gold);font-size:27px;margin-bottom:5px}
-
-/* NEW: DELIVERY / PAYMENT / SOCIAL / LANGUAGE */
-.ou-pay{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-.ou-social{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-top:14px}
-.ou-social a{border:1px solid var(--gold);border-radius:50px;padding:8px 16px;text-decoration:none;color:var(--gold)}
-.ou-lang{font-size:13px;font-weight:bold}
-[dir=rtl] .faq-question,[dir=rtl] .step{text-align:right}
-[dir=rtl] .product,[dir=rtl] .cart-panel{direction:rtl}
-
-/* CLIENT REVIEWS */
-.client-reviews{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}
-.client-review{padding:7px;background:var(--card);border:1px solid var(--border);border-radius:19px;transition:.25s}
-.client-review:hover{transform:translateY(-4px);border-color:var(--gold)}
-.client-review img{display:block;width:100%;height:410px;object-fit:cover;border-radius:13px;cursor:pointer}
-.client-viewer{position:fixed;inset:0;background:rgba(0,0,0,.94);z-index:200;display:none;align-items:center;justify-content:center;padding:20px}
-.client-viewer.show{display:flex}
-.client-viewer img{max-width:95%;max-height:90vh;object-fit:contain;border-radius:12px}
-.client-viewer button{position:absolute;top:18px;right:20px;width:45px;height:45px;border-radius:50%;border:1px solid var(--gold);background:#111;color:#fff;font-size:30px}
-
-/* FAQ */
-.faq-list{max-width:850px;margin:auto;display:grid;gap:10px}
-.faq-item{background:var(--card);border:1px solid var(--border);border-radius:15px;overflow:hidden}
-.faq-question{width:100%;background:none;border:0;color:var(--text);text-align:left;padding:17px;display:flex;justify-content:space-between;font-weight:bold}
-.faq-question span{color:var(--gold);font-size:22px}
-.faq-answer{max-height:0;overflow:hidden;color:var(--muted);padding:0 17px;transition:.3s}
-.faq-item.open .faq-answer{max-height:180px;padding:0 17px 17px}
-
-/* CART */
-.overlay{position:fixed;inset:0;background:rgba(0,0,0,.65);z-index:90;display:none}
-.overlay.show{display:block}
-.cart-panel{position:fixed;right:-430px;top:0;width:min(410px,94vw);height:100vh;background:#101010;border-left:1px solid var(--gold);z-index:100;padding:22px;transition:.35s;overflow-y:auto}
-.cart-panel.open{right:0}
-.cart-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:15px}
-.cart-header h2{color:var(--gold)}
-.close{background:none;border:0;color:var(--text);font-size:28px}
-.cart-item{display:flex;gap:10px;padding:12px 0;border-bottom:1px solid var(--border)}
-.cart-item img{width:65px;height:65px;object-fit:cover;border-radius:10px}
-.cart-item-info{flex:1}
-.cart-item-info strong{display:block}
-.cart-item-info span{color:var(--gold)}
-.cart-item-info small{display:block;color:var(--muted)}
-.quantity-control{display:flex;align-items:center;gap:7px;margin-top:7px}
-.quantity-control button{width:28px;height:28px;border-radius:7px;border:1px solid var(--gold);background:none;color:var(--gold)}
-.quantity-value{min-width:20px;text-align:center}
-.remove{border:0!important;color:#f66!important;width:auto!important}
-.cart-total{font-size:22px;font-weight:bold;color:var(--gold);margin:20px 0}
-.checkout{width:100%;padding:14px;border:0;border-radius:13px;background:var(--gold);color:#000;font-weight:bold}
-
-/* IMAGE LIGHTBOX */
-.image-lightbox{position:fixed;inset:0;z-index:99999;display:none;align-items:center;justify-content:center;padding:20px;background:rgba(0,0,0,.94);backdrop-filter:blur(12px);opacity:0;transition:opacity .3s ease}
-.image-lightbox.active{display:flex;opacity:1}
-.lightbox-content{position:relative;max-width:95vw;max-height:92vh;display:flex;align-items:center;justify-content:center}
-.lightbox-image{display:block;max-width:90vw;max-height:88vh;width:auto;height:auto;object-fit:contain;border-radius:18px;box-shadow:0 20px 80px rgba(0,0,0,.75);animation:lightboxOpen .35s cubic-bezier(.22,.61,.36,1);transition:opacity .2s ease,transform .25s ease;-webkit-user-drag:none;user-select:none}
-@keyframes lightboxOpen{0%{opacity:0;transform:scale(.82)}100%{opacity:1;transform:scale(1)}}
-.lightbox-close{position:fixed;top:18px;right:20px;width:46px;height:46px;border:1px solid rgba(212,175,55,.7);border-radius:50%;background:rgba(0,0,0,.65);color:#fff;font-size:30px;line-height:1;cursor:pointer;z-index:100001;transition:.25s}
-.lightbox-close:hover{transform:rotate(90deg) scale(1.08);background:var(--gold);color:#000}
-.lightbox-arrow{position:fixed;top:50%;transform:translateY(-50%);width:48px;height:48px;border:1px solid rgba(212,175,55,.7);border-radius:50%;background:rgba(0,0,0,.65);color:#fff;font-size:30px;cursor:pointer;z-index:100001;transition:.25s}
-.lightbox-arrow:hover{background:var(--gold);color:#000}
-.lightbox-prev{left:18px}
-.lightbox-next{right:18px}
-.lightbox-counter{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);padding:7px 14px;border:1px solid rgba(212,175,55,.5);border-radius:20px;background:rgba(0,0,0,.7);color:#fff;font-size:13px;z-index:100001}
-
-/* FIXED BUTTONS */
-.fixed-wa{position:fixed;right:17px;bottom:17px;width:57px;height:57px;border-radius:50%;background:#25D366;color:#fff;display:flex;align-items:center;justify-content:center;text-decoration:none;font-size:25px;z-index:80;box-shadow:0 8px 25px rgba(37,211,102,.25)}
-.back-top{position:fixed;right:18px;bottom:85px;width:45px;height:45px;border-radius:50%;border:1px solid var(--gold);background:#111;color:var(--gold);font-size:22px;z-index:79;opacity:0;visibility:hidden;transition:.25s}
-.back-top.show{opacity:1;visibility:visible}
-
-/* FOOTER */
-footer{text-align:center;padding:42px 15px;margin-top:55px;border-top:1px solid var(--border);color:var(--muted)}
-footer strong{color:var(--gold)}
-
-/* LIGHT MODE */
-body.light{--bg:#f7f7f5;--card:#fff;--card2:#f0f0ed;--text:#111;--muted:#666;--border:#ddd;background:radial-gradient(circle at 50% -10%,rgba(212,175,55,.13),transparent 35%),var(--bg)}
-body.light .nav{background:rgba(255,255,255,.92)}
-body.light .product,body.light .info-card,body.light .step,body.light .client-review{background:linear-gradient(145deg,#fff,#f4f4f1);box-shadow:0 12px 35px rgba(0,0,0,.06)}
-body.light .favorite{background:#fff;color:#111}
-body.light .cart-panel{background:#fff}
-
-/* HIDDEN */
-.hidden{display:none!important}
-
-/* TABLET */
-@media(max-width:900px){
-.products{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
-.info-grid,.steps,.ou-pay{grid-template-columns:1fr}
-.client-reviews{grid-template-columns:repeat(2,1fr)}
-}
-
-/* MOBILE */
-@media(max-width:600px){
-.logo img{width:105px;height:105px}
-.hero{padding:0 5px}
-.hero-actions{gap:8px}
-.hero-btn{padding:11px 15px;font-size:14px}
-.tools{margin-top:15px}
-.search-wrap{padding:0 10px}
-.nav{justify-content:flex-start;padding:11px 8px}
-.nav button{font-size:14px;padding:8px 14px}
-.section{margin:42px auto;padding:0 10px}
-.products{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
-.product{padding:7px;border-radius:16px}
-.product:hover{transform:none}
-.product-top{top:12px;left:12px;right:12px}
-.favorite{width:32px;height:32px;font-size:16px}
-.badge{font-size:8px;padding:4px 6px}
-.image-stage{border-radius:12px}
-.main-image{width:100%;height:auto;border-radius:12px}
-.swipe-hint{font-size:8px;bottom:7px}
-.thumbs{gap:4px;padding:6px 1px 2px}
-.thumbs img{width:40px;height:40px;border-radius:7px}
-.product h3{font-size:14px;line-height:1.25;margin:8px 2px 1px}
-.category{font-size:10px;margin:0 2px}
-.price{font-size:18px;margin:3px 2px 7px}
-.variant-label{font-size:10px;margin:5px 1px 3px}
-.variant-select{font-size:11px;padding:8px}
-.product-actions{grid-template-columns:1fr 38px;gap:5px;margin-top:6px}
-.whatsapp{font-size:11px;padding:9px 4px;border-radius:9px}
-.add-cart{font-size:17px;border-radius:9px}
-.client-reviews{grid-template-columns:repeat(2,1fr);gap:9px}
-.client-review img{height:290px}
-.promo-box{padding:20px 10px}
-.section-title{font-size:28px}
-.section-description{font-size:14px}
-.image-lightbox{padding:10px}
-.lightbox-image{max-width:94vw;max-height:82vh;border-radius:12px}
-.lightbox-close{top:12px;right:12px;width:42px;height:42px;font-size:27px}
-.lightbox-arrow{width:40px;height:40px;font-size:24px}
-.lightbox-prev{left:8px}
-.lightbox-next{right:8px}
-.lightbox-counter{bottom:12px}
-}
-
-/* VERY SMALL */
-@media(max-width:380px){
-.products{gap:7px}
-.product{padding:6px}
-.product h3{font-size:13px}
-.price{font-size:17px}
-.whatsapp{font-size:10px}
-.add-cart{width:35px}
-.thumbs img{width:36px;height:36px}
-}
+/* NEW HERO */
+header{padding:0 0 28px;background:radial-gradient(ellipse at 50% 0%,rgba(139,92,246,.28),transparent 60%)}
+.topbar{display:flex;align-items:center;justify-content:space-between;padding:12px 16px;max-width:1250px;margin:auto}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-weight:bold;letter-spacing:4px;color:var(--gold)}
+.brand img{width:52px;height:52px;object-fit:contain;filter:drop-shadow(0 4px 16px rgba(169,116,255,.45))}
+.topbar .tools{margin:0}
+.hero{padding:34px 15px 0}
+h1{font-size:clamp(38px,9vw,72px);letter-spacing:-1px}
+h1 span{background:linear-gradient(90deg,var(--gold),#c9a3ff 60%,#8b5cf6);-webkit-background-clip:text;background-clip:text;color:transparent}
+.trust{list-style:none;display:flex;justify-content:center;flex-wrap:wrap;gap:8px;margin-top:22px}
+.trust li{border:1px solid rgba(212,175,55,.35);border-radius:50px;padding:7px 14px;font-size:12px;color:var(--muted);background:rgba(139,92,246,.08)}
+.showcase{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;max-width:640px;margin:34px auto 0;padding:0 4px}
+.show-card{position:relative;display:block;aspect-ratio:3/4;border-radius:20px;overflow:hidden;border:1px solid rgba(212,175,55,.45);background:var(--card);text-decoration:none;color:#fff;transition:transform .3s ease,box-shadow .3s ease}
+.show-card.mid{transform:translateY(-16px)}
+.show-card:hover{box-shadow:0 14px 40px rgba(139,92,246,.4)}
+.show-card img{width:100%;height:100%;object-fit:cover;display:block}
+.show-card span{position:absolute;left:0;right:0;bottom:0;padding:22px 8px 10px;font-weight:bold;font-size:14px;background:linear-gradient(transparent,rgba(5,5,5,.9))}
+@media(max-width:600px){.hero{padding-top:22px}.trust li{font-size:11px;padding:6px 11px}.show-card{border-radius:14px}.show-card span{font-size:12px}}
 
 /* REDUCED MOTION */
 @media(prefers-reduced-motion:reduce){
@@ -508,16 +337,23 @@ body.light .cart-panel{background:#fff}
 .product:hover .main-image,.product:active .main-image{transform:none;filter:none}
 .swipe-left,.swipe-right,.image-change{animation:none!important}
 }
-<!-- ORION ACCESSORIES — PART 2/3 : HTML
-     Remplace TOUT ce qui se trouve entre <body> et <script> (la balise <script> principale),
-     c'est-à-dire de <body> jusqu'à </footer> inclus. Le <head> ne change pas. -->
+</style>
+</head>
 
 <body>
 
 <!-- HEADER -->
 <header id="home">
-  <div class="logo">
-    <img src="./LOGO.PNG" alt="ORION Accessories Maroc" width="120" height="120">
+  <div class="topbar">
+    <a class="brand" href="#home" aria-label="ORION Accessories">
+      <img src="./LOGO.PNG" alt="ORION Accessories Maroc" width="52" height="52">
+      <span>ORION</span>
+    </a>
+    <div class="tools">
+      <button class="tool" id="themeBtn" onclick="toggleTheme()" aria-label="Changer le thème">☀️</button>
+      <button class="tool ou-lang" id="langBtn" onclick="toggleLang()" aria-label="Changer la langue / تغيير اللغة">عربي</button>
+      <button class="tool" onclick="openCart()" aria-label="Ouvrir le panier">🛒<span class="count" id="cartCount">0</span></button>
+    </div>
   </div>
 
   <div class="hero">
@@ -530,10 +366,25 @@ body.light .cart-panel{background:#fff}
       <a class="hero-btn" href="https://wa.me/212673830013?text=Bonjour%20ORION%20Accessories" target="_blank" rel="noopener">Commander sur WhatsApp</a>
     </div>
 
-    <div class="tools">
-      <button class="tool" id="themeBtn" onclick="toggleTheme()" aria-label="Changer le thème">☀️</button>
-      <button class="tool ou-lang" id="langBtn" onclick="toggleLang()" aria-label="Changer la langue / تغيير اللغة">عربي</button>
-      <button class="tool" onclick="openCart()" aria-label="Ouvrir le panier">🛒<span class="count" id="cartCount">0</span></button>
+    <ul class="trust">
+      <li>🚚 Livraison partout au Maroc</li>
+      <li>💵 Paiement à la livraison</li>
+      <li>💬 Commande via WhatsApp</li>
+    </ul>
+
+    <div class="showcase">
+      <a class="show-card" href="#glasses">
+        <img src="./ORION Glasses Model 01 gold 120dh.JPG" alt="Lunettes ORION" onerror="this.style.display='none'">
+        <span>Lunettes</span>
+      </a>
+      <a class="show-card mid" href="#chains">
+        <img src="./ORION Chain Model 02 80dh 3.JPG" alt="Colliers ORION" onerror="this.style.display='none'">
+        <span>Colliers</span>
+      </a>
+      <a class="show-card" href="#bracelets">
+        <img src="./ORION Bracelets model 01 80dh 1.JPG" alt="Bracelets ORION" onerror="this.style.display='none'">
+        <span>Bracelets</span>
+      </a>
     </div>
   </div>
 
@@ -639,13 +490,11 @@ body.light .cart-panel{background:#fff}
       </div>
     </div>
 
-    <!-- Réseaux sociaux : décommentez et mettez vos vrais liens
     <div class="ou-social">
-      <a href="https://instagram.com/VOTRE_COMPTE" target="_blank" rel="noopener noreferrer">Instagram</a>
-      <a href="https://tiktok.com/@VOTRE_COMPTE" target="_blank" rel="noopener noreferrer">TikTok</a>
-      <a href="https://facebook.com/VOTRE_PAGE" target="_blank" rel="noopener noreferrer">Facebook</a>
+      <a href="https://www.instagram.com/orion___accessories_official" target="_blank" rel="noopener noreferrer">Instagram</a>
+      <a href="https://www.tiktok.com/@orion.accessoires" target="_blank" rel="noopener noreferrer">TikTok</a>
+      <a href="https://www.facebook.com/share/1AQPyEsQKQ/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer">Facebook</a>
     </div>
-    -->
   </section>
 
   <!-- AVIS CLIENTS -->
@@ -741,13 +590,14 @@ body.light .cart-panel{background:#fff}
   <strong>ORION Accessories</strong><br>
   Lunettes • Colliers • Bracelets<br>
   Livraison partout au Maroc
+  <div class="ou-social">
+      <a href="https://www.instagram.com/orion___accessories_official" target="_blank" rel="noopener noreferrer">Instagram</a>
+      <a href="https://www.tiktok.com/@orion.accessoires" target="_blank" rel="noopener noreferrer">TikTok</a>
+      <a href="https://www.facebook.com/share/1AQPyEsQKQ/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer">Facebook</a>
+    </div>
 </footer>
 
-<!-- FIN PARTIE 2 : la balise <script> principale (partie 3) vient juste après -->
-/* ORION ACCESSORIES — PART 3/3 : JAVASCRIPT
-   Colle ce contenu ENTRE <script> et </script> (remplace tout l'ancien JavaScript).
-   Ne garde PAS <script src="./orion-upgrade.js"> : tout est déjà inclus ici. */
-
+<script>
 "use strict";
 
 const WHATSAPP = "212673830013";
@@ -1394,7 +1244,10 @@ const DICT = {
   "Total :":"المجموع :",
   "Votre panier est vide.":"سلتك فارغة.",
   "Lunettes • Colliers • Bracelets":"نظارات • قلادات • أساور",
-  "Livraison partout au Maroc":"توصيل لجميع أنحاء المغرب"
+  "Livraison partout au Maroc":"توصيل لجميع أنحاء المغرب",
+  "🚚 Livraison partout au Maroc":"🚚 توصيل لجميع أنحاء المغرب",
+  "💵 Paiement à la livraison":"💵 الدفع عند الاستلام",
+  "💬 Commande via WhatsApp":"💬 الطلب عبر واتساب"
 };
 
 const originalText = new WeakMap();
@@ -1482,3 +1335,7 @@ try{
 }catch(e){}
 
 console.log("ORION Accessories loaded successfully.");
+</script>
+
+</body>
+</html>
